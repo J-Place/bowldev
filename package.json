@@ -1,0 +1,22 @@
+{
+  "name": "bowl.com",
+  "version": "1.0.0",
+  "description": "BOWL.com is the interactive home for USBC, the national governing body of bowling. We’re a membership organization that provides standardized rules, regulations and benefits to make bowling fair and fun for everyone.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Place/bowl.git"
+  },
+  "author": "Jay Place <jay@cooper-james.com>",
+  // "bugs": {
+  //   "url": "https://github.com/J-Place/bowl/issues"
+  // },
+  // "homepage": "https://github.com/J-Place/bowl#readme",
+  // "scripts": {
+  //   "test": "echo \"Error: no test specified\" && exit 1"
+  // },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
