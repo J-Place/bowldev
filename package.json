@@ -8,13 +8,6 @@
     "url": "git+https://github.com/J-Place/bowl.git"
   },
   "author": "Jay Place <jay@cooper-james.com>",
-  // "bugs": {
-  //   "url": "https://github.com/J-Place/bowl/issues"
-  // },
-  // "homepage": "https://github.com/J-Place/bowl#readme",
-  // "scripts": {
-  //   "test": "echo \"Error: no test specified\" && exit 1"
-  // },
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0"
