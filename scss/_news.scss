@@ -1,0 +1,51 @@
+.news-lead {
+    overflow: hidden;
+    position: relative;
+}
+
+.news-lead__caption {
+    @extend .oswald;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    color: #FFF;
+    text-transform: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 20px;
+    // width: auto;
+    margin: 0 15px;
+    padding: 1em;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.news-lead__image {
+    width: 100%;
+    // position: relative;
+}
+
+.top-news {
+    padding: 0;
+    height: 300px;
+    background-color: $gray-lt;
+}
+
+.top-news__title {
+    color: $gray-dk;
+    text-align: center;
+}
+
+.top-news__image {
+    width: 100%;
+    // margin: 0 -15px;
+}
+
+.news .news-ad {
+    display: block;
+}
+
+.news-sponsor__image {
+    display: block;
+    width: 100%;
+}

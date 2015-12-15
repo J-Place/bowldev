@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+
+    .stripe__container {
+    top: 0;
+    // border: 1px solid green;
+    width: auto;
+    height: 100%;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    z-index: -9;
+}
+
+.skew {
+    -webkit-transform: skew(-18.25deg);
+   -moz-transform: skew(-18.25deg);
+     -o-transform: skew(-18.25deg);
+}
+
+// .stripe__container--left {
+//     @extend .stripe__container;
+//     left: 0;
+// }
+
+// .stripe__container--left .stripe {
+//     left: -60%;
+// }
+
+// .stripe__container--right {
+//     @extend .stripe__container;
+//     right: 0;
+// }
+
+// .stripe__container--right .stripe {
+//     right: -60%;
+// }
+
+.stripe {
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    @extend .skew;
+}
+
+.stripe--right {
+    position: absolute;
+    width: 175px;
+    height: 100%;
+    @extend .skew;
+}

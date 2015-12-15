@@ -5,8 +5,17 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var connect = require('gulp-connect');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+
+// Run Server
+gulp.task('connect', function() {
+  connect.server({
+    root: '',
+    livereload: true
+  });
+});
 
 // Lint Task
 gulp.task('lint', function() {
@@ -32,11 +41,22 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('css', function () {
+      return gulp.src('css/*.css');
+});
+
+gulp.task('html', function () {
+      return gulp.src('*.html')
+});
+
+
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
-    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('js/*.js', ['lint', 'scripts'])
+    gulp.watch(['css/*.css'], ['css'])
+    gulp.watch(['scss/*.scss'], ['sass'])
+    gulp.watch(['*.html'], ['html']);
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
+gulp.task('default', ['connect', 'lint', 'sass', 'scripts', 'watch']);

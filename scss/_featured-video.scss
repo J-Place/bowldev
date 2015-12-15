@@ -1,0 +1,24 @@
+.featured-video {
+    text-align: center;
+    background-color: $gray-md;
+    padding: 2em 0 4em;
+    overflow: hidden;
+}
+
+.featured-video__title {
+    color: #FFF;
+    font-size: 3em;
+    line-height: 2em;
+    letter-spacing: 1.5px;
+    margin-bottom: 1em;
+}
+
+.featured-video__title:after {
+    content: '';
+    display: block;
+    background-color: #FFF;
+    width: 1.5em;
+    height: 0.12em;
+    margin: 0 auto;
+    @extend .skew;
+}

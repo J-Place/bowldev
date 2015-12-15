@@ -1,0 +1,326 @@
+body {
+  background-color: white; }
+
+.stripe__container {
+  top: 0;
+  width: auto;
+  height: 100%;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  z-index: -9; }
+
+.skew, .stripe, .stripe--right, .nav__list--item a:hover:after, .featured-video__title:after {
+  -webkit-transform: skew(-18.25deg);
+  -moz-transform: skew(-18.25deg);
+  -o-transform: skew(-18.25deg); }
+
+.stripe {
+  position: absolute;
+  width: 1000px;
+  height: 100%; }
+
+.stripe--right {
+  position: absolute;
+  width: 175px;
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif; }
+
+h1, h2, h3 {
+  text-transform: uppercase; }
+
+.oswald, .nav--main, .news-lead__caption {
+  font-family: 'Oswald', sans-serif; }
+
+.header {
+  position: relative;
+  z-index: 999;
+  border-bottom: 1px solid #d5d7d5; }
+
+.header > .container {
+  position: relative; }
+
+.logo {
+  width: 280px;
+  height: 95px;
+  background-image: url("../img/logo.png");
+  background-position: 0 37px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: block;
+  text-indent: -9999px; }
+
+.nav--main {
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  text-transform: uppercase; }
+
+.nav__list--item {
+  color: #01348d;
+  margin-left: 1.5em; }
+
+.nav__list--item a:hover {
+  text-decoration: none;
+  color: #b71234; }
+
+.nav__list--item a:hover:after {
+  content: '';
+  display: block;
+  background-color: #01348d;
+  width: auto;
+  height: 4px;
+  margin: 20px auto 0; }
+
+.nav-icon, .facebook, .twitter, .youtube, .search {
+  background-image: url("../img/bowl-sprites.svg");
+  background-size: 330px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  display: block; }
+
+.nav--secondary {
+  position: absolute;
+  right: 0;
+  top: 12px; }
+
+.secondary-links {
+  display: inline-block;
+  position: relative; }
+
+.login {
+  text-indent: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85em;
+  letter-spacing: 0.5px;
+  color: #b0b3b1;
+  text-transform: uppercase;
+  width: auto;
+  background-position: -5px -5px;
+  padding: 0 15px 0 23px;
+  line-height: 20px; }
+
+a.login:hover {
+  text-decoration: none;
+  background-position: -5px -35px; }
+
+.social-links {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 12px 0 0;
+  padding: 0;
+  top: -2px; }
+
+.social-links > li {
+  text-indent: -9999px;
+  display: inline-block;
+  padding: 0; }
+
+.facebook {
+  width: 21px;
+  height: 21px;
+  background-position: -94px -6px; }
+
+.facebook:hover {
+  background-position: -94px -36px; }
+
+.twitter {
+  width: 21px;
+  height: 21px;
+  background-position: -125px -6px; }
+
+.twitter:hover {
+  background-position: -125px -36px; }
+
+.youtube {
+  height: 21px;
+  width: 26px;
+  background-position: -153px -7px; }
+
+.youtube:hover {
+  background-position: -153px -37px; }
+
+.search {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background-position: -180px -5px;
+  top: -1px; }
+
+.search:hover {
+  background-position: -180px -35px; }
+
+.banner {
+  height: 130px;
+  position: relative; }
+
+.banner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.banner .stripe {
+  left: -800px;
+  background-color: gray;
+  opacity: 0.125; }
+
+.banner .stripe + .stripe {
+  left: -740px;
+  background-color: gray;
+  opacity: 0.125; }
+
+.slider {
+  height: 400px;
+  position: relative; }
+
+.slider-image__container {
+  position: relative;
+  height: 400px;
+  max-width: 1080px;
+  overflow: hidden; }
+
+.slider img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; }
+
+.slider .stripe {
+  left: -888px;
+  background-color: #01348d;
+  opacity: 1.0; }
+
+.slider .stripe + .stripe {
+  left: -828px;
+  background-color: #01348d;
+  opacity: 0.5; }
+
+.slider .stripe--right {
+  right: -20px;
+  width: 180px;
+  background-color: #01348d;
+  opacity: 1.0; }
+
+.slider .stripe--right + .stripe--right {
+  right: -20px;
+  width: 240px;
+  background-color: #01348d;
+  opacity: 0.5; }
+
+.slider .stripe--right + .stripe--right + .stripe--right {
+  right: -660px;
+  width: 640px;
+  background-color: #FFF;
+  opacity: 1.0; }
+
+.quick-links {
+  position: relative; }
+
+.quick-links .row {
+  padding-top: 3em; }
+
+.quick-link {
+  display: block;
+  margin: 2em auto; }
+
+.quick-link:hover {
+  text-decoration: none; }
+
+.quick-link:hover .quick-link__title {
+  color: #01348d;
+  text-decoration: none; }
+
+.quick-link__image {
+  display: block;
+  margin: 0 auto; }
+
+.quick-link__title {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  color: #75777a;
+  text-align: center;
+  margin: .75em 0 0; }
+
+.main-content {
+  position: relative; }
+
+.main-content .stripe {
+  left: -1068px;
+  background-color: gray;
+  opacity: 0.125; }
+
+.main-content .stripe + .stripe {
+  left: -1008px;
+  background-color: gray;
+  opacity: 0.125; }
+
+.news-lead {
+  overflow: hidden;
+  position: relative; }
+
+.news-lead__caption {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  color: #FFF;
+  text-transform: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 20px;
+  margin: 0 15px;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.news-lead__image {
+  width: 100%; }
+
+.top-news {
+  padding: 0;
+  height: 300px;
+  background-color: #e3e4e3; }
+
+.top-news__title {
+  color: #75777a;
+  text-align: center; }
+
+.top-news__image {
+  width: 100%; }
+
+.news .news-ad {
+  display: block; }
+
+.news-sponsor__image {
+  display: block;
+  width: 100%; }
+
+.featured-video {
+  text-align: center;
+  background-color: #b0b3b1;
+  padding: 2em 0 4em;
+  overflow: hidden; }
+
+.featured-video__title {
+  color: #FFF;
+  font-size: 3em;
+  line-height: 2em;
+  letter-spacing: 1.5px;
+  margin-bottom: 1em; }
+
+.featured-video__title:after {
+  content: '';
+  display: block;
+  background-color: #FFF;
+  width: 1.5em;
+  height: 0.12em;
+  margin: 0 auto; }
+
+.row {
+  margin-bottom: 4em; }
