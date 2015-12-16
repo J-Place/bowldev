@@ -1,7 +1,42 @@
+.news .row {
+    padding: 0 45px;
+}
+
+.news .row > div {
+    // padding-left: 45px;
+    // padding-right: 45px;
+}
+
+.main-content .stripe {
+    left: -1060px;
+    background-color: gray;
+    opacity: 0.125;
+}
+
+.main-content .stripe + .stripe {
+    left: -1000px;
+    background-color: gray;
+    opacity: 0.125;
+}
+
+.main-content {
+    position: relative;
+}
+
+.marketing-promo-wrapper {
+    // padding: 0 30px;
+}
+
 .marketing-promo {
     overflow: hidden;
     position: relative;
-    padding: 0 45px;
+    margin: 0 auto;
+    padding: 0;
+    height: 250px;
+}
+
+.marketing-promo:hover {
+    cursor: pointer;
 }
 
 .marketing-promo__caption {
@@ -11,40 +46,90 @@
     color: #FFF;
     text-transform: none;
     position: absolute;
-    left: 0;
-    right: 0;
+    width: 100%;
+    // left: 0;
+    // right: 0;
     bottom: 0;
     min-height: 20px;
-    // width: auto;
-    // margin: 0 15px;
     padding: 1em;
-    margin: 0 45px;
+    margin: 0;
     background-color: rgba(0,0,0,0.6);
+    z-index: 9;
 }
 
 .marketing-promo__image {
-    // width: 100%;
-    // position: relative;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.marketing-promo__detail {
+    @extend .skew;
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background-color: $blue;
+    top: 0;
+    right: -170%;
+    // right: -30%;
+    transition: right 0.25s;
+    z-index: 9999;
+    padding: 15px;
+}
+
+.marketing-promo__detail p {
+    @extend .no-skew;
+    margin-left: 10%;
+    padding: .5em;
+    color: #FFF;
+    font-size: 1.1em;
+    line-height: 1.25em;
+    font-weight: 300;
+    .bold {
+        margin-top: 1em;
+        display: block;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+    }
+}
+
+.marketing-promo__detail.open {
+    right: -30%;
+}
+
+.top-news-wrapper {
+    // padding: 0 30px;
 }
 
 .top-news {
-    padding: 0 45px;
-    height: 300px;
-}
-
-.top-news__title, .top-news__summary {
+    // padding: 0 15px;
+    position: absolute;
     background-color: $gray-lt;
-    padding: 0 45px;
+    // min-height: 300px;
+    height: 250px;
 }
 
 .top-news__title {
     color: $gray-dk;
     text-align: center;
+    font-size: 1.3em;
+    height: 13px;
+    line-height: 13px;
+    padding: 0;
 }
 
 .top-news__image {
-    // width: 100%;
+    width: 100%;
+    margin: 0;
     // margin: 0 -15px;
+}
+
+.top-news__summary {
+    @extend .oswald;
+    padding: 1em;
+    font-size: 1.0em;
+    font-weight: 400;
+    color: $gray-dk;
 }
 
 .news .news-ad {
@@ -52,7 +137,7 @@
 }
 
 .news-sponsor {
-    padding: 0 45px;
+    padding: 0 15px;
 }
 
 .news-sponsor__image {

@@ -1,0 +1,110 @@
+.login-container {
+    position: absolute;
+    right: -10px;
+}
+
+.login__toggle {
+    position: absolute;
+    right: 180px;
+    text-indent: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    color: $gray-md;
+    text-transform: uppercase;
+    width: 30px;
+    background-position: -5px -5px;
+    margin-left: 15px;
+    padding: 0 15px 0 23px;
+    line-height: 20px;
+    @include breakpoint(nav) {
+        text-indent: -9999px;
+        padding-right: 10px;
+    }
+}
+
+.login__toggle.open {
+    color: $blue;
+    background-position: -5px -35px;
+}
+
+a.login__toggle:hover {
+    text-decoration: none;
+    background-position: -5px -35px;
+}
+
+a.login__toggle:active, a.login__toggle:focus {
+    text-decoration: none;
+}
+
+.login__field-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
+    width: 235px;
+    height: auto;
+    margin: 12px 0 0 0;
+    padding: 0 20px 16px;
+    background-color: #FFF;
+    border: 1px solid #f3f3f3;
+    border-top: 0;
+}
+
+.login__field-wrapper.open {
+    display: block;
+}
+
+.login__instruction {
+    padding-right: 30px;
+    color: $gray-md;
+    line-height: 1.3em;
+    letter-spacing: 0.2px;
+}
+
+.login__input--email, .login__input--password {
+    display: block;
+    width: 100%;
+    margin: 0 0 .78em 0;
+    padding: .37em .5em;
+    background-color: #f1f1f1;
+    border: 1px solid $gray-lt;
+    font-size: 0.96em;
+    letter-spacing: 0.5px;
+}
+
+.login__forgot {
+    display: block;
+    font-size: 0.82em;
+    color: $blue;
+    letter-spacing: 0.4px;
+    margin: -0.25em 0 1.05em;
+}
+
+.login__submit {
+    display: block;
+    background-color: $blue;
+    border: 0 none;
+    color: #FFF;
+    @extend .oswald;
+    font-size: 0.95em;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 34px;
+    height: 37px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login__create {
+    font-size: 0.82em;
+    margin: 0.6em 0 0.2em;
+    display: block;
+    letter-spacing: 0.4px;
+    a {
+        display: block;
+        margin-top: 0.1em;
+        color: $blue;
+    }
+}

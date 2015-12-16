@@ -3,7 +3,7 @@
     letter-spacing: 1px;
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 52px;
     @extend .oswald;
     text-transform: uppercase;
     @include breakpoint(nav) {
@@ -40,7 +40,7 @@
     background-color: $blue;
     width: auto;
     height: 4px;
-    margin: 20px auto 0;
+    margin: 16px auto 0;
     @extend .skew;
 }
 

@@ -14,11 +14,12 @@
 }
 
 .logo {
-    width: 280px;
+    width: 288px;
     height: 95px;
+    // height: auto;
     background-image: url('../img/logo.svg');
-    background-position: 2px 24px;
-    background-size: 335px;
+    background-position: -3px 22px;
+    background-size: 360px;
     background-repeat: no-repeat;
     display: block;
     text-indent: -9999px;

@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -26,15 +26,6 @@
     <header class="header container-fluid">
         <div class="container">
             <a class="logo" href="/" class="logo">BOWL.com</a>
-            <div class="nav--secondary">
-                <div class="secondary-links login"><a class="nav-icon login" href="#">Login</a></div>
-                <ul class="secondary-links social-links">
-                    <li><a class="nav-icon facebook" href="#">Facebook</a></li>
-                    <li><a class="nav-icon twitter" href="#">Twitter</a></li>
-                    <li><a class="nav-icon youtube" href="#">YouTube</a></li>
-                </ul>
-                <div class="secondary-links search"><a class="nav-icon search" href="#">Search</a></div>
-            </div>
             <a class="nav-small-icon" href="#">MENU</a>
             <nav class="nav--main">
                 <ul class="nav__list">
@@ -46,90 +37,133 @@
                     <li class="nav__list--item"><a href="#">Find a...</a></li>
                 </ul>
             </nav>
+            <div class="nav--secondary">
+                <div class="secondary-links login-container">
+                    <a class="nav-icon login__toggle" href="#">Login</a>
+                    <div class="login__field-wrapper">
+                        <fieldset>
+                            <p class="login__instruction">Login requires USBC Member Login.</p>
+                            <input class="login__input--email" name="username" id="login-username" autocomplete="off" type="text" placeholder="Email">
+                            <input class="login__input--password" name="password" id="login-password" autocomplete="off" type="password" placeholder="Password">
+                            <a id="ctl00_ctl00_TopLogin_BTNFOrgot" class="login__forgot" href="#" target="_blank">Forgot password?</a>
+                            <button id="btn-login-submit" type="submit" class="login__submit">Sign In</button>
+                            <p class="login__create">Need Login? <a href="#">Create USBC Member Login</a></p>
+                        </fieldset>
+                    </div>
+                </div>
+                <ul class="secondary-links social-links">
+                    <li><a class="nav-icon facebook" href="#">Facebook</a></li>
+                    <li><a class="nav-icon twitter" href="#">Twitter</a></li>
+                    <li><a class="nav-icon youtube" href="#">YouTube</a></li>
+                </ul>
+                <div class="secondary-links search-container">
+                    <!-- <a class="nav-icon search" href="#">Search</a> -->
+                    <input name="ctl00$ctl00$cphMainZone$cphMainContent$txtKeywords" type="text" value="" id="txtKeywords" class="search__input" placeholder="">
+                    <input type="submit" name="ctl00$ctl00$cphMainZone$cphMainContent$btnSearch" value="Search" id="ctl00_ctl00_cphMainZone_cphMainContent_btnSearch" class="nav-icon search search__button">
+                    <!-- <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="sb-icon-search"></span>
+                        </form>
+                    </div> -->
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="container-fluid" style="overflow:hidden;display:block">
-    <div class="container banner">
-        <div class="stripe"></div><div class="stripe"></div>
-        <img src="img/temp-940.jpg" alt="" class="banner-large">
-        <img src="img/temp-422.jpg" alt="" class="banner-small">
-    </div>
-    </div>
-
-    <div class="container-fluid" style="overflow:hidden;display:block">
-    <div class="container slider">
-        <div class="stripe"></div><div class="stripe"></div>
-        <div class="stripe--right"></div><div class="stripe--right"></div><div class="stripe--right"></div>
-        <div class="slider-image__container">
-            <img src="img/slide-1.jpg" alt="">
+        <div class="container banner">
+            <div class="stripe"></div><div class="stripe"></div>
+            <img src="img/temp-940.jpg" alt="" class="banner-large">
+            <img src="img/temp-422.jpg" alt="" class="banner-small">
         </div>
     </div>
-    </div>
 
     <div class="container-fluid" style="overflow:hidden;display:block">
-    <div class="main-content container">
-        <div class="stripe"></div><div class="stripe"></div>
-        <div class="quick-links">
-            <div class="row">
-                <div class="col-lg-2 col-md-4">
-                    <a class="quick-link" href="#">
-                        <img class="quick-link__image" src="img/quick-link-1.png" alt="">
-                        <h3 class="quick-link__title">Current Event Coverage</h4>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4">
-                    <a class="quick-link" href="#">
-                        <img class="quick-link__image" src="img/quick-link-2.png" alt="">
-                        <h3 class="quick-link__title">Find a Member</h4>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4">
-                    <a class="quick-link" href="#">
-                        <img class="quick-link__image" src="img/quick-link-3.png" alt="">
-                        <h3 class="quick-link__title">Leagues Standing Sheets</h4>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4">
-                    <a class="quick-link" href="#">
-                        <img class="quick-link__image" src="img/quick-link-4.png" alt="">
-                        <h3 class="quick-link__title">Open Championships</h4>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4">
-                    <a class="quick-link" href="#">
-                        <img class="quick-link__image" src="img/quick-link-5.png" alt="">
-                        <h3 class="quick-link__title">Women's Championships</h4>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4">
-                    <a class="quick-link" href="#">
-                        <img class="quick-link__image" src="img/quick-link-6.png" alt="">
-                        <h3 class="quick-link__title">Join USBC</h4>
-                    </a>
-                </div>
+        <div class="container slider">
+            <div class="stripe"></div><div class="stripe"></div>
+            <div class="stripe--right"></div><div class="stripe--right"></div><div class="stripe--right"></div>
+            <div class="slider-image__container">
+                <img src="img/slide-1.jpg" alt="">
             </div>
         </div>
-        <div class="container news">
-            <div class="row">
-                <div class="marketing-promo col-md-4">
-                    <div class="marketing-promo__caption">Strike big at the 2017 Open Championships!</div>
-                    <img class="marketing-promo__image" src="img/news-lead.jpg" alt="">
-                    <div class="marketing-promo__detail">
-                        <h3>Test</h3>
+    </div>
+
+    <div class="container-fluid" style="overflow:hidden;display:block">
+        <div class="container main-content">
+            <div class="stripe"></div><div class="stripe"></div>
+            <div class="quick-links">
+                <div class="row">
+                    <div class="col-lg-2 col-sm-4">
+                        <a class="quick-link" href="#">
+                            <img class="quick-link__image" src="img/quick-link-1.png" alt="">
+                            <h3 class="quick-link__title">Current Event Coverage</h4>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <a class="quick-link" href="#">
+                            <img class="quick-link__image" src="img/quick-link-2.png" alt="">
+                            <h3 class="quick-link__title">Find a Member</h4>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <a class="quick-link" href="#">
+                            <img class="quick-link__image" src="img/quick-link-3.png" alt="">
+                            <h3 class="quick-link__title">Leagues Standing Sheets</h4>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <a class="quick-link" href="#">
+                            <img class="quick-link__image" src="img/quick-link-4.png" alt="">
+                            <h3 class="quick-link__title">Open Championships</h4>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <a class="quick-link" href="#">
+                            <img class="quick-link__image" src="img/quick-link-5.png" alt="">
+                            <h3 class="quick-link__title">Women's Championships</h4>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <a class="quick-link" href="#">
+                            <img class="quick-link__image" src="img/quick-link-6.png" alt="">
+                            <h3 class="quick-link__title">Join USBC</h4>
+                        </a>
                     </div>
                 </div>
-                <div class="top-news col-md-4">
-                    <h3 class="top-news__title">Top News</h3>
-                    <img class="top-news__image" src="img/top-news.jpg" alt="">
-                    <div class="top-news__summary">Lorem ipsum dolor sit amet, ut leo leo lobortis, arcu lacus ut elit tortor, ante libero augue, lacus blandit, euismod quam. Odio eget nibh eget tincidunt neque, mattis eu varius.</div>
-                </div>
-                <div class="news-sponsor col-md-4">
-                    <img class="news-sponsor__image" src="img/news-ad.png" alt="">
+            </div>
+            <div class="container news">
+                <div class="row">
+                    <div class="marketing-promo-wrapper col-sm-4">
+                        <div class="marketing-promo container-fluid">
+                            <div class="marketing-promo__caption">Strike big at the 2017 Open Championships!</div>
+                            <img class="marketing-promo__image" src="img/news-lead.jpg" alt="">
+                            <div class="marketing-promo__detail">
+                                <p>2017 USBC Open Championships<br />
+                                    March 5- July 10<br />
+                                    Point Hotel & Casino<br />
+                                    Limited space available.<br />
+                                    <span class="bold">Register Today!</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-news-wrapper col-sm-4">
+                        <div class="top-news">
+                            <h3 class="top-news__title">Top News</h3>
+                            <img class="top-news__image" src="img/top-news.jpg" alt="">
+                            <div class="top-news__summary">Lorem ipsum dolor sit amet, ut leo leo lobortis, arcu lacus ut elit tortor, ante libero augue, lacus blandit, euismod quam. Odio eget nibh eget tincidunt neque, mattis eu varius.</div>
+                        </div>
+                    </div>
+                    <div class="news-sponsor-wrapper col-sm-4">
+                        <div class="news-sponsor">
+                            <img class="news-sponsor__image" src="img/news-ad.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <div class="container-fluid featured-video">
@@ -161,6 +195,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 <script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/ExpandingSearch/js/uisearch.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

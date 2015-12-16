@@ -1,5 +1,6 @@
 .quick-links {
     position: relative;
+    padding: 0 45px;
 }
 
 .quick-links .row {
@@ -31,16 +32,4 @@
     color: $gray-dk;
     text-align: center;
     margin: .75em 0 0;
-}
-
-.main-content .stripe {
-    left: -974px;
-    background-color: gray;
-    opacity: 0.125;
-}
-
-.main-content .stripe + .stripe {
-    left: -914px;
-    background-color: gray;
-    opacity: 0.125;
 }
