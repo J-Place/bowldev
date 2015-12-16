@@ -25,35 +25,39 @@
 
     <header class="header container-fluid">
         <div class="container">
-        <a class="logo" href="/" class="logo">BOWL.com</a>
-        <div class="nav--secondary">
-            <div class="secondary-links"><a class="nav-icon login" href="#">Login</a></div>
-            <ul class="secondary-links social-links">
-                <li><a class="nav-icon facebook" href="#">Facebook</a></li>
-                <li><a class="nav-icon twitter" href="#">Twitter</a></li>
-                <li><a class="nav-icon youtube" href="#">YouTube</a></li>
-            </ul>
-            <div class="secondary-links"><a class="nav-icon search" href="#">Search</a></div>
-
-        </div>
-        <nav class="nav--main">
-            <ul class="nav__list list-inline">
-                <li class="nav__list--item"><a href="#">Bowlers</a></li>
-                <li class="nav__list--item"><a href="#">Youth</a></li>
-                <li class="nav__list--item"><a href="#">Tournaments</a></li>
-                <li class="nav__list--item"><a href="#">Associations</a></li>
-                <li class="nav__list--item"><a href="#">USBC</a></li>
-                <li class="nav__list--item"><a href="#">Find a...</a></li>
-            </ul>
-        </nav>
+            <a class="logo" href="/" class="logo">BOWL.com</a>
+            <div class="nav--secondary">
+                <div class="secondary-links login"><a class="nav-icon login" href="#">Login</a></div>
+                <ul class="secondary-links social-links">
+                    <li><a class="nav-icon facebook" href="#">Facebook</a></li>
+                    <li><a class="nav-icon twitter" href="#">Twitter</a></li>
+                    <li><a class="nav-icon youtube" href="#">YouTube</a></li>
+                </ul>
+                <div class="secondary-links search"><a class="nav-icon search" href="#">Search</a></div>
+            </div>
+            <a class="nav-small-icon" href="#">MENU</a>
+            <nav class="nav--main">
+                <ul class="nav__list">
+                    <li class="nav__list--item"><a href="#">Bowlers</a></li>
+                    <li class="nav__list--item"><a href="#">Youth</a></li>
+                    <li class="nav__list--item"><a href="#">Tournaments</a></li>
+                    <li class="nav__list--item"><a href="#">Associations</a></li>
+                    <li class="nav__list--item"><a href="#">USBC</a></li>
+                    <li class="nav__list--item"><a href="#">Find a...</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
+    <div class="container-fluid" style="overflow:hidden;display:block">
     <div class="container banner">
         <div class="stripe"></div><div class="stripe"></div>
-        <img src="img/temp-940.jpg" alt="">
+        <img src="img/temp-940.jpg" alt="" class="banner-large">
+        <img src="img/temp-422.jpg" alt="" class="banner-small">
+    </div>
     </div>
 
+    <div class="container-fluid" style="overflow:hidden;display:block">
     <div class="container slider">
         <div class="stripe"></div><div class="stripe"></div>
         <div class="stripe--right"></div><div class="stripe--right"></div><div class="stripe--right"></div>
@@ -61,7 +65,9 @@
             <img src="img/slide-1.jpg" alt="">
         </div>
     </div>
+    </div>
 
+    <div class="container-fluid" style="overflow:hidden;display:block">
     <div class="main-content container">
         <div class="stripe"></div><div class="stripe"></div>
         <div class="quick-links">
@@ -106,20 +112,24 @@
         </div>
         <div class="container news">
             <div class="row">
-                <div class="news-lead col-md-4">
-                    <div class="news-lead__caption">Strike big at the 2017 Open Championships!</div>
-                    <img class="news-lead__image" src="img/news-lead.jpg" alt="">
+                <div class="marketing-promo col-md-4">
+                    <div class="marketing-promo__caption">Strike big at the 2017 Open Championships!</div>
+                    <img class="marketing-promo__image" src="img/news-lead.jpg" alt="">
+                    <div class="marketing-promo__detail">
+                        <h3>Test</h3>
+                    </div>
                 </div>
                 <div class="top-news col-md-4">
                     <h3 class="top-news__title">Top News</h3>
                     <img class="top-news__image" src="img/top-news.jpg" alt="">
-                    <div class="top-news-summary">Lorem ipsum dolor sit amet, ut leo leo lobortis, arcu lacus ut elit tortor, ante libero augue, lacus blandit, euismod quam. Odio eget nibh eget tincidunt neque, mattis eu varius.</div>
+                    <div class="top-news__summary">Lorem ipsum dolor sit amet, ut leo leo lobortis, arcu lacus ut elit tortor, ante libero augue, lacus blandit, euismod quam. Odio eget nibh eget tincidunt neque, mattis eu varius.</div>
                 </div>
                 <div class="news-sponsor col-md-4">
                     <img class="news-sponsor__image" src="img/news-ad.png" alt="">
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="container-fluid featured-video">
@@ -154,6 +164,7 @@
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--
 <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -162,6 +173,7 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 </script>
+-->
 
 </body>
 </html>

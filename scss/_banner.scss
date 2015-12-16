@@ -1,0 +1,38 @@
+.banner {
+    height: 130px;
+    position: relative;
+    // overflow: hidden;
+}
+
+.banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-large {
+    display: block;
+    @include breakpoint(nav) {
+        display: none;
+    }
+}
+
+.banner-small {
+    display: none;
+    @include breakpoint(nav) {
+        display: block;
+    }
+}
+
+.banner .stripe {
+    left: -800px;
+    background-color: gray;
+    opacity: 0.125;
+}
+
+.banner .stripe + .stripe {
+    left: -740px;
+    background-color: gray;
+    opacity: 0.125;
+}

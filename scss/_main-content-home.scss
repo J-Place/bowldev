@@ -1,6 +1,7 @@
 .marketing-promo {
     overflow: hidden;
     position: relative;
+    padding: 0 45px;
 }
 
 .marketing-promo__caption {
@@ -17,6 +18,7 @@
     // width: auto;
     // margin: 0 15px;
     padding: 1em;
+    margin: 0 45px;
     background-color: rgba(0,0,0,0.6);
 }
 
@@ -26,9 +28,13 @@
 }
 
 .top-news {
-    padding: 0;
+    padding: 0 45px;
     height: 300px;
+}
+
+.top-news__title, .top-news__summary {
     background-color: $gray-lt;
+    padding: 0 45px;
 }
 
 .top-news__title {
@@ -43,6 +49,10 @@
 
 .news .news-ad {
     display: block;
+}
+
+.news-sponsor {
+    padding: 0 45px;
 }
 
 .news-sponsor__image {

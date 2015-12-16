@@ -33,18 +33,14 @@
     margin: .75em 0 0;
 }
 
-.main-content {
-    position: relative;
-}
-
 .main-content .stripe {
-    left: -1068px;
+    left: -974px;
     background-color: gray;
     opacity: 0.125;
 }
 
 .main-content .stripe + .stripe {
-    left: -1008px;
+    left: -914px;
     background-color: gray;
     opacity: 0.125;
 }

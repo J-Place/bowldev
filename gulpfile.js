@@ -52,10 +52,10 @@ gulp.task('html', function () {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts'])
-    gulp.watch(['css/*.css'], ['css'])
-    gulp.watch(['scss/*.scss'], ['sass'])
-    gulp.watch(['*.html'], ['html']);
+    gulp.watch('../bowl/js/*.js', ['lint', 'scripts'])
+    gulp.watch(['../bowl/css/*.css'], ['css'])
+    gulp.watch(['../bowl/scss/*.scss'], ['sass'])
+    gulp.watch(['../bowl/*.html'], ['html']);
 });
 
 // Default Task

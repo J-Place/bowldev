@@ -31,13 +31,18 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
   text-transform: uppercase; }
 
-.oswald, .nav--main, .news-lead__caption {
+.oswald, .nav--main, .marketing-promo__caption {
   font-family: 'Oswald', sans-serif; }
 
 .header {
   position: relative;
+  height: 95px;
   z-index: 999;
-  border-bottom: 1px solid #d5d7d5; }
+  border-bottom: 1px solid #d5d7d5;
+  transition: height 0.3s; }
+  @media only screen and (max-width: 1100px) {
+    .header {
+      height: 45px; } }
 
 .header > .container {
   position: relative; }
@@ -45,12 +50,24 @@ h1, h2, h3 {
 .logo {
   width: 280px;
   height: 95px;
-  background-image: url("../img/logo.png");
-  background-position: 0 37px;
-  background-size: 100%;
+  background-image: url("../img/logo.svg");
+  background-position: 2px 24px;
+  background-size: 335px;
   background-repeat: no-repeat;
   display: block;
   text-indent: -9999px; }
+  @media only screen and (max-width: 1100px) {
+    .logo {
+      width: 45px;
+      height: 45px;
+      background-size: 260px;
+      background-position: -214px -4px; } }
+  @media only screen and (max-width: 992px) {
+    .logo {
+      margin: 0 auto;
+      width: 250px;
+      background-position: -3px -8px;
+      background-size: 315px; } }
 
 .nav--main {
   font-size: 1.15em;
@@ -59,8 +76,23 @@ h1, h2, h3 {
   right: 0;
   top: 50px;
   text-transform: uppercase; }
+  @media only screen and (max-width: 1100px) {
+    .nav--main {
+      top: 12px;
+      right: 230px; } }
+  @media only screen and (max-width: 992px) {
+    .nav--main {
+      display: none; } }
+
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: -5px; }
 
 .nav__list--item {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
   color: #01348d;
   margin-left: 1.5em; }
 
@@ -88,6 +120,24 @@ h1, h2, h3 {
   right: 0;
   top: 12px; }
 
+.nav-small-icon {
+  font-size: 0.6em;
+  padding-top: 27px;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  background-image: url("../img/bowl-sprites.svg");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 1px -55px;
+  position: absolute;
+  top: 6px;
+  display: none; }
+  @media only screen and (max-width: 992px) {
+    .nav-small-icon {
+      display: block; } }
+
 .secondary-links {
   display: inline-block;
   position: relative; }
@@ -103,6 +153,10 @@ h1, h2, h3 {
   background-position: -5px -5px;
   padding: 0 15px 0 23px;
   line-height: 20px; }
+  @media only screen and (max-width: 1100px) {
+    .login {
+      text-indent: -9999px;
+      padding-right: 10px; } }
 
 a.login:hover {
   text-decoration: none;
@@ -164,6 +218,18 @@ a.login:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+.banner-large {
+  display: block; }
+  @media only screen and (max-width: 1100px) {
+    .banner-large {
+      display: none; } }
+
+.banner-small {
+  display: none; }
+  @media only screen and (max-width: 1100px) {
+    .banner-small {
+      display: block; } }
 
 .banner .stripe {
   left: -800px;
@@ -248,24 +314,22 @@ a.login:hover {
   text-align: center;
   margin: .75em 0 0; }
 
-.main-content {
-  position: relative; }
-
 .main-content .stripe {
-  left: -1068px;
+  left: -974px;
   background-color: gray;
   opacity: 0.125; }
 
 .main-content .stripe + .stripe {
-  left: -1008px;
+  left: -914px;
   background-color: gray;
   opacity: 0.125; }
 
-.news-lead {
+.marketing-promo {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  padding: 0 45px; }
 
-.news-lead__caption {
+.marketing-promo__caption {
   font-size: 1.3em;
   line-height: 1.4em;
   color: #FFF;
@@ -275,31 +339,30 @@ a.login:hover {
   right: 0;
   bottom: 0;
   min-height: 20px;
-  margin: 0 15px;
   padding: 1em;
+  margin: 0 45px;
   background-color: rgba(0, 0, 0, 0.6); }
 
-.news-lead__image {
-  width: 100%; }
-
 .top-news {
-  padding: 0;
-  height: 300px;
-  background-color: #e3e4e3; }
+  padding: 0 45px;
+  height: 300px; }
+
+.top-news__title, .top-news__summary {
+  background-color: #e3e4e3;
+  padding: 0 45px; }
 
 .top-news__title {
   color: #75777a;
   text-align: center; }
 
-.top-news__image {
-  width: 100%; }
-
 .news .news-ad {
   display: block; }
 
+.news-sponsor {
+  padding: 0 45px; }
+
 .news-sponsor__image {
-  display: block;
-  width: 100%; }
+  display: block; }
 
 .featured-video {
   text-align: center;

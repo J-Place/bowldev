@@ -1,9 +1,14 @@
 @import 'base';
+@import 'mixins';
 @import 'colors';
 @import 'typography';
 @import 'header';
+@import 'nav';
+@import 'nav-secondary';
+@import 'banner';
 @import 'slider';
 @import 'quick-links';
-@import 'news';
+@import 'main-content-home';
+// @import 'news';
 @import 'featured-video';
 @import 'overrides';
