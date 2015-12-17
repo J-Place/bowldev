@@ -228,17 +228,25 @@ a.login__toggle:active, a.login__toggle:focus {
   position: absolute;
   top: 20px;
   right: 0;
-  display: none;
+  display: block;
   width: 235px;
-  height: auto;
-  margin: 12px 0 0 0;
-  padding: 0 20px 16px;
+  margin: 0;
+  padding: 0 20px;
   background-color: #FFF;
-  border: 1px solid #f3f3f3;
-  border-top: 0; }
+  border: 0;
+  border-top: 0;
+  transition: height 0.125s, margin 0.125s, opacity 0.125s;
+  opacity: 0;
+  height: 0;
+  overflow: hidden; }
 
 .login__field-wrapper.open {
-  display: block; }
+  opacity: 1.0;
+  height: 245px;
+  margin: 12px 0 0 0;
+  padding: 0 20px 16px;
+  border: 1px solid #f3f3f3;
+  border-top: 0; }
 
 .login__instruction {
   padding-right: 30px;
@@ -296,7 +304,7 @@ a.login__toggle:active, a.login__toggle:focus {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 15px;
-  transition: width 0.2s; }
+  transition: width 0.125s; }
 
 .secondary-links.search-container.open {
   width: 240px;
