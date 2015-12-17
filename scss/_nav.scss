@@ -70,7 +70,7 @@
 }
 
 .nav__list--item a:after {
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
         padding: 10px 0;
         display: block;
         position: absolute;
@@ -104,6 +104,9 @@
     height: 4px;
     margin: 17px auto 0;
     @extend .skew;
+        @include breakpoint(nav) {
+        display: none;
+    }
     @include breakpoint(medium) {
         @extend .skew-reset;
         position: absolute;

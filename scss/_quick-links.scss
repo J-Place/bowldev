@@ -1,6 +1,9 @@
 .quick-links {
     position: relative;
     padding: 0 45px;
+    @include breakpoint(small) {
+        padding: 0;
+    }
 }
 
 .quick-links .row {

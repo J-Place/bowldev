@@ -21,6 +21,9 @@
     margin: 0;
     padding: 0;
     display: inline-block;
+    @include breakpoint(small) {
+        width: 60%;
+    }
 }
 
 .dropdown__list--column {
@@ -30,6 +33,9 @@
     width: auto;
     margin: 0 8em 0 0;
     padding: 0;
+    @include breakpoint(medium) {
+        margin-right: 4em;
+    }
 }
 
 .dropdown__list {

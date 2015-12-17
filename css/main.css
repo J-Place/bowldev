@@ -172,7 +172,7 @@ body {
       position: relative;
       margin: 0; } }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .nav__list--item a:after {
     padding: 10px 0;
     display: block;
@@ -202,6 +202,9 @@ body {
   width: auto;
   height: 4px;
   margin: 17px auto 0; }
+  @media only screen and (max-width: 1100px) {
+    .nav__list--item a:hover:after {
+      display: none; } }
   @media only screen and (max-width: 992px) {
     .nav__list--item a:hover:after {
       position: absolute;
@@ -313,6 +316,9 @@ body {
   margin: 0;
   padding: 0;
   display: inline-block; }
+  @media only screen and (max-width: 768px) {
+    .dropdown__links {
+      width: 60%; } }
 
 .dropdown__list--column {
   display: inline-block;
@@ -320,6 +326,9 @@ body {
   width: auto;
   margin: 0 8em 0 0;
   padding: 0; }
+  @media only screen and (max-width: 992px) {
+    .dropdown__list--column {
+      margin-right: 4em; } }
 
 .dropdown__list--item {
   list-style-type: none;
@@ -625,6 +634,9 @@ a.login-toggle:active, a.login-toggle:focus {
 .quick-links {
   position: relative;
   padding: 0 45px; }
+  @media only screen and (max-width: 768px) {
+    .quick-links {
+      padding: 0; } }
 
 .quick-links .row {
   padding-top: 3em; }
@@ -653,6 +665,9 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .main-content .container {
   position: relative; }
+  @media only screen and (max-width: 768px) {
+    .main-content .container {
+      padding: 0; } }
 
 .news .row {
   padding: 0 45px; }
@@ -713,10 +728,12 @@ a.login-toggle:active, a.login-toggle:focus {
 .marketing-promo__detail.open {
   right: -30%; }
 
+.top-news-wrapper {
+  height: 250px; }
+
 .top-news {
   position: absolute;
-  background-color: #e3e4e3;
-  height: 250px; }
+  background-color: #e3e4e3; }
 
 .top-news__title {
   color: #75777a;
