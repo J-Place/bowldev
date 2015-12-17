@@ -3,7 +3,7 @@
     right: -10px;
 }
 
-.login__toggle {
+.login-toggle {
     position: absolute;
     right: 180px;
     text-indent: 0;
@@ -23,21 +23,21 @@
     }
 }
 
-.login__toggle.open {
+.login-toggle.open {
     color: $blue;
     background-position: -5px -35px;
 }
 
-a.login__toggle:hover {
+a.login-toggle:hover {
     text-decoration: none;
     background-position: -5px -35px;
 }
 
-a.login__toggle:active, a.login__toggle:focus {
+a.login-toggle:active, a.login-toggle:focus {
     text-decoration: none;
 }
 
-.login__field-wrapper {
+.login-wrapper {
     position: absolute;
     top: 20px;
     right: 0;
@@ -55,7 +55,7 @@ a.login__toggle:active, a.login__toggle:focus {
     overflow: hidden;
 }
 
-.login__field-wrapper.open {
+.login-wrapper.open {
     // display: block;
     opacity: 1.0;
     height: 245px;
@@ -117,4 +117,9 @@ a.login__toggle:active, a.login__toggle:focus {
         margin-top: 0.1em;
         color: $blue;
     }
+}
+
+.login-wrapper *:focus,
+.login-wrapper *:active:focus{
+    outline:none;
 }

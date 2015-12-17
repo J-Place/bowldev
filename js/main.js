@@ -2,15 +2,15 @@ $(document).ready(function(){
 
 
     // Toggle Login
-    $(".login__toggle").click(function(){
+    $(".login-toggle").click(function(){
         $(this).addClass("open");
-        $(".login__field-wrapper").addClass("open");
+        $(".login-wrapper").addClass("open");
         $(".login__input--email").focus();
     });
-    $('.login__field-wrapper').on('blur', function(){
+    $('.login-wrapper').on('blur', function(){
         $(this).removeClass("open");
-        $(".login__toggle").removeClass("open");
-        // $(".login__field-wrapper").removeClass("open");
+        $(".login-toggle").removeClass("open");
+        // $(".login-wrapper").removeClass("open");
     });
 
 
@@ -26,12 +26,12 @@ $(document).ready(function(){
     // Close Login and Search on Click Outside
     $(document).mouseup(function(e)
     {
-        var login = $(".login__field-wrapper");
+        var login = $(".login-wrapper");
         var search = $(".search-container");
         if(e.target.id != login.attr('id') && !login.has(e.target).length)
         {
-            $(".login__field-wrapper").removeClass("open");
-            $(".login__toggle").removeClass("open");
+            $(".login-wrapper").removeClass("open");
+            $(".login-toggle").removeClass("open");
         }
         if(e.target.id != search.attr('id') && !search.has(e.target).length)
         {

@@ -1,6 +1,6 @@
 .nav--main {
-    font-size: 1.15em;
-    letter-spacing: 1px;
+    font-size: 1.1em;
+    letter-spacing: 0.8px;
     position: absolute;
     right: 0;
     top: 52px;
@@ -29,6 +29,11 @@
     margin-left: 1.5em;
 }
 
+.nav__list--item a {
+    color: $blue;
+    font-weight: 400;
+}
+
 .nav__list--item a:hover {
     text-decoration: none;
     color: $red;
@@ -40,7 +45,7 @@
     background-color: $blue;
     width: auto;
     height: 4px;
-    margin: 16px auto 0;
+    margin: 17px auto 0;
     @extend .skew;
 }
 
