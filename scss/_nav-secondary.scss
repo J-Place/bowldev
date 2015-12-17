@@ -1,6 +1,10 @@
-.secondary-links {
-    // display: inline-block;
-    // position: relative;
+.nav-secondary {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    @include breakpoint(medium) {
+        right: 20px;
+    }
 }
 
 .social-links {
@@ -12,6 +16,9 @@
     width: 82px;
     top: -2px;
     right: 48px;
+    @include breakpoint(medium) {
+        display: none;
+    }
 }
 
 .social-links > li {

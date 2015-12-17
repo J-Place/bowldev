@@ -1,27 +1,11 @@
+.main-content .container {
+    position: relative;
+}
+
 .news .row {
     padding: 0 45px;
 }
 
-.news .row > div {
-    // padding-left: 45px;
-    // padding-right: 45px;
-}
-
-.main-content .stripe {
-    left: -1060px;
-    background-color: gray;
-    opacity: 0.125;
-}
-
-.main-content .stripe + .stripe {
-    left: -1000px;
-    background-color: gray;
-    opacity: 0.125;
-}
-
-.main-content {
-    position: relative;
-}
 
 .marketing-promo-wrapper {
     // padding: 0 30px;
@@ -143,4 +127,23 @@
 .news-sponsor__image {
     display: block;
     // width: 100%;
+}
+
+
+.main-content .stripe {
+    left: -1060px;
+    background-color: gray;
+    opacity: 0.125;
+    @include breakpoint(medium) {
+        top: -450px;
+    }
+}
+
+.main-content .stripe + .stripe {
+    left: -1000px;
+    background-color: gray;
+    opacity: 0.125;
+    @include breakpoint(medium) {
+        top: -450px;
+    }
 }

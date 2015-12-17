@@ -7,10 +7,16 @@
     @include breakpoint(nav) {
         height: 45px;
     }
+    @include breakpoint(medium) {
+        padding: 0;
+    }
 }
 
 .header > .container {
     position: relative;
+    @include breakpoint(medium) {
+        padding: 0 30px;
+    }
 }
 
 .logo {

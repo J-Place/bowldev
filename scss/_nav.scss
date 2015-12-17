@@ -1,42 +1,99 @@
-.nav--main {
+.nav-main {
     font-size: 1.1em;
     letter-spacing: 0.8px;
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 52px;
     @extend .oswald;
     text-transform: uppercase;
+    transform: height 2.5s;
+
     @include breakpoint(nav) {
         top: 12px;
         right: 230px;
     }
     @include breakpoint(medium) {
+        position: fixed;
         display: none;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: $gray-dk;
     }
+    @include breakpoint(small) {
+        // @extend .opensans;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
+.nav-main.open {
+    // @include breakpoint(medium) {
+        display: block;
+        height: 100%;
+    // }
 }
 
 .nav__list {
     list-style: none;
     padding-left: 0;
     margin-left: -5px;
+    height: 22px;
+    @include breakpoint(medium) {
+
+    }
 }
 
 .nav__list--item {
     display: inline-block;
     padding-right: 5px;
     padding-left: 5px;
-    color: $blue;
     margin-left: 1.5em;
+    @include breakpoint(medium) {
+        display: block;
+        margin: 10px 30px;
+        border-bottom: 1px solid #555;
+    }
 }
 
 .nav__list--item a {
     color: $blue;
     font-weight: 400;
+    @include breakpoint(medium) {
+        font-weight: 300;
+        color: #FFF;
+        padding: 10px 0;
+        display: block;
+        position: relative;
+        margin: 0;
+    }
+}
+
+.nav__list--item a:after {
+    @include breakpoint(medium) {
+        padding: 10px 0;
+        display: block;
+        position: absolute;
+        top: -8px;
+        right: 0;
+        content: url("../img/arrow-rt.png");
+        width: 30px;
+        height: 40px;
+        background-color: transparent;
+        overflow: hidden;
+    }
+}
+
+.nav__list--item a:focus {
+    text-decoration: none;
 }
 
 .nav__list--item a:hover {
     text-decoration: none;
     color: $red;
+    @include breakpoint(medium) {
+        color: $blue;
+    }
 }
 
 .nav__list--item a:hover:after {
@@ -47,6 +104,18 @@
     height: 4px;
     margin: 17px auto 0;
     @extend .skew;
+    @include breakpoint(medium) {
+        @extend .skew-reset;
+        position: absolute;
+        top: -8px;
+        right: 0;
+        width: 30px;
+        height: 40px;
+        margin: 0;
+        padding: 10px 0;
+        content: url("../img/arrow-rt.png");
+        background-color: transparent;
+    }
 }
 
 .nav-icon {
@@ -55,15 +124,6 @@
     background-repeat: no-repeat;
     background-color: transparent;
     display: block;
-}
-
-.nav--secondary {
-    position: absolute;
-    right: 0;
-    top: 12px;
-    @include breakpoint(nav) {
-
-    }
 }
 
 .nav-small-icon {
@@ -83,4 +143,8 @@
     @include breakpoint(medium) {
         display: block;
     }
+}
+
+.nav-small-icon.open {
+    background-position: -53px -80px;
 }

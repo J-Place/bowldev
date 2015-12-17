@@ -27,17 +27,46 @@
         <div class="container">
             <a class="logo" href="/" class="logo">BOWL.com</a>
             <a class="nav-small-icon" href="#">MENU</a>
-            <nav class="nav--main">
+            <nav class="nav-main">
                 <ul class="nav__list">
-                    <li class="nav__list--item"><a href="#">Bowlers</a></li>
-                    <li class="nav__list--item"><a href="#">Youth</a></li>
+                    <li class="nav__list--item" data-id="bowlers"><a href="#" id="bowlers">Bowlers</a></li>
+                    <li class="nav__list--item" data-id="youth"><a href="#" id="youth">Youth</a></li>
                     <li class="nav__list--item"><a href="#">Tournaments</a></li>
                     <li class="nav__list--item"><a href="#">Associations</a></li>
                     <li class="nav__list--item"><a href="#">USBC</a></li>
                     <li class="nav__list--item"><a href="#">Find a...</a></li>
                 </ul>
             </nav>
-            <div class="nav--secondary">
+            <div class="nav-dropdown">
+                <div class="dropdown-wrapper bowlers" data-target="bowlers">
+                    <div class="dropdown__links">
+                        <ul class="dropdown__list--column">
+                            <li class="dropdown__list--item"><a href="#">Join USBC</a></li>
+                            <li class="dropdown__list--item"><a href="#">Welcome 2 Bowling</a></li>
+                            <li class="dropdown__list--item"><a href="#">USBC Bowling Academy</a></li>
+                            <li class="dropdown__list--item"><a href="#">USBC Bowler's Source</a></li>
+                            <li class="dropdown__list--item"><a href="#">USBC Bowling Store</a></li>
+                        </ul>
+                        <ul class="dropdown__list--column">
+                            <li class="dropdown__list--item"><a href="#">League Standing SHeets</a></li>
+                            <li class="dropdown__list--item"><a href="#">Sport Bowling</a></li>
+                            <li class="dropdown__list--item"><a href="#">Team USA</a></li>
+                            <!-- <li class="dropdown__list--item"><a href="#"></a></li> -->
+                        </ul>
+                        <ul class="dropdown__list--column">
+                            <li class="dropdown__list--item"><a href="#">News</a></li>
+                            <li class="dropdown__list--item"><a href="#">BowlTV</a></li>
+                            <li class="dropdown__list--item"><a href="#">Awards</a></li>
+                            <li class="dropdown__list--item"><a href="#">USBC Magazine Archive</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-cta">
+                        <img src="img/meganav-cta.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-secondary">
                 <div class="secondary-links login-container">
                     <a class="nav-icon login-toggle" href="#">Login</a>
                     <div class="login-wrapper">
@@ -60,28 +89,21 @@
                     <!-- <a class="nav-icon search" href="#">Search</a> -->
                     <input name="ctl00$ctl00$cphMainZone$cphMainContent$txtKeywords" type="text" value="" id="txtKeywords" class="search__input" placeholder="">
                     <input type="submit" name="ctl00$ctl00$cphMainZone$cphMainContent$btnSearch" value="Search" id="ctl00_ctl00_cphMainZone_cphMainContent_btnSearch" class="nav-icon search search__button">
-                    <!-- <div id="sb-search" class="sb-search">
-                        <form>
-                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
-                            <input class="sb-search-submit" type="submit" value="">
-                            <span class="sb-icon-search"></span>
-                        </form>
-                    </div> -->
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container-fluid" style="overflow:hidden;display:block">
-        <div class="container banner">
+    <div class="container-fluid banner" style="overflow:hidden;display:block">
+        <div class="container">
             <div class="stripe"></div><div class="stripe"></div>
             <img src="img/temp-940.jpg" alt="" class="banner-large">
             <img src="img/temp-422.jpg" alt="" class="banner-small">
         </div>
     </div>
 
-    <div class="container-fluid" style="overflow:hidden;display:block">
-        <div class="container slider">
+    <div class="container-fluid slider" style="overflow:hidden;display:block">
+        <div class="container">
             <div class="stripe"></div><div class="stripe"></div>
             <div class="stripe--right"></div><div class="stripe--right"></div><div class="stripe--right"></div>
             <div class="slider-image__container">
@@ -90,42 +112,42 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="overflow:hidden;display:block">
-        <div class="container main-content">
+    <div class="container-fluid main-content" style="overflow:hidden;display:block">
+        <div class="container">
             <div class="stripe"></div><div class="stripe"></div>
-            <div class="quick-links">
+            <div class="container quick-links">
                 <div class="row">
-                    <div class="col-lg-2 col-sm-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                         <a class="quick-link" href="#">
                             <img class="quick-link__image" src="img/quick-link-1.png" alt="">
                             <h3 class="quick-link__title">Current Event Coverage</h4>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-sm-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                         <a class="quick-link" href="#">
                             <img class="quick-link__image" src="img/quick-link-2.png" alt="">
                             <h3 class="quick-link__title">Find a Member</h4>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-sm-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                         <a class="quick-link" href="#">
                             <img class="quick-link__image" src="img/quick-link-3.png" alt="">
                             <h3 class="quick-link__title">Leagues Standing Sheets</h4>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-sm-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                         <a class="quick-link" href="#">
                             <img class="quick-link__image" src="img/quick-link-4.png" alt="">
                             <h3 class="quick-link__title">Open Championships</h4>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-sm-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                         <a class="quick-link" href="#">
                             <img class="quick-link__image" src="img/quick-link-5.png" alt="">
                             <h3 class="quick-link__title">Women's Championships</h4>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-sm-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                         <a class="quick-link" href="#">
                             <img class="quick-link__image" src="img/quick-link-6.png" alt="">
                             <h3 class="quick-link__title">Join USBC</h4>

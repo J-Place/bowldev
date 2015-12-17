@@ -1,14 +1,24 @@
-.banner {
+.banner .container {
     height: 129px;
     position: relative;
     // overflow: hidden;
+    @include breakpoint(medium) {
+
+    }
+    @include breakpoint(xsmall) {
+        height: 70px;
+    }
 }
 
 .banner img {
     position: absolute;
+    // width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include breakpoint(medium) {
+        width: 100%;
+    }
 }
 
 .banner-large {
@@ -29,10 +39,16 @@
     left: -800px;
     background-color: gray;
     opacity: 0.125;
+    @include breakpoint(medium) {
+        display: none;
+    }
 }
 
 .banner .stripe + .stripe {
     left: -740px;
     background-color: gray;
     opacity: 0.125;
+    @include breakpoint(medium) {
+        display: none;
+    }
 }

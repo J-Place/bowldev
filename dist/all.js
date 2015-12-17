@@ -7,14 +7,9 @@ $(document).ready(function(){
         $(".login-wrapper").addClass("open");
         $(".login__input--email").focus();
     });
-    $('.login-wrapper').on('blur', function(){
-        $(this).removeClass("open");
-        $(".login-toggle").removeClass("open");
-        // $(".login-wrapper").removeClass("open");
-    });
 
 
-    // Topggle Search Input
+    // Topggle Search
     $(".search__button").click(function(){
         $(".search-container").addClass("open");
         $(".search__button").addClass("open");
@@ -22,12 +17,25 @@ $(document).ready(function(){
         $("input.search__input").focus();
     });
 
+    // Toggle Megamenu
+    $("#bowlers").click(function(){
+        // $("nav-dropdown").addClass("open");
+        $(".bowlers").addClass("open");
+    });
+
 
     // Close Login and Search on Click Outside
     $(document).mouseup(function(e)
     {
+        var dropdown = $(".nav-dropdown");
         var login = $(".login-wrapper");
         var search = $(".search-container");
+
+        if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
+        {
+            $(".dropdown-wrapper").removeClass("open");
+            // $(".login-toggle").removeClass("open");
+        }
         if(e.target.id != login.attr('id') && !login.has(e.target).length)
         {
             $(".login-wrapper").removeClass("open");
@@ -35,7 +43,7 @@ $(document).ready(function(){
         }
         if(e.target.id != search.attr('id') && !search.has(e.target).length)
         {
-            $(this).val("");
+            $(".search__input").val("");
             $(".search-container").removeClass("open");
             $(".search__button").removeClass("open");
             $(".search__input").css("display", "none");
@@ -43,9 +51,35 @@ $(document).ready(function(){
     });
 
 
+    // Toggle Mobile Nav
+    $(".nav-small-icon").click(function(){
+        if ($(this).hasClass("open")) {
+            $(this).removeClass("open");
+            $(".nav-main").removeClass("open");
+        }
+        else {
+            $(this).addClass("open");
+            $(".nav-main").addClass("open");
+        }
+    });
+
+    // Nav Dropown
+    // var source = $('.nav__list--item a');
+    // var target = $('.dropdown-wrapper');
+    // $(source).click(function(){
+    //     var sourceID = $(this).attr('data-id');
+    //     var targetID = $(this).attr('data-target');
+    //     // alert($(this).attr('id'));
+    //     alert(targetID);
+    //     // if
+    // });
+
+
     // Marketing Promo Sliding Cover
     $(".marketing-promo").hover(function(){
         $(".marketing-promo__detail").toggleClass("open");
     });
+
+
 
 });

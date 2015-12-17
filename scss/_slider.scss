@@ -1,6 +1,11 @@
-.slider {
+.slider .container {
     height: 400px;
     position: relative;
+    @include breakpoint(medium) {
+        height: 283px;
+        padding: 0;
+        overflow: hidden;
+    }
 }
 
 .slider-image__container {
@@ -16,18 +21,29 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    @include breakpoint(medium) {
+        width: 100%;
+        top: 0;
+        transform: translate(-50%, 0);
+    }
 }
 
 .slider .stripe {
     left: -888px;
     background-color: $blue;
     opacity: 1.0;
+    @include breakpoint(medium) {
+        margin-left: -50%;
+    }
 }
 
 .slider .stripe + .stripe {
     left: -828px;
     background-color: $blue;
     opacity: 0.5;
+    @include breakpoint(medium) {
+        margin-left: -50%;
+    }
 }
 
 .slider .stripe--right {
@@ -35,6 +51,9 @@
     width: 180px;
     background-color: $blue;
     opacity: 1.0;
+    @include breakpoint(medium) {
+        margin-right: -50%;
+    }
 }
 
 .slider .stripe--right + .stripe--right {
@@ -42,6 +61,9 @@
     width: 240px;
     background-color: $blue;
     opacity: 0.5;
+    @include breakpoint(medium) {
+        margin-right: -50%;
+    }
 }
 
 .slider .stripe--right + .stripe--right + .stripe--right {
@@ -49,5 +71,8 @@
     width: 640px;
     background-color: #FFF;
     opacity: 1.0;
+    @include breakpoint(medium) {
+        margin-right: -50%;
+    }
 }
 
