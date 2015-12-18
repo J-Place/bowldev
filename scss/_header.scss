@@ -5,7 +5,6 @@
     border-bottom: 1px solid #d5d7d5;
     overflow: visible;
     transition: height 0.3s;
-    overflow: hidden;
     @include breakpoint(nav) {
         height: 45px;
     }

@@ -42,7 +42,7 @@
 }
 
 .dropdown-wrapper.open {
-    background-color: red;
+    background-color: #FFF;
     left: 0;
     // transition: left .25s;
 }
@@ -54,9 +54,11 @@
 }
 
 .dropdown-wrapper.bowlers.open {
-    background-color: $gray-dk;
     display: block;
-    left: 0;
+    @include breakpoint(medium) {
+        background-color: $gray-dk;
+        left: 0;
+    }
 }
 
 .dropdown-wrapper.bowlers.left {
@@ -68,16 +70,20 @@
 
 .dropdown-wrapper.youth {
     display: none;
-    position: absolute;
-    left: 100%;
-    transition: left .25s;
+    @include breakpoint(medium) {
+        position: absolute;
+        left: 100%;
+        transition: left .25s;
+    }
 }
 
 .dropdown-wrapper.youth.open {
-    background-color: $gray-dk;
     display: block;
-    position: absolute;
-    left: 0;
+    @include breakpoint(medium) {
+        background-color: $gray-dk;
+        position: absolute;
+        left: 0;
+    }
 }
 
 .dropdown-wrapper.youth.left {
@@ -112,19 +118,23 @@
     margin: 0;
     padding: 0;
     display: inline-block;
-    width: 60%;
+    width: 70%;
     @include breakpoint(medium) {
         width: 100%;
     }
 }
 
 .dropdown__list--title {
-    text-align: center;
-    font-size: 1.35em;
-    letter-spacing: 1.25px;
-    margin: -10px 0 0;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #555;
+    display: none;
+    @include breakpoint(medium) {
+        display: block;
+        text-align: center;
+        font-size: 1.35em;
+        letter-spacing: 1.25px;
+        margin: -10px 0 0;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #555;
+    }
 }
 
 .nav-level-3 .dropdown__list--title {
@@ -133,16 +143,18 @@
 }
 
 .dropdown__list--title:before {
-    padding: 10px 0;
-    display: block;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    content: url("../img/arrow-lt.png");
-    width: 30px;
-    height: 40px;
-    background-color: transparent;
-    overflow: hidden;
+    @include breakpoint(medium) {
+        padding: 10px 0;
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        content: url("../img/arrow-lt.png");
+        width: 30px;
+        height: 40px;
+        background-color: transparent;
+        overflow: hidden;
+    }
 }
 
 .dropdown__list--title a {
@@ -157,7 +169,7 @@
     display: inline-block;
     vertical-align: top;
     width: auto;
-    margin: 0 8em 0 0;
+    margin: 0 5em 0 0;
     padding: 0;
     @include breakpoint(medium) {
         display: block;
@@ -197,16 +209,18 @@
 }
 
 .dropdown__list--item a.has-children:after {
-    padding: 10px 0;
-    display: block;
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    content: url("../img/arrow-rt.png");
-    width: 30px;
-    height: 40px;
-    background-color: transparent;
-    overflow: hidden;
+    @include breakpoint(medium) {
+        padding: 10px 0;
+        display: block;
+        position: absolute;
+        top: -8px;
+        right: -10px;
+        content: url("../img/arrow-rt.png");
+        width: 30px;
+        height: 40px;
+        background-color: transparent;
+        overflow: hidden;
+    }
 }
 
 .dropdown-cta {

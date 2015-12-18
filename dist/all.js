@@ -19,27 +19,42 @@ $(document).ready(function(){
 
     // Toggle Mobile Nav
     $(".nav-small-icon").click(function(){
+        // if ($(".dropdown-wrapper").hasClass("open")) {
+
+        // }
         if ($(this).hasClass("open")) {
             $(this).removeClass("open");
             $(".nav-main").removeClass("open");
+            $(".nav-main").removeClass("left");
+            $(".nav-dropdown").removeClass("open");
+            $(".dropdown-wrapper").removeClass("open");
+            $(".dropdown-wrapper").removeClass("left");
         }
         else {
             $(this).addClass("open");
             $(".nav-main").addClass("open");
+            // $(".nav-dropdown").addClass("open");
         }
     });
 
     // Slide Mobile Nav Panels
     var panelWidth = $(window).width()-30;
 
-    $(".dropdown-wrapper.bowlers").width(panelWidth);
-    $(".dropdown-wrapper.youth").width(panelWidth);
-    $(".dropdown-wrapper.youth-tournaments").width(panelWidth);
-
+    if (panelWidth >= 780) {
+        // $(".dropdown-wrapper.bowlers").width(panelWidth);
+        // $(".dropdown-wrapper.youth").width(panelWidth);
+        // $(".dropdown-wrapper.youth-tournaments").width(panelWidth);
+    }
     $("#bowlers").click(function(){
-        $(".nav-main").addClass("left");
-        $(".nav-dropdown").addClass("open");
-        $(".bowlers").addClass("open");
+        if (panelWidth >= 780) {
+            // $(".nav-dropdown").addClass("open");
+            $(".bowlers").addClass("open");
+        }
+        if (panelWidth < 780) {
+            $(".nav-main").addClass("left");
+            $(".nav-dropdown").addClass("open");
+            $(".bowlers").addClass("open");
+        }
     });
 
     $(".exit--bowlers").click(function() {
@@ -68,7 +83,7 @@ $(document).ready(function(){
     });
 
     $(".exit--youth-tournaments").click(function() {
-        // $(".nav-dropdown").removeClass("open");
+        $(".nav-dropdown").removeClass("left").removeClass("open");
         $(".youth").removeClass("left").addClass("open");
         $(".youth-tournaments").removeClass("open");
         $(".nav-main").removeClass("left").addClass("open");
@@ -81,6 +96,7 @@ $(document).ready(function(){
         var dropdown = $(".nav-dropdown");
         var login = $(".login-wrapper");
         var search = $(".search-container");
+        var hamburger = $(".nav-samll-icon");
 
         if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
         {
@@ -90,6 +106,16 @@ $(document).ready(function(){
         {
             $(".login-wrapper").removeClass("open");
             $(".login-toggle").removeClass("open");
+        }
+        if(e.target.id != hamburger.attr('id') && hamburger.has(e.target).length)
+        {
+            // $(".dropdown-wrapper").removeClass("open");
+            // $(".search__input").val("");
+            // $(".search-container").removeClass("open");
+            // $(".search__button").removeClass("open");
+            // $(".search__input").css("display", "none");
+            // $(".login-wrapper").removeClass("open");
+            // $(".login-toggle").removeClass("open");
         }
         if(e.target.id != search.attr('id') && !search.has(e.target).length)
         {
