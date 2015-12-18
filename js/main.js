@@ -71,7 +71,7 @@ $(document).ready(function(){
         // $(".nav-dropdown").removeClass("open");
         $(".youth").removeClass("left").addClass("open");
         $(".youth-tournaments").removeClass("open");
-        // $(".nav-main").removeClass("left").addClass("open");
+        $(".nav-main").removeClass("left").addClass("open");
     });
 
 
@@ -97,6 +97,8 @@ $(document).ready(function(){
             $(".search-container").removeClass("open");
             $(".search__button").removeClass("open");
             $(".search__input").css("display", "none");
+            $(".login-wrapper").removeClass("open");
+            $(".login-toggle").removeClass("open");
         }
     });
 

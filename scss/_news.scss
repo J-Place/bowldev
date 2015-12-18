@@ -4,7 +4,16 @@
 
 .news .wrapper {
     position: relative;
-    padding: 5em 12em;
+    padding: 5em 8em;
+    @include breakpoint(large) {
+        padding: 5em 8em;
+    }
+    @include breakpoint(medium) {
+        padding: 2em 4em;
+    }
+    @include breakpoint(medium) {
+        padding: 1em 30px;
+    }
 }
 
 .article .wrapper {
