@@ -31,7 +31,6 @@ $(document).ready(function(){
 
     // Slide Mobile Nav Panels
     var panelWidth = $(window).width()-30;
-    // alert(panelWidth);
 
     $(".dropdown-wrapper.bowlers").width(panelWidth);
     $(".dropdown-wrapper.youth").width(panelWidth);
@@ -75,9 +74,6 @@ $(document).ready(function(){
         // $(".nav-main").removeClass("left").addClass("open");
     });
 
-    // Toggle Mobile Nav Panels
-    // $("#bowlers")
-
 
     // Close Login and Search on Click Outside
     $(document).mouseup(function(e)
@@ -89,7 +85,6 @@ $(document).ready(function(){
         if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
         {
             $(".dropdown-wrapper").removeClass("open");
-            // $(".login-toggle").removeClass("open");
         }
         if(e.target.id != login.attr('id') && !login.has(e.target).length)
         {
@@ -104,19 +99,6 @@ $(document).ready(function(){
             $(".search__input").css("display", "none");
         }
     });
-
-
-
-    // Nav Dropown
-    // var source = $('.nav__list--item a');
-    // var target = $('.dropdown-wrapper');
-    // $(source).click(function(){
-    //     var sourceID = $(this).attr('data-id');
-    //     var targetID = $(this).attr('data-target');
-    //     // alert($(this).attr('id'));
-    //     alert(targetID);
-    //     // if
-    // });
 
 
     // Marketing Promo Sliding Cover

@@ -11,13 +11,21 @@
         background-color: $gray-dk;
         font-family: "Open Sans", sans-serif;
         text-transform: uppercase;
-        transition: left .25s;
+        transition: left .25s, height .5s;
     }
 }
 
 .nav-dropdown.open {
     @include breakpoint(medium) {
         left: 0;
+    }
+}
+
+.nav-dropdown.close {
+    @include breakpoint(medium) {
+        width: 100%;
+        height: 0;
+        // display: none;
     }
 }
 

@@ -96,7 +96,7 @@
     }
 }
 
-.nav__list--item a:after {
+.nav__list--item a.has-children:after {
     @include breakpoint(medium) {
         padding: 10px 0;
         display: block;
@@ -127,7 +127,7 @@
     }
 }
 
-.nav__list--item a:hover:after {
+.nav__list--item a.has-children:hover:after {
     content: '';
     display: block;
     background-color: $blue;
