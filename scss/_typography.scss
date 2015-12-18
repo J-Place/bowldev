@@ -24,3 +24,23 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.section__title {
+    color: $gray-dk;
+    font-size: 3.3em;
+    line-height: 1.75em;
+    padding: 0 0 1em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section__title:after {
+    content: '';
+    display: block;
+    background-color: $gray-dk;
+    width: 65px;
+    height: 5px;
+    margin: 0 auto;
+    // padding-bottom: 0;
+    @extend .skew;
+}

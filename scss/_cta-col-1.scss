@@ -1,10 +1,10 @@
-.cta-1col {
+.cta-col-1 {
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-.cta-1col .wrapper {
+.cta-col-1 .wrapper {
     margin: 0;
     padding: 4em 6em;
     // position: relative;
@@ -46,6 +46,9 @@
     font-size: 1.2em;
     // margin-bottom: 1.5em;
     padding: 0 10em 1em;
+    @include breakpoint(medium) {
+        padding: 0 2em 1em;
+    }
 }
 
 .cta__background {
@@ -54,6 +57,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    top: 0;
     z-index: -1;
     background-color: $orange;
 }
@@ -62,4 +66,11 @@
     width: 100%;
     height: auto;
     opacity: 0.2;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    @include breakpoint(small) {
+        width: auto;
+        height: 110%;
+    }
 }

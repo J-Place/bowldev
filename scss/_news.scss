@@ -1,51 +1,25 @@
-// .marketing-promo {
-//     overflow: hidden;
-//     position: relative;
-// }
+.news {
+    overflow: hidden;
+}
 
-// .marketing-promo__caption {
-//     @extend .oswald;
-//     font-size: 1.3em;
-//     line-height: 1.4em;
-//     color: #FFF;
-//     text-transform: none;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     min-height: 20px;
-//     // width: auto;
-//     // margin: 0 15px;
-//     padding: 1em;
-//     background-color: rgba(0,0,0,0.6);
-// }
+.news .wrapper {
+    position: relative;
+    padding: 5em 12em;
+}
 
-// .marketing-promo__image {
-//     // width: 100%;
-//     // position: relative;
-// }
+.article .wrapper {
+    width: 460px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
 
-// .top-news {
-//     padding: 0;
-//     height: 300px;
-//     background-color: $gray-lt;
-// }
-
-// .top-news__title {
-//     color: $gray-dk;
-//     text-align: center;
-// }
-
-// .top-news__image {
-//     // width: 100%;
-//     // margin: 0 -15px;
-// }
-
-// .news .news-ad {
-//     display: block;
-// }
-
-// .news-sponsor__image {
-//     display: block;
-//     // width: 100%;
-// }
+.article__title {
+    @extend .opensans;
+    color: $gray-dk;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: none;
+    padding: 0 0 20px;
+}
