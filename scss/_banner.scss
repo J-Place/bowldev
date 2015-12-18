@@ -1,12 +1,18 @@
+.banner {
+    overflow: hidden;
+}
+
 .banner .container {
     height: 129px;
     position: relative;
-    // overflow: hidden;
     @include breakpoint(medium) {
-
+        margin-top: 45px;
+    }
+    @include breakpoint(small) {
+        min-height: 100px;
     }
     @include breakpoint(xsmall) {
-        height: 70px;
+        min-height: 65px;
     }
 }
 
@@ -21,19 +27,29 @@
     }
 }
 
-.banner-large {
-    display: block;
-    @include breakpoint(nav) {
-        display: none;
-    }
-}
+// img.banner-small {
+//     @include breakpoint(small) {
+//         display: block;
+//     }
+//     @include breakpoint(medium) {
+//         display: none;
+//     }
+//     @include breakpoint(large) {
+//         display: none;
+//     }
+// }
 
-.banner-small {
-    display: none;
-    @include breakpoint(nav) {
-        display: block;
-    }
-}
+// .banner-medium {
+//     @include breakpoint(small) {
+//         display: none;
+//     }
+//     @include breakpoint(medium) {
+//         display: block;
+//     }
+//     @include breakpoint(large) {
+//         display: none;
+//     }
+// }
 
 .banner .stripe {
     left: -800px;

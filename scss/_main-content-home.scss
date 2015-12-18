@@ -1,3 +1,7 @@
+.main-content {
+    overflow: hidden;
+}
+
 .main-content .container {
     position: relative;
     @include breakpoint(small) {
@@ -7,6 +11,14 @@
 
 .news .row {
     padding: 0 45px;
+    margin-left: 7px;
+    margin-right: 0;
+    @include breakpoint(medium) {
+        margin-left: 0;
+    }
+    @include breakpoint(small) {
+        margin-left: 0;
+    }
 }
 
 
@@ -20,6 +32,7 @@
     margin: 0 auto;
     padding: 0;
     height: 250px;
+    max-width: 330px;
 }
 
 .marketing-promo:hover {
@@ -62,6 +75,9 @@
     transition: right 0.25s;
     z-index: 9999;
     padding: 15px;
+    @include breakpoint(medium) {
+        right: -200%;
+    }
 }
 
 .marketing-promo__detail p {
@@ -90,11 +106,15 @@
 }
 
 .top-news {
-    // padding: 0 15px;
     position: absolute;
+    left: 22px;
+    max-width: 330px;
     background-color: $gray-lt;
-    // min-height: 300px;
-    // height: 250px;
+
+    @include breakpoint(large) {
+        right: 0;
+        left: 15px;
+    }
 }
 
 .top-news__title {

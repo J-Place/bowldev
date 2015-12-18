@@ -9,6 +9,12 @@
     border: 1px solid transparent;
     border-radius: 15px;
     transition: width 0.125s;
+    @include breakpoint(medium) {
+        right: -25px;
+    }
+    @include breakpoint(small) {
+        right: -10px;
+    }
 }
 
 .secondary-links.search-container.open {

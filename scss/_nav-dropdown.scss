@@ -1,29 +1,147 @@
 .nav-dropdown {
-    position: relative;
-    top: -1px;
+    @include breakpoint(medium) {
+        position: relative;
+        top: -1px;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        top: 45px;
+        z-index: 99;
+        background-color: $gray-dk;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        transition: left .25s;
+    }
+}
+
+.nav-dropdown.open {
+    @include breakpoint(medium) {
+        left: 0;
+    }
 }
 
 .dropdown-wrapper {
     background-color: #FFF;
     width: 100%;
+    height: 100%;
     padding: 25px 30px;
     min-height: 260px;
-    height: auto;
     display: none;
+    @include breakpoint(medium) {
+        padding: 25px 15px;
+    }
+}
+
+.dropdown-wrapper.open {
+    background-color: red;
+    left: 0;
+    // transition: left .25s;
+}
+
+.dropdown-wrapper.bowlers {
+    display: none;
+    left: 100%;
+    transition: left .25s;
 }
 
 .dropdown-wrapper.bowlers.open {
+    background-color: $gray-dk;
     display: block;
+    left: 0;
 }
+
+.dropdown-wrapper.bowlers.left {
+    display: block;
+    left: -100%;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-wrapper.youth {
+    display: none;
+    position: absolute;
+    left: 100%;
+    transition: left .25s;
+}
+
+.dropdown-wrapper.youth.open {
+    background-color: $gray-dk;
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.dropdown-wrapper.youth.left {
+    display: block;
+    position: absolute;
+    left: -100%;
+    margin: 0;
+    padding: 0;
+    background-color: $gray-dk;
+}
+
+.dropdown-wrapper.youth-tournaments {
+    display: none;
+    position: absolute;
+    left: 200%;
+    transition: left .25s;
+}
+
+.dropdown-wrapper.youth-tournaments.open {
+    background-color: $gray-dk;
+    display: block;
+    position: absolute;
+    padding-top: 0;
+    top: -25px;
+    left: 100%;
+    transition: left .25s;
+}
+
 
 .dropdown__links {
     position: absolute;
     margin: 0;
     padding: 0;
     display: inline-block;
-    @include breakpoint(small) {
-        width: 60%;
+    width: 60%;
+    @include breakpoint(medium) {
+        width: 100%;
     }
+}
+
+.dropdown__list--title {
+    text-align: center;
+    font-size: 1.35em;
+    letter-spacing: 1.25px;
+    margin: -10px 0 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #555;
+}
+
+.nav-level-3 .dropdown__list--title {
+    // padding-bottom: 0;
+    margin-top: 13px;
+}
+
+.dropdown__list--title:before {
+    padding: 10px 0;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    content: url("../img/arrow-lt.png");
+    width: 30px;
+    height: 40px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.dropdown__list--title a {
+    color: $gray-md;
+    padding: 0;
+    display: block;
+    width: 100%;
 }
 
 .dropdown__list--column {
@@ -34,7 +152,8 @@
     margin: 0 8em 0 0;
     padding: 0;
     @include breakpoint(medium) {
-        margin-right: 4em;
+        display: block;
+        margin-right: 15px;
     }
 }
 
@@ -46,14 +165,40 @@
     list-style-type: none;
     margin: 0 0 0.6em;
     padding: 0;
+    @include breakpoint(medium) {
+        margin: 10px 15px 10px 0;
+        border-bottom: 1px solid #555;
+    }
 }
 
-.dropdown__list--item a {
-    font-size: 1.0em;
+.dropdown__list--item > a {
+    font-size: 1.1em;
+    letter-spacing: 0.8px;
     font-weight: 400;
     color: $gray-dk;
     margin: 0;
     padding: 0;
+    @include breakpoint(medium) {
+        font-weight: 300;
+        color: #FFF;
+        padding: 5px 0 15px;
+        display: block;
+        position: relative;
+        margin: 0;
+    }
+}
+
+.dropdown__list--item a.has-children:after {
+    padding: 10px 0;
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    content: url("../img/arrow-rt.png");
+    width: 30px;
+    height: 40px;
+    background-color: transparent;
+    overflow: hidden;
 }
 
 .dropdown-cta {
@@ -69,5 +214,8 @@
         color: $gray-md;
         margin: 1em auto;
         padding: 0;
+    }
+    @include breakpoint(medium) {
+        display: none;
     }
 }

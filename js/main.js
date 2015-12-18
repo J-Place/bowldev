@@ -17,11 +17,66 @@ $(document).ready(function(){
         $("input.search__input").focus();
     });
 
-    // Toggle Megamenu
+    // Toggle Mobile Nav
+    $(".nav-small-icon").click(function(){
+        if ($(this).hasClass("open")) {
+            $(this).removeClass("open");
+            $(".nav-main").removeClass("open");
+        }
+        else {
+            $(this).addClass("open");
+            $(".nav-main").addClass("open");
+        }
+    });
+
+    // Slide Mobile Nav Panels
+    var panelWidth = $(window).width()-30;
+    // alert(panelWidth);
+
+    $(".dropdown-wrapper.bowlers").width(panelWidth);
+    $(".dropdown-wrapper.youth").width(panelWidth);
+    $(".dropdown-wrapper.youth-tournaments").width(panelWidth);
+
     $("#bowlers").click(function(){
-        // $("nav-dropdown").addClass("open");
+        $(".nav-main").addClass("left");
+        $(".nav-dropdown").addClass("open");
         $(".bowlers").addClass("open");
     });
+
+    $(".exit--bowlers").click(function() {
+        $(".nav-dropdown").removeClass("open");
+        $(".bowlers").removeClass("open");
+        $(".nav-main").removeClass("left").addClass("open");
+    });
+
+    $("#youth").click(function(){
+        $(".nav-main").addClass("left");
+        $(".nav-dropdown").addClass("open");
+        $(".youth").addClass("open");
+    });
+
+    $(".exit--youth").click(function() {
+        $(".nav-dropdown").removeClass("open");
+        $(".youth").removeClass("open");
+        $(".nav-main").removeClass("left").addClass("open");
+    });
+
+    $("#youth-tournaments").click(function(){
+        // $(".nav-main").addClass("left");
+        // $(".nav-dropdown").addClass("open");
+        $(".youth").removeClass("open").addClass("left");
+        $(".youth-tournaments").addClass("open");
+    });
+
+    $(".exit--youth-tournaments").click(function() {
+        // $(".nav-dropdown").removeClass("open");
+        $(".youth").removeClass("left").addClass("open");
+        $(".youth-tournaments").removeClass("open");
+        // $(".nav-main").removeClass("left").addClass("open");
+    });
+
+    // Toggle Mobile Nav Panels
+    // $("#bowlers")
 
 
     // Close Login and Search on Click Outside
@@ -51,17 +106,6 @@ $(document).ready(function(){
     });
 
 
-    // Toggle Mobile Nav
-    $(".nav-small-icon").click(function(){
-        if ($(this).hasClass("open")) {
-            $(this).removeClass("open");
-            $(".nav-main").removeClass("open");
-        }
-        else {
-            $(this).addClass("open");
-            $(".nav-main").addClass("open");
-        }
-    });
 
     // Nav Dropown
     // var source = $('.nav__list--item a');

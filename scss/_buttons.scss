@@ -1,0 +1,21 @@
+
+.button {
+    display: inline-block;
+    padding: 11px 33px;
+    margin: 0;
+    background-color: #FFF;
+    @extend .oswald;
+    color: $gray-dk;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+}
+
+.button:hover, button:active, button:focus, button:visited {
+    text-decoration: none;
+}
+
+.button--cta {
+    @extend .button;
+}

@@ -6,7 +6,7 @@
     top: 52px;
     @extend .oswald;
     text-transform: uppercase;
-    transform: height 2.5s;
+    transition: height 2.5s;
 
     @include breakpoint(nav) {
         top: 12px;
@@ -20,18 +20,15 @@
         width: 100%;
         height: 10px;
         background-color: $gray-dk;
-    }
-    @include breakpoint(small) {
-        // @extend .opensans;
         font-family: "Open Sans", sans-serif;
     }
 }
 
 .nav-main.open {
-    // @include breakpoint(medium) {
-        display: block;
-        height: 100%;
-    // }
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
 }
 
 .nav__list {
@@ -39,10 +36,34 @@
     padding-left: 0;
     margin-left: -5px;
     height: 22px;
-    @include breakpoint(medium) {
+    transition: left 0.5s;
 
+    @include breakpoint(medium) {
+        width: 750px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include breakpoint(small) {
+        width: 100%;
     }
 }
+
+.nav-main.open .nav__list {
+    transition: left 0.5s;
+    left: 0;
+}
+
+.nav-main.open.left .nav__list {
+    @include breakpoint(medium) {
+        position: absolute;
+        left: -100%;
+    }
+}
+
+
+// .nav-main.left .nav__list {
+//     left: -100%
+// }
 
 .nav__list--item {
     display: inline-block;
@@ -51,8 +72,14 @@
     margin-left: 1.5em;
     @include breakpoint(medium) {
         display: block;
-        margin: 10px 30px;
+        margin: 10px 0px;
         border-bottom: 1px solid #555;
+    }
+    @include breakpoint(small) {
+        margin: 10px 15px;
+    }
+    @include breakpoint(xsmall) {
+        margin: 10px 15px;
     }
 }
 
@@ -62,7 +89,7 @@
     @include breakpoint(medium) {
         font-weight: 300;
         color: #FFF;
-        padding: 10px 0;
+        padding: 5px 0 15px;
         display: block;
         position: relative;
         margin: 0;
@@ -70,17 +97,21 @@
 }
 
 .nav__list--item a:after {
-    @include breakpoint(small) {
+    @include breakpoint(medium) {
         padding: 10px 0;
         display: block;
         position: absolute;
         top: -8px;
-        right: 0;
+        right: -10px;
         content: url("../img/arrow-rt.png");
         width: 30px;
         height: 40px;
         background-color: transparent;
         overflow: hidden;
+        // border: 1px solid red;
+    }
+    @include breakpoint(small) {
+        // right: -10px;
     }
 }
 
@@ -104,14 +135,15 @@
     height: 4px;
     margin: 17px auto 0;
     @extend .skew;
-        @include breakpoint(nav) {
-        display: none;
+
+    @include breakpoint(nav) {
+        // display: none;
     }
     @include breakpoint(medium) {
         @extend .skew-reset;
         position: absolute;
         top: -8px;
-        right: 0;
+        right: -10px;
         width: 30px;
         height: 40px;
         margin: 0;
@@ -132,7 +164,8 @@
 .nav-small-icon {
     font-size: 0.6em;
     padding-top: 27px;
-    text-align: center;
+    // text-align: center;
+    text-indent: -9999px;
     height: 30px;
     width: 30px;
     background-image: url('../img/bowl-sprites.svg');
@@ -141,7 +174,7 @@
     background-color: transparent;
     background-position: 1px -55px;
     position: absolute;
-    top: 6px;
+    top: 9px;
     display: none;
     @include breakpoint(medium) {
         display: block;

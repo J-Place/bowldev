@@ -29,16 +29,17 @@
             <a class="nav-small-icon" href="#">MENU</a>
             <nav class="nav-main">
                 <ul class="nav__list">
-                    <li class="nav__list--item" data-id="bowlers"><a href="#" id="bowlers">Bowlers</a></li>
-                    <li class="nav__list--item" data-id="youth"><a href="#" id="youth">Youth</a></li>
-                    <li class="nav__list--item"><a href="#">Tournaments</a></li>
-                    <li class="nav__list--item"><a href="#">Associations</a></li>
-                    <li class="nav__list--item"><a href="#">USBC</a></li>
-                    <li class="nav__list--item"><a href="#">Find a...</a></li>
+                    <li class="nav__list--item"><a href="#" id="bowlers" class="has-children">Bowlers</a></li>
+                    <li class="nav__list--item"><a href="#" id="youth" class="has-children">Youth</a></li>
+                    <li class="nav__list--item"><a href="#" id="tournaments" class="has-children">Tournaments</a></li>
+                    <li class="nav__list--item"><a href="#" id="associations" class="has-children">Associations</a></li>
+                    <li class="nav__list--item"><a href="#" id="usbc" class="has-children">USBC</a></li>
+                    <li class="nav__list--item"><a href="#" id="find" class="has-children">Find a...</a></li>
                 </ul>
             </nav>
             <div class="nav-dropdown">
-                <div class="dropdown-wrapper bowlers" data-target="bowlers">
+                <div class="dropdown-wrapper bowlers nav-level-2" id="dropdown-bowlers">
+                    <h3 class="dropdown__list--title"><a href="#" class="exit--bowlers">Bowlers</a></h3>
                     <div class="dropdown__links">
                         <ul class="dropdown__list--column">
                             <li class="dropdown__list--item"><a href="#">Join USBC</a></li>
@@ -48,7 +49,7 @@
                             <li class="dropdown__list--item"><a href="#">USBC Bowling Store</a></li>
                         </ul>
                         <ul class="dropdown__list--column">
-                            <li class="dropdown__list--item"><a href="#">League Standing SHeets</a></li>
+                            <li class="dropdown__list--item"><a href="#">League Standing Sheets</a></li>
                             <li class="dropdown__list--item"><a href="#">Sport Bowling</a></li>
                             <li class="dropdown__list--item"><a href="#">Team USA</a></li>
                             <!-- <li class="dropdown__list--item"><a href="#"></a></li> -->
@@ -58,6 +59,52 @@
                             <li class="dropdown__list--item"><a href="#">BowlTV</a></li>
                             <li class="dropdown__list--item"><a href="#">Awards</a></li>
                             <li class="dropdown__list--item"><a href="#">USBC Magazine Archive</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-cta">
+                        <img src="img/meganav-cta.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
+                    </div>
+                </div>
+
+                <div class="dropdown-wrapper youth nav-level-2" id="">
+                    <h3 class="dropdown__list--title">
+                        <a href="#" class="exit--youth">Youth</a>
+                    </h3>
+                    <div class="dropdown__links">
+                        <ul class="dropdown__list--column">
+                            <li class="dropdown__list--item"><a href="#">Youth Home</a></li>
+                            <li class="dropdown__list--item">
+                                <a href="#" id="youth-tournaments" class="has-children">Youth Tournaments</a>
+                                <div class="dropdown-wrapper youth-tournaments nav-level-3">
+                                    <h3 class="dropdown__list--title">
+                                        <a href="#" class="exit--youth-tournaments">Youth Tournaments</a>
+                                    </h3>
+                                    <div class="dropdown__links">
+                                        <ul class="dropdown__list--column">
+                                            <li class="dropdown__list--item"><a href="#">Junior Gold</a></li>
+                                            <li class="dropdown__list--item"><a href="#">USA Bowling</a></li>
+                                            <li class="dropdown__list--item"><a href="#">Youth Open Championships</a></li>
+                                            <li class="dropdown__list--item"><a href="#">Pepsi Championships</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown__list--item"><a href="#">Collegiate</a></li>
+                            <li class="dropdown__list--item"><a href="#">High School</a></li>
+                            <li class="dropdown__list--item"><a href="#">USA Bowling</a></li>
+                        </ul>
+                        <ul class="dropdown__list--column">
+                            <li class="dropdown__list--item"><a href="#">Scholarships</a></li>
+                            <li class="dropdown__list--item"><a href="#">Junior Team USA</a></li>
+                            <li class="dropdown__list--item"><a href="#">Bowling Combine</a></li>
+                            <li class="dropdown__list--item"><a href="#">YES Fund</a></li>
+                        </ul>
+                        <ul class="dropdown__list--column">
+                            <li class="dropdown__list--item"><a href="#">Bowlopolis</a></li>
+                            <li class="dropdown__list--item"><a href="#">Youth Processing</a></li>
+                            <li class="dropdown__list--item"><a href="#">Registered Volunteer Program</a></li>
+                            <li class="dropdown__list--item"><a href="#">SMART</a></li>
                         </ul>
                     </div>
                     <div class="dropdown-cta">
@@ -94,15 +141,16 @@
         </div>
     </header>
 
-    <div class="container-fluid banner" style="overflow:hidden;display:block">
+    <div class="container-fluid banner">
         <div class="container">
             <div class="stripe"></div><div class="stripe"></div>
-            <img src="img/temp-940.jpg" alt="" class="banner-large">
-            <img src="img/temp-422.jpg" alt="" class="banner-small">
+            <img src="img/temp-422.jpg" alt="" class="banner-small visible-sm visible-xs">
+            <img src="img/temp-728.jpg" alt="" class="banner-medium visible-md">
+            <img src="img/temp-940.jpg" alt="" class="banner-large visible-lg">
         </div>
     </div>
 
-    <div class="container-fluid slider" style="overflow:hidden;display:block">
+    <div class="container-fluid slider">
         <div class="container">
             <div class="stripe"></div><div class="stripe"></div>
             <div class="stripe--right"></div><div class="stripe--right"></div><div class="stripe--right"></div>
@@ -112,10 +160,10 @@
         </div>
     </div>
 
-    <div class="container-fluid main-content" style="overflow:hidden;display:block">
+    <div class="container-fluid main-content">
         <div class="container">
             <div class="stripe"></div><div class="stripe"></div>
-            <div class="container quick-links">
+            <div class="row quick-links">
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                         <a class="quick-link" href="#">
@@ -155,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container news">
+            <div class="row news">
                 <div class="row">
                     <div class="marketing-promo-wrapper col-sm-4">
                         <div class="marketing-promo container-fluid">
@@ -192,6 +240,17 @@
         <div class="row">
             <h3 class="featured-video__title">Featured Video</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/gYCbWY45Oek" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="container-fluid cta-1col">
+        <div class="row wrapper">
+            <h2 class="cta__header">Application deadline is Dec. 1 <span class="cta__header--sub">for youth scholarships</span></h2>
+            <p class="cta__text">Each year, USBC awards several scholarships to USBC Youth bowlers and recognizes adult youth leaders with national awards.</p>
+            <a class="cta__button button--cta" href="#">Learn More</a>
+            <div class="cta__background">
+                <img src="img/cta-bg-lanes.jpg" alt="">
+            </div>
         </div>
     </div>
 
