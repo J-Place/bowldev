@@ -3,16 +3,19 @@
     height: 95px;
     z-index: 999;
     border-bottom: 1px solid #d5d7d5;
-    overflow: visible;
+    // overflow-x: hidden;
     transition: height 0.3s;
     @include breakpoint(nav) {
         height: 45px;
     }
     @include breakpoint(medium) {
         padding: 0;
-        overflow: hidden;
+        // overflow: hidden;
         position: fixed;
-        width: 100%;
+        // top: 45px;
+        right: 0;
+        // bottom: 0;
+        left: 0;
         background-color: #FFF;
     }
 }

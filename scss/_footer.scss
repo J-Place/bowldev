@@ -1,3 +1,113 @@
 .footer {
-    background-color: $blue;
+    background-color: $blue-md;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.footer-col {}
+
+.footer-col--info {
+    @extend .footer-col;
+}
+
+.footer-col--links {
+    @extend .footer-col;
+}
+
+.footer-links {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-links__title {
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-links__list {
+    list-style-type: none;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.footer-links__list li {
+    margin: 0 auto 1em;
+}
+
+.footer-col__link {
+    color: #FFF;
+}
+
+.footer-col__link:hover {
+    color: $blue-lt;
+    text-decoration: none;
+}
+
+.footer-col__link:active, .footer-col__link:visited {
+    text-decoration: none;
+}
+
+.footer-col__link .text {
+    display: block;
+    margin: .5em 0 1.5em;
+    font-size: 0.95em;
+    line-height: 1.15em;
+    // width: 60%;
+}
+
+.download-icon {
+    margin: .5em 0;
+}
+
+.social-link--footer {
+    width: 40px;
+    height: 40px;
+    // border: 1px solid red;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+    background-image: url("../img/social-icons-footer.svg");
+    background-size: 136px;
+    background-repeat: no-repeat;
+}
+
+.footer .social-link--fb {
+    @extend .social-link--footer;
+    background-position: 0 0;
+}
+.footer .social-link--fb:hover {
+    background-position: 0 -50px;
+}
+
+.footer .social-link--tw {
+    @extend .social-link--footer;
+    background-position: -50px 0;
+}
+.footer .social-link--tw:hover {
+    background-position: -50px -50px;
+}
+
+.footer .social-link--yt {
+    @extend .social-link--footer;
+    background-position: -100px 0;
+}
+.footer .social-link--yt:hover {
+    background-position: -100px -50px;
+}
+
+.footer .corporate {
+    border-top: 1px solid #002364;
+    padding: 25px 0 10px;
+    font-size: 1.0em;
+    font-weight: 300;
+    text-align: center;
+    color: #FFF;
+    .corporate-address {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }

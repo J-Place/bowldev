@@ -1,3 +1,14 @@
 .row {
     margin-bottom: 4em;
 }
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container {
+    @media (min-width: 1200px) {
+        width: 940px;
+    }
+}

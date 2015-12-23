@@ -13,18 +13,36 @@
     }
 }
 
-.marketing-promo-wrapper {
-    // padding: 0 30px;
+.marketing-promo {
     margin-bottom: 2em;
+    height: 250px;
+    @include breakpoint(large) {
+        // max-width: 228px;
+        // height: 205px;
+    }
+    @include breakpoint(medium) {
+        max-width: 420px;
+        height: 375px;
+    }
 }
 
-.marketing-promo {
+.marketing-promo-wrapper {
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: 0 auto;
     padding: 0;
+    max-width: 300px;
     height: 250px;
-    max-width: 330px;
+    @include breakpoint(large) {
+        // max-width: 228px;
+        // height: 205px
+    }
+    @include breakpoint(medium) {
+        max-width: 420px;
+        height: 375px;
+    }
 }
 
 .marketing-promo:hover {
@@ -53,23 +71,33 @@
     width: 100%;
     height: auto;
     position: relative;
+    @include breakpoint(medium) {
+        width: auto;
+        height: 100%;
+    }
 }
 
 .marketing-promo__detail {
     @extend .skew;
     position: absolute;
     height: 300px;
-    width: 500px;
+    width: 800px;
     background-color: $blue;
     top: 0;
-    right: -170%;
-    // right: -30%;
-    transition: right 0.25s;
+    right: -900px;
+    transition: right 0.3s;
     z-index: 9999;
     padding: 15px;
-    @include breakpoint(medium) {
-        right: -200%;
+    @include breakpoint(large) {
+        // height: 205px
     }
+    @include breakpoint(medium) {
+        height: 375px;
+    }
+}
+
+.marketing-promo__detail.open {
+    right: -405px;
 }
 
 .marketing-promo__detail p {
@@ -88,26 +116,35 @@
     }
 }
 
-.marketing-promo__detail.open {
-    right: -30%;
+.top-news {
+    height: 250px;
+    margin-bottom: 2em;
+    @include breakpoint(large) {
+        // max-width: 228px;
+        // height: 205px
+    }
+    @include breakpoint(medium) {
+        max-width: 420px;
+        height: 375px;
+    }
 }
 
 .top-news-wrapper {
-    // padding: 0 30px;
-    height: 250px;
-    margin-bottom: 2em;
-}
-
-.top-news {
     position: absolute;
-    left: 22px;
-    max-width: 330px;
+    height: 250px;
+    left: 0;
+    right: 0;
     margin: 0 auto;
+    padding: 0;
     background-color: $gray-lt;
-
+    max-width: 300px;
     @include breakpoint(large) {
-        right: 0;
-        left: 15px;
+        max-width: 228px;
+        height: 205px
+    }
+    @include breakpoint(medium) {
+        max-width: 420px;
+        height: 375px;
     }
 }
 
@@ -134,13 +171,35 @@
     color: $gray-dk;
 }
 
-.news-ad {
-    display: block;
+.news-sponsor {
+    margin-bottom: 2em;
+    height: 250px;
+    @include breakpoint(medium) {
+        max-width: 228px;
+        height: 205px
+    }
+    @include breakpoint(small) {
+        max-width: 420px;
+        height: 375px;
+    }
 }
 
-.news-sponsor {
-    padding: 0 15px;
+.news-sponsor-wrapper {
+    position: absolute;
+    height: 250px;
+    left: 0;
+    right: 0;
     margin: 0 auto;
+    padding: 0;
+    max-width: 300px;
+    @include breakpoint(large) {
+        // max-width: 228px;
+        // height: 205px
+    }
+    @include breakpoint(medium) {
+        max-width: 420px;
+        height: 375px;
+    }
 }
 
 .news-sponsor__image {

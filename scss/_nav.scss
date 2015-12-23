@@ -25,10 +25,19 @@
 }
 
 .nav-main.open {
-    display: block;
-    position: fixed;
-    height: 100%;
-    width: 100%;
+    @include breakpoint(medium) {
+        display: block;
+        position: fixed;
+        height: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+
+.nav-main.open.left {
+    @include breakpoint(medium) {
+        left: -100%;
+    }
 }
 
 .nav__list {
@@ -127,6 +136,19 @@
     }
 }
 
+.nav__list--item a:hover:after {
+    content: '';
+    display: block;
+    background-color: $blue;
+    width: auto;
+    height: 4px;
+    margin: 17px auto 0;
+    @extend .skew;
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+
 .nav__list--item a.has-children:hover:after {
     content: '';
     display: block;
@@ -178,6 +200,7 @@
     display: none;
     @include breakpoint(medium) {
         display: block;
+        left: 15px;
     }
 }
 

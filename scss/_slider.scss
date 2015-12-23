@@ -1,39 +1,138 @@
 .slider {
     overflow: hidden;
-}
-
-.slider .container {
     height: 400px;
     position: relative;
-    @include breakpoint(medium) {
-        height: 283px;
-        padding: 0;
-        overflow: hidden;
-    }
 }
 
-.slider-image__container {
+.container-fluid--slider {
+    @extend .container-fluid;
     position: relative;
     height: 400px;
-    max-width: 1080px;
     overflow: hidden;
 }
 
-.slider img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    @include breakpoint(medium) {
-        width: 100%;
-        top: 0;
-        transform: translate(-50%, 0);
-    }
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
 }
 
-.slider .stripe {
-    left: -888px;
+.stripes--slider {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+}
+
+.slider--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 400px;
+
+}
+
+.slider--overlay .slick-list {
+    // background-color: $red;
+    height: 100px;
+    top: 270px;
+    width: 100%;
+    @extend .skew;
+}
+
+.slider--overlay .slick-track {
+    height: 100px;
+}
+
+.slider--overlay .slick-slide {
+    height: 100px;
+}
+
+// .slider--overlay .slide__link {
+//     background-color: $red;
+//     height: 100px;
+//     position: absolute;
+//     left: -150px;
+// }
+
+.slider--background {
+    height: 400px;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.slides {
+    z-index: 1;
+}
+
+.slide {
+    height: 400px;
+    width: auto;
+    color: #FFF;
+    @extend .no-skew;
+}
+
+.slide--content {
+    height: 50px;
+    width: 60%;
+    left: 0;
+    color: #FFF;
+}
+
+.slide--image {
+    height: 400px;
+    margin: 0 auto;
+    @extend .skew-reset;
+}
+
+.slide__image {
+    position: relative;
+    height: 400px;
+    width: auto;
+    margin: 0 auto;
+
+}
+
+.slide__link {
+    position: absolute;
+    left: 100px;
+    width: 500px;
+    background-color: $red;
+}
+
+// SlickJS Overrides
+.slick-arrow {
+    border: 0 none;
+    width: 35px;
+    height: 35px;
+    top: 175px;
+    text-indent: -9999px;
+    background-image: url("../img/bowl-sprites.svg");
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.slick-prev.slick-arrow {
+    position: absolute;
+    left: 13em;
+    background-position: -210px -127px;
+}
+
+.slick-next.slick-arrow {
+    position: absolute;
+    right: 13em;
+    background-position: -210px -87px;
+}
+
+.stripes--slider {
+    position: absolute;
+    z-index: 99;
+}
+
+.stripes--slider .stripe {
+    left: -740px;
     background-color: $blue;
     opacity: 1.0;
     @include breakpoint(medium) {
@@ -41,8 +140,8 @@
     }
 }
 
-.slider .stripe + .stripe {
-    left: -828px;
+.stripes--slider .stripe + .stripe {
+    left: -680px;
     background-color: $blue;
     opacity: 0.5;
     @include breakpoint(medium) {
@@ -50,8 +149,8 @@
     }
 }
 
-.slider .stripe--right {
-    right: -20px;
+.stripes--slider .stripe--right {
+    right: 45px;
     width: 180px;
     background-color: $blue;
     opacity: 1.0;
@@ -60,8 +159,8 @@
     }
 }
 
-.slider .stripe--right + .stripe--right {
-    right: -20px;
+.stripes--slider .stripe--right + .stripe--right {
+    right: 45px;
     width: 240px;
     background-color: $blue;
     opacity: 0.5;
@@ -70,7 +169,7 @@
     }
 }
 
-.slider .stripe--right + .stripe--right + .stripe--right {
+.stripes--slider .stripe--right + .stripe--right + .stripe--right {
     right: -660px;
     width: 640px;
     background-color: #FFF;
@@ -79,4 +178,3 @@
         margin-right: -50%;
     }
 }
-

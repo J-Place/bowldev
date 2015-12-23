@@ -26,6 +26,23 @@ a:hover {
      -o-transform: skew(-18.25deg);
 }
 
+.stripe {
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    @extend .skew;
+    z-index: 2;
+}
+
+.stripe--right {
+    position: absolute;
+    width: 175px;
+    height: 100%;
+    @extend .skew;
+    z-index: 2;
+}
+
+
 .no-skew {
     -webkit-transform: skew(18.25deg);
    -moz-transform: skew(18.25deg);
@@ -37,22 +54,6 @@ a:hover {
    -moz-transform: skew(0deg);
      -o-transform: skew(0deg);
 }
-
-.stripe {
-    position: absolute;
-    width: 1000px;
-    height: 100%;
-    @extend .skew;
-}
-
-.stripe--right {
-    position: absolute;
-    width: 175px;
-    height: 100%;
-    @extend .skew;
-}
-
-
 
 .clearfix:after {
      visibility: hidden;

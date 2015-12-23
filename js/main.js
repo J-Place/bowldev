@@ -37,20 +37,39 @@ $(document).ready(function(){
         }
     });
 
-    // Slide Mobile Nav Panels
-    var panelWidth = $(window).width()-30;
 
-    if (panelWidth >= 780) {
-        // $(".dropdown-wrapper.bowlers").width(panelWidth);
-        // $(".dropdown-wrapper.youth").width(panelWidth);
-        // $(".dropdown-wrapper.youth-tournaments").width(panelWidth);
-    }
+    // Set width of Mobile Nav panels
+    var panelWidth = $(window).width()-30;
+    var setPanel = function(){
+        if (panelWidth < 780) {
+            // alert("Test 1");
+            $(".dropdown-wrapper.bowlers").width(panelWidth);
+            $(".dropdown-wrapper.youth").width(panelWidth);
+            $(".dropdown-wrapper.youth-tournaments").width(panelWidth);
+            // alert("Test 2");
+        }
+        else if (panelWidth >= 780) {
+            // alert("Desktop");
+        }
+    };
+    setPanel();
+
+
+    // Top level nav event
+    // var linkID = $(this).getElementById();
+
+    // $(this).click( function(){
+    //     alert(linkID);
+    // });
+
+    // var topLink = $("")
     $("#bowlers").click(function(){
         if (panelWidth >= 780) {
             // $(".nav-dropdown").addClass("open");
             $(".bowlers").addClass("open");
         }
         if (panelWidth < 780) {
+            $(".nav-main").width(panelWidth);
             $(".nav-main").addClass("left");
             $(".nav-dropdown").addClass("open");
             $(".bowlers").addClass("open");
@@ -134,6 +153,46 @@ $(document).ready(function(){
         $(".marketing-promo__detail").toggleClass("open");
     });
 
+    //Slider
+    // $(".slides").slick({
+    //     autoPlay: true,
+    // });
+
+    $('.slider-for').slick({
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        speed: 5000,
+        autoplaySpeed: 15000,
+        asNavFor: '.slider-nav'
+    });
+
+    $(".slider-nav").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        arrows: true,
+        centerMode: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+            breakpoint: 1020,
+            settings: {
+                slidesToShow: 1
+                }
+            }
+          ]
+      });
+
+    // $(".royalSlider").royalSlider({
+    //     keyboardNavEnabled: true,
+    //     arrowsNavAutoHide: false
+    // });
 
 
 });

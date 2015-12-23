@@ -2,21 +2,18 @@
     overflow: hidden;
 }
 
-.news .wrapper {
-    position: relative;
-    padding: 5em 8em;
-    @include breakpoint(large) {
-        padding: 5em 8em;
-    }
-    @include breakpoint(medium) {
-        padding: 2em 4em;
-    }
-    @include breakpoint(medium) {
-        padding: 1em 30px;
-    }
-}
+// .news .row {
+//     position: relative;
+//     padding: 5em 8em;
+//     @include breakpoint(large) {
+//         padding: 5em 8em;
+//     }
+//     @include breakpoint(medium) {
+//         padding: 1em 0;
+//     }
+// }
 
-.article .wrapper {
+.article .row {
     width: 460px;
     margin: 0 auto;
     padding: 0;
@@ -31,4 +28,9 @@
     font-weight: 700;
     text-transform: none;
     padding: 0 0 20px;
+}
+
+.article__image {
+    width: 100%;
+    height: auto;
 }
