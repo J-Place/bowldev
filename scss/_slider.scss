@@ -17,27 +17,21 @@
     overflow: hidden;
 }
 
-.stripes--slider {
-    width: 100%;
-    height: 400px;
-    background-color: transparent;
-}
-
 .slider--overlay {
     position: absolute;
     top: 0;
+    right: 0;
     left: 0;
     z-index: 999;
-    width: 100%;
     height: 400px;
-
 }
 
 .slider--overlay .slick-list {
-    // background-color: $red;
     height: 100px;
     top: 270px;
-    width: 100%;
+    left: -30px;
+    width: 755px;
+    padding-right: 50px;
     @extend .skew;
 }
 
@@ -48,13 +42,6 @@
 .slider--overlay .slick-slide {
     height: 100px;
 }
-
-// .slider--overlay .slide__link {
-//     background-color: $red;
-//     height: 100px;
-//     position: absolute;
-//     left: -150px;
-// }
 
 .slider--background {
     height: 400px;
@@ -70,20 +57,21 @@
     height: 400px;
     width: auto;
     color: #FFF;
-    @extend .no-skew;
+    // @extend .no-skew;
 }
 
-.slide--content {
-    height: 50px;
-    width: 60%;
-    left: 0;
-    color: #FFF;
+.slide .wrapper {
+    background-color: $red;
+    width: 999px;
+    height: 100px;
+    right: 180px;
+    position: relative;
 }
 
 .slide--image {
     height: 400px;
     margin: 0 auto;
-    @extend .skew-reset;
+    // @extend .skew-reset;
 }
 
 .slide__image {
@@ -95,13 +83,133 @@
 }
 
 .slide__link {
+    // position: relative;
     position: absolute;
-    left: 100px;
-    width: 500px;
-    background-color: $red;
+    display: block;
+    left: 200px;
+    @extend .no-skew;
+    // width: 500px;
+    // width: 800px;
 }
 
+
+.slide__title {
+    // @extend .no-skew;
+    color: #FFF;
+    font-size: 1.9em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.slide__cta {
+    // @extend .no-skew;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.slide:focus,
+.slide:active,
+.slide:active:focus {
+    outline: none;
+}
+
+:focus,
+:active,
+:active:focus {
+    outline: none;
+}
+
+.stripes--slider {
+    position: absolute;
+    z-index: 99;
+    height: 400px;
+    left: 0;
+    right: 0;
+}
+
+.stripes--slider .stripe {
+    // left: -60px;
+    width: 347px;
+    background-color: $blue;
+    opacity: 1.0;
+    @include breakpoint(large) {
+        width: 445px;
+    }
+    @include breakpoint(medium) {
+        width: 350px;
+    }
+}
+
+.stripes--slider .stripe + .stripe {
+    // left: -60px;
+    width: 407px;
+    background-color: $blue;
+    opacity: 0.5;
+    @include breakpoint(large) {
+        width: 505px;
+    }
+    @include breakpoint(medium) {
+        width: 410px;
+    }
+}
+
+.stripes--slider .stripe--right {
+    right: -110px;
+    width: 180px;
+    background-color: $blue;
+    opacity: 1.0;
+    @include breakpoint(large) {
+        width: 240px;
+    }
+    @include breakpoint(medium) {
+        // right: -10px;
+        right: -160px;
+    }
+    @include breakpoint(small) {
+        right: -160px;
+    }
+}
+
+.stripes--slider .stripe--right + .stripe--right {
+    right: -110px;
+    width: 235px;
+    background-color: $blue;
+    opacity: 0.5;
+    @include breakpoint(large) {
+        width: 300px;
+    }
+    @include breakpoint(medium) {
+        // right: -10px;
+        right: -160px;
+    }
+    @include breakpoint(small) {
+        right: -160px;
+    }
+}
+
+.stripe--overlay {
+    position: absolute;
+    background-color: $red;
+    height: 100px;
+    width: 500px;
+    left: -300px;
+    bottom: 30px;
+    z-index: 9;
+}
+
+
+
 // SlickJS Overrides
+
+.slick-slide, .slick-slide:focus, .slick-slide:active {
+    outline: none !important;
+    border: 0 none;
+}
+
 .slick-arrow {
     border: 0 none;
     width: 35px;
@@ -112,69 +220,22 @@
     background-size: 450px;
     background-repeat: no-repeat;
     background-color: transparent;
+    position: absolute;
+    z-index: 9;
 }
 
 .slick-prev.slick-arrow {
-    position: absolute;
-    left: 13em;
+    left: 0;
     background-position: -210px -127px;
+    @include breakpoint(large) {
+        left: 15px;
+    }
 }
 
 .slick-next.slick-arrow {
-    position: absolute;
-    right: 13em;
+    right: 0;
     background-position: -210px -87px;
-}
-
-.stripes--slider {
-    position: absolute;
-    z-index: 99;
-}
-
-.stripes--slider .stripe {
-    left: -740px;
-    background-color: $blue;
-    opacity: 1.0;
-    @include breakpoint(medium) {
-        margin-left: -50%;
-    }
-}
-
-.stripes--slider .stripe + .stripe {
-    left: -680px;
-    background-color: $blue;
-    opacity: 0.5;
-    @include breakpoint(medium) {
-        margin-left: -50%;
-    }
-}
-
-.stripes--slider .stripe--right {
-    right: 45px;
-    width: 180px;
-    background-color: $blue;
-    opacity: 1.0;
-    @include breakpoint(medium) {
-        margin-right: -50%;
-    }
-}
-
-.stripes--slider .stripe--right + .stripe--right {
-    right: 45px;
-    width: 240px;
-    background-color: $blue;
-    opacity: 0.5;
-    @include breakpoint(medium) {
-        margin-right: -50%;
-    }
-}
-
-.stripes--slider .stripe--right + .stripe--right + .stripe--right {
-    right: -660px;
-    width: 640px;
-    background-color: #FFF;
-    opacity: 1.0;
-    @include breakpoint(medium) {
-        margin-right: -50%;
+    @include breakpoint(large) {
+        right: 15px;
     }
 }

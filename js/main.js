@@ -164,35 +164,25 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        fade: true,
-        speed: 5000,
+        // fade: true,
+        speed: 1200,
         autoplaySpeed: 15000,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
+        initialSlide: 0,
     });
 
     $(".slider-nav").slick({
         infinite: true,
+        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
+        initialSlide: 0,
         dots: false,
         arrows: true,
-        centerMode: true,
-        focusOnSelect: true,
-        responsive: [
-            {
-            breakpoint: 1020,
-            settings: {
-                slidesToShow: 1
-                }
-            }
-          ]
+        fade: true,
+        speed: 1200,
+        focusOnSelect: false,
       });
-
-    // $(".royalSlider").royalSlider({
-    //     keyboardNavEnabled: true,
-    //     arrowsNavAutoHide: false
-    // });
-
 
 });

@@ -27,32 +27,9 @@
     }
 }
 
-// img.banner-small {
-//     @include breakpoint(small) {
-//         display: block;
-//     }
-//     @include breakpoint(medium) {
-//         display: none;
-//     }
-//     @include breakpoint(large) {
-//         display: none;
-//     }
-// }
-
-// .banner-medium {
-//     @include breakpoint(small) {
-//         display: none;
-//     }
-//     @include breakpoint(medium) {
-//         display: block;
-//     }
-//     @include breakpoint(large) {
-//         display: none;
-//     }
-// }
-
 .banner .stripe {
-    left: -800px;
+    // left: -800px;
+    width: 436px;
     background-color: gray;
     opacity: 0.125;
     @include breakpoint(medium) {
@@ -61,7 +38,8 @@
 }
 
 .banner .stripe + .stripe {
-    left: -740px;
+    // left: -740px;
+    width: 495px;
     background-color: gray;
     opacity: 0.125;
     @include breakpoint(medium) {
