@@ -9,11 +9,13 @@
     border: 1px solid transparent;
     border-radius: 15px;
     transition: width 0.125s;
-    @include breakpoint(medium) {
-        right: -25px;
-    }
-    @include breakpoint(small) {
-        right: -10px;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        top: -10px;
+        // right: 0;
+        // width: 30px;
+        height: 40px;
+        border-radius: 20px;
     }
 }
 
@@ -23,7 +25,7 @@
     border: 1px solid $gray-md;
 }
 
-.nav-icon.search {
+.nav-icon--search {
     display: block;
     width: 30px;
     height: 30px;
@@ -31,10 +33,24 @@
     @extend .nav-icon;
     background-position: -185px -1px;
     right: 0;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        top: 5px;
+        right: 5px;
+        width: 35px;
+        height: 35px;
+        background-position: -237px -41px;
+        background-size: 430px;
+    }
 }
 
-.nav-icon.search:hover, .nav-icon.search.open {
+.nav-icon--search:hover, .nav-icon--search.open {
     background-position: -185px -31px;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin-top: 1px;
+        background-position: -237px -46px;
+    }
 }
 
 .search__input {
@@ -45,6 +61,13 @@
     width: 190px;
     height: 26px;
     margin: 1px 15px;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        width: 190px;
+        height: 30px;
+        margin: 4px 0 4px 15px;
+        padding: 0;
+    }
 }
 
 .search__button {

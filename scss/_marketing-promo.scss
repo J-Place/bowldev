@@ -1,0 +1,153 @@
+.marketing-promo {
+    // overflow: hidden;
+    position: relative;
+    // height: 250px;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     padding: 0;
+//     max-width: 300px;
+//     height: 250px;
+//     @include breakpoint(medium-max) {
+//         max-width: 420px;
+//         height: 375px;
+//     }
+}
+
+.marketing-promo:hover {
+    cursor: pointer;
+}
+
+.marketing-promo__summary {
+    text-transform: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: #FFF;
+    z-index: 9;
+    overflow: hidden;
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        height: 70px
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 55px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        height: 50px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        height: 90px;
+    }
+}
+
+.marketing-promo__summary p {
+    @extend .oswald;
+    font-weight: 400;
+    color: #FFF;
+    padding: 0;
+    letter-spacing: .5px;
+    overflow: hidden;
+
+    @include breakpoint(large-min) {
+        font-size: 1.2em;
+        line-height: 1.22em;
+        height: 40px;
+        margin: 13px 15px;
+    }
+    @include breakpoint(large-max) {
+        font-size: 1.2em;
+        line-height: 20px;
+        height: 40px;
+        margin: 15px;
+    }
+    @include breakpoint(medium-max) {
+        font-size: 1.07em;
+        line-height: 17px;
+        height: 35px;
+        margin: 10px;
+    }
+    @include breakpoint(small-max) {
+        font-size: 1.0em;
+        line-height: 14px;
+        height: 30px;
+        margin: 8px;
+    }
+    @include breakpoint(xsmall-max) {
+        font-size: 1.35em;
+        line-height: 24px;
+        height: 50px;
+        margin: 20px 25px;
+    }
+
+}
+
+.marketing-promo__image {
+    width: 100%;
+    height: auto;
+}
+
+.marketing-promo__detail {
+    @extend .skew;
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background-color: $blue;
+    top: 0;
+    // right: -900px;
+    // right: -550px;
+    left: 200%;
+    transition: right 0.3s;
+    z-index: 9999;
+    padding: 0;
+    @include breakpoint(large) {
+        // height: 205px
+    }
+    @include breakpoint(medium-max) {
+        height: 375px;
+    }
+}
+
+.marketing-promo__detail.open {
+    // right: -125px;
+    left: -100%
+}
+
+.marketing-promo__detail p {
+    @extend .no-skew;
+    margin-left: 10%;
+    padding: .5em;
+    color: #FFF;
+    font-size: 1.1em;
+    line-height: 1.25em;
+    font-weight: 300;
+    .bold {
+        margin-top: 1em;
+        display: block;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+    }
+}
+
+
+.main-content .stripe {
+    left: -1060px;
+    background-color: gray;
+    opacity: 0.125;
+    @include breakpoint(medium-max) {
+        top: -450px;
+    }
+}
+
+.main-content .stripe + .stripe {
+    left: -1000px;
+    background-color: gray;
+    opacity: 0.125;
+    @include breakpoint(medium-max) {
+        top: -450px;
+    }
+}

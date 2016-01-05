@@ -1,36 +1,13 @@
+.container-fluid.news .container {
+    // width: 970px;
+    // @include breakpoint(medium-max) { width: 758px; }
+    // @include breakpoint(small-max) { width: 452px; }
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .news {
     overflow: hidden;
-}
-
-// .news .row {
-//     position: relative;
-//     padding: 5em 8em;
-//     @include breakpoint(large) {
-//         padding: 5em 8em;
-//     }
-//     @include breakpoint(medium) {
-//         padding: 1em 0;
-//     }
-// }
-
-.article .row {
-    width: 460px;
-    margin: 0 auto;
-    padding: 0;
     position: relative;
-    overflow: hidden;
 }
 
-.article__title {
-    @extend .opensans;
-    color: $gray-dk;
-    font-size: 1.2em;
-    font-weight: 700;
-    text-transform: none;
-    padding: 0 0 20px;
-}
-
-.article__image {
-    width: 100%;
-    height: auto;
-}

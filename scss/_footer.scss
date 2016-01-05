@@ -1,7 +1,12 @@
-.footer {
+.container-fluid.footer {
     background-color: $blue-md;
     padding-top: 2em;
     padding-bottom: 1em;
+    // margin-top: -30px;
+}
+
+.container-fluid.footer .container {
+
 }
 
 .footer-col {}
@@ -101,13 +106,25 @@
 
 .footer .corporate {
     border-top: 1px solid #002364;
+    margin-top: 45px;
     padding: 25px 0 10px;
     font-size: 1.0em;
     font-weight: 300;
     text-align: center;
     color: #FFF;
-    .corporate-address {
-        padding-left: 2em;
-        padding-right: 2em;
+    @include breakpoint(xsmall) {
+        text-align: left;
+        line-height: 1.7em;
+        padding-top: 20px;
+        margin-top: 30px;
+    }
+}
+
+.corporate-address {
+    padding-left: 2em;
+    padding-right: 2em;
+    @include breakpoint(xsmall) {
+        display: block;
+        padding: 0;
     }
 }

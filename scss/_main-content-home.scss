@@ -1,13 +1,13 @@
 .main-content {
     overflow: hidden;
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         overflow: visible;
     }
 }
 
 .main-content .wrapper {
     position: relative;
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         padding: 0;
         margin-right: 30px;
     }
@@ -16,12 +16,7 @@
 .marketing-promo {
     margin-bottom: 2em;
     height: 250px;
-    @include breakpoint(large) {
-        // max-width: 228px;
-        // height: 205px;
-    }
-    @include breakpoint(medium) {
-        max-width: 420px;
+    @include breakpoint(medium-max) {
         height: 375px;
     }
 }
@@ -29,20 +24,16 @@
 .marketing-promo-wrapper {
     overflow: hidden;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 300px;
-    height: 250px;
-    @include breakpoint(large) {
-        // max-width: 228px;
-        // height: 205px
-    }
-    @include breakpoint(medium) {
-        max-width: 420px;
-        height: 375px;
-    }
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     padding: 0;
+//     max-width: 300px;
+//     height: 250px;
+//     @include breakpoint(medium-max) {
+//         max-width: 420px;
+//         height: 375px;
+//     }
 }
 
 .marketing-promo:hover {
@@ -71,7 +62,7 @@
     width: 100%;
     height: auto;
     position: relative;
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         width: auto;
         height: 100%;
     }
@@ -91,7 +82,7 @@
     @include breakpoint(large) {
         // height: 205px
     }
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         height: 375px;
     }
 }
@@ -116,104 +107,12 @@
     }
 }
 
-.top-news {
-    height: 250px;
-    margin-bottom: 2em;
-    @include breakpoint(large) {
-        // max-width: 228px;
-        // height: 205px
-    }
-    @include breakpoint(medium) {
-        max-width: 420px;
-        height: 375px;
-    }
-}
-
-.top-news-wrapper {
-    position: absolute;
-    height: 250px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding: 0;
-    background-color: $gray-lt;
-    max-width: 300px;
-    @include breakpoint(large) {
-        max-width: 228px;
-        height: 205px
-    }
-    @include breakpoint(medium) {
-        max-width: 420px;
-        height: 375px;
-    }
-}
-
-.top-news__title {
-    color: $gray-dk;
-    text-align: center;
-    font-size: 1.3em;
-    height: 13px;
-    line-height: 13px;
-    padding: 0;
-}
-
-.top-news__image {
-    width: 100%;
-    margin: 0;
-    // margin: 0 -15px;
-}
-
-.top-news__summary {
-    @extend .oswald;
-    padding: 1em;
-    font-size: 1.0em;
-    font-weight: 400;
-    color: $gray-dk;
-}
-
-.news-sponsor {
-    margin-bottom: 2em;
-    height: 250px;
-    @include breakpoint(medium) {
-        max-width: 228px;
-        height: 205px
-    }
-    @include breakpoint(small) {
-        max-width: 420px;
-        height: 375px;
-    }
-}
-
-.news-sponsor-wrapper {
-    position: absolute;
-    height: 250px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 300px;
-    @include breakpoint(large) {
-        // max-width: 228px;
-        // height: 205px
-    }
-    @include breakpoint(medium) {
-        max-width: 420px;
-        height: 375px;
-    }
-}
-
-.news-sponsor__image {
-    display: block;
-    margin: 0 auto;
-    // width: 100%;
-}
-
 
 .main-content .stripe {
     left: -1060px;
     background-color: gray;
     opacity: 0.125;
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         top: -450px;
     }
 }
@@ -222,7 +121,7 @@
     left: -1000px;
     background-color: gray;
     opacity: 0.125;
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         top: -450px;
     }
 }

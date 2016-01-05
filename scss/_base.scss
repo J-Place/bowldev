@@ -1,23 +1,16 @@
 body {
-    background-color: white;
+    background-color: #FFF;
+    overflow-x: hidden;
+    // position: relative;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin-top: 55px;
+        // position: relative;
+    }
 }
 
 a:hover {
     text-decoration: none;
-}
-.close {
-    // display: none;
-}
-
-.stripe__container {
-    top: 0;
-    // border: 1px solid green;
-    width: auto;
-    height: 100%;
-    display: block;
-    position: absolute;
-    overflow: hidden;
-    z-index: -9;
 }
 
 .skew {
@@ -38,11 +31,29 @@ a:hover {
      -o-transform: skew(0deg);
 }
 
+.skew-zero {
+    -webkit-transform: skew(0deg);
+   -moz-transform: skew(0deg);
+     -o-transform: skew(0deg);
+}
+
+.stripes {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    overflow: visible;
+    z-index: -1;
+}
+
 .stripe {
     position: absolute;
     width: 1000px;
     height: 100%;
-    left: -280px;
+    background-color: $gray-2;
+    transition: background-color 0.2s;
+    left: -270px;
     @extend .skew;
     z-index: 2;
 }
@@ -51,31 +62,38 @@ a:hover {
     position: absolute;
     width: 175px;
     height: 100%;
+    background-color: $gray-2;
+    transition: background-color 0.2s;
     @extend .skew;
     z-index: 2;
 }
 
-.clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
- }
-
-.clearfix {
-    display: inline-block;
+.stripe--bottom {
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    @extend .skew;
+    z-index: 2;
 }
 
-/* start commented backslash hack \*/
-* html .clearfix {
-    height: 1%;
+.outline {
+    border: 1px solid $gray-lt;
+    // margin: -1px;
 }
 
-.clearfix {
-    display: block;
+.outline--red {
+    @extend .outline;
+    border-color: red;
 }
 
-/* close commented backslash hack */
+.outline--orange {
+    @extend .outline;
+    border-color: $orange;
+}
+
+.outline--yellow {
+    @extend .outline;
+    border-color: yellow;
+}
+
 

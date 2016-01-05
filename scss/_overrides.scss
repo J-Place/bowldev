@@ -1,14 +1,30 @@
-.row {
-    margin-bottom: 4em;
+.container-fluid {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    // Phone and below
+    @include breakpoint(xsmall-max) {}
 }
 
 .container {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.container {
-    @media (min-width: 1200px) {
-        width: 940px;
+    max-width: 992px !important;
+    margin: 20px auto;
+    // Tablet and below
+    @include breakpoint(small-max) {}
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin-bottom: 0px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
+
+
+

@@ -4,49 +4,10 @@
     position: relative;
 }
 
-.container-fluid--slider {
-    @extend .container-fluid;
+.container-fluid.slider .container {
     position: relative;
-    height: 400px;
-    overflow: hidden;
-}
-
-
-.slider-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.slider--overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
-    height: 400px;
-}
-
-.slider--overlay .slick-list {
-    height: 100px;
-    top: 270px;
-    left: -30px;
-    width: 755px;
-    padding-right: 50px;
-    @extend .skew;
-}
-
-.slider--overlay .slick-track {
-    height: 100px;
-}
-
-.slider--overlay .slick-slide {
-    height: 100px;
-}
-
-.slider--background {
-    height: 400px;
-    overflow: hidden;
-    z-index: 9;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .slides {
@@ -60,37 +21,29 @@
     // @extend .no-skew;
 }
 
-.slide .wrapper {
+.slide__text-container {
     background-color: $red;
-    width: 999px;
     height: 100px;
-    right: 180px;
-    position: relative;
+    position: absolute;
+    bottom: 30px;
+    width: 750px;
+    z-index: 99;
 }
 
-.slide--image {
-    height: 400px;
-    margin: 0 auto;
-    // @extend .skew-reset;
-}
-
-.slide__image {
-    position: relative;
+.slide__image-container {
+    position: absolute;
     height: 400px;
     width: auto;
     margin: 0 auto;
-
+    z-index: -1;
 }
 
-.slide__link {
-    // position: relative;
-    position: absolute;
-    display: block;
-    left: 200px;
-    @extend .no-skew;
-    // width: 500px;
-    // width: 800px;
-}
+// .slide__link {
+//     position: absolute;
+//     display: block;
+//     left: 200px;
+//     @extend .no-skew;
+// }
 
 
 .slide__title {
@@ -123,41 +76,48 @@
     outline: none;
 }
 
-.stripes--slider {
-    position: absolute;
-    z-index: 99;
+// .stripes--slider {
+//     position: absolute;
+//     z-index: 99;
+//     height: 400px;
+//     left: 0;
+//     right: 0;
+// }
+
+.slider--stripes {
     height: 400px;
-    left: 0;
-    right: 0;
 }
 
-.stripes--slider .stripe {
+.slider--stripes .stripe {
     // left: -60px;
-    width: 347px;
+    width: 348px;
+    position: absolute;
     background-color: $blue;
     opacity: 1.0;
     @include breakpoint(large) {
-        width: 445px;
+        // width: 445px;
+        width: 348px;
     }
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         width: 350px;
     }
 }
 
-.stripes--slider .stripe + .stripe {
+.slider--stripes .stripe + .stripe {
     // left: -60px;
-    width: 407px;
+    width: 408px;
     background-color: $blue;
     opacity: 0.5;
     @include breakpoint(large) {
-        width: 505px;
+        // width: 505px;
+        width: 408px;
     }
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         width: 410px;
     }
 }
 
-.stripes--slider .stripe--right {
+.slider--stripes .stripe--right {
     right: -110px;
     width: 180px;
     background-color: $blue;
@@ -165,16 +125,16 @@
     @include breakpoint(large) {
         width: 240px;
     }
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         // right: -10px;
         right: -160px;
     }
-    @include breakpoint(small) {
+    @include breakpoint(small-max) {
         right: -160px;
     }
 }
 
-.stripes--slider .stripe--right + .stripe--right {
+.slider--stripes .stripe--right + .stripe--right {
     right: -110px;
     width: 235px;
     background-color: $blue;
@@ -182,11 +142,11 @@
     @include breakpoint(large) {
         width: 300px;
     }
-    @include breakpoint(medium) {
+    @include breakpoint(medium-max) {
         // right: -10px;
         right: -160px;
     }
-    @include breakpoint(small) {
+    @include breakpoint(small-max) {
         right: -160px;
     }
 }
@@ -216,12 +176,12 @@
     height: 35px;
     top: 175px;
     text-indent: -9999px;
-    background-image: url("../img/bowl-sprites.svg");
+    background-image: url("../img/bowl-sprites.png");
     background-size: 450px;
     background-repeat: no-repeat;
     background-color: transparent;
     position: absolute;
-    z-index: 9;
+    z-index: 99;
 }
 
 .slick-prev.slick-arrow {

@@ -1,5 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
+    color: $gray-5;
+    letter-spacing: 1.8px;
 }
 
 h1, h2, h3 {
@@ -28,19 +30,19 @@ body {
     color: $gray-dk;
     font-size: 3.3em;
     line-height: 1.75em;
+    margin: 0;
     padding: 0 0 1em;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.section__title:after {
+.section__title::after {
     content: '';
     display: block;
     background-color: $gray-dk;
     width: 65px;
     height: 5px;
     margin: 0 auto;
-    // padding-bottom: 0;
     @extend .skew;
 }

@@ -1,48 +1,53 @@
-.banner {
-    overflow: hidden;
-}
+// .container.leaderboard {
+//     height: 90px;
+// }
 
-.banner .container {
-    height: 129px;
+.article--banner-ad {
+    margin: 0 auto;
+    padding: 0;
     position: relative;
-    @include breakpoint(medium) {
-        margin-top: 45px;
-    }
-    @include breakpoint(small) {
-        min-height: 100px;
-    }
-    @include breakpoint(xsmall) {
-        min-height: 65px;
+    text-align: center;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin: 0;
     }
 }
 
-.banner img {
-    position: absolute;
-    // width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include breakpoint(medium) {
-        width: 100%;
+.article--banner-ad:first-of-type {
+    // Phone and above
+    @include breakpoint(xsmall-min) {
+        margin: 20px auto;
     }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin: 20px auto;
+        // margin: 15px auto;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        // margin: 15px auto;
+    }
+
 }
 
-.banner .stripe {
-    // left: -800px;
-    width: 436px;
+.article--banner-ad + .stripes .stripe {
+    left: -835px;
+    width: 1000px;
     background-color: gray;
     opacity: 0.125;
-    @include breakpoint(medium) {
+    z-index: 9;
+    @include breakpoint(medium-max) {
         display: none;
     }
 }
 
-.banner .stripe + .stripe {
-    // left: -740px;
-    width: 495px;
+.article--banner-ad + .stripes .stripe + .stripe {
+    left: -775px;
+    width: 1000px;
     background-color: gray;
     opacity: 0.125;
-    @include breakpoint(medium) {
+    z-index: 9;
+    @include breakpoint(medium-max) {
         display: none;
     }
 }

@@ -1,19 +1,13 @@
-.quick-links {
-    position: relative;
-    // padding: 0 45px;
-    overflow: hidden;
-    // @include breakpoint(small) {
-    //     padding: 0;
-    // }
-}
 
-.quick-links .row {
-    padding-top: 3em;
+.container.quick-links {
+    margin-top: 30px;
+    padding: 0;
 }
 
 .quick-link {
     display: block;
     margin: 2em auto;
+    min-height: 160px;
 }
 
 .quick-link:hover {
@@ -27,13 +21,48 @@
 
 .quick-link__image {
     display: block;
+    margin: 0;
     margin: 0 auto;
+    padding: 0;
+    width: 125px;
+    height: 125px;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        width: 85px;
+        height: auto;
+    }
+}
+
+.quick-link__image--hover {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 125px;
+    height: 125px;
+    opacity: 0.0;
+    -webkit-transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+.quick-link:hover .quick-link__image--hover {
+    opacity: 1.0;
 }
 
 .quick-link__title {
-    font-size: 1.2em;
+    font-size: 1.175em;
     line-height: 1.3em;
-    color: $gray-dk;
+    color: $gray-5;
     text-align: center;
     margin: .75em 0 0;
+    letter-spacing: 0.2px;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        font-size: 1.0em;
+        letter-spacing: 0.5px;
+    }
 }

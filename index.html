@@ -11,25 +11,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="js/vendor/modernizr-custom.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <!-- <link rel="stylesheet" href="js/vendor/royal-slider/royalslider.css"> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous"> -->
+    <script>if (!window.jQuery) { document.write('<link rel="stylesheet" href="css/bootstrap.css"><\/script>'); }</script>
     <link rel="stylesheet" href="js/vendor/slickjs/slick.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
 </head>
 <body>
 <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-    <header class="header container-fluid">
+    <header class="container-fluid header">
         <div class="container">
             <a class="logo" href="/" class="logo">BOWL.com</a>
             <a class="nav-small-icon" href="#">MENU</a>
-            <nav class="nav-main">
+            <nav class="nav-main nav-level-1">
                 <ul class="nav__list">
                     <li class="nav__list--item"><a href="#" id="bowlers" class="has-children">Bowlers</a></li>
                     <li class="nav__list--item"><a href="#" id="youth" class="has-children">Youth</a></li>
@@ -41,7 +40,9 @@
             </nav>
             <div class="nav-dropdown">
                 <div class="dropdown-wrapper bowlers nav-level-2" id="dropdown-bowlers">
-                    <h3 class="dropdown__list--title"><a href="#" class="exit--bowlers">Bowlers</a></h3>
+                    <h3 class="dropdown__list--title">
+                        <a href="#" class="exit--bowlers"><span class="nav--prev">Back</span>Bowlers</a>
+                    </h3>
                     <div class="dropdown__links">
                         <ul class="dropdown__list--column">
                             <li class="dropdown__list--item"><a href="#">Join USBC</a></li>
@@ -71,7 +72,7 @@
 
                 <div class="dropdown-wrapper youth nav-level-2" id="">
                     <h3 class="dropdown__list--title">
-                        <a href="#" class="exit--youth">Youth</a>
+                        <a href="#" class="exit--youth"><span class="nav--prev">Back</span>Youth</a>
                     </h3>
                     <div class="dropdown__links">
                         <ul class="dropdown__list--column">
@@ -80,7 +81,7 @@
                                 <a href="#" id="youth-tournaments" class="has-children">Youth Tournaments</a>
                                 <div class="dropdown-wrapper youth-tournaments nav-level-3">
                                     <h3 class="dropdown__list--title">
-                                        <a href="#" class="exit--youth-tournaments">Youth Tournaments</a>
+                                        <a href="#" class="exit--youth-tournaments"><span class="nav--prev">Back</span>Youth Tournaments</a>
                                     </h3>
                                     <div class="dropdown__links">
                                         <ul class="dropdown__list--column">
@@ -116,7 +117,7 @@
                 </div>
             </div>
             <div class="nav-secondary">
-                <div class="secondary-links login-container">
+                <div class="secondary-links login">
                     <a class="nav-icon login-toggle" href="#">Login</a>
                     <div class="login-wrapper">
                         <fieldset>
@@ -137,53 +138,65 @@
                 <div class="secondary-links search-container">
                     <!-- <a class="nav-icon search" href="#">Search</a> -->
                     <input name="ctl00$ctl00$cphMainZone$cphMainContent$txtKeywords" type="text" value="" id="txtKeywords" class="search__input" placeholder="">
-                    <input type="submit" name="ctl00$ctl00$cphMainZone$cphMainContent$btnSearch" value="Search" id="ctl00_ctl00_cphMainZone_cphMainContent_btnSearch" class="nav-icon search search__button">
+                    <input type="submit" name="ctl00$ctl00$cphMainZone$cphMainContent$btnSearch" value="Search" id="ctl00_ctl00_cphMainZone_cphMainContent_btnSearch" class="nav-icon--search search__button">
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container-fluid banner">
-        <div class="container">
-            <div class="stripe"></div><div class="stripe"></div>
-            <img src="img/temp-422.jpg" alt="" class="banner-small visible-xs">
-            <img src="img/temp-728.jpg" alt="" class="banner-medium visible-sm visible-xs">
-            <img src="img/temp-940.jpg" alt="" class="banner-large visible-md visible-lg">
+<!-- Page Stripes -->
+    <div class="container page--stripes">
+        <div class="stripes">
+            <div class="stripe"></div>
+            <div class="stripe"></div>
         </div>
     </div>
 
-
-    <div class="container-fluid--slider">
-        <div class="container stripes--slider">
-            <div class="stripe"></div>
-            <div class="stripe"></div>
-            <div class="stripe--right"></div>
-            <div class="stripe--right"></div>
-            <div class="stripe--overlay"></div>
-            <!-- <div class="stripe--right"></div> -->
+<!-- Leaderboard Ad -->
+    <div class="container-fluid">
+        <div class="container leaderboard">
+            <article class="article article--banner-ad">
+                <img src="http://placehold.it/728x90" alt="FPO Image" class="block__leaderboard hidden-md hidden-lg">
+                <img src="http://placehold.it/970x90" alt="FPO Image" class="block__leaderboard visible-md visible-lg">
+            </article>
         </div>
+    </div>
 
-        <!-- This slider renders the text overlay -->
-        <div class="container slider-nav slider--overlay">
-            <div class="slide slide--text">
+<!-- Slider -->
+    <div class="container-fluid">
+        <!-- Slider text block -->
+        <div class="container slider__ribbon">
+            <div class="ribbon"></div>
+        </div>
+        <div class="container slider slider-nav slider--foreground">
+            <div class="slide slide--text" data-slideColor="blue">
                 <div class="wrapper">
                     <a href="#" class="slide__link">
                         <h4 class="slide__title">You make it happen. We Make it Worth Your While</h4>
-                        <p class="slide__cta">Join the Captains Club Today!</p>
+                        <p class="slide__text">Join the Captains Club Today!</p>
                     </a>
                 </div>
             </div>
-            <div class="slide slide--text">
+            <div class="slide slide--text" data-slideColor="yellow">
                 <div class="wrapper">
                     <a href="#" class="slide__link">
                         <h4 class="slide__title">Go Big. Bowl Vegas</h4>
-                        <p class="slide__cta">Grab your friends for good times and great bowling!</p>
+                        <p class="slide__text">Grab your friends for good times and great bowling!</p>
                     </a>
                 </div>
             </div>
         </div>
-        <!-- This slider renders background image -->
-        <div class="container slider-for slider--background">
+        <!-- Slider stripes -->
+        <div class="container slider--stripes">
+            <div class="stripes">
+                <div class="stripe" data-stripeColor="blue"></div>
+                <div class="stripe" data-stripeColor="blue"></div>
+                <div class="stripe--right" data-stripeColor="blue"></div>
+                <div class="stripe--right" data-stripeColor="blue"></div>
+            </div>
+        </div>
+        <!-- Slider background image -->
+        <div class="container slider slider-for slider--background">
             <div class="slide slide--image">
                 <img class="slide__image" src="img/content/slide-one.jpg" />
             </div>
@@ -193,149 +206,179 @@
         </div>
     </div>
 
-    <div class="container-fluid quick-links">
+<!-- Quick Links -->
+    <div class="container-fluid">
+        <div class="container quick-links">
+            <div class="col-lg-2 col-sm-3 col-xs-6">
+                <a class="quick-link" href="#">
+                    <img class="quick-link__image" src="img/quick-link-1.png" alt="">
+                    <img class="quick-link__image--hover" src="img/quick-link-1-hover.png" alt="">
+                    <h3 class="quick-link__title">Current Event Coverage</h3>
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-6">
+                <a class="quick-link" href="#">
+                    <img class="quick-link__image" src="img/quick-link-2.png" alt="">
+                    <img class="quick-link__image--hover" src="img/quick-link-2-hover.png" alt="">
+                    <h3 class="quick-link__title">Find a Member</h3>
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-6 visible-lg">
+                <a class="quick-link" href="#">
+                    <img class="quick-link__image" src="img/quick-link-3.png" alt="">
+                    <h3 class="quick-link__title">League Standing Sheets</h3>
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-6">
+                <a class="quick-link" href="#">
+                    <img class="quick-link__image" src="img/quick-link-4.png" alt="">
+                    <h3 class="quick-link__title">Open Championships</h3>
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-6">
+                <a class="quick-link" href="#">
+                    <img class="quick-link__image" src="img/quick-link-5.png" alt="">
+                    <h3 class="quick-link__title">Women's Championships</h3>
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-6 visible-lg">
+                <a class="quick-link" href="#">
+                    <img class="quick-link__image" src="img/quick-link-6.png" alt="">
+                    <h3 class="quick-link__title">Join USBC</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- 3 Panel CTA -->
+    <div class="container-fluid">
         <div class="container">
-            <div class=" quick-links">
-                <div class="wrapper">
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                        <a class="quick-link" href="#">
-                            <img class="quick-link__image" src="img/quick-link-1.png" alt="">
-                            <h3 class="quick-link__title">Current Event Coverage</h4>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                        <a class="quick-link" href="#">
-                            <img class="quick-link__image" src="img/quick-link-2.png" alt="">
-                            <h3 class="quick-link__title">Find a Member</h4>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                        <a class="quick-link" href="#">
-                            <img class="quick-link__image" src="img/quick-link-3.png" alt="">
-                            <h3 class="quick-link__title">Leagues Standing Sheets</h4>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                        <a class="quick-link" href="#">
-                            <img class="quick-link__image" src="img/quick-link-4.png" alt="">
-                            <h3 class="quick-link__title">Open Championships</h4>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                        <a class="quick-link" href="#">
-                            <img class="quick-link__image" src="img/quick-link-5.png" alt="">
-                            <h3 class="quick-link__title">Women's Championships</h4>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                        <a class="quick-link" href="#">
-                            <img class="quick-link__image" src="img/quick-link-6.png" alt="">
-                            <h3 class="quick-link__title">Join USBC</h4>
-                        </a>
-                    </div>
+            <div class="row">
+                <div class="col-iphone-12 col-sm-4">
+                    <article class="article article--fixed-height marketing-promo"> <!-- marketing-promo-wrapper cta-3-wrapper -->
+                        <div class="marketing-promo__summary">
+                            <p>Strike big at the 2017 Open Championships!</p>
+                        </div>
+                        <img class="marketing-promo__image" src="img/content/mktg-promo-hero.jpg" alt="" width="480px" height="400px">
+                        <!--
+                        <div class="marketing-promo__detail">
+                            <p>2017 USBC Open Championships<br />March 5- July 10<br />Point Hotel & Casino<br />Limited space available.<br /><span class="bold">Register Today!</span></p>
+                        </div>
+                         -->
+                    </article>
+                </div>
+                <div class="col-iphone-12 col-sm-4">
+                    <article class="article article--fixed-height top-news"> <!-- top-news-wrapper cta-3-wrapper -->
+                        <h3 class="top-news__title">Top News</h3>
+                        <div class="top-news__summary">
+                            <p>Lorem ipsum dolor sit amet, ut leo leo lobortis, arcu lacus ut elit tortor, ante libero augue, lacus blandit, euismod quam. Odio eget nibh eget tincidunt neque, mattis eu varius.</p>
+                        </div>
+                        <img class="top-news__image" src="img/content/top-news-hero.jpg" alt="" width="480px" height="400px">
+                    </article>
+                </div>
+                <div class="col-iphone-12 col-sm-4">
+                    <article class="article article--fixed-height ad__block"> <!-- news-sponsor-wrapper cta-3-wrapper -->
+                        <img src="http://placehold.it/300x250" alt="FPO Image" class="block__rectangle--large hidden-lg">
+                        <img src="http://placehold.it/336x280" alt="FPO Image" class="block__rectangle--large visible-lg">
+                    </article>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <div class="container cta-col-3">
-        <div class="marketing-promo col-sm-12 col-md-4">
-            <div class="marketing-promo-wrapper">
-                <div class="marketing-promo__caption">Strike big at the 2017 Open Championships!</div>
-                <img class="marketing-promo__image" src="img/mktg-promo.jpg" alt="">
-                <div class="marketing-promo__detail">
-                    <p>2017 USBC Open Championships<br />
-                        March 5- July 10<br />
-                        Point Hotel & Casino<br />
-                        Limited space available.<br />
-                        <span class="bold">Register Today!</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="top-news col-sm-12 col-md-4">
-            <div class="top-news-wrapper">
-                <h3 class="top-news__title">Top News</h3>
-                <img class="top-news__image" src="img/top-news.jpg" alt="">
-                <div class="top-news__summary">Lorem ipsum dolor sit amet, ut leo leo lobortis, arcu lacus ut elit tortor, ante libero augue, lacus blandit, euismod quam. Odio eget nibh eget tincidunt neque, mattis eu varius.</div>
-            </div>
-        </div>
-        <div class="news-sponsor col-sm-12 col-md-4">
-            <div class="news-sponsor-wrapper">
-                <img class="news-sponsor__image visible-lg" src="img/news-ad-lg.png" alt="">
-                <img class="news-sponsor__image visible-md" src="img/news-ad-md.png" alt="">
-                <img class="news-sponsor__image visible-sm visible-xs" src="img/news-ad-sm.png" alt="">
-            </div>
+<!-- Featured Video -->
+    <div class="container-fluid">
+        <div class="row featured-video">
+                    <div class="wrapper">
+                        <h3 class="section__title featured-video__title">Featured Video</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gYCbWY45Oek" frameborder="0" allowfullscreen></iframe>
+
+                    </div>
+                    <!-- <div class="stripe--video"></div> -->
         </div>
     </div>
 
-    <div class="container-fluid featured-video">
-        <div class="row">
-            <h3 class="featured-video__title">Featured Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gYCbWY45Oek" frameborder="0" allowfullscreen></iframe>
-        </div>
+<!-- Content section with background image; container class moves down to cta__content -->
+    <div class="container-fluid">
+                    <article class="article article--cta-1">
+                        <div class="cta__content container">
+                            <h2 class="cta__header">Application deadline is Dec. 1 <span class="cta__header--sub">for youth scholarships</span></h2>
+                            <p class="cta__text">Each year, USBC awards several scholarships to USBC Youth bowlers and recognizes adult youth leaders with national awards.</p>
+                            <a class="cta__button button--cta" href="">Learn More</a>
+                        </div>
+                        <div class="cta__background">
+                            <img src="img/cta-bg-lanes.jpg" alt="">
+                        </div>
+                    </article>
     </div>
 
-    <div class="container-fluid cta-col-1">
-        <div class="row">
-            <h2 class="cta__header">Application deadline is Dec. 1 <span class="cta__header--sub">for youth scholarships</span></h2>
-            <p class="cta__text">Each year, USBC awards several scholarships to USBC Youth bowlers and recognizes adult youth leaders with national awards.</p>
-            <a class="cta__button button--cta" href="#">Learn More</a>
-            <div class="cta__background">
-                <img src="img/cta-bg-lanes.jpg" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="container news">
-        <div class="row">
-            <h4 class="section__title">News</h4>
-            <article class="article col-lg-6 col-sm-12">
-                <!-- <div class="row"> -->
-                    <img src="img/news-1.jpg" alt="" class="article__image">
-                    <h3 class="article__title">PWBA shows global reach og bowling</h3>
-                    <p class="article__summary">Lorem</p>
-                <!-- </div> -->
-            </article>
-            <article class="article col-lg-6 col-sm-12">
-                <!-- <div class="row"> -->
-                    <img src="img/news-2.jpg" alt="" class="article__image">
-                    <h3 class="article__title">South Africa, Colombia lead World Cup field into match play</h3>
-                    <p class="article__summary">Lorem</p>
-                <!-- </div> -->
-            </article>
-            <article class="article col-lg-6 col-sm-12">
-                <!-- <div class="row"> -->
-                    <img src="img/news-3.png" alt="" class="article__image">
-                    <h3 class="article__title">Semper title</h3>
-                    <p class="article__summary">Lorem</p>
-                <!-- </div> -->
-            </article>
-            <article class="article col-lg-6 col-sm-12">
-                <!-- <div class="row"> -->
-                    <img src="img/news-4.jpg" alt="" class="article__image">
-                    <h3 class="article__title">Semper title</h3>
-                    <p class="article__summary">Lorem</p>
-                <!-- </div> -->
-            </article>
-        </div>
-    </div>
-
-    <div class="container-fluid banner">
+<!-- News articles -->
+    <div class="container-fluid">
         <div class="container">
-            <!-- <div class="stripe"></div><div class="stripe"></div> -->
-            <img src="img/temp-422.jpg" alt="" class="banner-small visible-sm visible-xs">
-            <img src="img/temp-728.jpg" alt="" class="banner-medium visible-md">
-            <img src="img/temp-940.jpg" alt="" class="banner-large visible-lg">
+            <!-- <div class="row"> -->
+                <div class="col-xs-12 col-sm-4">
+                    <article class="article article--equal">
+                        <img src="img/content/bug-2015-usbc-mixed.jpg" alt="" class="article__image">
+                        <h3 class="article__title">Mixed</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <article class="article article--equal">
+                        <img src="img/content/bug-2015-usbc-mixed.jpg" alt="" class="article__image">
+                        <h3 class="article__title">Mixed</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <article class="article article--equal">
+                        <img src="img/content/bug-youth-open.jpg" alt="" class="article__image">
+                        <h3 class="article__title">Bowling.com Youth Open Championships</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <article class="article article--equal">
+                        <img src="img/content/bug-2015-usbc-mixed.jpg" alt="" class="article__image">
+                        <h3 class="article__title">Mixed</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <article class="article article--equal">
+                        <img src="img/content/bug-usbc-team-usa.jpg" alt="" class="article__image">
+                        <h3 class="article__title">Team USA Trials</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <article class="article article--equal">
+                        <img src="img/content/bug-youth-open.jpg" alt="" class="article__image">
+                        <h3 class="article__title">Bowling.com Youth Open Championships</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </article>
+                </div>
+            <!-- </div> -->
         </div>
     </div>
 
+<!-- Leaderboard Ad -->
+    <div class="container-fluid">
+        <div class="container leaderboard">
+            <article class="article article--banner-ad">
+                <img src="http://placehold.it/728x90" alt="FPO Image" class="block__leaderboard hidden-md hidden-lg">
+                <img src="http://placehold.it/970x90" alt="FPO Image" class="block__leaderboard visible-md visible-lg">
+            </article>
+        </div>
+    </div>
+
+
+<!-- Footer -->
     <footer class="container-fluid footer">
         <div class="container">
             <div class="footer-col--links col-sm-12 col-md-7 col-md-push-2">
                 <div class="row">
-                    <div class="footer-links col-md-4">
+                    <div class="footer-links col-sm-4">
                         <h5 class="footer-links__title">Philanthropy</h5>
                         <ul class="footer-links__list">
                             <li>
@@ -358,7 +401,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-links col-md-4">
+                    <div class="footer-links col-sm-4">
                         <h5 class="footer-links__title">Ecommerce</h5>
                         <ul class="footer-links__list">
                             <li>
@@ -381,7 +424,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-links col-md-4">
+                    <div class="footer-links col-sm-4">
                         <h5 class="footer-links__title">Broadcast Partners</h5>
                         <ul class="footer-links__list">
                             <li>
@@ -431,15 +474,17 @@
             </div>
         </div>
         <div class="container">
-            <!-- <p>&copy; United States Bowling Congress <script>document.write(new Date().getFullYear())</script></p> -->
             <p class="corporate">United States Bowling Congress<span class="corporate-address">621 Six Flags Drive, Arlington, Texas 76011</span>800-514-BOWL</p>
         </div>
     </footer>
-</div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>if (!window.jQuery) { document.write('<script src="js/vendor/jquery-2.1.4.min.js"><\/script>'); }</script>
+
 <script src="js/vendor/slickjs/slick.min.js"></script>
+<script src="js/vendor/jquery.dotdotdot.min.js"></script>
+<script src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 

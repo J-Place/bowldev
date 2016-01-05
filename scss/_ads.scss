@@ -1,0 +1,60 @@
+.ad__block {
+    position: relative;
+    padding-bottom: 0;
+}
+
+.ad__block img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container.leaderboard {
+    margin: 0 auto;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Ad img elements
+
+.block__leaderboard {
+    width: auto;
+    height: 90px;
+    max-width: 970px;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.block__rectangle--medium {
+    width: 100%;
+    height: auto;
+}
+
+.block__rectangle--large {
+    width: 100%;
+    height: auto;
+}
+
+// .news-sponsor {
+//     margin-bottom: 2em;
+//     @include breakpoint(medium-max) {
+//     }
+//     @include breakpoint(small-max) {
+//         max-width: none;
+//     }
+// }
+
+// .news-sponsor-wrapper {
+//     position: relative;
+// }
+
+// .news-sponsor__image {
+//     display: block;
+//     margin: 0 auto;
+//     @include breakpoint(xsmall) {
+//         width: 100%;
+//         height: auto;
+//     }
+// }

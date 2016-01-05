@@ -1,55 +1,69 @@
-.header {
+.container-fluid.header {
     position: relative;
     height: 95px;
-    z-index: 999;
+    z-index: 9999;
     border-bottom: 1px solid #d5d7d5;
-    // overflow-x: hidden;
     transition: height 0.3s;
-    @include breakpoint(nav) {
-        height: 45px;
+    overflow: visible;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 70px;
     }
-    @include breakpoint(medium) {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        height: 55px;
         padding: 0;
-        // overflow: hidden;
         position: fixed;
-        // top: 45px;
+        overflow: visible;
         right: 0;
-        // bottom: 0;
         left: 0;
+        top: 0;
         background-color: #FFF;
     }
 }
 
-.header .container {
+.container-fluid.header .container {
     position: relative;
-    @include breakpoint(medium) {
-        padding: 0 0px;
-    }
-    @include breakpoint(small) {
-        padding: 0 15px;
+    padding-top: 0;
+    margin: 0 auto;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
 .logo {
     width: 288px;
     height: 95px;
-    // height: auto;
-    background-image: url('../img/logo.svg');
-    background-position: -3px 22px;
+    background-image: url('../img/logo.png');
+    background-position: -2px 22px;
     background-size: 360px;
     background-repeat: no-repeat;
     display: block;
     text-indent: -9999px;
-    @include breakpoint(nav) {
-        width: 45px;
-        height: 45px;
-        background-size: 260px;
-        background-position: -214px -4px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        margin-left: 0;
+        width: 230px;
+        background-position: -2px 20px;
+        background-size: 280px;
+        height: 70px;
     }
-    @include breakpoint(medium) {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        height: 55px;
         margin: 0 auto;
-        width: 250px;
-        background-position: -3px -8px;
-        background-size: 315px;
+        background-size: 305px;
+        width: 245px;
+        background-position: -1px -1px;
+    }
+    // Small phone and below
+    @include breakpoint(iphone-max) {
+        // height: 55px;
+        // margin: 0 auto;
+        background-size: 240px;
+        width: 200px;
+        background-position: 2px -1px;
     }
 }

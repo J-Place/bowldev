@@ -4,39 +4,38 @@
     position: absolute;
     right: 10px;
     top: 52px;
+    margin:  0;
+    padding: 0;
     @extend .oswald;
     text-transform: uppercase;
     transition: height 2.5s;
-
+    // Move Header Elements Mid-Desktop
     @include breakpoint(nav) {
-        top: 12px;
-        right: 230px;
+        // top: 13px;
+        // right: 230px;
     }
-    @include breakpoint(medium) {
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        font-size: 0.95em;
+        top: 42px;
+        // padding: 0 3px;
+        // right: 170px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        top: 42px;
+        right: 15px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        font-size: 1.1em;
         position: fixed;
         display: none;
         top: 45px;
-        left: 0;
         width: 100%;
         height: 10px;
         background-color: $gray-dk;
         font-family: "Open Sans", sans-serif;
-    }
-}
-
-.nav-main.open {
-    @include breakpoint(medium) {
-        display: block;
-        position: fixed;
-        height: 100%;
-        left: 0;
-        right: 0;
-    }
-}
-
-.nav-main.open.left {
-    @include breakpoint(medium) {
-        left: -100%;
     }
 }
 
@@ -46,13 +45,17 @@
     margin-left: -5px;
     height: 22px;
     transition: left 0.5s;
-
-    @include breakpoint(medium) {
-        width: 750px;
-        margin: 0 auto;
-        padding: 0;
+    :last-child {
+        padding-right: 0;
     }
-    @include breakpoint(small) {
+    // Tablet and below
+    @include breakpoint(small-max) {
+        // width: 750px;
+        // margin: 0 auto;
+        // padding: 0;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
         width: 100%;
     }
 }
@@ -63,39 +66,53 @@
 }
 
 .nav-main.open.left .nav__list {
-    @include breakpoint(medium) {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
         position: absolute;
         left: -100%;
     }
 }
+.nav-main.open.left .nav__list {
 
-
-// .nav-main.left .nav__list {
-//     left: -100%
-// }
+}
 
 .nav__list--item {
     display: inline-block;
-    padding-right: 5px;
-    padding-left: 5px;
-    margin-left: 1.5em;
-    @include breakpoint(medium) {
+    // Large Desktop and above
+    @include breakpoint(large-min) {
+            margin-left: 27px;
+            padding: 0;
+    }
+    // Large Dektop and below
+    @include breakpoint(large-max) {
+        margin-left: 25px;
+        padding: 0;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        margin-left: 11px;
+        padding: 0 5px;
+    }
+    // Tablet and below
+    @include breakpoint(xsmall-max) {
         display: block;
-        margin: 10px 0px;
+        margin: 10px 15px 10px 23px;
+        padding: 0;
         border-bottom: 1px solid #555;
     }
-    @include breakpoint(small) {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        // display: block;
         margin: 10px 15px;
-    }
-    @include breakpoint(xsmall) {
-        margin: 10px 15px;
+        // border-bottom: 1px solid #555;
     }
 }
 
 .nav__list--item a {
     color: $blue;
     font-weight: 400;
-    @include breakpoint(medium) {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
         font-weight: 300;
         color: #FFF;
         padding: 5px 0 15px;
@@ -105,8 +122,10 @@
     }
 }
 
-.nav__list--item a.has-children:after {
-    @include breakpoint(medium) {
+// Right arrow on mobile nav links with children
+.nav__list--item a.has-children::after {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
         padding: 10px 0;
         display: block;
         position: absolute;
@@ -117,26 +136,24 @@
         height: 40px;
         background-color: transparent;
         overflow: hidden;
-        // border: 1px solid red;
-    }
-    @include breakpoint(small) {
-        // right: -10px;
     }
 }
 
 .nav__list--item a:focus {
     text-decoration: none;
+    outline: 0;
 }
 
 .nav__list--item a:hover {
     text-decoration: none;
     color: $red;
-    @include breakpoint(medium) {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
         color: $blue;
     }
 }
 
-.nav__list--item a:hover:after {
+.nav__list--item a:hover::after {
     content: '';
     display: block;
     background-color: $blue;
@@ -144,25 +161,26 @@
     height: 4px;
     margin: 17px auto 0;
     @extend .skew;
-    @include breakpoint(medium) {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
         display: none;
     }
 }
 
-.nav__list--item a.has-children:hover:after {
+.nav__list--item a.has-children:hover::after {
     content: '';
     display: block;
     background-color: $blue;
     width: auto;
     height: 4px;
     margin: 17px auto 0;
-    @extend .skew;
-
-    @include breakpoint(nav) {
-        // display: none;
+    // Phone and above
+    @include breakpoint(xsmall-min) {
+        @extend .skew;
     }
-    @include breakpoint(medium) {
-        @extend .skew-reset;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        // @extend .skew-reset;
         position: absolute;
         top: -8px;
         right: -10px;
@@ -175,35 +193,3 @@
     }
 }
 
-.nav-icon {
-    background-image: url('../img/bowl-sprites.svg');
-    background-size: 330px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    display: block;
-}
-
-.nav-small-icon {
-    font-size: 0.6em;
-    padding-top: 27px;
-    // text-align: center;
-    text-indent: -9999px;
-    height: 30px;
-    width: 30px;
-    background-image: url('../img/bowl-sprites.svg');
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: 1px -55px;
-    position: absolute;
-    top: 9px;
-    display: none;
-    @include breakpoint(medium) {
-        display: block;
-        left: 15px;
-    }
-}
-
-.nav-small-icon.open {
-    background-position: -53px -80px;
-}

@@ -1,19 +1,20 @@
 .featured-video {
     text-align: center;
-    background-color: $gray-md;
-    padding: 2em 0 4em;
+    position: relative;
     overflow: hidden;
+    z-index: 99;
+}
+
+.featured-video .wrapper {
+    background-color: $gray-md;
+    padding: 30px 0 60px;
 }
 
 .featured-video__title {
     color: #FFF;
-    font-size: 3em;
-    line-height: 2em;
-    letter-spacing: 1.5px;
-    margin-bottom: 1em;
 }
 
-.featured-video__title:after {
+.featured-video__title::after {
     content: '';
     display: block;
     background-color: #FFF;
@@ -21,4 +22,23 @@
     height: 0.12em;
     margin: 0 auto;
     @extend .skew;
+}
+
+.featured-video iframe {
+    // z-index: 99;
+    // position: relative;
+}
+
+.stripe--video {
+    top: 0;
+    left: 65%;
+    width: 1900px;
+    background-color: $gray-lt;
+    opacity: 0.4;
+    @include breakpoint(large) {
+        width: 445px;
+    }
+    @include breakpoint(medium-max) {
+        width: 350px;
+    }
 }

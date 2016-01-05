@@ -1,0 +1,525 @@
+.container.slider {
+    margin: 0 auto;
+    // height: 400px;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        // height: 300px
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+.slides {
+    z-index: 1;
+}
+
+.slide {
+    // height: 400px;
+    width: auto;
+    color: #FFF;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        // height: 175px
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Slider foreground
+
+.slider--foreground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    // height: 400px;
+    height: 100%;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        top: 0;
+        left: 15px;
+        right: 15px;
+        // height: 375px;
+        overflow: hidden;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        // top: 0;
+        // left: 15px;
+        // right: 15px;
+        height: 285px;
+        // overflow: hidden;
+    }
+    @media only screen and (max-width: 400px) {
+        height: 254px;
+    }
+}
+
+.slider--foreground .slick-list {
+    height: 100px;
+    top: 270px;
+    left: -30px;
+    width: 755px;
+    // padding-right: 50px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        // @extend .skew;
+        width: auto;
+        top: 300px;
+        left: 0;
+        right: 0;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        height: 110px;
+        top: initial;
+        bottom: 0;
+        position: absolute;
+        // left: -10%;
+        // width: auto;
+        // padding-left: 10%;
+    }
+}
+
+.slider--foreground .slick-track {
+    // height: 100px;
+    // Phone and below
+    @include breakpoint(small-max) {
+        height: 110px
+    }
+}
+
+.slider--foreground .slick-slide {
+    height: 100px;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        height: 110px;
+    }
+}
+
+.slide--text .wrapper {
+    background-color: transparent;
+    width: 999px;
+    height: 100px;
+    right: 180px;
+    margin-left: 0;
+    display: block;
+    position: relative;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        // width: auto;
+        // width: 100%;
+        left: 0;
+        right: 0;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        width: 100%;
+        height: 110px; // *************************
+        margin-left: -20px;
+    }
+}
+
+// Link wraps headline and text
+.slide__link {
+    position: absolute;
+    display: block;
+    left: 200px;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left: 0;
+    }
+}
+
+.slide__title {
+    // @extend .no-skew;
+    color: #FFF;
+    font-size: 1.9em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        font-size: 1.5em;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.slide__text {
+    // @extend .no-skew;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        font-size: 0.9em;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Container for red block behind text
+.container.slider__ribbon {
+    position: absolute;
+    height: 100px;
+    margin-bottom: 0;
+    top: 250px;
+    left: 0;
+    right: 0;
+    @extend .skew;
+    z-index: 999;
+    // Large desktop and above
+    @include breakpoint(large-min) {
+        // @extend .skew-zero;
+        @extend .skew;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        overflow: hidden;
+        // height: 75px;
+        // top: 150px;
+        left: -450px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        @extend .skew-zero;
+        height: 110px;
+        // top: 175px;
+        top: initial;
+        bottom: 0;
+        left: -450px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        left: 15px;
+        right: 15px;
+    }
+}
+
+.ribbon {
+    background-color: $red;
+    transition: background-color 0.2s;
+    width: 1800px;
+    height: 100%;
+    left: -1050px;
+    position: absolute;
+    // @extend .skew;
+    z-index: 999;
+    // Large desktop and above
+    @include breakpoint(large-min) {
+        // @extend .skew-zero;
+        // @extend .skew;
+    }
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        // @extend .skew;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        // width: auto;
+        // left: 15px;
+        // right: 15px;
+        // @extend .skew-zero;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        // position: relative;
+        // left: 0;
+        // right: 0;
+    }
+}
+
+.ribbon::after {
+    background-color: $red;
+    height: 100%;
+    border-bottom: 50% solid blue;
+    border-right: 50% solid green;
+    position: absolute;
+    right: -30px;
+    width: 50px;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Slider background image
+
+.container.slider--background {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 300px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        // height: 375px;
+        padding: 0 15px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        height: 285px;
+        // padding: 0 15px;
+    }
+    @media only screen and (max-width: 400px) {
+        height: 254px;
+    }
+}
+
+// Image wrapper
+.slide--image {
+    height: 400px;
+    margin: 0 auto;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        // height: 275px;
+        height: 300px;
+        // @include aspect-ratio(16, 9);
+    }
+    @include breakpoint(xsmall-max) {
+        // height: 175px;
+        // @include aspect-ratio(16, 9);
+    }
+}
+
+// The img element
+.slide__image {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 300px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        height: auto;
+        width: 100%;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Slider stripes
+
+.container.slider--stripes {
+    position: absolute;
+    z-index: 99;
+    overflow: visible;
+    height: 100%;
+    // height: 400px;
+    margin: 0 auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        // width: 100%;
+        // height: 300px;
+        // @include aspect-ratio(16, 9);
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        // height: 325px ;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        overflow: hidden;
+    }
+}
+
+.slider--stripes .stripes {
+    width: auto;
+    left: 0;
+    right: 0;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        // overflow: hidden;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left:  0;
+        right: 0;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        overflow: hidden;
+        // left: 30px;
+        // right: 30px;
+        left: 15px;
+        right: 15px;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        // left: 15px;
+        // right: 15px;
+    }
+}
+
+.slider--stripes .stripe {
+    // left: -930px;
+    left: -918px;
+    // width: 347px;
+    width: 1000px;
+    background-color: $blue;
+    opacity: 1.0;
+    z-index: 99;
+    // Large desktop and below
+    @include breakpoint(large-max) {
+        // left: -930px;
+        left: -918px;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 650px;
+        left: -569px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+    }
+}
+
+.slider--stripes .stripe + .stripe {
+    // left: -870px;
+    left: -858px;
+    background-color: $blue;
+    opacity: 0.5;
+    @include breakpoint(large-max) {
+        left: -858px
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 695px;
+        left: -585px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+    }
+}
+
+.slider--stripes .stripe--right {
+    right: -98px;
+    width: 180px;
+    background-color: $blue;
+    opacity: 1.0;
+    z-index: 99;
+    // Large desktop and below
+    @include breakpoint(large-max) {
+        width: 240px;
+        right: -158px;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        // right: -10px;
+        right: -160px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        right: -160px;
+    }
+}
+
+.slider--stripes .stripe--right + .stripe--right {
+    right: -98px;
+    width: 240px;
+    background-color: $blue;
+    opacity: 0.5;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SlickJS Overrides
+
+.slick-slide, .slick-slide:focus, .slick-slide:active {
+    outline: none !important;
+    border: 0 none;
+}
+
+.slick-arrow {
+    border: 0 none;
+    width: 35px;
+    height: 35px;
+    top: 175px;
+    text-indent: -9999px;
+    background-image: url("../img/bowl-sprites.png");
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: absolute;
+    z-index: 9;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        top: 135px;
+        width: 27px;
+        height: 27px;
+        background-size: 290px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        top: 75px;
+        width: 18px;
+        height: 18px;
+        background-size: 190px;
+    }
+}
+
+.slick-prev.slick-arrow {
+    left: 0;
+    background-position: -210px -127px;
+    @include breakpoint(large-max) {
+        left: 15px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        background-position: -135px -78px
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        background-position: -87px -53px;
+    }
+}
+
+.slick-next.slick-arrow {
+    right: 0;
+    background-position: -210px -87px;
+    @include breakpoint(large-max) {
+        right: 15px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        background-position: -135px -52px
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        background-position: -86px -36px;
+    }
+}
+
+.slide:focus,
+.slide:active,
+.slide:active:focus {
+    outline: none;
+}
+
+:focus,
+:active,
+:active:focus {
+    outline: lime;
+}
+
+
+.slider--foreground .slick-slide {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slider--foreground .slick-slide.slick-active {
+    opacity: 1.0;
+}

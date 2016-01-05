@@ -1,0 +1,127 @@
+.top-news {
+    position: relative;
+}
+
+.top-news__title {
+    color: $gray-5;
+    background-color: $gray-lt;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    height: 38px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 8px 0 15px;
+    position: absolute;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        height: 50px;
+        line-height: 50px;
+    }
+    // Phone and below
+    @include breakpoint(small-max) {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+.top-news__title::after {
+    content: '';
+    height: 35px;
+    width: 16px;
+    background-color: $gray-lt;
+    // background-color: rgba(255,0,255,0.5);
+    position: absolute;
+    top: 0;
+    right: -15px;
+    left: auto;
+    transform: skewX(-15deg);
+    transform-origin: top;
+    @extend .skew;
+    -webkit-transform-origin: 0 0;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        right: -15px;
+        height: 50px;
+        width: 16px;
+    }
+}
+
+.top-news__summary {
+    text-transform: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(224,224,224,0.915);
+    z-index: 9;
+    overflow: hidden;
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        height: 70px
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 55px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        height: 50px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        height: 90px;
+    }
+}
+
+.top-news__summary p {
+    @extend .oswald;
+    font-weight: 400;
+    color: $gray-5;
+    padding: 0;
+    letter-spacing: .5px;
+    overflow: hidden;
+    // Large desktop and above
+    @include breakpoint(large-min) {
+        font-size: 1.2em;
+        line-height: 1.22em;
+        height: 40px;
+        margin: 13px 15px;
+    }
+    // Large desktop and below
+    @include breakpoint(large-max) {
+        font-size: 1.2em;
+        line-height: 20px;
+        height: 40px;
+        margin: 15px;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        font-size: 1.07em;
+        line-height: 17px;
+        height: 35px;
+        margin: 10px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        font-size: 1.0em;
+        line-height: 14px;
+        height: 30px;
+        margin: 8px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        font-size: 1.35em;
+        line-height: 24px;
+        height: 50px;
+        margin: 20px 25px;
+    }
+}
+
+.top-news__image {
+    width: 100%;
+    height: auto;
+}
