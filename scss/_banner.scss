@@ -2,33 +2,32 @@
 //     height: 90px;
 // }
 
-.article--banner-ad {
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        margin: 0;
-    }
-}
+// .article--banner-ad {
+//     margin: 0 auto;
+//     padding: 0;
+//     position: relative;
+//     text-align: center;
+//     // Phone and below
+//     @include breakpoint(xsmall-max) {
+//         margin: 0;
+//     }
+// }
 
-.article--banner-ad:first-of-type {
-    // Phone and above
-    @include breakpoint(xsmall-min) {
-        margin: 20px auto;
-    }
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        margin: 20px auto;
-        // margin: 15px auto;
-    }
-    // iPhone and below
-    @include breakpoint(iphone) {
-        // margin: 15px auto;
-    }
-
-}
+// .article--banner-ad:first-of-type {
+//     // Phone and above
+//     @include breakpoint(xsmall-min) {
+//         margin: 20px auto;
+//     }
+//     // Phone and below
+//     @include breakpoint(xsmall-max) {
+//         margin: 20px auto;
+//         // margin: 15px auto;
+//     }
+//     // iPhone and below
+//     @include breakpoint(iphone) {
+//         // margin: 15px auto;
+//     }
+// }
 
 .article--banner-ad + .stripes .stripe {
     left: -835px;

@@ -61,25 +61,25 @@
     }
     @include breakpoint(large-max) {
         font-size: 1.2em;
-        line-height: 20px;
+        line-height: 1.22em;
         height: 40px;
         margin: 15px;
     }
     @include breakpoint(medium-max) {
         font-size: 1.07em;
-        line-height: 17px;
+        line-height: 1.2em;
         height: 35px;
         margin: 10px;
     }
     @include breakpoint(small-max) {
         font-size: 1.0em;
-        line-height: 14px;
+        line-height: 1.1em;
         height: 30px;
         margin: 8px;
     }
     @include breakpoint(xsmall-max) {
         font-size: 1.35em;
-        line-height: 24px;
+        line-height: 1.4em;
         height: 50px;
         margin: 20px 25px;
     }

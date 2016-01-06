@@ -11,15 +11,11 @@
     transition: height 2.5s;
     // Move Header Elements Mid-Desktop
     @include breakpoint(nav) {
-        // top: 13px;
-        // right: 230px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
         font-size: 0.95em;
         top: 42px;
-        // padding: 0 3px;
-        // right: 170px;
     }
     // Tablet and below
     @include breakpoint(small-max) {

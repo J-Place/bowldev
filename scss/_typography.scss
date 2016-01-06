@@ -27,20 +27,26 @@ body {
 }
 
 .section__title {
-    color: $gray-dk;
+    color: $gray-4;
     font-size: 3.3em;
+    font-weight: 500;
     line-height: 1.75em;
     margin: 0;
-    padding: 0 0 1em;
+    padding: 0 0 35px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        font-size: 2.8em;
+        line-height: 1.85em;
+    }
 }
 
 .section__title::after {
     content: '';
     display: block;
-    background-color: $gray-dk;
+    background-color: $gray-4;
     width: 65px;
     height: 5px;
     margin: 0 auto;

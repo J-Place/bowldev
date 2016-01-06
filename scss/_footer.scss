@@ -3,6 +3,10 @@
     padding-top: 2em;
     padding-bottom: 1em;
     // margin-top: -30px;
+// Tablet and below
+    @include breakpoint(small-max) {
+        padding: 2em 3em 1em;
+    }
 }
 
 .container-fluid.footer .container {

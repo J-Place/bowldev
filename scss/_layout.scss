@@ -72,11 +72,13 @@
 // Tablet and below
     @include breakpoint(small-max) {
         // min-height: 190px;
-        padding-bottom: 60px;
+        margin-bottom: 15px;
+        padding-bottom: 0;
     }
 // Phone and below
     @include breakpoint(xsmall-max) {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
+        padding-bottom: 0;
     }
 }
 
@@ -111,6 +113,11 @@
     @include breakpoint(medium-min) {
         min-height: 340px;
     }
+}
+
+.article--cta-1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

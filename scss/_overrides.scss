@@ -1,3 +1,9 @@
+a:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0;
+}
+
 .container-fluid {
     overflow: hidden;
     position: relative;
@@ -25,6 +31,3 @@
         padding-left: 15px;
     }
 }
-
-
-

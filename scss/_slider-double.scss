@@ -40,9 +40,10 @@
     height: 100%;
     // Tablet and below
     @include breakpoint(small-max) {
-        top: 0;
-        left: 15px;
-        right: 15px;
+        // top: 0;
+        // left: 15px;
+        // right: 15px;
+        height: 300px;
         // height: 375px;
         overflow: hidden;
     }
@@ -51,7 +52,7 @@
         // top: 0;
         // left: 15px;
         // right: 15px;
-        height: 285px;
+        // height: 285px;
         // overflow: hidden;
     }
     @media only screen and (max-width: 400px) {
@@ -62,42 +63,35 @@
 .slider--foreground .slick-list {
     height: 100px;
     top: 270px;
-    left: -30px;
+    left: -15px;
     width: 755px;
-    // padding-right: 50px;
     // Desktop and below
     @include breakpoint(medium-max) {
-        // @extend .skew;
-        width: auto;
-        top: 300px;
+        height: 75px;
+        top: initial;
         left: 0;
-        right: 0;
+        bottom: 25px;
+        position: absolute;
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        height: 110px;
-        top: initial;
-        bottom: 0;
-        position: absolute;
-        // left: -10%;
-        // width: auto;
-        // padding-left: 10%;
+
     }
 }
 
 .slider--foreground .slick-track {
     // height: 100px;
-    // Phone and below
-    @include breakpoint(small-max) {
-        height: 110px
+    // Tablet and below
+    @include breakpoint(medium-max) {
+        height: 100px
     }
 }
 
 .slider--foreground .slick-slide {
     height: 100px;
     // Tablet and below
-    @include breakpoint(small-max) {
-        height: 110px;
+    @include breakpoint(medium-max) {
+        height: 100px;
     }
 }
 
@@ -106,15 +100,20 @@
     width: 999px;
     height: 100px;
     right: 180px;
+    // right: 0;
     margin-left: 0;
     display: block;
     position: relative;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        right: 0;
+    }
     // Tablet and below
     @include breakpoint(small-max) {
         // width: auto;
         // width: 100%;
-        left: 0;
-        right: 0;
+        // left: 0;
+        // right: 0;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -129,38 +128,41 @@
     position: absolute;
     display: block;
     left: 200px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        left: 25px;
+    }
     // Tablet and below
     @include breakpoint(small-max) {
-        left: 0;
+        left: 15px;
     }
 }
 
 .slide__title {
-    // @extend .no-skew;
     color: #FFF;
     font-size: 1.9em;
     font-weight: 400;
     letter-spacing: 1px;
     margin-top: 20px;
     text-transform: uppercase;
-    // Tablet and below
-    @include breakpoint(small-max) {
-        font-size: 1.5em;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        font-size: 1.52em;
         margin-top: 15px;
-        margin-bottom: 5px;
-        letter-spacing: 0.5px;
+        margin-bottom: 7px;
+        // letter-spacing: 0.75px;
     }
 }
 
 .slide__text {
-    // @extend .no-skew;
     color: #FFF;
     font-size: 1.1em;
     font-weight: 300;
     text-transform: uppercase;
-    // Tablet and below
-    @include breakpoint(small-max) {
-        font-size: 0.9em;
+    letter-spacing: 1px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        font-size: 0.85em;
     }
 }
 
@@ -170,34 +172,32 @@
     position: absolute;
     height: 100px;
     margin-bottom: 0;
-    top: 250px;
+    // top: 250px;
+    bottom: 30px;
     left: 0;
     right: 0;
-    @extend .skew;
     z-index: 999;
     // Large desktop and above
     @include breakpoint(large-min) {
-        // @extend .skew-zero;
-        @extend .skew;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
-        overflow: hidden;
-        // height: 75px;
+        height: 75px;
+        bottom: 25px;
         // top: 150px;
-        left: -450px;
+        // left: -450px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        @extend .skew-zero;
-        height: 110px;
+        // height: 110px;
         // top: 175px;
         top: initial;
-        bottom: 0;
-        left: -450px;
+        // bottom: 0;
+        // left: -450px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
+        overflow: hidden;
         left: 15px;
         right: 15px;
     }
@@ -208,42 +208,37 @@
     transition: background-color 0.2s;
     width: 1800px;
     height: 100%;
-    left: -1050px;
-    position: absolute;
-    // @extend .skew;
+    left: -1080px;
+    position: relative;
     z-index: 999;
-    // Large desktop and above
-    @include breakpoint(large-min) {
-        // @extend .skew-zero;
-        // @extend .skew;
+    // Large desktop and below
+    @include breakpoint(large-max) {
+        left: -1100px;
     }
     // Desktop and above
     @include breakpoint(medium-min) {
-        // @extend .skew;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
-        // width: auto;
-        // left: 15px;
-        // right: 15px;
-        // @extend .skew-zero;
+        left: -1273px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        // position: relative;
-        // left: 0;
-        // right: 0;
     }
 }
 
 .ribbon::after {
-    background-color: $red;
-    height: 100%;
-    border-bottom: 50% solid blue;
-    border-right: 50% solid green;
+    content: '';
     position: absolute;
-    right: -30px;
-    width: 50px;
+    background-color: inherit;
+    height: 100px;
+    @extend .skew;
+    right: -17px;
+    width: 35px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 75px;
+    }
 }
 
 
@@ -302,8 +297,8 @@
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        height: auto;
-        width: 100%;
+        // height: auto;
+        // width: 110%;
     }
 }
 
@@ -380,7 +375,7 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         width: 650px;
-        left: -569px;
+        left: -585px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -413,17 +408,17 @@
     z-index: 99;
     // Large desktop and below
     @include breakpoint(large-max) {
-        width: 240px;
-        right: -158px;
+        // width: 240px;
+        // right: -158px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
-        // right: -10px;
-        right: -160px;
+        width: 500px;
+        right: -435px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        right: -160px;
+        // right: -160px;
     }
 }
 
@@ -432,6 +427,10 @@
     width: 240px;
     background-color: $blue;
     opacity: 0.5;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 210px;
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -455,7 +454,7 @@
     position: absolute;
     z-index: 9;
     // Tablet and below
-    @include breakpoint(small-max) {
+    @include breakpoint(medium-max) {
         top: 135px;
         width: 27px;
         height: 27px;
@@ -472,12 +471,13 @@
 
 .slick-prev.slick-arrow {
     left: 0;
-    background-position: -210px -127px;
+    background-position: -210px -125px;
     @include breakpoint(large-max) {
         left: 15px;
     }
     // Tablet and below
-    @include breakpoint(small-max) {
+    @include breakpoint(medium-max) {
+        left: 10px;
         background-position: -135px -78px
     }
     // Phone and below
@@ -488,13 +488,14 @@
 
 .slick-next.slick-arrow {
     right: 0;
-    background-position: -210px -87px;
+    background-position: -210px -85px;
     @include breakpoint(large-max) {
         right: 15px;
     }
     // Tablet and below
-    @include breakpoint(small-max) {
-        background-position: -135px -52px
+    @include breakpoint(medium-max) {
+        right: 35px;
+        background-position: -127px -52px
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
