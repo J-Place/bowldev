@@ -2,6 +2,14 @@
 .container.quick-links {
     margin-top: 30px;
     padding: 0;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        padding: 0 45px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        padding: 0 30px;
+    }
 }
 
 .quick-link {
@@ -28,7 +36,7 @@
     height: 125px;
     // Phone and below
     @include breakpoint(xsmall-max) {
-        width: 85px;
+        width: 102px;
         height: auto;
     }
 }
@@ -47,6 +55,10 @@
     -moz-transition: opacity 0.25s;
     -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
+    @include breakpoint(xsmall-max) {
+        width: 102px;
+        height: auto;
+    }
 }
 
 .quick-link:hover .quick-link__image--hover {
@@ -63,8 +75,8 @@
     // Tablet and below
     @include breakpoint(small-max) {
         font-size: 1.0em;
-        margin-top: 0px;
-        padding: 0 5px;
+        margin-top: 5px;
+        padding: 0;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {

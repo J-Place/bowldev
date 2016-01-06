@@ -41,7 +41,7 @@
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        height: 90px;
+        height: 100px;
     }
 }
 
@@ -78,9 +78,9 @@
         margin: 8px;
     }
     @include breakpoint(xsmall-max) {
-        font-size: 1.35em;
-        line-height: 1.4em;
-        height: 50px;
+        font-size: 1.65em;
+        line-height: 1.3em;
+        height: 60px;
         margin: 20px 25px;
     }
 

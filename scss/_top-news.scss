@@ -14,7 +14,7 @@
     padding: 0 8px 0 15px;
     position: absolute;
     // Tablet and below
-    @include breakpoint(small-max) {
+    @include breakpoint(medium-max) {
         font-size: 0.91em;
         height: 29px;
         line-height: 31px;
@@ -43,7 +43,7 @@
     @extend .skew;
     -webkit-transform-origin: 0 0;
     // Tablet and below
-    @include breakpoint(small-max) {
+    @include breakpoint(medium-max) {
         height: 29px;
     }
     // Phone and below
@@ -76,7 +76,7 @@
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        height: 90px;
+        height: 100px;
     }
 }
 
@@ -117,9 +117,9 @@
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        font-size: 1.35em;
-        line-height: 1.4em;
-        height: 50px;
+        font-size: 1.65em;
+        line-height: 1.3em;
+        height: 60px;
         margin: 20px 25px;
     }
 }

@@ -11,6 +11,12 @@
 
 .container.leaderboard {
     margin: 20px auto;
+    padding: 0;
+    text-align: center;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        padding: 0 15px;
+    }
 }
 
 .container.leaderboard--footer {

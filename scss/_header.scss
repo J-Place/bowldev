@@ -4,7 +4,9 @@
     z-index: 9999;
     border-bottom: 1px solid #d5d7d5;
     transition: height 0.3s;
-    overflow: visible;
+    // overflow: visible;
+        overflow-x: hidden;
+        overflow-y: visible;
     // Desktop and below
     @include breakpoint(medium-max) {
         height: 70px;
@@ -14,7 +16,8 @@
         height: 55px;
         padding: 0;
         position: fixed;
-        overflow: visible;
+        overflow-x: hidden;
+        overflow-y: visible;
         right: 0;
         left: 0;
         top: 0;

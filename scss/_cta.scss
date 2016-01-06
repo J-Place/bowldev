@@ -4,10 +4,15 @@
 }
 
 .cta-3 .row {
+    margin: 0;
     // Tablet and below
-    @include breakpoint(medium-max) {
-        margin-right: 0;
-        margin-left: 15px;
+    @include breakpoint(small-max) {
+        margin-left: 0;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        // margin-right: 0;
+        // margin-left: 15px;
     }
 }
 
