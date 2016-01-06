@@ -228,6 +228,11 @@ $(document).ready(function(){
 
 
 
+    // var bodyHeight = $("body").height();
+    // var setBodyHeight = function() {
+    //     $(".container.page--stripes").height(bodyHeight);
+    // };
+    // setBodyHeight();
 
 
     // Set width of Mobile Nav panels

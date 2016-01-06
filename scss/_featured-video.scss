@@ -6,8 +6,23 @@
 }
 
 .featured-video .wrapper {
-    background-color: $gray-md;
+    background-color: $gray-2;
     padding: 30px 0 60px;
+    position: relative;
+}
+
+.featured-video iframe {
+    position: relative;
+    z-index: 999;
+    // position: relative;
+    @include breakpoint(xsmall-max) {
+        height: 238px;
+        width: 424px;
+    }
+    @include breakpoint(iphone) {
+        height: 168px;
+        width: 300px;
+    }
 }
 
 .featured-video__title {
@@ -25,17 +40,15 @@
     @extend .skew;
 }
 
-.featured-video iframe {
-    // z-index: 99;
-    // position: relative;
-}
-
-.stripe--video {
+.stripe--featured-video {
+    @extend .stripe;
+    position: absolute;
     top: 0;
+    bottom: 0;
     left: 65%;
     width: 1900px;
     background-color: $gray-lt;
-    opacity: 0.4;
+    opacity: 0.3;
     @include breakpoint(large) {
         width: 445px;
     }

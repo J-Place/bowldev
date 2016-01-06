@@ -98,29 +98,40 @@
     width: 500px;
     background-color: $blue;
     top: 0;
-    // right: -900px;
-    // right: -550px;
-    left: 200%;
-    transition: right 0.3s;
+    left: 340px;
+    transition: left 0.2s;
     z-index: 9999;
     padding: 0;
     @include breakpoint(large) {
         // height: 205px
     }
+    // Desktop and below
     @include breakpoint(medium-max) {
         height: 375px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left: 340px;
+        display: none;
     }
 }
 
 .marketing-promo__detail.open {
-    // right: -125px;
-    left: -100%
+    left: -50px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        left: -65px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+    }
 }
 
 .marketing-promo__detail p {
     @extend .no-skew;
-    margin-left: 10%;
-    padding: .5em;
+    max-width: 275px;
+    margin: 15px 0 0 40px;
+    padding: 0;
     color: #FFF;
     font-size: 1.1em;
     line-height: 1.25em;
@@ -130,6 +141,11 @@
         display: block;
         letter-spacing: .5px;
         text-transform: uppercase;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        font-size: 0.9em;
+        max-width: 195px;
     }
 }
 

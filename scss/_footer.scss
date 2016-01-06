@@ -7,20 +7,35 @@
     @include breakpoint(small-max) {
         padding: 2em 3em 1em;
     }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        padding: 0 15px 1em;
+        margin-bottom: 4em;
+    }
 }
 
 .container-fluid.footer .container {
 
 }
 
-.footer-col {}
+.container.footer__links {
+    position: relative;
+    z-index: 999;
+}
 
 .footer-col--info {
     @extend .footer-col;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin-top: 60px;
+    }
 }
 
 .footer-col--links {
-    @extend .footer-col;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        margin-bottom: 45px;
+    }
 }
 
 .footer-links {
@@ -132,3 +147,90 @@
         padding: 0;
     }
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Footer stripes
+
+.container.footer--stripes {
+    position: absolute;
+    z-index: 99;
+    overflow: visible;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    // Slider small
+    @include breakpoint(slider-small) {
+        overflow: hidden;
+    }
+}
+
+.footer--stripes .stripes {
+    width: auto;
+    left: 0;
+    right: 0;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left:  0;
+        right: 0;
+    }
+    // Slider small below
+    @include breakpoint(slider-small) {
+        overflow: hidden;
+        left: 15px;
+        right: 15px;
+    }
+}
+
+.footer--stripes .stripe {
+    // left: -930px;
+    left: 1024px;
+    width: 500px;
+    background-color: #000;
+    opacity: 0.1;
+    z-index: 99;
+    // Large desktop and below
+    @include breakpoint(large-max) {
+        // left: -918px;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        // width: 650px;
+        left: 780px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left: 750px;
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        left: 690px;
+    }
+}
+
+.footer--stripes .stripe + .stripe {
+    left: 954px;
+    // width: 440px;
+    background-color: #000;
+    opacity: 0.1;
+    @include breakpoint(large-max) {
+        // left: -858px
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        // width: 650px;
+        left: 710px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left: 680px;
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        left: 650px;
+    }
+}
+

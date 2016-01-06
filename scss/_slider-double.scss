@@ -149,7 +149,7 @@
     @media only screen and (max-width: 580px) {  }
     @media only screen and (max-width: 520px) {  }
     @media only screen and (max-width: 460px) {  }
-    @media only screen and (max-width: 410px) {  }
+    @media only screen and (max-width: 410px) { font-size: 1.5em; }
     @media only screen and (max-width: 360px) {  }
 }
 
@@ -171,7 +171,7 @@
     @media only screen and (max-width: 580px) {  }
     @media only screen and (max-width: 520px) {  }
     @media only screen and (max-width: 460px) {  }
-    @media only screen and (max-width: 410px) {  }
+    @media only screen and (max-width: 410px) { font-size: 1.0em; }
     @media only screen and (max-width: 360px) {  }
 }
 
@@ -265,6 +265,7 @@
 
 .container.slider--background {
     height: 400px;
+    padding: 0;
     overflow: hidden;
     position: relative;
     z-index: -1;
@@ -276,7 +277,7 @@
     @include breakpoint(small-max) {
         padding: 0 15px;
     }
-    // Phone Slider small
+    // Slider small
     @include breakpoint(slider-small) {
         height: 285px;
     }
@@ -307,7 +308,8 @@
     margin: 0 auto;
     // Desktop and below
     @include breakpoint(medium-max) {
-        height: 285px;
+        // height: 285px;
+        height: 300px;
     }
     // Slider small
     @include breakpoint(slider-small) {
@@ -398,7 +400,7 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         width: 695px;
-        left: -585px;
+        left: -580px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -433,12 +435,12 @@
     opacity: 0.5;
     // Desktop and below
     @include breakpoint(medium-max) {
-        width: 530px;
+        width: 550px;
         right: -435px;
     }
     // Slider small
     @include breakpoint(slider-small) {
-        right: -455px;
+        right: -475px;
     }
 }
 
@@ -523,7 +525,7 @@
 :focus,
 :active,
 :active:focus {
-    outline: lime;
+    outline: orange;
 }
 
 

@@ -1,12 +1,10 @@
 .container-fluid.header {
     position: relative;
     height: 95px;
-    z-index: 9999;
+    z-index: 99999;
     border-bottom: 1px solid #d5d7d5;
     transition: height 0.3s;
-    // overflow: visible;
-        overflow-x: hidden;
-        overflow-y: visible;
+    overflow: visible;
     // Desktop and below
     @include breakpoint(medium-max) {
         height: 70px;
@@ -15,12 +13,13 @@
     @include breakpoint(xsmall-max) {
         height: 55px;
         padding: 0;
+        // overflow-x: hidden;
+        // overflow-y: visible;
         position: fixed;
-        overflow-x: hidden;
-        overflow-y: visible;
-        right: 0;
-        left: 0;
         top: 0;
+        // width: 100%;
+        left: 0;
+        right: 0;
         background-color: #FFF;
     }
 }
@@ -31,8 +30,12 @@
     margin: 0 auto;
     // Phone and below
     @include breakpoint(xsmall-max) {
+        // margin: 0;
         padding-right: 0;
         padding-left: 0;
+        // position: fixed;
+        // right: 0;
+        // left: 0;
     }
 }
 

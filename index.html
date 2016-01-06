@@ -24,6 +24,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
+<!-- Header -->
     <header class="container-fluid header">
         <div class="container">
             <a class="logo" href="/" class="logo">BOWL.com</a>
@@ -38,80 +39,86 @@
                     <li class="nav__list--item"><a href="#" id="find">Find a...</a></li>
                 </ul>
             </nav>
+            <!-- Nav dropdown for desktop; slide out for mobile -->
             <div class="nav-dropdown">
                 <div class="dropdown-wrapper bowlers nav-level-2" id="dropdown-bowlers">
                     <h3 class="dropdown__list--title">
                         <a href="#" class="exit--bowlers"><span class="nav--prev">Back</span>Bowlers</a>
                     </h3>
                     <div class="dropdown__links">
-                        <ul class="dropdown__list--column">
-                            <li class="dropdown__list--item"><a href="#">Join USBC</a></li>
-                            <li class="dropdown__list--item"><a href="#">Welcome 2 Bowling</a></li>
-                            <li class="dropdown__list--item"><a href="#">USBC Bowling Academy</a></li>
-                            <li class="dropdown__list--item"><a href="#">USBC Bowler's Source</a></li>
-                            <li class="dropdown__list--item"><a href="#">USBC Bowling Store</a></li>
-                        </ul>
-                        <ul class="dropdown__list--column">
-                            <li class="dropdown__list--item"><a href="#">League Standing Sheets</a></li>
-                            <li class="dropdown__list--item"><a href="#">Sport Bowling</a></li>
-                            <li class="dropdown__list--item"><a href="#">Team USA</a></li>
-                            <!-- <li class="dropdown__list--item"><a href="#"></a></li> -->
-                        </ul>
-                        <ul class="dropdown__list--column">
-                            <li class="dropdown__list--item"><a href="#">News</a></li>
-                            <li class="dropdown__list--item"><a href="#">BowlTV</a></li>
-                            <li class="dropdown__list--item"><a href="#">Awards</a></li>
-                            <li class="dropdown__list--item"><a href="#">USBC Magazine Archive</a></li>
-                        </ul>
+                        <div class="dropdown__list--column">
+                            <h4 class="dropdown__list--title">Discover</h4>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list--item"><a href="#">Join USBC</a></li>
+                                <li class="dropdown__list--item"><a href="#">Welcome 2 Bowling</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Bowling Academy</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Bowler's Source</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Bowling Store</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__list--column">
+                            <h4 class="dropdown__list--title">Media</h4>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list--item"><a href="#">News</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Magazine Archive</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__list--column">
+                            <h4 class="dropdown__list--title">Digital Content</h4>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list--item"><a href="#">USBC Bowling Academy</a></li>
+                                <li class="dropdown__list--item"><a href="#">Bowlers's Source</a></li>
+                                <li class="dropdown__list--item"><a href="#">Welcome 2 Bowling</a></li>
+                                <li class="dropdown__list--item"><a href="#">BowlTV</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__list--column">
+                            <h4 class="dropdown__list--title">Travel</h4>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list--item"><a href="#">Travel</a></li>
+                                <li class="dropdown__list--item"><a href="#">My Bowling Vacation</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="dropdown-cta">
-                        <img src="img/meganav-cta.jpg" alt="">
+                        <img src="img/content/meganav-cta-bowlers.jpg" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
                     </div>
                 </div>
 
-                <div class="dropdown-wrapper youth nav-level-2" id="">
+                <div class="dropdown-wrapper youth nav-level-2" id="dropdown-youth">
                     <h3 class="dropdown__list--title">
-                        <a href="#" class="exit--youth"><span class="nav--prev">Back</span>Youth</a>
+                        <a href="#" class="exit--bowlers"><span class="nav--prev">Back</span>Youth</a>
                     </h3>
                     <div class="dropdown__links">
-                        <ul class="dropdown__list--column">
-                            <li class="dropdown__list--item"><a href="#">Youth Home</a></li>
-                            <li class="dropdown__list--item">
-                                <a href="#" id="youth-tournaments" class="has-children">Youth Tournaments</a>
-                                <div class="dropdown-wrapper youth-tournaments nav-level-3">
-                                    <h3 class="dropdown__list--title">
-                                        <a href="#" class="exit--youth-tournaments"><span class="nav--prev">Back</span>Youth Tournaments</a>
-                                    </h3>
-                                    <div class="dropdown__links">
-                                        <ul class="dropdown__list--column">
-                                            <li class="dropdown__list--item"><a href="#">Junior Gold</a></li>
-                                            <li class="dropdown__list--item"><a href="#">USA Bowling</a></li>
-                                            <li class="dropdown__list--item"><a href="#">Youth Open Championships</a></li>
-                                            <li class="dropdown__list--item"><a href="#">Pepsi Championships</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="dropdown__list--item"><a href="#">Collegiate</a></li>
-                            <li class="dropdown__list--item"><a href="#">High School</a></li>
-                            <li class="dropdown__list--item"><a href="#">USA Bowling</a></li>
-                        </ul>
-                        <ul class="dropdown__list--column">
-                            <li class="dropdown__list--item"><a href="#">Scholarships</a></li>
-                            <li class="dropdown__list--item"><a href="#">Junior Team USA</a></li>
-                            <li class="dropdown__list--item"><a href="#">Bowling Combine</a></li>
-                            <li class="dropdown__list--item"><a href="#">YES Fund</a></li>
-                        </ul>
-                        <ul class="dropdown__list--column">
-                            <li class="dropdown__list--item"><a href="#">Bowlopolis</a></li>
-                            <li class="dropdown__list--item"><a href="#">Youth Processing</a></li>
-                            <li class="dropdown__list--item"><a href="#">Registered Volunteer Program</a></li>
-                            <li class="dropdown__list--item"><a href="#">SMART</a></li>
-                        </ul>
+                        <div class="dropdown__list--column">
+                            <h4 class="dropdown__list--title">Tournaments</h4>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list--item"><a href="#">Welcome 2 Bowling</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Bowling Academy</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Bowler's Source</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Bowling Store</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__list--column">
+                            <h4 class="dropdown__list--title">Education</h4>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list--item"><a href="#">News</a></li>
+                                <li class="dropdown__list--item"><a href="#">Resources</a></li>
+                                <li class="dropdown__list--item"><a href="#">USBC Magazine Archive</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__list--column">
+                            <h4 class="dropdown__list--title">Scholarships</h4>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list--item"><a href="#">Bowlers's Source</a></li>
+                                <li class="dropdown__list--item"><a href="#">Welcome 2 Bowling</a></li>
+                                <li class="dropdown__list--item"><a href="#">BowlTV</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="dropdown-cta">
-                        <img src="img/meganav-cta.jpg" alt="">
+                        <img src="img/content/meganav-cta-youth.jpg" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
                     </div>
                 </div>
@@ -145,7 +152,7 @@
     </header>
 
 <!-- Page Stripes -->
-    <div class="container page--stripes">
+    <div class="container page-stripes">
         <div class="stripes">
             <div class="stripe"></div>
             <div class="stripe"></div>
@@ -224,13 +231,13 @@
                     <h3 class="quick-link__title">Find a Member</h3>
                 </a>
             </div>
-            <div class="col-lg-2 col-sm-3 col-xs-6 visible-sm">
+            <div class="col-lg-2 col-sm-3 col-xs-6 visible-sm visible-md visible-lg">
                 <a class="quick-link" href="#">
                     <img class="quick-link__image" src="img/quick-link-3.png" alt="">
                     <h3 class="quick-link__title">League Standing Sheets</h3>
                 </a>
             </div>
-            <div class="col-lg-2 col-sm-3 col-xs-6 visible-sm">
+            <div class="col-lg-2 col-sm-3 col-xs-6 visible-sm visible-md visible-lg">
                 <a class="quick-link" href="#">
                     <img class="quick-link__image" src="img/quick-link-4.png" alt="">
                     <h3 class="quick-link__title">Open Championships</h3>
@@ -261,11 +268,9 @@
                             <p>Strike big at the 2017 Open Championships!</p>
                         </div>
                         <img class="marketing-promo__image" src="img/content/mktg-promo-hero.jpg" alt="" width="480px" height="400px">
-                        <!--
                         <div class="marketing-promo__detail">
                             <p>2017 USBC Open Championships<br />March 5- July 10<br />Point Hotel & Casino<br />Limited space available.<br /><span class="bold">Register Today!</span></p>
                         </div>
-                         -->
                     </article>
                 </div>
                 <div class="col-sm-4 col-xs-12">
@@ -293,9 +298,10 @@
         <div class="row featured-video">
                     <div class="wrapper">
                         <h3 class="section__title featured-video__title">Featured Video</h3>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gYCbWY45Oek" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gYCbWY45Oek" frameborder="0" wmode="Opaque" allowfullscreen></iframe>
+                        <div class="stripe--featured-video"></div>
                     </div>
-                    <!-- <div class="stripe--video"></div> -->
+                    <!-- <div class="stripe--featured-video"></div> -->
         </div>
     </div>
 
@@ -322,44 +328,30 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <article class="article article--equal">
-                        <img src="img/content/bug-2015-usbc-mixed.jpg" alt="" class="article__image">
-                        <h3 class="article__title">Mixed</h3>
-                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <img src="img/content/news-1.jpg" alt="" class="article__image">
+                        <h3 class="article__title">PWBA shows global reach of bowling</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </article>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <article class="article article--equal">
-                        <img src="img/content/bug-2015-usbc-mixed.jpg" alt="" class="article__image">
-                        <h3 class="article__title">Mixed</h3>
-                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <img src="img/content/news-2.jpg" alt="" class="article__image">
+                        <h3 class="article__title">South Africa, Columbia lead World Cup field into match play</h3>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </article>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <article class="article article--equal">
-                        <img src="img/content/bug-youth-open.jpg" alt="" class="article__image">
+                        <img src="img/content/news-3.png" alt="" class="article__image">
                         <h3 class="article__title">Bowling.com Youth Open Championships</h3>
                         <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                     </article>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <article class="article article--equal">
-                        <img src="img/content/bug-2015-usbc-mixed.jpg" alt="" class="article__image">
+                        <img src="img/content/news-4.jpg" alt="" class="article__image">
                         <h3 class="article__title">Mixed</h3>
-                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <article class="article article--equal">
-                        <img src="img/content/bug-usbc-team-usa.jpg" alt="" class="article__image">
-                        <h3 class="article__title">Team USA Trials</h3>
-                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <article class="article article--equal">
-                        <img src="img/content/bug-youth-open.jpg" alt="" class="article__image">
-                        <h3 class="article__title">Bowling.com Youth Open Championships</h3>
-                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                     </article>
                 </div>
             <!-- </div> -->
@@ -376,13 +368,20 @@
         </div>
     </div>
 
+<!-- Page Stripes Bottom -->
+    <div class="container page-stripes page-stripes--bottom">
+        <div class="stripes">
+            <div class="stripe"></div>
+            <div class="stripe"></div>
+        </div>
+    </div>
 
 <!-- Footer -->
     <footer class="container-fluid footer">
-        <div class="container">
+        <div class="container footer__links">
             <div class="footer-col--links col-sm-12 col-md-7 col-md-push-2">
                 <div class="row">
-                    <div class="footer-links col-xs-4">
+                    <div class="footer-links col-xs-12 col-sm-4">
                         <h5 class="footer-links__title">Philanthropy</h5>
                         <ul class="footer-links__list">
                             <li>
@@ -405,7 +404,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-links col-xs-4">
+                    <div class="footer-links col-xs-12 col-sm-4">
                         <h5 class="footer-links__title">Ecommerce</h5>
                         <ul class="footer-links__list">
                             <li>
@@ -428,7 +427,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-links col-xs-4">
+                    <div class="footer-links col-xs-12 col-sm-4">
                         <h5 class="footer-links__title">Broadcast Partners</h5>
                         <ul class="footer-links__list">
                             <li>
@@ -447,7 +446,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-col--info col-xs-4 col-md-2 col-md-pull-7">
+            <div class="footer-col--info col-xs-12 col-sm-4 col-md-2 col-md-pull-7">
                 <div class="row">
                     <h5 class="footer-links__title">Information</h5>
                     <ul class="footer-links__list">
@@ -463,12 +462,12 @@
             </div>
             <div class="footer-col--cta col-sm-8 col-md-3">
                 <div class="row">
-                    <div class="footer-col--promo col-md-12 col-sm-6 col-xs-4">
+                    <div class="footer-col--promo col-md-12 col-sm-6 col-xs-12">
                         <h5 class="footer-links__title">Download App</h5>
                         <img src="img/download-apple.png" alt="" class="download-icon">
                         <img src="img/download-google.png" alt="" class="download-icon">
                     </div>
-                    <div class="footer-col--promo col-md-12 col-sm-6 col-xs-4">
+                    <div class="footer-col--promo col-md-12 col-sm-6 col-xs-12">
                         <h5 class="footer-links__title">Connect</h5>
                         <a class="social-link--fb" href="#">Facebook</a>
                         <a class="social-link--tw" href="#">Twitter</a>
@@ -479,6 +478,15 @@
         </div>
         <div class="container">
             <p class="corporate">United States Bowling Congress<span class="corporate-address">621 Six Flags Drive, Arlington, Texas 76011</span>800-514-BOWL</p>
+        </div>
+        <!-- Footer stripes -->
+        <div class="container footer--stripes">
+            <div class="stripes">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <!-- <div class="stripe--right"></div> -->
+                <!-- <div class="stripe--right"></div> -->
+            </div>
         </div>
     </footer>
 

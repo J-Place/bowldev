@@ -23,12 +23,11 @@
     padding: 0;
     position: absolute;
     width: 82px;
-    top: -2px;
+    top: 0px;
     right: 48px;
     @include breakpoint(xsmall-min) {
         right: 43px;
     }
-
     @include breakpoint(xsmall-max) {
         display: none;
     }
@@ -56,21 +55,21 @@
     width: 21px;
     height: 21px;
     @extend .nav-icon;
-    background-position: -125px -6px;
+    background-position: -126px -6px;
 }
 
 .twitter:hover {
-    background-position: -125px -36px;
+    background-position: -126px -36px;
 }
 
 .youtube {
     height: 21px;
     width: 26px;
     @extend .nav-icon;
-    background-position: -153px -7px;
+    background-position: -153px -6px;
 }
 
 .youtube:hover {
-    background-position: -153px -37px;
+    background-position: -153px -36px;
 }
 

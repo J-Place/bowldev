@@ -1,12 +1,19 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     color: $gray-5;
-    letter-spacing: 1.8px;
 }
 
 h1, h2, h3 {
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
+
+
+h4, h5, h6 {
+    // text-transform: uppercase;
+    letter-spacing: 0.25px;
+}
+
 
 body {
     font-family: 'Open Sans', sans-serif;
