@@ -1,6 +1,10 @@
 .container.cta-3 {
     padding: 0;
     margin-bottom: 40px;
+    // iPhone and below
+    @include breakpoint(iphone) {
+        margin-bottom: 0px;
+    }
 }
 
 .cta-3 .row {

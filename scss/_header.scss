@@ -65,11 +65,11 @@
         background-position: -1px -1px;
     }
     // Small phone and below
-    @include breakpoint(iphone-max) {
+    @include breakpoint(iphone) {
         // height: 55px;
         // margin: 0 auto;
-        background-size: 240px;
-        width: 200px;
-        background-position: 2px -1px;
+        background-size: 255px;
+        width: 215px;
+        background-position: 4px 1px;
     }
 }

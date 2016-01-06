@@ -120,6 +120,7 @@
 
 // Right arrow on mobile nav links with children
 .nav__list--item a.has-children::after {
+    // @extend .skew;
     // Phone and below
     @include breakpoint(xsmall-max) {
         padding: 10px 0;
@@ -157,6 +158,14 @@
     height: 4px;
     margin: 17px auto 0;
     @extend .skew;
+    // Tablet and below
+    @include breakpoint(small-min) {
+
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        margin-top: 6px;
+    }
     // Phone and below
     @include breakpoint(xsmall-max) {
         display: none;
@@ -170,11 +179,16 @@
     width: auto;
     height: 4px;
     margin: 17px auto 0;
+    @extend .skew;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        margin-top: 5px;
+    }
     // Phone and above
     @include breakpoint(xsmall-min) {
-        @extend .skew;
+        // @extend .skew;
     }
-    // Phone and below
+    // Phone and below; link arrows
     @include breakpoint(xsmall-max) {
         @extend .skew-reset;
         position: absolute;

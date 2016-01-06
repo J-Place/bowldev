@@ -40,7 +40,11 @@
 
 .nav-dropdown {
     margin-top: -1px;
-    box-shadow: 5px 0 5px -4px rgba(0, 0, 0, 0.2), -5px 0 5px -4px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.2), -5px 0px 5px -4px rgba(0, 0, 0, 0.2);
+    // border-top: 1px solid #FFF;
+    border-bottom: 1px solid $gray-1;
+    border-left: 1px solid $gray-1;
+    border-right: 1px solid $gray-1;
     display: none;
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -79,6 +83,7 @@
 }
 
 .dropdown-wrapper {
+    display: none;
     position: relative;
     background-color: #FFF;
     width: 100%;
@@ -86,6 +91,10 @@
     min-height: 270px;
     padding: 25px 30px 50px;
     // min-height: 260px;
+    // Tablet and above
+    @include breakpoint(small-min) {
+        width: 100% !important;
+    }
     // Phone and below
     @include breakpoint(xsmall-max) {
         padding: 25px 15px;
@@ -209,6 +218,11 @@
     padding: 0;
     display: inline-block;
     width: 70%;
+    // Tablet and above
+    @include breakpoint(small-min) {
+        position: relative;
+        width: 78%
+    }
     // Phone and above
     @include breakpoint(xsmall-min) {
         position: relative;
@@ -320,11 +334,11 @@ h4.dropdown__list--title {
 }
 
 .dropdown__list--column:nth-child(4n) {
-    float: right;
     margin-right: 90px;
     // Tablet and below
     @include breakpoint(small-max) {
-        margin-right: 75px;
+        // float: right;
+        // margin-right: 75px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
