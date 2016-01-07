@@ -33,6 +33,7 @@
         // top: 0;
         // left: 15px;
         // right: 15px;
+
         height: 285px;
         // height: 375px;
         overflow: hidden;
@@ -75,28 +76,30 @@
     }
 }
 
-.slide--text .wrapper {
+.slide--foreground .wrapper {
     background-color: transparent;
     width: 999px;
-    height: 100px;
+    height: 400px;
     right: 180px;
-    // right: 0;
+    // left: 0;
     margin-left: 0;
     display: block;
     position: relative;
     // Desktop and below
     @include breakpoint(medium-max) {
+        height: 285px;
         right: 0;
     }
     // Tablet and below
-    @include breakpoint(small-max) {}
+    @include breakpoint(small-max) {
+    }
     // Phone and below
     @include breakpoint(slider-small) {
-        width: 100%;
-        height: 110px; // *************************
+        // width: 100%;
+        // height: 110px; // *************************
         // margin-left: -20px;
-        margin-left: 15px;
-        left: 0;
+        // margin-left: 15px;
+        // left: 0;
     }
 }
 
@@ -105,22 +108,31 @@
     position: absolute;
     display: block;
     left: 200px;
+    bottom: 30px;
+    height: 100px;
     // Desktop and below
     @include breakpoint(medium-max) {
-        left: 25px;
+        left: 0;
+        height: 75px;
+        bottom: 25px;
+        padding-left: 15px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        left: 15px;
+        padding-left: 8px;
     }
     // Slider small
     @include breakpoint(slider-small) {
+        padding-left: 0;
         max-width: 410px;
+        height: 110px;
+        bottom: 0;
+        left: 30px;
     }
     // Slider step down
     @media only screen and (max-width: 580px) { width: 480px; }
-    @media only screen and (max-width: 520px) { width: 420px; }
-    @media only screen and (max-width: 460px) { width: 360px; }
+    @media only screen and (max-width: 520px) { width: 400px; }
+    @media only screen and (max-width: 460px) { width: 325px; }
     @media only screen and (max-width: 410px) { width: 310px; }
     @media only screen and (max-width: 360px) { width: 260px; }
 }
@@ -284,12 +296,13 @@
 }
 
 // Image wrapper
-.slide--image {
+.slide--background {
     height: 400px;
     margin: 0 auto;
     // Tablet and below
     @include breakpoint(small-max) {
         position: relative;
+        overflow: hidden;
         height: 285px;
     }
     // Slider step down

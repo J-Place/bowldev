@@ -1293,46 +1293,50 @@ a.login-toggle:active, a.login-toggle:focus {
     .slider--foreground .slick-slide {
       height: 100px; } }
 
-.slide--text .wrapper {
+.slide--foreground .wrapper {
   background-color: transparent;
   width: 999px;
-  height: 100px;
+  height: 400px;
   right: 180px;
   margin-left: 0;
   display: block;
   position: relative; }
   @media only screen and (max-width: 992px) {
-    .slide--text .wrapper {
+    .slide--foreground .wrapper {
+      height: 285px;
       right: 0; } }
-  @media only screen and (max-width: 620px) {
-    .slide--text .wrapper {
-      width: 100%;
-      height: 110px;
-      margin-left: 15px;
-      left: 0; } }
 
 .slide__link {
   position: absolute;
   display: block;
-  left: 200px; }
+  left: 200px;
+  bottom: 30px;
+  height: 100px; }
   @media only screen and (max-width: 992px) {
     .slide__link {
-      left: 25px; } }
+      left: 0;
+      height: 75px;
+      bottom: 25px;
+      padding-left: 15px; } }
   @media only screen and (max-width: 768px) {
     .slide__link {
-      left: 15px; } }
+      padding-left: 8px; } }
   @media only screen and (max-width: 620px) {
     .slide__link {
-      max-width: 410px; } }
+      padding-left: 0;
+      max-width: 410px;
+      height: 110px;
+      bottom: 0;
+      left: 30px; } }
   @media only screen and (max-width: 580px) {
     .slide__link {
       width: 480px; } }
   @media only screen and (max-width: 520px) {
     .slide__link {
-      width: 420px; } }
+      width: 400px; } }
   @media only screen and (max-width: 460px) {
     .slide__link {
-      width: 360px; } }
+      width: 325px; } }
   @media only screen and (max-width: 410px) {
     .slide__link {
       width: 310px; } }
@@ -1449,31 +1453,32 @@ a.login-toggle:active, a.login-toggle:focus {
     .container.slider--background {
       height: 285px; } }
 
-.slide--image {
+.slide--background {
   height: 400px;
   margin: 0 auto; }
   @media only screen and (max-width: 768px) {
-    .slide--image {
+    .slide--background {
       position: relative;
+      overflow: hidden;
       height: 285px; } }
   @media only screen and (max-width: 580px) {
-    .slide--image {
+    .slide--background {
       height: 215px;
       width: auto; } }
   @media only screen and (max-width: 520px) {
-    .slide--image {
+    .slide--background {
       height: 201px;
       width: auto; } }
   @media only screen and (max-width: 460px) {
-    .slide--image {
+    .slide--background {
       height: 182px;
       width: auto; } }
   @media only screen and (max-width: 410px) {
-    .slide--image {
+    .slide--background {
       height: 182px;
       width: auto; } }
   @media only screen and (max-width: 360px) {
-    .slide--image {
+    .slide--background {
       height: 182px;
       width: auto; } }
 
