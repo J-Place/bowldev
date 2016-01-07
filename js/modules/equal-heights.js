@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 $(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,11 +40,11 @@ $(window).bind("load", function() {
         });
     }
 
-    setTimeout(function(){
-        console.log("Time's up");
-        console.log("Now run the column equalizer...");
-        columnConform();
-    }, 15000);
+    // setTimeout(function(){
+    //     console.log("Time's up");
+    //     console.log("Now run the column equalizer...");
+    //     columnConform();
+    // }, 15000);
 
     // $(window).load(function () {
     //     columnConform();
@@ -58,7 +57,8 @@ $(window).bind("load", function() {
     // Dom Ready
     // You might also want to wait until window.onload if images are the things that
     // are unequalizing the blocks
-    // $(function() {
-    //     columnConform();
-    // });
+    $(function() {
+        columnConform();
+    });
+
 });

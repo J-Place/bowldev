@@ -26,53 +26,11 @@
     right: 0;
     left: 0;
     z-index: 9999;
-    // height: 400px;
     height: 100%;
     // Tablet and below
     @include breakpoint(small-max) {
-        // top: 0;
-        // left: 15px;
-        // right: 15px;
-
         height: 285px;
-        // height: 375px;
         overflow: hidden;
-    }
-}
-
-.slider--foreground .slick-list {
-    height: 100px;
-    top: 270px;
-    left: -15px;
-    width: 755px;
-    // Desktop and below
-    @include breakpoint(medium-max) {
-        height: 75px;
-        top: initial;
-        left: 0;
-        bottom: 25px;
-        position: absolute;
-    }
-    // Slider small
-    @include breakpoint(slider-small) {
-        height: 110px;
-        bottom: 0;
-    }
-}
-
-.slider--foreground .slick-track {
-    // height: 100px;
-    // Slider small
-    @include breakpoint(slider-small) {
-        height: 110px
-    }
-}
-
-.slider--foreground .slick-slide {
-    height: 100px;
-    // Tablet and below
-    @include breakpoint(medium-max) {
-        height: 100px;
     }
 }
 

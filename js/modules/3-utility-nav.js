@@ -66,4 +66,5 @@ $(window).bind("load", function() {
             $(".login-toggle").removeClass("open");
         }
     });
+
 });

@@ -1266,33 +1266,6 @@ a.login-toggle:active, a.login-toggle:focus {
       height: 285px;
       overflow: hidden; } }
 
-.slider--foreground .slick-list {
-  height: 100px;
-  top: 270px;
-  left: -15px;
-  width: 755px; }
-  @media only screen and (max-width: 992px) {
-    .slider--foreground .slick-list {
-      height: 75px;
-      top: initial;
-      left: 0;
-      bottom: 25px;
-      position: absolute; } }
-  @media only screen and (max-width: 620px) {
-    .slider--foreground .slick-list {
-      height: 110px;
-      bottom: 0; } }
-
-@media only screen and (max-width: 620px) {
-  .slider--foreground .slick-track {
-    height: 110px; } }
-
-.slider--foreground .slick-slide {
-  height: 100px; }
-  @media only screen and (max-width: 992px) {
-    .slider--foreground .slick-slide {
-      height: 100px; } }
-
 .slide--foreground .wrapper {
   background-color: transparent;
   width: 999px;

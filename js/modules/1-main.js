@@ -1,7 +1,9 @@
 $(window).bind("load", function() {
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Marketing promo slide over
     $(".marketing-promo").hover(function(){
         $(".marketing-promo__detail").toggleClass("open");
     });
+
 });

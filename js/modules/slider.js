@@ -47,7 +47,7 @@ $(window).bind("load", function() {
         arrows: true,
         fade: true,
         speed: 0,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
         pauseOnHover: true
     });
 

@@ -1,10 +1,14 @@
 $(window).bind("load", function() {
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Marketing promo slide over
     $(".marketing-promo").hover(function(){
         $(".marketing-promo__detail").toggleClass("open");
     });
+
 });
+$(window).bind("load", function() {
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Mobile nav dropdown toggle
 
@@ -77,6 +81,8 @@ $(window).bind("load", function() {
         $(".nav-level-2").removeClass("open");
         $(".nav-level-1").removeClass("left");
     });
+
+});
 $(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -145,8 +151,8 @@ $(window).bind("load", function() {
             $(".login-toggle").removeClass("open");
         }
     });
+
 });
-// $(document).ready(function() {
 $(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -189,11 +195,11 @@ $(window).bind("load", function() {
         });
     }
 
-    setTimeout(function(){
-        console.log("Time's up");
-        console.log("Now run the column equalizer...");
-        columnConform();
-    }, 15000);
+    // setTimeout(function(){
+    //     console.log("Time's up");
+    //     console.log("Now run the column equalizer...");
+    //     columnConform();
+    // }, 15000);
 
     // $(window).load(function () {
     //     columnConform();
@@ -206,9 +212,10 @@ $(window).bind("load", function() {
     // Dom Ready
     // You might also want to wait until window.onload if images are the things that
     // are unequalizing the blocks
-    // $(function() {
-    //     columnConform();
-    // });
+    $(function() {
+        columnConform();
+    });
+
 });
 $(window).bind("load", function() {
 
@@ -259,7 +266,7 @@ $(window).bind("load", function() {
         arrows: true,
         fade: true,
         speed: 0,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
         pauseOnHover: true
     });
 
