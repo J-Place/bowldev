@@ -221,7 +221,7 @@
     z-index: 9;
 // Large desktop and below
     @include breakpoint(large-max) {
-        left: -963px;
+        // left: -963px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
@@ -238,7 +238,7 @@
     z-index: 9;
 // Large desktop and below
     @include breakpoint(large-max) {
-        left: -903px;
+        // left: -903px;
     }
 // Desktop and below
     @include breakpoint(medium-max) {

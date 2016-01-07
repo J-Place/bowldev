@@ -252,9 +252,6 @@ a:hover {
   background-color: #e3e4e3;
   opacity: 0.35;
   z-index: 9; }
-  @media only screen and (max-width: 1200px) {
-    .page-stripes .stripes .stripe, .page-stripes .stripes .stripe--featured-video {
-      left: -963px; } }
   @media only screen and (max-width: 992px) {
     .page-stripes .stripes .stripe, .page-stripes .stripes .stripe--featured-video {
       left: -1107px; } }
@@ -265,9 +262,6 @@ a:hover {
   background-color: gray;
   opacity: 0.125;
   z-index: 9; }
-  @media only screen and (max-width: 1200px) {
-    .page-stripes .stripes .stripe + .stripe, .page-stripes .stripes .stripe--featured-video + .stripe, .page-stripes .stripes .stripe + .stripe--featured-video, .page-stripes .stripes .stripe--featured-video + .stripe--featured-video {
-      left: -903px; } }
   @media only screen and (max-width: 992px) {
     .page-stripes .stripes .stripe + .stripe, .page-stripes .stripes .stripe--featured-video + .stripe, .page-stripes .stripes .stripe + .stripe--featured-video, .page-stripes .stripes .stripe--featured-video + .stripe--featured-video {
       left: -1057px; } }
@@ -1289,11 +1283,10 @@ a.login-toggle:active, a.login-toggle:focus {
     .slide__link {
       left: 0;
       height: 75px;
-      bottom: 25px;
-      padding-left: 15px; } }
+      bottom: 25px; } }
   @media only screen and (max-width: 768px) {
     .slide__link {
-      padding-left: 8px; } }
+      padding-left: 15px; } }
   @media only screen and (max-width: 620px) {
     .slide__link {
       padding-left: 0;

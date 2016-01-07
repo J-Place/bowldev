@@ -73,11 +73,11 @@
         left: 0;
         height: 75px;
         bottom: 25px;
-        padding-left: 15px;
+        // padding-left: 15px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        padding-left: 8px;
+        padding-left: 15px;
     }
     // Slider small
     @include breakpoint(slider-small) {
