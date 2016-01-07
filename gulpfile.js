@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var livereload = require('gulp-livereload');
 
 // Run Server
 gulp.task('connect', function() {
@@ -28,33 +29,37 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('css'))
+        .pipe(livereload());
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src('js/*.js')
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('js'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('js'))
+        .pipe(livereload());
 });
 
-gulp.task('css', function () {
-      return gulp.src('css/*.css');
-});
+// gulp.task('css', function () {
+//       return gulp.src('css/*.css');
+// });
 
 gulp.task('html', function () {
       return gulp.src('*.html')
+            .pipe(livereload());
 });
 
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('../bowl/js/*.js', ['lint', 'scripts'])
-    gulp.watch(['../bowl/css/*.css'], ['css'])
-    gulp.watch(['../bowl/scss/*.scss'], ['sass'])
+    livereload.listen();
+    gulp.watch('../bowl/js/*.js', ['lint', 'scripts']);
+    // gulp.watch(['../bowl/css/*.css'], ['css'])
+    gulp.watch(['../bowl/scss/*.scss'], ['sass']);
     gulp.watch(['../bowl/*.html'], ['html']);
 });
 
