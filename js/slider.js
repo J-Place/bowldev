@@ -31,11 +31,18 @@
     });
     // Change slider stripe color based on data-attribute of individual content element.
     var stripeBlue = $(".slider--stripes .stripe").attr("data-stripeColor") === "blue";
+<<<<<<< HEAD
     var slideBlue = $(".slider--foreground .slide").attr("data-slideColor") === "blue";
     var stripeYellow = $(".slider--stripes .stripe").attr("data-stripeColor") === "yellow";
     var slideYellow = $(".slider--foreground .slide").attr("data-slideColor") === "yellow";
     var slideOrange = $(".slider--foreground .slide").attr("data-slideColor") === "orange";
     var stripeOrange = $(".slider--stripes .stripe").attr("data-stripeColor") === "orange";
+=======
+    var stripeYellow = $(".slider--stripes .stripe").attr("data-stripeColor") === "yellow";
+    var slideBlue = $(".slider--foreground .slide").attr("data-slideColor") === "blue";
+    var slideYellow = $(".slider--foreground .slide").attr("data-slideColor") === "yellow";
+    var slideOrange = $(".slider--foreground .slide").attr("data-slideColor") === "orange";
+>>>>>>> master
     $('.slider-for').on('beforeChange', function(event, slick, currentSlide){
         if (currentSlide == slideBlue) {
             // console.log("Blue");
