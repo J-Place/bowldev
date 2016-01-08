@@ -5,50 +5,71 @@ $(window).bind("load", function() {
     // which are synced via setting 'asNavFor'.
 
     // Change slider stripe color based on data-attribute of individual content element.
-    var stripeBlue = $(".slider--stripes .stripe").attr("data-stripeColor") === "blue";
     var slideBlue = $(".slider--foreground .slide").attr("data-slideColor") === "blue";
-    var stripeYellow = $(".slider--stripes .stripe").attr("data-stripeColor") === "yellow";
     var slideYellow = $(".slider--foreground .slide").attr("data-slideColor") === "yellow";
-    var stripeOrange = $(".slider--stripes .stripe").attr("data-stripeColor") === "orange";
     var slideOrange = $(".slider--foreground .slide").attr("data-slideColor") === "orange";
+    var firstSlide = $(".slider .slide").first().attr("data-slideColor");
+    var slideColor = $(this).attr("data-slideColor");
+
+    // alert(stripe1);
+
+    function setFirstSlide() {
+        // console.log("Running function...");
+        // console.log(firstSlide);
+        if (firstSlide == "blue") {
+            $(".slider--stripes .stripe").css("background-color", "#01348d");
+            $(".slider--stripes .stripe--right").css("background-color", "#01348d");
+            $(".ribbon").css("background-color", "#b71234");
+        }
+        else if (firstSlide == "orange") {
+            $(".slider--stripes .stripe").css("background-color", "#fe7200");
+            $(".slider--stripes .stripe--right").css("background-color", "#fe7200");
+            $(".ribbon").css("background-color", "#01348d");
+        }
+        else if (firstSlide == "yellow") {
+            $(".slider--stripes .stripe").css("background-color", "#ffc100");
+            $(".slider--stripes .stripe--right").css("background-color", "#ffc100");
+            $(".ribbon").css("background-color", "#63666b");
+        }
+    }
+
+    // console.log(firstSlide = slideOrange);
+    setFirstSlide();
 
     $(".slider--foreground").on(
-        {'beforeChange': function(event, slick, currentSlide){
+        {
+        'afterChange': function(event, slick, currentSlide){
+            console.log(currentSlide);
             if (currentSlide == slideBlue) {
-                // console.log("Blue");
+                // console.log("blue");
                 $(".slider--stripes .stripe").css("background-color", "#01348d");
                 $(".slider--stripes .stripe--right").css("background-color", "#01348d");
                 $(".ribbon").css("background-color", "#b71234");
             }
             else if (currentSlide == slideYellow) {
-                // console.log("Yellow");
-                $(".slider--stripes .stripe").css("background-color", "#ffc100");
-                $(".slider--stripes .stripe--right").css("background-color", "#ffc100");
-                $(".ribbon").css("background-color", "#63666b");
-            }
-            else if (currentSlide == slideOrange) {
-                // console.log("Orange");
+                // console.log("yellow");
                 $(".slider--stripes .stripe").css("background-color", "#fe7200");
                 $(".slider--stripes .stripe--right").css("background-color", "#fe7200");
-                $(".ribbon").css("background-color", "#01348d");
+                $(".ribbon").css("background-color", "blue");
             }
             else {
-                // alert("Fail.");
+                console.log("ERR");
+                return true
             }
         }
     }).slick({
         infinite: true,
-        autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        // autoplay: true,
+        // slidesToShow: 1,
+        // slidesToScroll: 1,
         asNavFor: '.slider--background',
-        initialSlide: 0,
-        focusOnSelect: false,
+        // initialSlide: 0,
+        // focusOnSelect: false,
         arrows: true,
         fade: true,
         speed: 0,
-        autoplaySpeed: 5000,
-        pauseOnHover: true
+        autoplaySpeed: 3000,
+        // pauseOnHover: true
     });
 
     $('.slider--background').slick({
@@ -56,11 +77,11 @@ $(window).bind("load", function() {
         // autoplay: true,
         // slidesToShow: 1,
         // slidesToScroll: 1,
-        // asNavFor: '.slider--foreground',
-        initialSlide: 0,
-        focusOnSelect: false,
+        asNavFor: '.slider--foreground',
+        // initialSlide: 0,
+        // focusOnSelect: false,
         arrows: false,
-        pauseOnHover: true
+        // pauseOnHover: true
     });
 
 });

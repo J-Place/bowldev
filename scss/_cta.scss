@@ -2,8 +2,8 @@
     padding: 0;
     margin-bottom: 40px;
     // iPhone and below
-    @include breakpoint(iphone) {
-        margin-bottom: 0px;
+    @include breakpoint(xsmall-max) {
+        margin-bottom: 15px;
     }
 }
 

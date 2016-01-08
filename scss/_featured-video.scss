@@ -9,19 +9,26 @@
     background-color: $gray-2;
     padding: 30px 0 60px;
     position: relative;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        padding: 20px 0 45px;
+    }
 }
 
 .featured-video iframe {
     position: relative;
     z-index: 999;
     // position: relative;
+    // Phone and below
     @include breakpoint(xsmall-max) {
-        height: 238px;
-        width: 424px;
+        // height: 238px;
+        height: 252px;
+        // width: 424px;
+        width: 450px;
     }
     @include breakpoint(iphone) {
-        height: 168px;
-        width: 300px;
+        height: 162px;
+        width: 290px;
     }
 }
 

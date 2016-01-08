@@ -153,70 +153,20 @@ $(window).bind("load", function() {
     });
 
 });
-$(window).bind("load", function() {
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Equal Height for Articles
-    // these are (ruh-roh) globals. You could wrap in an
-    // immediately-Invoked Function Expression (IIFE) if you wanted to...
-    var currentTallest = 0,
-        currentRowStart = 0,
-        rowDivs = new Array();
-    function setConformingHeight(el, newHeight) {
-        // set the height to something new, but remember the original height in case things change
-        el.data("originalHeight", (el.data("originalHeight") === undefined) ? (el.height()) : (el.data("originalHeight")));
-        el.height(newHeight);
-    }
-    function getOriginalHeight(el) {
-        // if the height has changed, send the originalHeight
-        return (el.data("originalHeight") === undefined) ? (el.height()) : (el.data("originalHeight"));
-    }
-    function columnConform() {
-        // find the tallest DIV in the row, and set the heights of all of the DIVs to match it.
-        $('.article--equal').each(function() {
-            // "caching"
-            var $el = $(this);
-            var topPosition = $el.position().top;
-            if (currentRowStart != topPosition) {
-                // we just came to a new row.  Set all the heights on the completed row
-                for(currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) setConformingHeight(rowDivs[currentDiv], currentTallest);
-                // set the variables for the new row
-                rowDivs.length = 0; // empty the array
-                currentRowStart = topPosition;
-                currentTallest = getOriginalHeight($el);
-                rowDivs.push($el);
-            } else {
-                // another div on the current row.  Add it to the list and check if it's taller
-                rowDivs.push($el);
-                currentTallest = (currentTallest < getOriginalHeight($el)) ? (getOriginalHeight($el)) : (currentTallest);
-            }
-            // do the last row
-            for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) setConformingHeight(rowDivs[currentDiv], currentTallest);
-        });
-    }
-
-    // setTimeout(function(){
-    //     console.log("Time's up");
-    //     console.log("Now run the column equalizer...");
-    //     columnConform();
-    // }, 15000);
-
-    // $(window).load(function () {
-    //     columnConform();
-    // });
-
-    $(window).resize(function() {
-        columnConform();
+    $(window).scroll( function(){
+        // console.log(window.scrollY);
+        if($(window).scrollTop() > 20) {
+            $(".header").addClass("scroll");
+            $(".logo").addClass("scroll");
+            $(".nav-main").addClass("scroll");
+        }
+        // else if ($(window).scrollTop() < 100) {
+        //     $(".header").removeClass("scroll");
+        //     $(".logo").removeClass("scroll");
+        //     $(".nav-main").removeClass("scroll");
+        // }
     });
 
-    // Dom Ready
-    // You might also want to wait until window.onload if images are the things that
-    // are unequalizing the blocks
-    $(function() {
-        columnConform();
-    });
-
-});
 $(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -224,50 +174,71 @@ $(window).bind("load", function() {
     // which are synced via setting 'asNavFor'.
 
     // Change slider stripe color based on data-attribute of individual content element.
-    var stripeBlue = $(".slider--stripes .stripe").attr("data-stripeColor") === "blue";
     var slideBlue = $(".slider--foreground .slide").attr("data-slideColor") === "blue";
-    var stripeYellow = $(".slider--stripes .stripe").attr("data-stripeColor") === "yellow";
     var slideYellow = $(".slider--foreground .slide").attr("data-slideColor") === "yellow";
-    var stripeOrange = $(".slider--stripes .stripe").attr("data-stripeColor") === "orange";
     var slideOrange = $(".slider--foreground .slide").attr("data-slideColor") === "orange";
+    var firstSlide = $(".slider .slide").first().attr("data-slideColor");
+    var slideColor = $(this).attr("data-slideColor");
+
+    // alert(stripe1);
+
+    function setFirstSlide() {
+        // console.log("Running function...");
+        // console.log(firstSlide);
+        if (firstSlide == "blue") {
+            $(".slider--stripes .stripe").css("background-color", "#01348d");
+            $(".slider--stripes .stripe--right").css("background-color", "#01348d");
+            $(".ribbon").css("background-color", "#b71234");
+        }
+        else if (firstSlide == "orange") {
+            $(".slider--stripes .stripe").css("background-color", "#fe7200");
+            $(".slider--stripes .stripe--right").css("background-color", "#fe7200");
+            $(".ribbon").css("background-color", "#01348d");
+        }
+        else if (firstSlide == "yellow") {
+            $(".slider--stripes .stripe").css("background-color", "#ffc100");
+            $(".slider--stripes .stripe--right").css("background-color", "#ffc100");
+            $(".ribbon").css("background-color", "#63666b");
+        }
+    }
+
+    // console.log(firstSlide = slideOrange);
+    setFirstSlide();
 
     $(".slider--foreground").on(
-        {'beforeChange': function(event, slick, currentSlide){
+        {
+        'afterChange': function(event, slick, currentSlide){
+            console.log(currentSlide);
             if (currentSlide == slideBlue) {
-                // console.log("Blue");
+                // console.log("blue");
                 $(".slider--stripes .stripe").css("background-color", "#01348d");
                 $(".slider--stripes .stripe--right").css("background-color", "#01348d");
                 $(".ribbon").css("background-color", "#b71234");
             }
             else if (currentSlide == slideYellow) {
-                // console.log("Yellow");
-                $(".slider--stripes .stripe").css("background-color", "#ffc100");
-                $(".slider--stripes .stripe--right").css("background-color", "#ffc100");
-                $(".ribbon").css("background-color", "#63666b");
-            }
-            else if (currentSlide == slideOrange) {
-                // console.log("Orange");
+                // console.log("yellow");
                 $(".slider--stripes .stripe").css("background-color", "#fe7200");
                 $(".slider--stripes .stripe--right").css("background-color", "#fe7200");
-                $(".ribbon").css("background-color", "#01348d");
+                $(".ribbon").css("background-color", "blue");
             }
             else {
-                // alert("Fail.");
+                console.log("ERR");
+                return true
             }
         }
     }).slick({
         infinite: true,
-        autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        // autoplay: true,
+        // slidesToShow: 1,
+        // slidesToScroll: 1,
         asNavFor: '.slider--background',
-        initialSlide: 0,
-        focusOnSelect: false,
+        // initialSlide: 0,
+        // focusOnSelect: false,
         arrows: true,
         fade: true,
         speed: 0,
-        autoplaySpeed: 5000,
-        pauseOnHover: true
+        autoplaySpeed: 3000,
+        // pauseOnHover: true
     });
 
     $('.slider--background').slick({
@@ -275,11 +246,11 @@ $(window).bind("load", function() {
         // autoplay: true,
         // slidesToShow: 1,
         // slidesToScroll: 1,
-        // asNavFor: '.slider--foreground',
-        initialSlide: 0,
-        focusOnSelect: false,
+        asNavFor: '.slider--foreground',
+        // initialSlide: 0,
+        // focusOnSelect: false,
         arrows: false,
-        pauseOnHover: true
+        // pauseOnHover: true
     });
 
 });

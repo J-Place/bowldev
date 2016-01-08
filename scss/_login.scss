@@ -1,6 +1,5 @@
 .login {
     position: absolute;
-    // right: -10px;
     right: 0;
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -22,7 +21,8 @@
     margin-left: 15px;
     padding: 0 15px 0 23px;
     line-height: 20px;
-    @include breakpoint(nav) {
+    // Desktop and below
+    @include breakpoint(medium-max) {
         text-indent: -9999px;
         padding-right: 10px;
         right: 122px;
@@ -45,9 +45,8 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .login-wrapper {
     position: absolute;
-    top: 20px;
+    top: 19px;
     right: 0;
-    // display: none;
     display: block;
     width: 235px;
     margin: 0;
@@ -62,7 +61,6 @@ a.login-toggle:active, a.login-toggle:focus {
 }
 
 .login-wrapper.open {
-    // display: block;
     opacity: 1.0;
     height: 245px;
     margin: 12px 0 0 0;
@@ -73,7 +71,7 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .login__instruction {
     padding-right: 30px;
-    color: $gray-md;
+    color: $gray-3;
     line-height: 1.3em;
     letter-spacing: 0.2px;
 }

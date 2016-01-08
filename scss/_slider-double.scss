@@ -73,7 +73,7 @@
         left: 0;
         height: 75px;
         bottom: 25px;
-        // padding-left: 15px;
+        padding-left: 0;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -81,11 +81,10 @@
     }
     // Slider small
     @include breakpoint(slider-small) {
-        padding-left: 0;
+        padding-left: 25px;
         max-width: 410px;
         height: 110px;
         bottom: 0;
-        left: 30px;
     }
     // Slider step down
     @media only screen and (max-width: 580px) { width: 480px; }
@@ -291,11 +290,10 @@
     }
     // Slider step down
     @media only screen and (max-width: 580px) { height: 215px; width: auto; }
-    @media only screen and (max-width: 520px) { height: 201px; width: auto; }
+    @media only screen and (max-width: 520px) { height: 195px; width: auto; }
     @media only screen and (max-width: 460px) {
         height: 182px;
         width: auto;
-        // @include img-center;
     }
     @media only screen and (max-width: 410px) { height: 182px; width: auto; }
     @media only screen and (max-width: 360px) { height: 182px; width: auto; }
@@ -340,7 +338,7 @@
     // left: -930px;
     left: -918px;
     width: 1000px;
-    background-color: $blue;
+    background-color: transparent;
     opacity: 1.0;
     z-index: 99;
     // Large desktop and below
@@ -363,7 +361,7 @@
 
 .slider--stripes .stripe + .stripe {
     left: -858px;
-    background-color: $blue;
+    background-color: transparent;
     opacity: 0.5;
     @include breakpoint(large-max) {
         left: -858px
@@ -385,7 +383,7 @@
 .slider--stripes .stripe--right {
     right: -98px;
     width: 180px;
-    background-color: $blue;
+    background-color: transparent;
     opacity: 1.0;
     z-index: 99;
     // Desktop and below
@@ -402,7 +400,7 @@
 .slider--stripes .stripe--right + .stripe--right {
     right: -98px;
     width: 240px;
-    background-color: $blue;
+    background-color: transparent;
     opacity: 0.5;
     // Desktop and below
     @include breakpoint(medium-max) {

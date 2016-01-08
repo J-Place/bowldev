@@ -35,12 +35,11 @@
     right: 0;
     // Phone and below
     @include breakpoint(xsmall-max) {
-        top: 5px;
-        right: 5px;
-        width: 35px;
-        height: 35px;
-        background-position: -237px -41px;
-        background-size: 430px;
+        top: 8px;
+        right: 7px;
+        width: 30px;
+        height: 30px;
+        background-position: -31px -89px;
     }
 }
 

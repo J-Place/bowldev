@@ -15,7 +15,7 @@ var livereload = require('gulp-livereload');
 gulp.task('connect', function() {
     connect.server({
         root: '',
-        livereload: false
+        livereload: true
     });
 });
 
@@ -36,11 +36,6 @@ gulp.task('sass', function() {
 });
 
 
-// gulp.task('css', function () {
-//       return gulp.src('css/*.css');
-// });
-
-
 // Concatenate & Minify JS
 gulp.task('js', function() {
     return gulp
@@ -55,10 +50,17 @@ gulp.task('js', function() {
 });
 
 
+// CSS Task
+gulp.task('css', function() {
+    return gulp
+        .src('scss/*.scss')
+//         .pipe(livereload());
+});
+
 // Lint Task
 gulp.task('lint', function() {
     return gulp
-        .src('js/all.js')
+        .src('js/modules/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
@@ -69,7 +71,8 @@ gulp.task('watch', function() {
     gulp.watch(['js/modules/*.js'], ['lint', 'js']);
     gulp.watch(['scss/*.scss'], ['sass']);
     gulp.watch(['*.html'], ['html']);
+    // gulp.watch(['css/*.css'], ['css']);
 });
 
 // Default Task
-gulp.task('default', ['connect', 'sass', 'js', 'lint', 'watch']);
+gulp.task('default', ['connect', 'sass', 'js', 'css', 'lint', 'watch']);
