@@ -15,6 +15,7 @@ $(window).bind("load", function() {
     setPanel();
 
 
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Toggle mobile nav
 
@@ -39,7 +40,6 @@ $(window).bind("load", function() {
     // Mobile nav sliding panes
 
     var mobileNav = function(){
-
         var navID = $(this).attr("ID");
         var dropContainer = $(".nav-dropdown");
         var dropID = $(".nav-dropdown ." + navID);
@@ -48,26 +48,27 @@ $(window).bind("load", function() {
         var level3 = $(".nav-level-3");
         var link = $(".nav__list--item a");
 
-        if ($(level1).hasClass("open")) {
-            if (panelWidth >= 768) {
+            if ($(level1).hasClass("open")) {
+                if (panelWidth >= 768) {
+                    $(level1).addClass("open");
+                    $(dropContainer).addClass("open");
+                    $(dropID).addClass("open");
+                }
+                else {
+                    $(dropContainer).addClass("open");
+                    $(dropID).addClass("open");
+                    $(level1).addClass("left");
+                }
+            }
+            else if ($(level2).hasClass("open")) {
+                $(level2).addClass("left");
+                $(level3).addClass("open");
+            }
+            else {
                 $(level1).addClass("open");
                 $(dropContainer).addClass("open");
                 $(dropID).addClass("open");
             }
-            else {
-                $(dropContainer).addClass("open");
-                $(dropID).addClass("open");
-                $(level1).addClass("left");
-            }
-        }
-        else if ($(level2).hasClass("open")) {
-            $(level2).addClass("left");
-            $(level3).addClass("open");
-        }
-        else {
-            $(level1).addClass("open");
-            $(dropContainer).addClass("open");
-            $(dropID).addClass("open");
         }
     };
 
@@ -76,6 +77,5 @@ $(window).bind("load", function() {
         $(".nav-level-2").removeClass("open");
         $(".nav-level-1").removeClass("left");
     });
-
 
 });

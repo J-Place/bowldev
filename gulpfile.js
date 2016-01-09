@@ -43,7 +43,6 @@ gulp.task('js', function() {
         .pipe(concat('all.js'))
         .pipe(gulp.dest('js'))
         .pipe(livereload());
-
         // .pipe(rename('all.min.js'))
         // .pipe(uglify())
         // .pipe(gulp.dest('js'))
@@ -54,7 +53,7 @@ gulp.task('js', function() {
 gulp.task('css', function() {
     return gulp
         .src('scss/*.scss')
-//         .pipe(livereload());
+        .pipe(livereload());
 });
 
 // Lint Task

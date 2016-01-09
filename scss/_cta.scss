@@ -27,10 +27,7 @@
     }
 }
 
-
-
-
-.cta__content.container {
+.container.cta__content {
     position: relative;
     text-align: center;
     margin: 60px auto;
@@ -91,11 +88,16 @@
     height: auto;
     opacity: 0.2;
     bottom: 0;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
+    @include breakpoint(medium-max) {
+        width: auto;
+        height: 100%;
+    }
     @include breakpoint(small-max) {
         width: auto;
         height: 110%;
+    }
+    @include breakpoint(xsmall-max) {
+        width: auto;
+        height: 100%;
     }
 }

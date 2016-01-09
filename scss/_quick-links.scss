@@ -8,7 +8,11 @@
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        padding: 0 40px;
+        padding: 0 20px;
+    }
+    // iPhone and below
+    @include breakpoint(iphone-max) {
+        padding: 0;
     }
 }
 

@@ -13,11 +13,19 @@ $(window).bind("load", function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Topggle search input box
 
-    $(".search__button").click(function(){
+    // $(".search__button").click(function(){
+    //     $(".search-container").addClass("open");
+    //     $(".search__button").addClass("open");
+    //     $(".search__input").css("display", "block");
+    //     $("input.search__input").focus();
+    // });
+
+    $(".search__toggle").click(function() {
+        $(".search__input--wrapper").addClass("open");
+        $("input.search__input").focus();
         $(".search-container").addClass("open");
         $(".search__button").addClass("open");
         $(".search__input").css("display", "block");
-        $("input.search__input").focus();
     });
 
 
@@ -27,6 +35,7 @@ $(window).bind("load", function() {
     {
         var dropdown = $(".nav-dropdown");
         var loginToggle = $(".login-toggle");
+        var searchToggle = $(".search__toggle");
         var loginDropdown = $(".login-wrapper");
         var search = $(".search-container");
         var hamburger = $(".nav-samll-icon");
@@ -59,11 +68,14 @@ $(window).bind("load", function() {
         {
             // console.log("Outside Search");
             $(".search__input").val("");
-            $(search).removeClass("open");
+            $("search").removeClass("open");
             $(".search__button").removeClass("open");
             $(".search__input").css("display", "none");
+            $(".search__input--wrapper").removeClass("open");
+            $(".search-container").removeClass("open");
             $(".login-wrapper").removeClass("open");
             $(".login-toggle").removeClass("open");
+            // $(".search__toggle").click();
         }
     });
 

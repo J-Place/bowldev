@@ -25,10 +25,13 @@
     width: 82px;
     top: 0px;
     right: 48px;
-    @include breakpoint(xsmall-min) {
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        top: 1px;
         right: 43px;
     }
-    @include breakpoint(xsmall-max) {
+    // Tablet and below
+    @include breakpoint(small-max) {
         display: none;
     }
 }

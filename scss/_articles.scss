@@ -3,7 +3,6 @@
 
 .article {
     margin-bottom: 40px;
-    padding: 0;
     overflow: hidden;
     position: relative;
 // Desktop and below
@@ -20,6 +19,21 @@
         margin-bottom: 0;
     }
 }
+
+.main-content__body .article {
+// Desktop and above
+    @include breakpoint(medium-min) {
+        height: 310px;
+    }
+}
+
+.main-content__body .article--detail {
+// Desktop and above
+    @include breakpoint(medium-min) {
+        height: auto;
+    }
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Article modifiers
@@ -39,7 +53,8 @@
 // Tablet and below
     @include breakpoint(small-max) {
         height: 100%;
-        margin-bottom: 0px;
+        // margin-bottom: 0px;
+        margin-bottom: 20px;
     }
 // Phone and below
     @include breakpoint(xsmall-max) {
@@ -47,7 +62,7 @@
     }
 // iPhone and below
     @include breakpoint(iphone) {
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
     }
 }
 
@@ -72,6 +87,16 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Article content
 
+.article__link:hover {
+    .article__title {
+        color: $blue;
+    }
+    .article__summary {
+        color: $blue;
+        text-decoration: underline;
+    }
+}
+
 .article__image {
     width: 100%;
     height: auto;
@@ -83,10 +108,21 @@
     color: $gray-4;
     font-size: 1.2em;
     font-weight: 700;
+    line-height: 1.3em;
     text-transform: none;
     position: relative;
     margin-top: 0;
     padding: 0 0 4px;
+}
+
+.article__title--full {
+    @extend .oswald;
+    font-size: 2.75em;
+    line-height: 1.1em;
+    font-weight: 400;
+    color: $gray-3;
+    margin-top: 0;
+    padding: 0 0 15px;
 }
 
 .article__summary {
@@ -98,4 +134,47 @@
     @include breakpoint(xsmall-max) {
         margin-bottom: 30px;
     }
+}
+
+.article__section {
+    margin-bottom: 30px;
+}
+
+.article__text {
+    margin-bottom: 30px;
+}
+
+.article__text p {
+    margin-bottom: 1em;
+}
+
+
+
+// Article section - conteact list
+.contact__list--item {
+    margin-bottom: 15px;
+}
+
+.contact__title {
+    @extend .opensans;
+    font-size: 1.02em;
+    font-weight: 600;
+    color: $gray-4;
+    margin-bottom: .1em;
+}
+
+// Host cities
+.city__list {
+    list-style-type: none;
+    margin: .2em auto 0;
+    padding: 0;
+}
+
+.city__list--item {
+    margin-bottom: .375em;
+}
+
+.host__year {
+    display: inline-block;
+    width: 42px;
 }

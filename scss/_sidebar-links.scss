@@ -1,0 +1,96 @@
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Sidebar links
+
+.sidebar-links__title {
+    padding: 0 0 0 10px;
+    margin: 0 auto 30px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    color: $gray-4;
+    // Tablet and below
+    @include breakpoint(small-max) {
+         font-size: 1.65em;
+        background-color: $blue;
+        color: #FFF;
+        line-height: 2.5em;
+        margin-bottom: 55px;
+        padding: 0 20px;
+    }
+}
+
+.sidebar-links__title::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 4px;
+    left: -10px;
+    top: 15px;
+    width: 100%;
+    @extend .skew;
+    background-color: $blue;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        display: none;
+    }
+}
+
+.sidebar-links__title--label {
+    display: none;
+   // Tablet and below
+    @include breakpoint(small-max) {
+        display: inline-block;
+    }
+}
+
+.sidebar-nav--icon {
+    @extend .nav-icon;
+    background-position: -176px -56px;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    right: 28px;
+}
+
+.sidebar-nav--icon.open {
+    background-position: -176px -86px;
+}
+
+.sidebar-links {
+    margin: 0 auto 60px;
+}
+
+.sidebar-links__list {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        height: 0;
+        overflow: hidden;
+        display: none;
+    }
+}
+.sidebar-links__list.open {
+    display: block;
+    height: 100%;
+}
+
+.sidebar-links__list--item {
+    margin: 1em auto 0;
+    padding: 0 0 1em 0;
+    border-bottom: 1px solid $gray-2;
+}
+
+.sidebar-links__list--item a {
+    color: $gray-3;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.sidebar-links__list--item a:hover {
+    color: $red;
+}

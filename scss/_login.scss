@@ -2,7 +2,7 @@
     position: absolute;
     right: 0;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: none;
     }
 }
@@ -14,7 +14,8 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 0.85em;
     letter-spacing: 0.5px;
-    color: $gray-md;
+    color: $gray-2;
+    font-weight: 400;
     text-transform: uppercase;
     width: auto;
     background-position: -5px -5px;
@@ -23,6 +24,7 @@
     line-height: 20px;
     // Desktop and below
     @include breakpoint(medium-max) {
+        background-position: -5px -4px;
         text-indent: -9999px;
         padding-right: 10px;
         right: 122px;

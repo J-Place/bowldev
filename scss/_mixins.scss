@@ -2,34 +2,34 @@
 @mixin breakpoint($point) {
 
   @if $point == iphone {
-    @media only screen and (max-width: 320px)  { @content; }
+    @media only screen and (max-width: 319px)  { @content; }
   }
   @else if $point == slider-small {
-    @media only screen and (max-width: 620px)  { @content; }
+    @media only screen and (max-width: 619px)  { @content; }
   }
   @else if $point == xsmall-max {
-    @media only screen and (max-width: 480px) { @content; }
+    @media only screen and (max-width: 479px) { @content; }
   }
   @else if $point == xsmall-min {
     @media only screen and (min-width: 480px) { @content; }
   }
   @else if $point == small-max {
-    @media only screen and (max-width: 768px) { @content; }
+    @media only screen and (max-width: 767px) { @content; }
   }
   @else if $point == small-min {
     @media only screen and (min-width: 768px) { @content; }
   }
   @else if $point == medium-max {
-    @media only screen and (max-width: 992px) { @content; }
+    @media only screen and (max-width: 991px) { @content; }
   }
   @else if $point == medium-min {
     @media only screen and (min-width: 992px) { @content; }
   }
   @else if $point == nav {
-    @media only screen and (max-width: 1100px) { @content; }
+    @media only screen and (max-width: 1099px) { @content; }
   }
   @else if $point == large-max {
-    @media only screen and (max-width: 1200px) { @content; }
+    @media only screen and (max-width: 1199px) { @content; }
   }
   @else if $point == large-min {
     @media only screen and (min-width: 1200px) { @content; }

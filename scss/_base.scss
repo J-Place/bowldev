@@ -1,12 +1,18 @@
 body {
     background-color: #FFF;
     overflow-x: hidden;
+
+    // Desktop and below
+    @include breakpoint(large-max) {
+        // margin-top: 70px;
+        // margin-top: 55px;
+    }
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-top: 70px;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         margin-top: 55px;
     }
 }

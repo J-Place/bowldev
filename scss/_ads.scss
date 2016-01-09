@@ -9,6 +9,14 @@
     display: block;
 }
 
+.ad__block--sidebar {
+    @extend .ad__block;
+    // Phone and below
+    @include breakpoint(small-max) {
+        display: none;
+    }
+}
+
 .container.leaderboard {
     margin: 20px auto;
     padding: 0;

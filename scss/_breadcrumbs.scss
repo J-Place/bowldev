@@ -1,0 +1,18 @@
+.container.breadcrumbs {
+    margin: 0 auto;
+        // Tablet and below
+    @include breakpoint(small-max) {
+        display: none;;
+    }
+}
+
+.breadcrumb__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb__list--item {
+    display: inline-block;
+    margin: 0 10px;
+}

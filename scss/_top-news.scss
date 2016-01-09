@@ -20,7 +20,7 @@
         line-height: 31px;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         font-size: 1.5em;
         letter-spacing: 2px;
         height: 48px;
@@ -47,7 +47,7 @@
         height: 29px;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         right: -15px;
         height: 48px;
         width: 16px;
@@ -71,11 +71,11 @@
         height: 55px;
     }
     // Tablet and below
-    @include breakpoint(small-max) {
+    @include breakpoint(xsmall-max) {
         height: 50px;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         height: 100px;
     }
 }
@@ -109,14 +109,14 @@
         margin: 10px;
     }
     // Tablet and below
-    @include breakpoint(small-max) {
-        font-size: 1.0em;
-        line-height: 1.1em;
-        height: 30px;
-        margin: 8px;
-    }
+    // @include breakpoint(small-max) {
+    //     font-size: 1.0em;
+    //     line-height: 1.1em;
+    //     height: 30px;
+    //     margin: 8px;
+    // }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         font-size: 1.65em;
         line-height: 1.3em;
         height: 60px;

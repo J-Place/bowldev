@@ -5,29 +5,25 @@
     background-color: transparent;
     display: block;
     padding: 0;
+    cursor: pointer;
 }
 
 .nav-small-icon {
     display: none;
+    position: absolute;
     // Tablet and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
+        display: block;
         font-size: 0.6em;
         text-indent: -9999px;
         height: 30px;
         width: 30px;
         background-image: url('../img/bowl-sprites.png');
-        background-size: 300px;
         background-repeat: no-repeat;
         background-color: transparent;
-        background-position: 1px -54px;
-        position: absolute;
-        top: 9px;
-        left: 27px;
-        display: block;
-        // left: 15px;
-    }
-    // Phone and below
-    @include breakpoint(xsmall-max) {
+        // background-position: 1px -54px;
+        // top: 9px;
+        // left: 27px;
         left: 14px;
         top: 12px;
         background-position: 0px -90px;
@@ -48,7 +44,7 @@
     border-right: 1px solid $gray-1;
     display: none;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         position: relative;
         width: 100%;
         height: 100%;
@@ -63,7 +59,7 @@
     display: block;
     background-color: #FFF;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         background-color: $gray-dk;
         left: 0;
         right: 0;
@@ -77,7 +73,7 @@
 
 .nav-dropdown.close {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         width: 100%;
         height: 0;
     }
@@ -96,7 +92,7 @@
         width: 100% !important;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         padding: 25px 15px;
     }
 }
@@ -111,7 +107,7 @@
 
 .nav-level-1 {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         left: 0;
         transition: left .2s;
         position: fixed;
@@ -126,7 +122,7 @@
 
 .nav-level-1.open {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         position: fixed;
         height: 100%;
         padding-top: 0;
@@ -135,7 +131,7 @@
 }
 .nav-level-1.open.left {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         left: -100%;
     }
 }
@@ -143,7 +139,7 @@
 .nav-level-2 {
     // display: none;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         transition: left .25s;
         background-color: $gray-3;
         position: fixed;
@@ -157,7 +153,7 @@
 .nav-level-2.open {
     // display: block;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         position: fixed;
         top: 55px;
         display: block;
@@ -169,18 +165,18 @@
 
 .nav-level-2.open.left {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         left: -100%;
     }
 }
 
 .nav-level-3 {
     // Phone and above
-    @include breakpoint(xsmall-min) {
+    @include breakpoint(small-min) {
         // display: none;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         background-color: $gray-dk;
         position: fixed;
         // display: block;
@@ -194,7 +190,7 @@
 
 .nav-level-3.open {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         position: fixed;
         top: 55px;
         // background-color: $gray-dk;
@@ -217,11 +213,11 @@
         width: 78%
     }
     // Phone and above
-    @include breakpoint(xsmall-min) {
+    @include breakpoint(small-min) {
         position: relative;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         width: 100%;
         position: absolute;
     }
@@ -239,7 +235,7 @@ h3.dropdown__list--title {
         display: none;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: block;
         text-align: center;
         font-size: 1.35em;
@@ -261,14 +257,14 @@ h4.dropdown__list--title {
         margin-top: 0;
     }
     // Tablet and below - megamenu
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: none;
     }
 }
 
 .nav--prev {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         padding: 10px 0;
         display: block;
         position: absolute;
@@ -301,7 +297,7 @@ h4.dropdown__list--title {
 .dropdown__list--title a {
     display: none;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         color: $gray-md;
         padding: 0;
         display: block;
@@ -316,7 +312,7 @@ h4.dropdown__list--title {
     margin: 0 5em 0 0;
     padding: 0;
     // Phone and above
-    @include breakpoint(xsmall-min) {
+    @include breakpoint(small-min) {
         margin: 0 2em 2em 0;
     }
     // Phone and below
@@ -334,14 +330,14 @@ h4.dropdown__list--title {
         // margin-right: 75px;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
 
     }
 }
 
 .dropdown__list--column .dropdown__list--column {
     // Phone and above
-    @include breakpoint(xsmall-min) {
+    @include breakpoint(small-min) {
         margin-left: 0;
     }
 }
@@ -363,7 +359,7 @@ h4.dropdown__list--title {
         padding: 0;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         margin: 10px 15px 10px 0;
         border-bottom: 1px solid #555;
     }
@@ -377,7 +373,7 @@ h4.dropdown__list--title {
     margin: 0;
     padding: 0;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         font-weight: 300;
         color: #FFF;
         padding: 5px 0 15px;
@@ -389,7 +385,7 @@ h4.dropdown__list--title {
 
 .dropdown__list--item a.has-children::after {
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         padding: 10px 0;
         display: block;
         position: absolute;
@@ -418,7 +414,7 @@ h4.dropdown__list--title {
         width: 180px;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: none;
     }
     p {

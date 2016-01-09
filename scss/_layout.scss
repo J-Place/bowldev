@@ -1,91 +1,15 @@
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Page content columns
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// // Main content columns
 
-.container.page-content {
-    background-color: transparent;
-    position: relative;
-    overflow: hidden;
-    padding: 30px 0 0;
-}
-
-.page-content__main {
-    margin: 0 auto;
+.container.main-content {
+    margin-top: 45px;
     padding: 0;
-}
-
-.page-content__sidebar {
-// Desktop and above
-    @include breakpoint(medium-min) {
-        // margin-left: -15px;
+    position: relative;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        margin-top: 0;
     }
-}
-
-.page-content.landing .container-fluid .container {
-    width: 970px;
-    padding: 15px 0 0;
-}
-
-// .page-content .stripe {
-//     left: -1263px;
-//     background-color: #000;
-//     opacity: 0.1;
-//     z-index: -1;
-// }
-
-// .page-content .stripe + .stripe {
-//     left: -1203px;
-//     background-color: #000;
-//     opacity: 0.07;
-//     z-index: -1;
-// }
-
-
-// .page-content .stripe--bottom {
-//     left: 1330px;
-//     bottom: 0;
-//     background-color: #000;
-//     opacity: 0.1;
-//     z-index: -1;
-// }
-
-// .page-content .stripe--bottom + .stripe--bottom {
-//     left: -1270px;
-//     bottom: 0;
-//     background-color: #000;
-//     opacity: 0.07;
-//     z-index: -1;
-// }
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Sidebar links
-
-.sidebar__title {
-    padding-bottom: .5em;
-    margin-bottom: .5em;
-}
-
-.sidebar__title::after {
-    display: block;
-    position: relative;
-    height: 10px;
-    width: 100px;
-    background-color: $blue;
-    @extend .skew;
-}
-
-.sidebar__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar__list--item {
-    margin: 2em auto;
-    padding: 0;
-    color: $gray-3;
-    border-bottom: 1px solid $gray-2;
 }
 
 

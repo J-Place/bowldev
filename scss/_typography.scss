@@ -34,15 +34,33 @@ body {
 }
 
 .section__title {
+    font-size: 1.7em;
+    line-height: 1.2em;
     color: $gray-4;
-    font-size: 3.3em;
     font-weight: 500;
-    line-height: 1.75em;
     margin: 0;
+    padding: 15px 0;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include breakpoint(medium-max) {
+        font-size: 1.8em;
+        // line-height: 1.85em;
+    }
+    // Phone and below
+    @include breakpoint(small-max) {
+        font-size: 2.3em;
+        // line-height: 1.75em;
+        // padding-bottom: 30px;
+    }
+}
+
+.section__title--large {
+    @extend .section__title;
+    font-size: 3.3em;
+    line-height: 1.75em;
     padding: 0 0 35px;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     // Desktop and below
     @include breakpoint(medium-max) {
         font-size: 2.8em;
@@ -56,7 +74,7 @@ body {
     }
 }
 
-.section__title::after {
+.section__title--large::after {
     content: '';
     display: block;
     background-color: $gray-4;
