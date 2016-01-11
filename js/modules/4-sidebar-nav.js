@@ -1,7 +1,5 @@
 $(window).bind("load", function() {
-
     $(".sidebar-nav--icon").click(function (){
-
         if ($(this).hasClass('open')) {
             // console.log("It's already open.");
             $(this).removeClass("open");

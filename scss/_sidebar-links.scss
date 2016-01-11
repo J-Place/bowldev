@@ -51,6 +51,11 @@
     position: absolute;
     top: 10px;
     right: 28px;
+    display: none;
+   // Tablet and below
+    @include breakpoint(small-max) {
+        display: block;
+    }
 }
 
 .sidebar-nav--icon.open {
@@ -63,6 +68,7 @@
 
 .sidebar-links__list {
     list-style-type: none;
+    // list-style-position: inside;
     margin: 0 auto;
     padding: 0;
     // Tablet and below
@@ -79,7 +85,7 @@
 
 .sidebar-links__list--item {
     margin: 1em auto 0;
-    padding: 0 0 1em 0;
+    padding: 0 0 1em 13px;
     border-bottom: 1px solid $gray-2;
 }
 
@@ -87,7 +93,6 @@
     color: $gray-3;
     font-size: 1.1em;
     font-weight: 500;
-    padding-left: 10px;
     text-decoration: none;
 }
 

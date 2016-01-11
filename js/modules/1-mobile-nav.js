@@ -18,64 +18,89 @@ $(window).bind("load", function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Toggle mobile nav
 
+    var level1Open = false;
+    var level2Open = false;
+
+    // var navID = $(this).attr("ID");
+    var dropContainer = $(".nav-dropdown");
+
+    var level1 = $(".nav-level-1");
+    var level2 = $(".nav-level-2");
+    // var link = $(".nav__list--item a");
+
+    function openLevel1() {
+        $(".nav-small-icon").addClass("open");
+        $(".nav-main").addClass("open");
+        $(".nav-dropdown").addClass("open");
+    }
+    function openLevel2() {
+        // $(".nav-dropdown").addClass("open");
+        // $(level1).addClass("left");
+        // $(level2).addClass("open");
+        // $(dropID).addClass("open");
+        return level1Open = true;
+        return level2Open = true;
+    }
+    function closeLevel1() {
+        $(".nav-small-icon").removeClass("open");
+        $(".nav-main").removeClass("open");
+        $(".nav-dropdown").removeClass("open");
+        $(".dropdown-wrapper").removeClass("open");
+        $(level1).removeClass("left");
+    }
+    function closeLevel2() {
+        $(level1).removeClass("left");
+        $(level2).removeClass("open");
+    }
+    function closeAll() {
+        // $(".nav-small-icon").removeClass("open");
+        // $(".nav-main").removeClass("open");
+        // $(".nav-dropdown").removeClass("open");
+        // $(".dropdown-wrapper").removeClass("open");
+        // $(level1).removeClass("left");
+        // $(level1).removeClass("open");
+        // $(level2).removeClass("open");
+        closeLevel1();
+        closeLevel2();
+        return level1Open = false;
+        return level2Open = false;
+    }
+
+    // Click nav icon to open mobile nav
     $(".nav-small-icon").click(function(){
-        if ($(this).hasClass("open")) {
-            $(this).removeClass("open");
-            $(".nav-main").removeClass("open");
-            $(".nav-main").removeClass("left");
-            $(".nav-dropdown").removeClass("open");
-            $(".nav-dropdown").removeClass("left");
-            $(".dropdown-wrapper").removeClass("open");
-            $(".dropdown-wrapper").removeClass("left");
+        if (level1Open === false) {
+            openLevel1();
+            return level1Open = true;
+            // return level2Open = false;
         }
-        else {
-            $(this).addClass("open");
-            $(".nav-level-1").addClass("open");
-            $(".nav-dropdown").addClass("open");
+        else if (level1Open === true) {
+            closeLevel1();
+            closeLevel2();
+            return level1Open = false;
+            return level2Open = false;
         }
     });
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Mobile nav sliding panes
-
-    var mobileNav = function(){
-
+    // Click links within dropdown
+    $(".nav__list--item a").click(function(){
         var navID = $(this).attr("ID");
-        var dropContainer = $(".nav-dropdown");
-        var dropID = $(".nav-dropdown ." + navID);
-        var level1 = $(".nav-level-1");
-        var level2 = $(".nav-level-2");
-        var level3 = $(".nav-level-3");
-        var link = $(".nav__list--item a");
 
-        if ($(level1).hasClass("open")) {
-            if (panelWidth >= 768) {
-                $(level1).addClass("open");
-                $(dropContainer).addClass("open");
-                $(dropID).addClass("open");
-            }
-            else {
-                $(dropContainer).addClass("open");
-                $(dropID).addClass("open");
-                $(level1).addClass("left");
-            }
-        }
-        else if ($(level2).hasClass("open")) {
-            $(level2).addClass("left");
-            $(level3).addClass("open");
+        if ($(this).hasClass("has-children")) {
+            $(dropContainer).addClass("open");
+            $(level1).addClass("left");
+            $(".nav-level-2." + navID).addClass("open");
+            return false;
         }
         else {
-            $(level1).addClass("open");
-            $(dropContainer).addClass("open");
-            $(dropID).addClass("open");
+            return true;
         }
-    };
-
-    $(".nav__list--item a").click(mobileNav);
+    });
     $(".exit-level-2").click(function() {
-        $(".nav-level-2").removeClass("open");
-        $(".nav-level-1").removeClass("left");
+        $(level2).removeClass("open");
+        $(level1).removeClass("left");
+        return level2Open = false;
     });
 
 
 });
+

@@ -52,7 +52,7 @@ $(window).bind("load", function() {
         // // }
         // // {
             'afterChange': function(event, slick, currentSlide){
-                console.log("after" + currentSlide);
+                // console.log("after" + currentSlide);
                 $(".slider__ribbon .ribbon").toggleClass("blue");
                 $(".slider--stripes .stripes").toggleClass("blue");
                 $(".slider__ribbon .ribbon").toggleClass("yellow");

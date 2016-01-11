@@ -11,6 +11,7 @@
 .nav-small-icon {
     display: none;
     position: absolute;
+    cursor: pointer;
     // Tablet and below
     @include breakpoint(small-max) {
         display: block;
@@ -109,7 +110,7 @@
     // Phone and below
     @include breakpoint(small-max) {
         left: 0;
-        transition: left .2s;
+        transition: left 0.3s;
         position: fixed;
         background-color: $gray-3;
         top: 55px;
@@ -140,7 +141,7 @@
     // display: none;
     // Phone and below
     @include breakpoint(small-max) {
-        transition: left .25s;
+        transition: left 0.3s;
         background-color: $gray-3;
         position: fixed;
         display: block;
@@ -159,7 +160,7 @@
         display: block;
         padding-top: 0;
         left: 0px;
-        transition: left .25s;
+        transition: left 0.3s;
     }
 }
 
@@ -183,7 +184,7 @@
         left: 100%;
         top: 55px;
         padding-top: 0;
-        transition: left .3s;
+        transition: left 0.3s;
         z-index: 1;
     }
 }

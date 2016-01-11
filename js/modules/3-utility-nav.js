@@ -13,19 +13,28 @@ $(window).bind("load", function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Topggle search input box
 
-    // $(".search__button").click(function(){
-    //     $(".search-container").addClass("open");
-    //     $(".search__button").addClass("open");
-    //     $(".search__input").css("display", "block");
-    //     $("input.search__input").focus();
-    // });
-
     $(".search__toggle").click(function() {
-        $(".search__input--wrapper").addClass("open");
-        $("input.search__input").focus();
-        $(".search-container").addClass("open");
-        $(".search__button").addClass("open");
-        $(".search__input").css("display", "block");
+        if ($(this).hasClass('open')) {
+            $(this).removeClass("open");
+            $(".search__input--wrapper").removeClass("open");
+            $("input.search__input").focus();
+            $(".search-container").removeClass("open");
+            $(".search__button").removeClass("open");
+            // $(".search__input").css("display", "block");
+        }
+        else {
+            $(".search__input--wrapper").addClass("open");
+            $("input.search__input").focus();
+            $(".search-container").addClass("open");
+            $(".search__button").addClass("open");
+            // $(".search__input").css("display", "block");
+        }
+    });
+        // $(".search__input--wrapper").addClass("open");
+        // $("input.search__input").focus();
+        // $(".search-container").addClass("open");
+        // $(".search__button").addClass("open");
+        // $(".search__input").css("display", "block");
     });
 
 
@@ -78,5 +87,3 @@ $(window).bind("load", function() {
             // $(".search__toggle").click();
         }
     });
-
-});

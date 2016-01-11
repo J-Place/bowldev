@@ -25,24 +25,28 @@ a:hover {
     -webkit-transform: skew(-18.25deg);
    -moz-transform: skew(-18.25deg);
      -o-transform: skew(-18.25deg);
+     -ms-transform: skew(-18.25deg);
 }
 
 .no-skew {
     -webkit-transform: skew(18.25deg);
    -moz-transform: skew(18.25deg);
      -o-transform: skew(18.25deg);
+     -ms-transform: skew(18.25deg);
 }
 
 .skew-reset {
     -webkit-transform: skew(0deg);
    -moz-transform: skew(0deg);
      -o-transform: skew(0deg);
+     -ms-transform: skew(0deg);
 }
 
 .skew-zero {
     -webkit-transform: skew(0deg);
    -moz-transform: skew(0deg);
      -o-transform: skew(0deg);
+     -ms-transform: skew(0deg);
 }
 
 .stripes {

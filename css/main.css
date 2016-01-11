@@ -78,22 +78,26 @@ a:hover {
 .skew, .section__title--large::after, .stripe, .stripe--featured-video, .stripe--right, .stripe--bottom, .ribbon::after, .cta__header::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
   -webkit-transform: skew(-18.25deg);
   -moz-transform: skew(-18.25deg);
-  -o-transform: skew(-18.25deg); }
+  -o-transform: skew(-18.25deg);
+  -ms-transform: skew(-18.25deg); }
 
 .no-skew, .marketing-promo__detail p {
   -webkit-transform: skew(18.25deg);
   -moz-transform: skew(18.25deg);
-  -o-transform: skew(18.25deg); }
+  -o-transform: skew(18.25deg);
+  -ms-transform: skew(18.25deg); }
 
 .skew-reset {
   -webkit-transform: skew(0deg);
   -moz-transform: skew(0deg);
-  -o-transform: skew(0deg); }
+  -o-transform: skew(0deg);
+  -ms-transform: skew(0deg); }
 
 .skew-zero {
   -webkit-transform: skew(0deg);
   -moz-transform: skew(0deg);
-  -o-transform: skew(0deg); }
+  -o-transform: skew(0deg);
+  -ms-transform: skew(0deg); }
 
 .stripes {
   top: 0;
@@ -324,18 +328,15 @@ a:hover {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  transition: all 0.2s; }
+  transition: all 0.3s; }
   @media only screen and (max-width: 991px) {
     .nav-main {
       font-size: 0.95em;
       top: 41px; } }
   @media only screen and (max-width: 767px) {
     .nav-main {
-      right: 15px; } }
-  @media only screen and (max-width: 767px) {
-    .nav-main {
+      right: 15px;
       font-size: 1.1em;
-      background-color: #75777a;
       font-family: "Open Sans", sans-serif; } }
 
 @media only screen and (max-width: 991px) {
@@ -356,7 +357,7 @@ a:hover {
   padding-left: 0;
   margin-left: -5px;
   height: 22px;
-  transition: left 0.5s; }
+  transition: left 0.3s; }
   .nav__list :last-child {
     padding-right: 0; }
   @media only screen and (max-width: 767px) {
@@ -364,13 +365,12 @@ a:hover {
       width: 100%; } }
 
 .nav-main.open .nav__list {
-  transition: left 0.5s;
+  transition: left 0.3s;
   left: 0; }
 
 @media only screen and (max-width: 767px) {
   .nav-main.open.left .nav__list {
-    position: absolute;
-    left: -100%; } }
+    position: absolute; } }
 
 .nav__list--item {
   display: inline-block; }
@@ -380,8 +380,7 @@ a:hover {
       padding: 0; } }
   @media only screen and (max-width: 1199px) {
     .nav__list--item {
-      margin-left: 25px;
-      padding: 0; } }
+      margin-left: 25px; } }
   @media only screen and (max-width: 991px) {
     .nav__list--item {
       margin-left: 11px;
@@ -390,7 +389,6 @@ a:hover {
     .nav__list--item {
       display: block;
       margin: 10px 15px 10px 23px;
-      padding: 0;
       border-bottom: 1px solid #555; } }
   @media only screen and (max-width: 479px) {
     .nav__list--item {
@@ -540,7 +538,8 @@ a:hover {
 
 .nav-small-icon {
   display: none;
-  position: absolute; }
+  position: absolute;
+  cursor: pointer; }
   @media only screen and (max-width: 767px) {
     .nav-small-icon {
       display: block;
@@ -618,7 +617,7 @@ a:hover {
 @media only screen and (max-width: 767px) {
   .nav-level-1 {
     left: 0;
-    transition: left .2s;
+    transition: left 0.3s;
     position: fixed;
     background-color: #75777a;
     top: 55px;
@@ -640,7 +639,7 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .nav-level-2 {
-    transition: left .25s;
+    transition: left 0.3s;
     background-color: #75777a;
     position: fixed;
     display: block;
@@ -655,7 +654,7 @@ a:hover {
     display: block;
     padding-top: 0;
     left: 0px;
-    transition: left .25s; } }
+    transition: left 0.3s; } }
 
 @media only screen and (max-width: 767px) {
   .nav-level-2.open.left {
@@ -668,7 +667,7 @@ a:hover {
     left: 100%;
     top: 55px;
     padding-top: 0;
-    transition: left .3s;
+    transition: left 0.3s;
     z-index: 1; } }
 
 @media only screen and (max-width: 767px) {
@@ -2012,7 +2011,11 @@ a.login-toggle:active, a.login-toggle:focus {
   width: 35px;
   position: absolute;
   top: 10px;
-  right: 28px; }
+  right: 28px;
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .sidebar-nav--icon {
+      display: block; } }
 
 .sidebar-nav--icon.open {
   background-position: -176px -86px; }
@@ -2036,14 +2039,13 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .sidebar-links__list--item {
   margin: 1em auto 0;
-  padding: 0 0 1em 0;
+  padding: 0 0 1em 13px;
   border-bottom: 1px solid #b0b3b1; }
 
 .sidebar-links__list--item a {
   color: #75777a;
   font-size: 1.1em;
   font-weight: 500;
-  padding-left: 10px;
   text-decoration: none; }
 
 .sidebar-links__list--item a:hover {
