@@ -204,7 +204,7 @@ $(window).bind("load", function() {
         }
     });
 $(window).bind("load", function() {
-    $(".sidebar-nav--icon").click(function (){
+    $(".sidebar-links__title").click(function (){
         if ($(this).hasClass('open')) {
             // console.log("It's already open.");
             $(this).removeClass("open");

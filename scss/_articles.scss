@@ -5,6 +5,7 @@
     margin-bottom: 40px;
     overflow: hidden;
     position: relative;
+
 // Desktop and below
     @include breakpoint(medium-max) {
         margin-bottom: 15px;
@@ -20,13 +21,38 @@
     }
 }
 
-.main-content__body .article {
+// Article Tile - image top, copy bottom
+.main-content__body .article--tile {
 // Desktop and above
     @include breakpoint(medium-min) {
-        height: 310px;
+        // height: 310px;
+        overflow: hidden;
     }
 }
 
+// Article List - image, left copy right
+.main-content__body .article--list {
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        // max-height: 300px;
+        // overflow: hidden;
+        height: auto;
+        position: relative;
+        margin-bottom: 30px;
+    }
+}
+
+.article--list .article__summary {
+    max-height: 100px;
+    overflow: hidden;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        max-height: 160px;
+        margin-bottom: 45px;
+    }
+}
+
+// Article Detail - full page layout
 .main-content__body .article--detail {
 // Desktop and above
     @include breakpoint(medium-min) {
@@ -34,6 +60,63 @@
     }
 }
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Page elements
+
+// Page title
+.page__title--news {
+    color: $gray-3;
+    font-size: 2.5em;
+    margin: 0 auto 30px;
+    padding: 0 0 15px;
+}
+
+.pagination__wrapper {
+    position: relative;
+    text-align: center;
+    margin: 60px auto;
+    padding: 0;
+}
+
+.pagination__list {
+    list-style-type: none;
+    margin: 0 atuo;
+    padding: 0;
+}
+
+.pagination__list--item {
+    list-style-position: inside;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0 8px;
+    font-size: 1.32em;
+}
+
+.pagination__list--item a {
+    color: $gray-3;
+}
+
+.pagination__list--item a.active {
+    color: $red;
+}
+
+.pagination__list--item a.previous {
+    @extend .nav-icon;
+    height: 30px;
+    width: 30px;
+    top: -3px;
+    background-position: -210px -61px;
+}
+
+.pagination__list--item a.next {
+    @extend .nav-icon;
+    height: 30px;
+    width: 30px;
+    top: -3px;
+    background-position: -121px -61px;
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Article modifiers
@@ -70,6 +153,7 @@
 // Desktop and above
     @include breakpoint(medium-min) {
         // min-height: 340px;
+        height: 375px;
     }
 // iPhone and below
     @include breakpoint(iphone) {
@@ -77,6 +161,12 @@
         padding-bottom: 0;
         // min-height: 330px;
     }
+}
+
+.article--equal .article__image-wrapper {
+    max-height: 233px;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .article--cta-1 {
@@ -89,12 +179,21 @@
 
 .article__link:hover {
     .article__title {
-        color: $blue;
+        color: $blue-link;
     }
     .article__summary {
-        color: $blue;
-        text-decoration: underline;
+        // color: $blue;
+        // text-decoration: underline;
     }
+    .article__date {
+        // color: $blue;
+        // text-decoration: underline;
+    }
+}
+
+.article__date {
+    color: $gray-4;
+    font-size: 0.9em;
 }
 
 .article__image {
@@ -127,12 +226,17 @@
 
 .article__summary {
     font-weight: 400;
+    font-size: 1.05em;
     color: $gray-4;
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    // Phone and below
+    @include breakpoint(small-max) {
+        margin-bottom: 40px;
+    }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
     }
 }
 
