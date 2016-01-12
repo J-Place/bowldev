@@ -7,6 +7,10 @@
     max-width: 400px;
     margin: 0 auto 30px;
     padding: 0;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        display: none;
+    }
 }
 
 .search__input--sidebar {

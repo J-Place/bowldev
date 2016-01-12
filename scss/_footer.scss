@@ -3,17 +3,17 @@
     padding-top: 2em;
     padding-bottom: 1em;
     // margin-top: -30px;
-// Tablet and below
+    // Tablet and below
     @include breakpoint(small-max) {
         padding: 1em 1em 1em;
-        margin-bottom: 275px;
-        margin-bottom: 0;
+        margin-bottom: 250px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        padding: 0 15px 1em;
+        // padding: 0 15px 1em;
+        // padding: 0 0 1em;
+        padding-bottom: 1em;
         margin-bottom: 0;
-        // padding-bottom: 275px;
     }
 }
 
@@ -126,7 +126,7 @@
 .download-icon {
     margin: .5em 0;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: block;
         margin-bottom: 10px;
     }
@@ -201,7 +201,7 @@
 .container.footer--stripes {
     position: absolute;
     z-index: 99;
-    overflow: visible;
+    overflow: hidden;
     height: 100%;
     margin: 0 auto;
     padding: 0;

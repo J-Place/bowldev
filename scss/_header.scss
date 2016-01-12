@@ -5,11 +5,11 @@
     border-bottom: 1px solid #d5d7d5;
     transition: height 0.3s;
     overflow: visible;
+
     // Desktop and below //
     @include breakpoint(medium-max) {
-        height: 69px;
+        height: 70px;
         padding: 0;
-        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -25,18 +25,21 @@ body.scroll--header {
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-top: 45px;
+        margin-bottom: -45px;
     }
     // Phone and below
     @include breakpoint(small-max) {
         margin-top: 55px;
+        margin-bottom: -55px;
     }
 }
 
 
-.header.scroll {
+.container-fluid.header.scroll {
     // Desktop and below //
     @include breakpoint(medium-max) {
         height: 45px;
+        position: fixed;
     }
     // Phone and below //
     @include breakpoint(small-max) {
@@ -65,14 +68,14 @@ body.scroll--header {
     background-repeat: no-repeat;
     display: block;
     text-indent: -9999px;
-    transition: all .1s;
+    transition: all .2s;
     // Desktop and below //
     @include breakpoint(medium-max) {
         margin-left: 0;
         width: 230px;
         background-position: -2px 20px;
         background-size: 280px;
-        height: 69px;
+        height: 68px;
     }
     // Phone and below //
     @include breakpoint(small-max) {
@@ -97,17 +100,17 @@ body.scroll--header {
     // Desktop and below //
     @include breakpoint(medium-max) {
         width: 44px;
-        height: 44px;
+        height: 43px;
         background-size: 260px;
         background-position: -219px -3px;
     }
     // Phone and below //
     @include breakpoint(small-max) {
-        height: 55px;
-        width: 245px;
+        height: 54px;
+        background-size: 275px;
+        width: 240px;
         margin: 0 auto;
-        background-size: 305px;
-        background-position: -1px -1px;
+        background-position: 8px -1px;
     }
     // Small phone and below //
     @include breakpoint(iphone) {

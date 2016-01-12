@@ -3,7 +3,7 @@
 // Sidebar links
 
 .sidebar-links__title {
-    padding: 0 0 0 10px;
+    padding: 0;
     margin: 0 auto 30px;
     font-size: 2.2em;
     letter-spacing: 1px;
@@ -20,12 +20,26 @@
     }
 }
 
+.sidebar-links__title.open {
+    margin-bottom: 0;
+}
+
+
+.sidebar-links__title::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: lime;
+}
+
 .sidebar-links__title::after {
     content: "";
     display: block;
     position: relative;
     height: 4px;
-    left: -10px;
     top: 15px;
     width: 100%;
     @extend .skew;
@@ -59,7 +73,7 @@
     }
 }
 
-.sidebar-nav--icon.open {
+.open .sidebar-nav--icon {
     background-position: -176px -86px;
 }
 
@@ -69,32 +83,64 @@
 
 .sidebar-links__list {
     list-style-type: none;
-    // list-style-position: inside;
     margin: 0 auto;
     padding: 0;
+    font-weight: 500;
     // Tablet and below
     @include breakpoint(small-max) {
+        transition: height 1s;
         height: 0;
         overflow: hidden;
+        padding: 15px;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 1px;
         display: none;
     }
 }
 .sidebar-links__list.open {
     display: block;
     height: 100%;
+    padding-top: 0;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        background-color: $gray-list-background;
+    }
 }
 
 .sidebar-links__list--item {
     margin: 1em auto 0;
     padding: 0 0 1em 13px;
-    border-bottom: 1px solid $gray-2;
+    border-bottom: 1px solid $gray-4;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        border-color: $gray-list-border;
+        margin: 23px 15px 0 0;
+        padding: 0 0 23px 0;
+    }
+}
+
+.sidebar-links__list--item:last-of-type {
+    border: 0 none;
 }
 
 .sidebar-links__list--item a {
-    color: $gray-3;
     font-size: 1.1em;
-    font-weight: 500;
     text-decoration: none;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        color: #FFF;
+        // Match font-size, margin and padding on these elements:
+        // .nav-main, .dropdown__list--item > a, .sidebar__list--item > a
+        font-size: 1.4em;
+        // font-family: "Open Sans", sans-serif;
+        position: relative;
+        @extend .opensans;
+        // padding: 13px 0 25px;
+        margin: 0;
+        padding-left: 10px;
+        line-height: 22px;
+    }
 }
 
 .sidebar-links__list--item a:hover {

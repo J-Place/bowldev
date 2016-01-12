@@ -1,5 +1,6 @@
 .container.breadcrumbs {
     margin: 0 auto;
+    // padding: 0;
         // Tablet and below
     @include breakpoint(small-max) {
         display: none;;
@@ -14,5 +15,16 @@
 
 .breadcrumb__list--item {
     display: inline-block;
-    margin: 0 10px;
+    margin-right: 7px;
+    padding: 0;
+}
+
+.breadcrumb__list--item::after {
+    content: "/";
+    margin-left: 11px;
+    padding: 0;
+}
+
+.breadcrumb__list--item:last-of-type::after {
+    content: "";
 }

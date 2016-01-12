@@ -67,7 +67,8 @@ $(window).bind("load", function() {
     }
 
     // Click nav icon to open mobile nav
-    $(".nav-small-icon").click(function(){
+    $(".nav-small-icon").click(function(e){
+        e.preventDefault();
         if (level1Open === false) {
             openLevel1();
             return level1Open = true;
@@ -101,6 +102,4 @@ $(window).bind("load", function() {
         return level2Open = false;
     });
 
-
 });
-
