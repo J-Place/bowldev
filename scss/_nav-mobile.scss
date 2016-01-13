@@ -182,6 +182,7 @@
 .dropdown__links {
     // position: absolute;
     margin: 0;
+    margin-bottom: 60px;
     padding: 0;
     display: inline-block;
     width: 70%;
@@ -197,6 +198,7 @@
     // Phone and below
     @include breakpoint(small-max) {
         width: 100%;
+        height: 100%;
         position: absolute;
     }
 }
@@ -332,15 +334,16 @@ h4.dropdown__list--title {
 }
 
 .dropdown__list--item > a {
-    font-size: 1.1em;
-    text-transform: uppercase;
+    font-size: 1.0em;
     letter-spacing: 0.5px;
     font-weight: 400;
-    color: $gray-5;
+    color: $gray-4;
     // Phone and below
     @include breakpoint(small-max) {
         // Match font-size, margin and padding on these elements:
         // .nav-main, .dropdown__list--item > a, .sidebar__list--item > a
+        text-transform: uppercase;
+        // color: $gray-5;
         font-size: 1.4em;
         font-weight: 300;
         color: #FFF;
@@ -351,21 +354,21 @@ h4.dropdown__list--title {
     }
 }
 
-.dropdown__list--item a.has-children::after {
-    // Phone and below
-    @include breakpoint(small-max) {
-        padding: 10px 0;
-        display: block;
-        position: absolute;
-        top: -2px;
-        right: -10px;
-        content: url("../img/arrow-rt.png");
-        width: 30px;
-        height: 40px;
-        background-color: transparent;
-        overflow: hidden;
-    }
-}
+// .dropdown__list--item a::after {
+//     // Phone and below
+//     @include breakpoint(small-max) {
+//         padding: 10px 0;
+//         display: block;
+//         position: absolute;
+//         top: -2px;
+//         right: -10px;
+//         content: url("../img/arrow-rt.png");
+//         width: 30px;
+//         height: 40px;
+//         background-color: transparent;
+//         overflow: hidden;
+//     }
+// }
 
 .dropdown-cta {
     display: inline-block;

@@ -47,7 +47,7 @@
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        height: 405px;
+        // height: 255px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -79,11 +79,11 @@
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        font-size: 1.1em;
-        padding-top: 10px;
-        padding-left: 15px;
-        height: 110px;
-        bottom: 0;
+        // font-size: 1.1em;
+        // padding-top: 10px;
+        // padding-left: 15px;
+        // height: 110px;
+        // bottom: 0;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -122,11 +122,11 @@
         margin-top: 15px;
         margin-bottom: 7px;
     }
-    // Phone and below
-    @include breakpoint(medium-max) {
-        font-size: 1.75em;
-        line-height: 1.1em;
-        font-weight: 300;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        // font-size: 1.52em;
+        // margin-top: 15px;
+        // margin-bottom: 7px;
     }
     // Slider small
     @include breakpoint(slider-small) {
@@ -165,14 +165,22 @@
     left: 0;
     right: 0;
     z-index: 999;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 75px;
+        bottom: 25px;
+    }
+
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        top: initial;
-        overflow: hidden;
-        height: 110px;
-        width: 728px;
-        bottom: 0;
-        padding: 0;
+// !!!!!!! Keep This !!!!!!!!
+        // top: initial;
+        // overflow: hidden;
+        // height: 110px;
+        // width: 728px;
+        // bottom: 0;
+        // padding: 0;
+// !!!!!!! Keep This !!!!!!!!
     }
     // Slider small
     @include breakpoint(small-max) {
@@ -191,21 +199,21 @@
     transition: background-color 0.2s;
     width: 1800px;
     height: 100%;
-    left: -1080px;
+    left: -1133px;
     position: relative;
     z-index: 999;
     // Large desktop and below
     @include breakpoint(large-max) {
-        left: -1100px;
+        // left: -1133px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
-        left: -1273px;
+        left: -1265px;
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        left: 0;
-        right: 0;
+        // left: 0;
+        // right: 0;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -247,7 +255,7 @@
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        display: none;
+        // display: none;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -271,7 +279,7 @@
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        height: 405px;
+        // height: 405px;
         // padding: 0 15px;
     }
     // Tablet and below
@@ -335,6 +343,7 @@
     position: absolute;
     z-index: 99;
     overflow: visible;
+    // width: 1170px;
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -342,7 +351,7 @@
     right: 0;
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        display: none;
+        // display: none;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -501,6 +510,13 @@
         height: 18px;
         background-size: 190px;
     }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        top: 60px;
+        width: 18px;
+        height: 18px;
+        background-size: 190px;
+    }
 }
 
 .slick-prev.slick-arrow {
@@ -536,6 +552,11 @@
     @include breakpoint(slider-small) {
         right: 20px;
         background-position: -86px -33px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        background-size: 330px;
+        background-position: -67px -65px;
     }
 }
 
