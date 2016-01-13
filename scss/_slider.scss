@@ -1,9 +1,8 @@
 .container.slider {
     margin: 0 auto;
-    // iPhone and below
-    @include breakpoint(iphone) {
-        padding-left: 0;
-        padding-right: 0;
+    // iPad portrait and below
+    @include breakpoint(small-max) {
+        padding: 0 15px;
     }
 }
 
@@ -29,7 +28,6 @@
     height: 100%;
     // Tablet and below
     @include breakpoint(small-max) {
-        height: 285px;
         overflow: hidden;
     }
 }
@@ -39,7 +37,6 @@
     width: 999px;
     height: 400px;
     right: 180px;
-    // left: 0;
     margin-left: 0;
     display: block;
     position: relative;
@@ -48,17 +45,22 @@
         height: 285px;
         right: 0;
     }
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        height: 405px;
+    }
     // Tablet and below
     @include breakpoint(small-max) {
+        height: 345px;
     }
-    // Phone and below
-    @include breakpoint(slider-small) {
-        // width: 100%;
-        // height: 110px; // *************************
-        // margin-left: -20px;
-        // margin-left: 15px;
-        // left: 0;
-    }
+    // Slider step down
+    @media only screen and (max-width: 580px) { height: 340px; }
+    @media only screen and (max-width: 520px) { height: 310px; }
+    @media only screen and (max-width: 460px) { height: 290px; }
+    @media only screen and (max-width: 400px) { height: 260px; }
+    @media only screen and (max-width: 360px) { height: 250px; }
+    @media only screen and (max-width: 320px) { height: 234px; }
+    @media only screen and (max-width: 300px) { height: 225px; }
 }
 
 // Link wraps headline and text
@@ -75,24 +77,36 @@
         bottom: 25px;
         padding-left: 0;
     }
-    // Tablet and below
-    @include breakpoint(small-max) {
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        font-size: 1.1em;
+        padding-top: 10px;
         padding-left: 15px;
-    }
-    // Slider small
-    @include breakpoint(slider-small) {
-        padding-left: 25px;
-        max-width: 410px;
         height: 110px;
         bottom: 0;
     }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        font-size: 0.9em;
+        padding-top: 0px;
+        padding-left: 15px;
+        height: 110px;
+        bottom: 0;
+    }
+    // Slider small
+    // @include breakpoint(slider-small) {
+        // max-width: 410px;
+    // }
+
     // Slider step down
     @media only screen and (max-width: 580px) { width: 480px; }
     @media only screen and (max-width: 520px) { width: 400px; }
-    @media only screen and (max-width: 460px) { width: 325px; }
+    @media only screen and (max-width: 460px) { width: 325px; font-size: 0.9em; padding-top: 1px; }
     @media only screen and (max-width: 410px) { width: 310px; }
-    @media only screen and (max-width: 360px) { width: 300px; }
-    @media only screen and (max-width: 300px) { width: 260px; }
+    @media only screen and (max-width: 360px) { width: 280px; font-size: 0.9em; padding-top: 5px; }
+    @media only screen and (max-width: 340px) { width: 270px; }
+    @media only screen and (max-width: 320px) { width: 260px; font-size: 0.8em; padding-top: 0px; }
+    @media only screen and (max-width: 300px) { width: 250px; }
 }
 
 .slide__title {
@@ -107,7 +121,12 @@
         font-size: 1.52em;
         margin-top: 15px;
         margin-bottom: 7px;
-        // letter-spacing: 0.75px;
+    }
+    // Phone and below
+    @include breakpoint(medium-max) {
+        font-size: 1.75em;
+        line-height: 1.1em;
+        font-weight: 300;
     }
     // Slider small
     @include breakpoint(slider-small) {
@@ -115,12 +134,6 @@
         line-height: 1.1em;
         font-weight: 300;
     }
-    // Slider step down
-    @media only screen and (max-width: 580px) {  }
-    @media only screen and (max-width: 520px) {  }
-    @media only screen and (max-width: 460px) {  }
-    @media only screen and (max-width: 410px) { font-size: 1.5em; }
-    @media only screen and (max-width: 360px) {  }
 }
 
 .slide__text {
@@ -137,16 +150,12 @@
     @include breakpoint(slider-small) {
         font-size: 1.15em;
     }
-    // Slider step down
-    @media only screen and (max-width: 580px) {  }
-    @media only screen and (max-width: 520px) {  }
-    @media only screen and (max-width: 460px) {  }
-    @media only screen and (max-width: 410px) { font-size: 1.0em; }
-    @media only screen and (max-width: 360px) {  }
 }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Container for red block behind text
+
 .container.slider__ribbon {
     position: absolute;
     height: 100px;
@@ -156,21 +165,17 @@
     left: 0;
     right: 0;
     z-index: 999;
-    // Large desktop and above
-    @include breakpoint(large-min) {
-    }
-    // Desktop and below
-    @include breakpoint(medium-max) {
-        height: 75px;
-        bottom: 25px;
-        // top: 150px;
-        // left: -450px;
-    }
-    // Tablet and below
-    @include breakpoint(small-max) {
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        top: initial;
+        overflow: hidden;
+        height: 110px;
+        width: 728px;
+        bottom: 0;
+        padding: 0;
     }
     // Slider small
-    @include breakpoint(slider-small) {
+    @include breakpoint(small-max) {
         top: initial;
         overflow: hidden;
         left: 15px;
@@ -179,11 +184,10 @@
         bottom: 0;
         margin: 0;
         padding: 0;
-     }
+    }
 }
 
 .ribbon {
-    // background-color: $red;
     transition: background-color 0.2s;
     width: 1800px;
     height: 100%;
@@ -194,21 +198,31 @@
     @include breakpoint(large-max) {
         left: -1100px;
     }
-    // Desktop and above
-    @include breakpoint(medium-min) {
-    }
     // Desktop and below
     @include breakpoint(medium-max) {
         left: -1273px;
     }
-    // Tablet and below
-    @include breakpoint(small-max) {
-    }
-    // Slider small
-    @include breakpoint(slider-small) {
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
         left: 0;
         right: 0;
     }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left: 0;
+        right: 0;
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        // left: 0;
+        // right: 0;
+    }
+    // Slider step down
+    @media only screen and (max-width: 580px) { }
+    @media only screen and (max-width: 520px) { }
+    @media only screen and (max-width: 460px) { }
+    @media only screen and (max-width: 410px) { }
+    @media only screen and (max-width: 360px) { }
 }
 
 .ribbon.blue {
@@ -231,8 +245,12 @@
     @include breakpoint(medium-max) {
         height: 75px;
     }
-    // Slider small
-    @include breakpoint(slider-small) {
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        display: none;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
         display: none;
     }
 }
@@ -243,7 +261,7 @@
 
 .container.slider--background {
     height: 400px;
-    padding: 0;
+    // padding: 0;
     overflow: hidden;
     position: relative;
     z-index: -1;
@@ -251,14 +269,26 @@
     @include breakpoint(medium-max) {
         height: 285px;
     }
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        height: 405px;
+        // padding: 0 15px;
+    }
     // Tablet and below
     @include breakpoint(small-max) {
         padding: 0 15px;
+        height: 345px;
+        width: auto;
     }
     // Slider small
-    @include breakpoint(slider-small) {
-        height: 285px;
-    }
+    @include breakpoint(slider-small) { height: 345px; }
+    @media only screen and (max-width: 580px) { height: 340px; }
+    @media only screen and (max-width: 520px) { height: 310px; }
+    @media only screen and (max-width: 460px) { height: 290px; }
+    @media only screen and (max-width: 400px) { height: 260px; }
+    @media only screen and (max-width: 360px) { height: 250px; }
+    @media only screen and (max-width: 320px) { height: 234px; }
+    @media only screen and (max-width: 300px) { height: 225px; }
 }
 
 // Image wrapper
@@ -269,14 +299,8 @@
     @include breakpoint(small-max) {
         position: relative;
         overflow: hidden;
-        height: 285px;
+        // height: 285px;
     }
-    // Slider step down
-    @media only screen and (max-width: 580px) { height: 215px; width: auto; }
-    @media only screen and (max-width: 520px) { height: 201px; width: auto; }
-    @media only screen and (max-width: 460px) { height: 182px; width: auto; }
-    @media only screen and (max-width: 410px) { height: 182px; width: auto; }
-    @media only screen and (max-width: 360px) { height: 182px; width: auto; }
 }
 
 // The img element
@@ -287,25 +311,21 @@
     margin: 0 auto;
     // Desktop and below
     @include breakpoint(medium-max) {
-        // height: 285px;
         height: 300px;
     }
     // Slider small
     @include breakpoint(slider-small) {
-        height: 243px;
-        // height: 100%;
-        width: auto;
-        // @include img-center;
+        // height: 243px;
+        // width: auto;
     }
     // Slider step down
-    @media only screen and (max-width: 580px) { height: 215px; width: auto; }
-    @media only screen and (max-width: 520px) { height: 195px; width: auto; }
-    @media only screen and (max-width: 460px) {
-        height: 182px;
-        width: auto;
-    }
-    @media only screen and (max-width: 410px) { height: 182px; width: auto; }
-    @media only screen and (max-width: 360px) { height: 182px; width: auto; }
+    @media only screen and (max-width: 580px) { height: 232px; width: auto; }
+    @media only screen and (max-width: 520px) { height: 210px; width: auto; }
+    @media only screen and (max-width: 460px) { height: 182px; width: auto; }
+    @media only screen and (max-width: 400px) { height: 162px; width: auto; }
+    @media only screen and (max-width: 360px) { height: 142px; width: auto; }
+    @media only screen and (max-width: 320px) { height: 126px; width: auto; }
+    @media only screen and (max-width: 300px) { height: 115px; width: auto; }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -320,6 +340,14 @@
     padding: 0;
     left: 0;
     right: 0;
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        display: none;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        display: none;
+    }
     // Slider small
     @include breakpoint(slider-small) {
         overflow: hidden;
@@ -483,8 +511,8 @@
     }
     // Tablet and below
     @include breakpoint(medium-max) {
-        left: 10px;
-        background-position: -135px -78px
+        left: 25px;
+        background-position: -134px -78px
     }
     // Slider small
     @include breakpoint(slider-small) {

@@ -9,7 +9,7 @@ body {
     }
     // Phone and below
     @include breakpoint(small-max) {
-        // margin-top: 55px;
+        margin-top: 55px;
     }
 }
 

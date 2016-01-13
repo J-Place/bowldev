@@ -70,7 +70,7 @@ gulp.task('watch', function() {
     gulp.watch(['js/modules/*.js'], ['lint', 'js']);
     gulp.watch(['scss/*.scss'], ['sass']);
     gulp.watch(['*.html'], ['html']);
-    // gulp.watch(['css/*.css'], ['css']);
+    gulp.watch(['css/*.css'], ['css']);
 });
 
 // Default Task

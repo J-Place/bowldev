@@ -52,8 +52,8 @@
         height: 100%;
         top: 55px;
         z-index: 99;
-        font-family: "Open Sans", sans-serif;
-        text-transform: uppercase;
+        // font-family: "Open Sans", sans-serif;
+        // text-transform: uppercase;
     }
 }
 
@@ -67,7 +67,8 @@
         right: 0;
         top: 54px;
         bottom: 0;
-        position: fixed;
+        // position: fixed;
+        position: absolute;
         display: block;
         z-index: 1;
     }
@@ -125,7 +126,10 @@
 .nav-level-1.open {
     // Phone and below
     @include breakpoint(small-max) {
-        position: fixed;
+        // position: fixed;
+        // overflow-y: scroll;
+        // position: absolute;
+        min-height: 1500px;
         height: 100%;
         padding-top: 2px;
         right: 0;
@@ -144,7 +148,8 @@
     @include breakpoint(small-max) {
         transition: left 0.3s;
         background-color: $gray-list-background;
-        position: fixed;
+        // position: fixed;
+        position: absolute;
         display: block;
         padding-top: 0;
         left: 100%;
@@ -156,12 +161,13 @@
     // display: block;
     // Phone and below
     @include breakpoint(small-max) {
-        position: fixed;
-        top: 55px;
+        // top: 55px;
         display: block;
         padding-top: 0;
         left: 0px;
         transition: left 0.3s;
+        // position: fixed;
+        position: absolute;
         overflow-y: scroll;
     }
 }
@@ -316,7 +322,7 @@ h4.dropdown__list--title {
     }
     // Phone and below
     @include breakpoint(small-max) {
-        margin: 0 15px 0 0;
+        margin: 0 30px 0 0;
         // margin-top: 0;
         // margin-right: 15px;
         // margin-bottom: 0;
@@ -327,6 +333,7 @@ h4.dropdown__list--title {
 
 .dropdown__list--item > a {
     font-size: 1.1em;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 400;
     color: $gray-5;

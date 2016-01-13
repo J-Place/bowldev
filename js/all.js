@@ -12,11 +12,24 @@ $(window).bind("load", function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Set width of mobile nav panels
 
-    var panelWidth = $(window).width()-30;
+
+
+    var panelWidth = $(window).width();
     var setPanel = function(){
+
+        // var body = $('body').width();
+        var target = $(".nav-level-2");
+        var targetWidth = $(".nav-level-2").width();
+        var bodyWidth = $("body").width();
+        var bodyHeight = $(document).height();
+        var windowHeight = $(window).height();
+        console.log(bodyHeight);
+        console.log(windowHeight);
+
         if (panelWidth < 780) {
-            $(".nav-level-2").width(panelWidth);
-            $(".nav-level-3").width(panelWidth);
+            // $(".nav-level-2").width(panelWidth - 17);
+            $(".nav-dropdown").height(windowHeight);
+            $(".nav-level-2").height(bodyHeight);
         }
         else if (panelWidth >= 780) {
         }
@@ -41,6 +54,7 @@ $(window).bind("load", function() {
         $(".nav-small-icon").addClass("open");
         $(".nav-main").addClass("open");
         $(".nav-dropdown").addClass("open");
+        $(".container-fluid.header").addClass("open");
     }
     function openLevel2() {
         // $(".nav-dropdown").addClass("open");
@@ -56,24 +70,25 @@ $(window).bind("load", function() {
         $(".nav-dropdown").removeClass("open");
         $(".dropdown-wrapper").removeClass("open");
         $(level1).removeClass("left");
+        $(".container-fluid.header").removeClass("open");
     }
     function closeLevel2() {
         $(level1).removeClass("left");
         $(level2).removeClass("open");
     }
-    function closeAll() {
-        // $(".nav-small-icon").removeClass("open");
-        // $(".nav-main").removeClass("open");
-        // $(".nav-dropdown").removeClass("open");
-        // $(".dropdown-wrapper").removeClass("open");
-        // $(level1).removeClass("left");
-        // $(level1).removeClass("open");
-        // $(level2).removeClass("open");
-        closeLevel1();
-        closeLevel2();
-        return level1Open = false;
-        return level2Open = false;
-    }
+    // function closeAll() {
+    //     // $(".nav-small-icon").removeClass("open");
+    //     // $(".nav-main").removeClass("open");
+    //     // $(".nav-dropdown").removeClass("open");
+    //     // $(".dropdown-wrapper").removeClass("open");
+    //     // $(level1).removeClass("left");
+    //     // $(level1).removeClass("open");
+    //     // $(level2).removeClass("open");
+    //     closeLevel1();
+    //     closeLevel2();
+    //     return level1Open = false;
+    //     return level2Open = false;
+    // }
 
     // Click nav icon to open mobile nav
     $(".nav-small-icon").click(function(e){
@@ -232,7 +247,6 @@ $(window).bind("load", function() {
             $("body").removeClass("scroll--header");
         }
     });
-
 $(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,7 +1,22 @@
 .ad__block {
     position: relative;
     padding-bottom: 0;
+    // overflow: visible;
 }
+
+// .ad__block::after {
+//     content: "Advertisement";
+//     color: $gray-4;
+//     font-size: 0.79em;
+//     font-weight: 400;
+//     letter-spacing: .4px;
+//     text-transform: uppercase;
+//     margin: 0;
+//     padding: 0;
+//     position: absolute;
+//     bottom: -17px;
+//     left: 0;
+// }
 
 .ad__block img {
     width: 100%;

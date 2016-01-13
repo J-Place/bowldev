@@ -70,6 +70,9 @@ body {
   @media only screen and (max-width: 991px) {
     body {
       margin-top: 0px; } }
+  @media only screen and (max-width: 767px) {
+    body {
+      margin-top: 55px; } }
 
 a:hover {
   text-decoration: none; }
@@ -237,17 +240,24 @@ a:hover {
       background-color: #FFF; } }
   @media only screen and (max-width: 767px) {
     .container-fluid.header {
-      height: 55px; } }
+      height: 55px;
+      position: fixed; } }
 
 @media only screen and (max-width: 991px) {
   body.scroll--header {
-    margin-top: 45px;
-    margin-bottom: -45px; } }
+    margin-top: 45px; } }
 
 @media only screen and (max-width: 767px) {
   body.scroll--header {
-    margin-top: 55px;
-    margin-bottom: -55px; } }
+    margin-top: 55px; } }
+
+/* way the hell off screen */
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px; }
 
 @media only screen and (max-width: 991px) {
   .container-fluid.header.scroll {
@@ -289,14 +299,14 @@ a:hover {
     .logo {
       height: 55px;
       margin: 0 auto;
-      background-size: 275px;
-      width: 240px;
-      background-position: 8px -1px; } }
+      background-size: 245px;
+      width: 200px;
+      background-position: 4px 2px; } }
   @media only screen and (max-width: 319px) {
     .logo {
-      background-size: 255px;
-      width: 215px;
-      background-position: 4px 1px; } }
+      background-size: 200px;
+      width: 165px;
+      background-position: 5px 10px; } }
 
 @media only screen and (max-width: 991px) {
   .logo.scroll {
@@ -308,16 +318,16 @@ a:hover {
 @media only screen and (max-width: 767px) {
   .logo.scroll {
     height: 54px;
-    background-size: 275px;
-    width: 240px;
     margin: 0 auto;
-    background-position: 8px -1px; } }
+    background-size: 245px;
+    width: 200px;
+    background-position: 4px 2px; } }
 
 @media only screen and (max-width: 319px) {
   .logo.scroll {
-    background-size: 255px;
-    width: 215px;
-    background-position: 4px 1px; } }
+    background-size: 200px;
+    width: 165px;
+    background-position: 5px 10px; } }
 
 .nav-main {
   letter-spacing: 0.8px;
@@ -575,9 +585,7 @@ a:hover {
       width: 100%;
       height: 100%;
       top: 55px;
-      z-index: 99;
-      font-family: "Open Sans", sans-serif;
-      text-transform: uppercase; } }
+      z-index: 99; } }
 
 .nav-dropdown.open {
   display: block;
@@ -589,7 +597,7 @@ a:hover {
       right: 0;
       top: 54px;
       bottom: 0;
-      position: fixed;
+      position: absolute;
       display: block;
       z-index: 1; } }
 
@@ -633,7 +641,7 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .nav-level-1.open {
-    position: fixed;
+    min-height: 1500px;
     height: 100%;
     padding-top: 2px;
     right: 0; } }
@@ -646,7 +654,7 @@ a:hover {
   .nav-level-2 {
     transition: left 0.3s;
     background-color: #63666b;
-    position: fixed;
+    position: absolute;
     display: block;
     padding-top: 0;
     left: 100%;
@@ -654,12 +662,11 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .nav-level-2.open {
-    position: fixed;
-    top: 55px;
     display: block;
     padding-top: 0;
     left: 0px;
     transition: left 0.3s;
+    position: absolute;
     overflow-y: scroll; } }
 
 @media only screen and (max-width: 767px) {
@@ -770,12 +777,13 @@ a:hover {
       padding: 0; } }
   @media only screen and (max-width: 767px) {
     .dropdown__list--item {
-      margin: 0 15px 0 0;
+      margin: 0 30px 0 0;
       padding: 0;
       border-bottom: 1px solid #3d4144; } }
 
 .dropdown__list--item > a {
   font-size: 1.1em;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 400;
   color: #333333; }
@@ -1236,7 +1244,7 @@ a.login-toggle:active, a.login-toggle:focus {
 .container.footer--stripes {
   position: absolute;
   z-index: 99;
-  overflow: hidden;
+  overflow: visible;
   height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -1244,7 +1252,7 @@ a.login-toggle:active, a.login-toggle:focus {
   right: 0;
   bottom: 0;
   top: 0; }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .container.footer--stripes {
       overflow: hidden; } }
 
@@ -1256,7 +1264,7 @@ a.login-toggle:active, a.login-toggle:focus {
     .footer--stripes .stripes {
       left: 0;
       right: 0; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .footer--stripes .stripes {
       overflow: hidden; } }
 
@@ -1272,7 +1280,7 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 767px) {
     .footer--stripes .stripe, .footer--stripes .stripe--featured-video {
       left: 750px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .footer--stripes .stripe, .footer--stripes .stripe--featured-video {
       left: 690px; } }
   @media only screen and (max-width: 479px) {
@@ -1289,7 +1297,7 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 767px) {
     .footer--stripes .stripe + .stripe, .footer--stripes .stripe--featured-video + .stripe, .footer--stripes .stripe + .stripe--featured-video, .footer--stripes .stripe--featured-video + .stripe--featured-video {
       left: 680px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .footer--stripes .stripe + .stripe, .footer--stripes .stripe--featured-video + .stripe, .footer--stripes .stripe + .stripe--featured-video, .footer--stripes .stripe--featured-video + .stripe--featured-video {
       left: 650px; } }
   @media only screen and (max-width: 479px) {
@@ -1318,10 +1326,9 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .container.slider {
   margin: 0 auto; }
-  @media only screen and (max-width: 319px) {
+  @media only screen and (max-width: 767px) {
     .container.slider {
-      padding-left: 0;
-      padding-right: 0; } }
+      padding: 0 15px; } }
 
 .slides {
   z-index: 1; }
@@ -1339,7 +1346,6 @@ a.login-toggle:active, a.login-toggle:focus {
   height: 100%; }
   @media only screen and (max-width: 767px) {
     .slider--foreground {
-      height: 285px;
       overflow: hidden; } }
 
 .slide--foreground .wrapper {
@@ -1354,6 +1360,33 @@ a.login-toggle:active, a.login-toggle:focus {
     .slide--foreground .wrapper {
       height: 285px;
       right: 0; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .slide--foreground .wrapper {
+      height: 405px; } }
+  @media only screen and (max-width: 767px) {
+    .slide--foreground .wrapper {
+      height: 345px; } }
+  @media only screen and (max-width: 580px) {
+    .slide--foreground .wrapper {
+      height: 340px; } }
+  @media only screen and (max-width: 520px) {
+    .slide--foreground .wrapper {
+      height: 310px; } }
+  @media only screen and (max-width: 460px) {
+    .slide--foreground .wrapper {
+      height: 290px; } }
+  @media only screen and (max-width: 400px) {
+    .slide--foreground .wrapper {
+      height: 260px; } }
+  @media only screen and (max-width: 360px) {
+    .slide--foreground .wrapper {
+      height: 250px; } }
+  @media only screen and (max-width: 320px) {
+    .slide--foreground .wrapper {
+      height: 234px; } }
+  @media only screen and (max-width: 300px) {
+    .slide--foreground .wrapper {
+      height: 225px; } }
 
 .slide__link {
   position: absolute;
@@ -1367,13 +1400,18 @@ a.login-toggle:active, a.login-toggle:focus {
       height: 75px;
       bottom: 25px;
       padding-left: 0; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .slide__link {
+      font-size: 1.1em;
+      padding-top: 10px;
+      padding-left: 15px;
+      height: 110px;
+      bottom: 0; } }
   @media only screen and (max-width: 767px) {
     .slide__link {
-      padding-left: 15px; } }
-  @media only screen and (max-width: 619px) {
-    .slide__link {
-      padding-left: 25px;
-      max-width: 410px;
+      font-size: 0.9em;
+      padding-top: 0px;
+      padding-left: 15px;
       height: 110px;
       bottom: 0; } }
   @media only screen and (max-width: 580px) {
@@ -1384,16 +1422,28 @@ a.login-toggle:active, a.login-toggle:focus {
       width: 400px; } }
   @media only screen and (max-width: 460px) {
     .slide__link {
-      width: 325px; } }
+      width: 325px;
+      font-size: 0.9em;
+      padding-top: 1px; } }
   @media only screen and (max-width: 410px) {
     .slide__link {
       width: 310px; } }
   @media only screen and (max-width: 360px) {
     .slide__link {
-      width: 300px; } }
+      width: 280px;
+      font-size: 0.9em;
+      padding-top: 5px; } }
+  @media only screen and (max-width: 340px) {
+    .slide__link {
+      width: 270px; } }
+  @media only screen and (max-width: 320px) {
+    .slide__link {
+      width: 260px;
+      font-size: 0.8em;
+      padding-top: 0px; } }
   @media only screen and (max-width: 300px) {
     .slide__link {
-      width: 260px; } }
+      width: 250px; } }
 
 .slide__title {
   color: #FFF;
@@ -1407,14 +1457,16 @@ a.login-toggle:active, a.login-toggle:focus {
       font-size: 1.52em;
       margin-top: 15px;
       margin-bottom: 7px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 991px) {
     .slide__title {
       font-size: 1.75em;
       line-height: 1.1em;
       font-weight: 300; } }
-  @media only screen and (max-width: 410px) {
+  @media only screen and (max-width: 620px) {
     .slide__title {
-      font-size: 1.5em; } }
+      font-size: 1.75em;
+      line-height: 1.1em;
+      font-weight: 300; } }
 
 .slide__text {
   color: #FFF;
@@ -1425,12 +1477,9 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 991px) {
     .slide__text {
       font-size: 0.85em; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slide__text {
       font-size: 1.15em; } }
-  @media only screen and (max-width: 410px) {
-    .slide__text {
-      font-size: 1.0em; } }
 
 .container.slider__ribbon {
   position: absolute;
@@ -1440,11 +1489,15 @@ a.login-toggle:active, a.login-toggle:focus {
   left: 0;
   right: 0;
   z-index: 999; }
-  @media only screen and (max-width: 991px) {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
     .container.slider__ribbon {
-      height: 75px;
-      bottom: 25px; } }
-  @media only screen and (max-width: 619px) {
+      top: initial;
+      overflow: hidden;
+      height: 110px;
+      width: 728px;
+      bottom: 0;
+      padding: 0; } }
+  @media only screen and (max-width: 767px) {
     .container.slider__ribbon {
       top: initial;
       overflow: hidden;
@@ -1468,7 +1521,11 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 991px) {
     .ribbon {
       left: -1273px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .ribbon {
+      left: 0;
+      right: 0; } }
+  @media only screen and (max-width: 767px) {
     .ribbon {
       left: 0;
       right: 0; } }
@@ -1489,25 +1546,53 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 991px) {
     .ribbon::after {
       height: 75px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .ribbon::after {
+      display: none; } }
+  @media only screen and (max-width: 767px) {
     .ribbon::after {
       display: none; } }
 
 .container.slider--background {
   height: 400px;
-  padding: 0;
   overflow: hidden;
   position: relative;
   z-index: -1; }
   @media only screen and (max-width: 991px) {
     .container.slider--background {
       height: 285px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .container.slider--background {
+      height: 405px; } }
   @media only screen and (max-width: 767px) {
     .container.slider--background {
-      padding: 0 15px; } }
-  @media only screen and (max-width: 619px) {
+      padding: 0 15px;
+      height: 345px;
+      width: auto; } }
+  @media only screen and (max-width: 620px) {
     .container.slider--background {
-      height: 285px; } }
+      height: 345px; } }
+  @media only screen and (max-width: 580px) {
+    .container.slider--background {
+      height: 340px; } }
+  @media only screen and (max-width: 520px) {
+    .container.slider--background {
+      height: 310px; } }
+  @media only screen and (max-width: 460px) {
+    .container.slider--background {
+      height: 290px; } }
+  @media only screen and (max-width: 400px) {
+    .container.slider--background {
+      height: 260px; } }
+  @media only screen and (max-width: 360px) {
+    .container.slider--background {
+      height: 250px; } }
+  @media only screen and (max-width: 320px) {
+    .container.slider--background {
+      height: 234px; } }
+  @media only screen and (max-width: 300px) {
+    .container.slider--background {
+      height: 225px; } }
 
 .slide--background {
   height: 400px;
@@ -1515,28 +1600,7 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 767px) {
     .slide--background {
       position: relative;
-      overflow: hidden;
-      height: 285px; } }
-  @media only screen and (max-width: 580px) {
-    .slide--background {
-      height: 215px;
-      width: auto; } }
-  @media only screen and (max-width: 520px) {
-    .slide--background {
-      height: 201px;
-      width: auto; } }
-  @media only screen and (max-width: 460px) {
-    .slide--background {
-      height: 182px;
-      width: auto; } }
-  @media only screen and (max-width: 410px) {
-    .slide--background {
-      height: 182px;
-      width: auto; } }
-  @media only screen and (max-width: 360px) {
-    .slide--background {
-      height: 182px;
-      width: auto; } }
+      overflow: hidden; } }
 
 .slide__image {
   position: relative;
@@ -1546,29 +1610,33 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 991px) {
     .slide__image {
       height: 300px; } }
-  @media only screen and (max-width: 619px) {
-    .slide__image {
-      height: 243px;
-      width: auto; } }
   @media only screen and (max-width: 580px) {
     .slide__image {
-      height: 215px;
+      height: 232px;
       width: auto; } }
   @media only screen and (max-width: 520px) {
     .slide__image {
-      height: 195px;
+      height: 210px;
       width: auto; } }
   @media only screen and (max-width: 460px) {
     .slide__image {
       height: 182px;
       width: auto; } }
-  @media only screen and (max-width: 410px) {
+  @media only screen and (max-width: 400px) {
     .slide__image {
-      height: 182px;
+      height: 162px;
       width: auto; } }
   @media only screen and (max-width: 360px) {
     .slide__image {
-      height: 182px;
+      height: 142px;
+      width: auto; } }
+  @media only screen and (max-width: 320px) {
+    .slide__image {
+      height: 126px;
+      width: auto; } }
+  @media only screen and (max-width: 300px) {
+    .slide__image {
+      height: 115px;
       width: auto; } }
 
 .container.slider--stripes {
@@ -1580,7 +1648,13 @@ a.login-toggle:active, a.login-toggle:focus {
   padding: 0;
   left: 0;
   right: 0; }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .container.slider--stripes {
+      display: none; } }
+  @media only screen and (max-width: 767px) {
+    .container.slider--stripes {
+      display: none; } }
+  @media only screen and (max-width: 620px) {
     .container.slider--stripes {
       overflow: hidden; } }
 
@@ -1592,7 +1666,7 @@ a.login-toggle:active, a.login-toggle:focus {
     .slider--stripes .stripes {
       left: 0;
       right: 0; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slider--stripes .stripes {
       overflow: hidden;
       left: 15px;
@@ -1610,7 +1684,7 @@ a.login-toggle:active, a.login-toggle:focus {
     .slider--stripes .stripe, .slider--stripes .stripe--featured-video {
       width: 650px;
       left: -585px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slider--stripes .stripe, .slider--stripes .stripe--featured-video {
       left: -635px; } }
 
@@ -1636,7 +1710,7 @@ a.login-toggle:active, a.login-toggle:focus {
     .slider--stripes .stripe + .stripe, .slider--stripes .stripe--featured-video + .stripe, .slider--stripes .stripe + .stripe--featured-video, .slider--stripes .stripe--featured-video + .stripe--featured-video {
       width: 695px;
       left: -580px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slider--stripes .stripe + .stripe, .slider--stripes .stripe--featured-video + .stripe, .slider--stripes .stripe + .stripe--featured-video, .slider--stripes .stripe--featured-video + .stripe--featured-video {
       left: -650px; } }
 
@@ -1649,7 +1723,7 @@ a.login-toggle:active, a.login-toggle:focus {
     .slider--stripes .stripe--right {
       width: 500px;
       right: -435px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slider--stripes .stripe--right {
       right: -455px; } }
 
@@ -1662,7 +1736,7 @@ a.login-toggle:active, a.login-toggle:focus {
     .slider--stripes .stripe--right + .stripe--right {
       width: 550px;
       right: -435px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slider--stripes .stripe--right + .stripe--right {
       right: -475px; } }
 
@@ -1688,7 +1762,7 @@ a.login-toggle:active, a.login-toggle:focus {
       width: 27px;
       height: 27px;
       background-size: 290px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slick-arrow {
       top: 80px;
       width: 18px;
@@ -1703,9 +1777,9 @@ a.login-toggle:active, a.login-toggle:focus {
       left: 15px; } }
   @media only screen and (max-width: 991px) {
     .slick-prev.slick-arrow {
-      left: 10px;
-      background-position: -135px -78px; } }
-  @media only screen and (max-width: 619px) {
+      left: 25px;
+      background-position: -134px -78px; } }
+  @media only screen and (max-width: 620px) {
     .slick-prev.slick-arrow {
       left: 20px;
       background-position: -88px -51px; } }
@@ -1720,7 +1794,7 @@ a.login-toggle:active, a.login-toggle:focus {
     .slick-next.slick-arrow {
       right: 35px;
       background-position: -127px -52px; } }
-  @media only screen and (max-width: 619px) {
+  @media only screen and (max-width: 620px) {
     .slick-next.slick-arrow {
       right: 20px;
       background-position: -86px -33px; } }
@@ -2357,10 +2431,10 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 991px) {
     .marketing-promo__summary {
       height: 55px; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 479px) {
     .marketing-promo__summary {
       height: 50px; } }
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 767px) {
     .marketing-promo__summary {
       height: 100px; } }
 
@@ -2385,16 +2459,10 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 991px) {
     .marketing-promo__summary p {
       font-size: 1.07em;
-      line-height: 1.2em;
+      line-height: 1.1em;
       height: 35px;
       margin: 10px; } }
   @media only screen and (max-width: 767px) {
-    .marketing-promo__summary p {
-      font-size: 1.0em;
-      line-height: 1.1em;
-      height: 30px;
-      margin: 8px; } }
-  @media only screen and (max-width: 479px) {
     .marketing-promo__summary p {
       font-size: 1.65em;
       line-height: 1.3em;
@@ -2699,7 +2767,7 @@ a:focus {
   padding: 0; }
 
 .container {
-  max-width: 992px !important;
+  max-width: 970px !important;
   margin: 20px auto; }
   @media only screen and (max-width: 479px) {
     .container {
@@ -2712,3 +2780,7 @@ a:focus {
     .container {
       padding-right: 15px;
       padding-left: 15px; } }
+
+@media (min-width: 750px) {
+  .container {
+    width: 758px; } }

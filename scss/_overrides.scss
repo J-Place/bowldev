@@ -13,7 +13,8 @@ a:focus {
 }
 
 .container {
-    max-width: 992px !important;
+    // max-width: 992px !important;
+    max-width: 970px !important;
     margin: 20px auto;
     // Tablet and below
     @include breakpoint(small-max) {}
@@ -29,5 +30,11 @@ a:focus {
     @include breakpoint(iphone) {
         padding-right: 15px;
         padding-left: 15px;
+    }
+}
+
+.container {
+    @media (min-width: 750px) {
+        width: 758px;
     }
 }

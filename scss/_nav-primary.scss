@@ -1,5 +1,4 @@
 .nav-main {
-    // font-size: 1.1em;
     letter-spacing: 0.8px;
     position: absolute;
     right: 10px;
@@ -19,11 +18,6 @@
     // Tablet and below
     @include breakpoint(small-max) {
         right: 15px;
-        // // Match font-size, margin and padding on these elements:
-        // // .nav-main, .dropdown__list--item > a, .sidebar__list--item > a
-        // font-size: 1.4em;
-        // line-height: 22px;
-        // font-family: "Open Sans", sans-serif;
         @extend .opensans;
     }
 }
