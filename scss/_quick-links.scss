@@ -5,10 +5,12 @@
     // Tablet and below
     @include breakpoint(small-max) {
         padding: 0 45px;
+        // margin-bottom: 0;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
         padding: 0 20px;
+        margin-bottom: 30px;
     }
     // iPhone and below
     @include breakpoint(iphone-max) {

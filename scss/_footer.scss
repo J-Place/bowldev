@@ -17,10 +17,6 @@
     }
 }
 
-.container-fluid.footer .container {
-
-}
-
 .container.footer__links {
     position: relative;
     z-index: 999;
@@ -52,7 +48,6 @@
 }
 
 .footer-col--promo.col-xs-12 + .footer-col--promo.col-xs-12 {
-    // border: 1px solid red;
     // Desktop and above
     @include breakpoint(medium-min) {
         margin-top: 30px;

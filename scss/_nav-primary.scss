@@ -1,7 +1,7 @@
 .nav-main {
     letter-spacing: 0.8px;
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 52px;
     margin:  0;
     padding: 0;
@@ -160,9 +160,6 @@
     @include breakpoint(medium-max) {
         margin-top: 5px;
     }
-    // Tablet and babove
-    @include breakpoint(small-min) {
-    }
     // Phone and below
     @include breakpoint(small-max) {
         position: absolute;
@@ -177,3 +174,6 @@
     }
 }
 
+.nav__list--item a.skew:hover::after {
+    @extend .skew;
+}

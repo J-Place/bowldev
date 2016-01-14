@@ -27,4 +27,5 @@
 
 .breadcrumb__list--item:last-of-type::after {
     content: "";
+    display: none;
 }

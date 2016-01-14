@@ -53,15 +53,15 @@
         right: 5px;
         width: 30px;
         height: 30px;
-        background-position: -31px -89px;
+        background-position: -32px -90px;
     }
 }
 
 .nav-icon--search.open, .nav-icon--search.open:hover {
     // Tablet and below
     @include breakpoint(small-max) {
-        background-position: -61px -89px;
-        top: -43px;
+        background-position: -62px -90px;
+        top: -42px;
         right: 12px;
     }
 }

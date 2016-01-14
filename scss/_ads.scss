@@ -24,8 +24,13 @@
     display: block;
 }
 
-.ad__block--sidebar {
+.main-content__sidebar .ad__block {
     @extend .ad__block;
+    margin-bottom: 30px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        margin-bottom: 15px;
+    }
     // Phone and below
     @include breakpoint(small-max) {
         display: none;
@@ -43,7 +48,7 @@
 }
 
 .container.leaderboard--footer {
-    margin-bottom: 30px;
+    margin: 30px auto;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

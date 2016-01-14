@@ -33,6 +33,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Section titles for full width container
+
+
 .section__title {
     font-size: 1.7em;
     line-height: 1.2em;
@@ -59,7 +64,7 @@ body {
     @extend .section__title;
     font-size: 3.3em;
     line-height: 1.75em;
-    padding: 0 0 35px;
+    padding: 35px 0;
     text-align: center;
     // Desktop and below
     @include breakpoint(medium-max) {
@@ -70,7 +75,7 @@ body {
     @include breakpoint(small-max) {
         font-size: 3.1em;
         line-height: 1.75em;
-        padding-bottom: 30px;
+        padding: 0 0 30px 0;
     }
 }
 
@@ -82,4 +87,18 @@ body {
     height: 5px;
     margin: 0 auto;
     @extend .skew;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Section titles for 2 col main content body
+
+.main-content__body .section__title--large {
+    color: $gray-3;
+    padding-top: 25px;
+}
+
+.main-content__body .section__title--large:after {
+    background-color: $gray-3;
+    height: 4px;
 }

@@ -1,17 +1,29 @@
+
+
+.main-content__body .cta-1 {
+    margin-top: 60px;
+}
+
+
 .container.cta-3 {
     padding: 0;
     margin-bottom: 40px;
-    // iPhone and below
+    margin-top: 0;
+    // Phone and below
     @include breakpoint(xsmall-max) {
         margin-bottom: 15px;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        margin-bottom: 0;
     }
 }
 
 .cta-3 .row {
-    margin: 0;
+    // margin: 0;
     // Tablet and below
     @include breakpoint(small-max) {
-        margin-left: 0;
+        // margin-left: 0;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -31,6 +43,18 @@
     position: relative;
     text-align: center;
     margin: 60px auto;
+}
+
+.cta-3 .article {
+    // Tablet and below
+    @include breakpoint(medium-max) {
+        height: 185px;
+        margin-bottom: 15px;
+    }
+    // Phone and below
+    @include breakpoint(small-max) {
+        height: auto;
+    }
 }
 
 .cta__header {
@@ -100,4 +124,9 @@
         width: auto;
         height: 100%;
     }
+}
+
+.main-content__body .cta__background img {
+        width: auto;
+        height: 110%;
 }

@@ -1,11 +1,13 @@
 .article--video {
     background-color: $gray-2;
     text-align: center;
-    padding: 30px 15px 60px;
+    // padding: 30px 15px 60px;
+    padding: 0 15px 60px;
     position: relative;
     overflow: hidden;
     z-index: 99;
     margin-bottom: 0;
+    // padding-top: 0;
     @include breakpoint(large-max) {
         padding: 30px 125px 60px;
     }
@@ -15,6 +17,14 @@
     @include breakpoint(small-max) {
         padding: 30px 15px 60px;
     }
+}
+.main-content__body .article--video {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $gray-2;
+    border-bottom: 1px solid $gray-2;
+    margin-top: 60px;
 }
 
 .video__wrapper {
@@ -28,10 +38,16 @@
 }
 
 .video__wrapper iframe {
-    width: 560px;
-    height: 315px;
+    // width: 560px;
+    // height: 315px;
     z-index: 99999;
     position: relative;
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        width: 660px;
+        height: 370px;
+    }
+    // Desktop and below
     @include breakpoint(medium-max) {
         position: absolute;
         top: 0;
@@ -40,6 +56,10 @@
         height: 100%;
         z-index: 99;
     }
+}
+
+.main-content__body .video__wrapper iframe {
+    margin-bottom: -5px;
 }
 
 .featured-video__title {

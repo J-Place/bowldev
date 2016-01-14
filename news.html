@@ -169,26 +169,30 @@
 <!-- Leaderboard Ad -->
     <div class="container-fluid">
         <div class="container leaderboard">
-            <img src="http://placehold.it/728x90" alt="FPO Image" class="block__leaderboard hidden-md">
-            <img src="http://placehold.it/970x90" alt="FPO Image" class="block__leaderboard visible-md">
+            <img src="img/haggar-lg.jpg" alt="FPO Image" class="block__leaderboard visible-md visible-lg">
+            <img src="img/haggar-sm.jpg" alt="FPO Image" class="block__leaderboard hidden-md hidden-lg">
         </div>
     </div>
 
 <!-- Breadcrumbs -->
-<div class="container breadcrumbs">
-    <ul class="breadcrumb__list">
-        <li class="breadcrumb__list--item"><a href="#">Home</a></li>
-        <li class="breadcrumb__list--item"><a href="#">News</a></li>
-    </ul>
-</div>
+    <div class="container breadcrumbs">
+        <ul class="breadcrumb__list">
+            <li class="breadcrumb__list--item">
+                <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb__list--item">
+                <a href="#">News</a>
+            </li>
+        </ul>
+    </div>
 
 <!-- Main Content - 2 Col -->
     <div class="container main-content">
         <div class="row">
-            <!-- Sidebar -->
+        <!-- Sidebar -->
             <div class="col-xs-12 col-sm-push-8 col-sm-4 main-content__sidebar">
                 <div class="sidebar-links">
-                <h3 class="sidebar-links__title">News <span class="sidebar-links__title--label">MENU</span><span class="sidebar-nav--icon"></span></h3>
+                    <h3 class="sidebar-links__title">News <span class="sidebar-links__title--label">Menu</span><span class="sidebar-nav--icon"></span></h3>
                     <ul class="sidebar-links__list">
                         <li class="sidebar-links__list--item"><a href="" class="sidebar-links__list--link">@USBC</a></li>
                         <li class="sidebar-links__list--item"><a href="" class="sidebar-links__list--link">Associations</a></li>
@@ -207,22 +211,19 @@
                     <input name="ctl00$ctl00$cphMainZone$cphMainContent$txtKeywords" type="text" value="Search News" id="txtKeywords" class="search__input--sidebar" placeholder="">
                     <input type="submit" name="ctl00$ctl00$cphMainZone$cphMainContent$btnSearch" value="Search" id="ctl00_ctl00_cphMainZone_cphMainContent_btnSearch" class="search__submit--sidebar search__submit--icon">
                 </div>
-                <article class="article ad__block--sidebar">
-                    <img src="http://placehold.it/300x250" alt="FPO Image" class="block__rectangle--large hidden-lg">
-                    <img src="http://placehold.it/336x280" alt="FPO Image" class="block__rectangle--large visible-lg">
-                </article>
-            </div>
-            <!-- Body -->
-            <div class="col-xs-12 col-sm-pull-4 col-sm-8 main-content__body">
-                <div class="row page-title col-sm-12">
-                    <h2 class="page__title--large">News</h2>
+                <div class="ad__block">
+                    <img src="img/xbowling-rectangle.jpg" alt="" class="block__rectangle--large">
                 </div>
+            </div>
+        <!-- Body -->
+            <div class="col-xs-12 col-sm-pull-4 col-sm-8 main-content__body">
+                <h2 class="page__title--large">News</h2>
                 <article class="row article article--list">
                     <a href="news-detail.html" class="article__link">
-                        <section class="article__section image-wrapper col-sm-12 col-md-6">
+                        <section class="article__section--image col-sm-12 col-md-6">
                             <img src="img/content/news-5.jpg" alt="" class="article__image">
                         </section>
-                        <section class="article__section text-detail col-sm-12 col-md-6">
+                        <section class="article__section--content col-sm-12 col-md-6">
                             <div class="article__date">December 11, 2015</div>
                             <h3 class="article__title">Germany leads team event at 2015 World Women's Championships</h3>
                             <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
@@ -231,10 +232,10 @@
                 </article>
                 <article class="row article article--list">
                     <a href="news-detail.html" class="article__link">
-                        <section class="article__section image-wrapper col-sm-12 col-md-6">
+                        <section class="article__section--image col-sm-12 col-md-6">
                             <img src="img/content/news-6.jpg" alt="" class="article__image">
                         </section>
-                        <section class="article__section text-detail col-sm-12 col-md-6">
+                        <section class="article__section--content col-sm-12 col-md-6">
                             <div class="article__date">December 10, 2015</div>
                             <h3 class="article__title">Team USA wins doubles at 2015 World Women's Championships</h3>
                             <p class="article__summary">Lorem ipsum dolor sit amet, enean euismod bibendum laoreet. consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus. Lorem ipsum dolor sit amet, enean euismod bibendum laoreet. consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
@@ -243,10 +244,10 @@
                 </article>
                 <article class="row article article--list">
                     <a href="#" class="article__link">
-                        <section class="article__section image-wrapper col-sm-12 col-md-6">
+                        <section class="article__section--image col-sm-12 col-md-6">
                             <img src="img/content/news-7.jpg" alt="" class="article__image">
                         </section>
-                        <section class="article__section text-detail col-sm-12 col-md-6">
+                        <section class="article__section--content col-sm-12 col-md-6">
                             <div class="article__date">December 9, 2015</div>
                             <h3 class="article__title">Korea wins singles, trios at 2015 World Women's Championships</h3>
                             <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus.</p>
@@ -255,10 +256,10 @@
                 </article>
                 <article class="row article article--list">
                     <a href="#" class="article__link">
-                        <section class="article__section image-wrapper col-sm-12 col-md-6">
+                        <section class="article__section--image col-sm-12 col-md-6">
                             <img src="img/content/news-8.jpg" alt="" class="article__image">
                         </section>
-                        <section class="article__section text-detail col-sm-12 col-md-6">
+                        <section class="article__section--content col-sm-12 col-md-6">
                             <div class="article__date">December 9, 2015</div>
                             <h3 class="article__title">PWBA expands schedule, Players Championship returns in 2016</h3>
                             <p class="article__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus.</p>
@@ -284,14 +285,11 @@
         </div>
     </div>
 
-
 <!-- Leaderboard Ad -->
     <div class="container-fluid">
         <div class="container leaderboard leaderboard--footer">
-            <!-- <article class="article article--banner-ad"> -->
-                <img src="http://placehold.it/728x90" alt="FPO Image" class="block__leaderboard hidden-lg">
-                <img src="http://placehold.it/970x90" alt="FPO Image" class="block__leaderboard visible-lg">
-            <!-- </article> -->
+            <img src="img/haggar-lg.jpg" alt="FPO Image" class="block__leaderboard visible-md visible-lg">
+            <img src="img/haggar-sm.jpg" alt="FPO Image" class="block__leaderboard hidden-md hidden-lg">
         </div>
     </div>
 
