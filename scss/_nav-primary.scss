@@ -49,6 +49,9 @@
     }
     // Tablet and below
     @include breakpoint(small-max) {
+        position: fixed;
+        height: 100%;
+        overflow-x: hidden;
     }
     // Phone and below
     @include breakpoint(small-max) {
