@@ -26,12 +26,10 @@ body.scroll--header {
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-top: 45px;
-        // margin-bottom: -45px;
     }
     // Phone and below
     @include breakpoint(small-max) {
         margin-top: 55px;
-        // margin-bottom: -55px;
     }
 }
 

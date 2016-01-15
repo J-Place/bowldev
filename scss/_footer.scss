@@ -50,7 +50,11 @@
         width: 100%;
         margin-bottom: 30px;
         margin-left: 0;
-        padding-left: 0;
+        padding-left: 15px;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        // padding-left: 15px;
     }
 }
 

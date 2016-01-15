@@ -14,8 +14,8 @@ $(window).bind("load", function() {
         if (panelWidth < 768) {
             $(".nav-dropdown").width(bodyWidth);
             $(".nav-level-2").width(bodyWidth - 30);
-            $(".nav-dropdown").height(bodyHeight);
-            $(".nav-level-2").height(bodyHeight);
+            // $(".nav-dropdown").height(bodyHeight);
+            // $(".nav-level-2").height(bodyHeight);
         }
         else if (panelWidth >= 768) {
         }

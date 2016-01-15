@@ -39,6 +39,13 @@
     }
 }
 
+.cta-3 .ad__block {
+    // Tablet and below
+    @include breakpoint(medium-max) {
+        margin-bottom: 15px;
+    }
+}
+
 .container.cta__content {
     position: relative;
     text-align: center;
@@ -89,8 +96,13 @@
     color: #FFF;
     font-size: 1.2em;
     padding: 0 10em 1em;
+    // Tablet and below
     @include breakpoint(medium-max) {
         padding: 0 2em 1em;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        padding: 0 0 1em;
     }
 }
 
