@@ -8,12 +8,12 @@ $(window).bind("load", function() {
 
 
 
-    var panelWidth = $(window).width();
+    var windowWidth = $(window).width();
     var setSkew = function(){
-        if (panelWidth > 780) {
+        if (windowWidth > 768) {
             $(".nav__list--item a").addClass("skew");
         }
-        else if (panelWidth <= 780) {
+        else if (windowWidth <= 768) {
             $(".nav__list--item a").removeClass("skew");
         }
     };

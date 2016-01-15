@@ -6,22 +6,35 @@ $(window).bind("load", function() {
     var panelWidth = $(window).width();
     var setPanel = function(){
 
-        var target = $(".nav-level-2");
-        var targetWidth = $(".nav-level-2").width();
         var bodyWidth = $("body").width();
         var bodyHeight = $(document).height();
-        var windowHeight = $(window).height();
 
-        if (panelWidth < 780) {
-            $(".nav-dropdown").width(panelWidth +17);
-            $(".nav-level-2").width(panelWidth - 15);
+        console.log(bodyHeight);
+
+        if (panelWidth < 768) {
+            $(".nav-dropdown").width(bodyWidth);
+            $(".nav-level-2").width(bodyWidth - 30);
             $(".nav-dropdown").height(bodyHeight);
             $(".nav-level-2").height(bodyHeight);
         }
-        else if (panelWidth >= 780) {
+        else if (panelWidth >= 768) {
         }
     };
+
     setPanel();
+
+    // Listen for orientation changes
+    window.addEventListener("orientationchange", function() {
+        location.reload();
+    //     var panelWidth = $(window).width();
+    //     $(".nav-dropdown").width(bodyWidth);
+    //     $(".nav-level-2").width(bodyWidth - 30);
+    //     setPanel();
+    }, false);
+
+    // $(window).resize(function() {
+    //     setPanel();
+    // });
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -39,34 +52,32 @@ $(window).bind("load", function() {
         $(".nav-dropdown").addClass("open");
         $(".container-fluid.header").addClass("open");
     }
-    function openLevel2() {
-        // $(".nav-dropdown").addClass("open");
-        // $(level1).addClass("left");
-        // $(level2).addClass("open");
-        // $(dropID).addClass("open");
-        return level1Open = true;
-        return level2Open = true;
-    }
     function closeLevel1() {
         $(".nav-small-icon").removeClass("open");
         $(".nav-main").removeClass("open");
         $(".nav-dropdown").removeClass("open");
-        $(".dropdown-wrapper").removeClass("open");
-        $(level1).removeClass("left");
+        $(level1).removeClass("open");
+        // $(level1).removeClass("left");
         $(".container-fluid.header").removeClass("open");
+    }
+    function openLevel2() {
+        $(level1).addClass("left");
+        $(level2).addClass("open");
+        return level1Open = true;
+        return level2Open = true;
     }
     function closeLevel2() {
         $(level1).removeClass("left");
         $(level2).removeClass("open");
     }
 
-    // Click nav icon to open mobile nav
+// Click nav icon to open mobile nav
     $(".nav-small-icon").click(function(e){
         e.preventDefault();
         if (level1Open === false) {
             openLevel1();
             return level1Open = true;
-            // return level2Open = false;
+            return level2Open = false;
         }
         else if (level1Open === true) {
             closeLevel1();
@@ -76,13 +87,30 @@ $(window).bind("load", function() {
         }
     });
 
-    // Click links within dropdown
-    $(".nav__list--item a").click(function(){
+// Click links within dropdown
+    $(".nav__list--item a").click(function(e){
+        // var windowWidth = $(window).width();
         var navID = $(this).attr("ID");
-        $(dropContainer).addClass("open");
-        $(level1).addClass("left");
-        $(".nav-level-2." + navID).addClass("open");
-        return false;
+        e.preventDefault();
+        if (panelWidth < 768 && level1Open === true) {
+            console.log("Mobile");
+            $(level1).addClass("left");
+            // $(level2 + navID).addClass("open");
+            $(".nav-level-2." + navID).addClass("open");
+            return level1Open = true;
+            return level2Open = true;
+        }
+        else if (panelWidth >= 768) {
+            console.log("false");
+            $(".nav-dropdown").addClass("open");
+            $(".nav-level-2." + navID).addClass("open");
+            return level1Open = true;
+            return level2Open = false;
+        }
+
+        //////////////////////////////////////////////////////////////
+        // Keep this in case we need nav links with no children
+        //
         // if ($(this).hasClass("has-children")) {
         //     // $(dropContainer).addClass("open");
         //     // $(level1).addClass("left");
@@ -92,7 +120,11 @@ $(window).bind("load", function() {
         // else {
         //     return true;
         // }
+        //////////////////////////////////////////////////////////////
+
     });
+
+
     $(".exit-level-2").click(function() {
         $(level2).removeClass("open");
         $(level1).removeClass("left");

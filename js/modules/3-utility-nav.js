@@ -19,7 +19,7 @@ $(window).bind("load", function() {
         if ($(this).hasClass('open')) {
             $(this).removeClass("open");
             $(".search__input--wrapper").removeClass("open");
-            $("input.search__input").focus();
+            $("input.search__input").blur();
             $(".search-container").removeClass("open");
             $(".search__button").removeClass("open");
             // $(".search__input").css("display", "block");
@@ -30,6 +30,7 @@ $(window).bind("load", function() {
             $(".search-container").addClass("open");
             $(".search__button").addClass("open");
 
+            // Close other dropdowns
             $(".nav-small-icon").removeClass("open");
             $(".nav-main").removeClass("open");
             $(".nav-dropdown").removeClass("open");
@@ -41,6 +42,7 @@ $(window).bind("load", function() {
 });
 
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Close Login and Search on click outside
 $(document).mouseup(function(e)
@@ -50,35 +52,20 @@ $(document).mouseup(function(e)
     var searchToggle = $(".search__toggle");
     var loginDropdown = $(".login-wrapper");
     var search = $(".search-container");
-    var hamburger = $(".nav-samll-icon");
 
     if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
     {
         // console.log("Outside Dropdown");
+        // $(".nav-dropdown").removeClass("open");
         $(".dropdown-wrapper").removeClass("open");
     }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
     {
-        // console.log("Login Button");
-        // console.log("Outside Login");
-        // console.log(e.target);
         $(loginDropdown).removeClass("open");
         $(loginToggle).removeClass("open");
     }
-    if(e.target.id != hamburger.attr('id') && hamburger.has(e.target).length)
-    {
-        // console.log("Outside Hamburger");
-        // $(".dropdown-wrapper").removeClass("open");
-        // $(".search__input").val("");
-        // $(".search-container").removeClass("open");
-        // $(".search__button").removeClass("open");
-        // $(".search__input").css("display", "none");
-        // $(".login-wrapper").removeClass("open");
-        // $(".login-toggle").removeClass("open");
-    }
     if(e.target.id != search.attr('id') && !search.has(e.target).length)
     {
-        // console.log("Outside Search");
         $(".search__input").val("");
         $("search").removeClass("open");
         $(".search__button").removeClass("open");
@@ -87,6 +74,5 @@ $(document).mouseup(function(e)
         $(".search-container").removeClass("open");
         $(".login-wrapper").removeClass("open");
         $(".login-toggle").removeClass("open");
-        // $(".search__toggle").click();
     }
 });

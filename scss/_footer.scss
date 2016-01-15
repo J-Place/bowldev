@@ -6,14 +6,14 @@
     // Tablet and below
     @include breakpoint(small-max) {
         padding: 1em 1em 1em;
-        margin-bottom: 250px;
+        // margin-bottom: 250px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
         // padding: 0 15px 1em;
         // padding: 0 0 1em;
         padding-bottom: 1em;
-        margin-bottom: 0;
+        // margin-bottom: 230px;
     }
 }
 
@@ -31,7 +31,8 @@
     @extend .footer-col;
     // Phone and below
     @include breakpoint(xsmall-max) {
-        // margin-top: 0px;
+        width: 100%;
+        margin-bottom: 45px;
     }
 }
 
@@ -39,12 +40,28 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-bottom: 45px;
+        // text-align: center;
+    }
+}
+
+.footer-col--cta {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-left: 0;
+        padding-left: 0;
     }
 }
 
 .footer-links {
     display: inline-block;
     vertical-align: top;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 .footer-col--promo.col-xs-12 + .footer-col--promo.col-xs-12 {
@@ -135,7 +152,7 @@
     margin: 0;
     padding: 0;
     text-indent: -9999px;
-    background-image: url("../img/social-icons-footer.svg");
+    background-image: url("../img/social-icons-footer.png");
     background-size: 136px;
     background-repeat: no-repeat;
 }
@@ -172,7 +189,7 @@
     font-weight: 300;
     text-align: center;
     color: #FFF;
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         text-align: left;
         line-height: 1.7em;
         padding-top: 20px;
@@ -184,7 +201,7 @@
     padding-left: 2em;
     padding-right: 2em;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: block;
         padding: 0;
     }
@@ -241,7 +258,7 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         // width: 650px;
-        left: 780px;
+        left: 720px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -268,7 +285,7 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         // width: 650px;
-        left: 710px;
+        left: 650px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
