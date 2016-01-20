@@ -1,196 +1,15 @@
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Page content columns
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// // Main content columns
 
-.container.page-content {
-    background-color: transparent;
+.container.main-content {
+    margin-top: 45px;
+    // padding: 0;
     position: relative;
-    overflow: hidden;
-    padding: 30px 0 0;
-}
-
-.page-content__main {
-    margin: 0 auto;
-    padding: 0;
-}
-
-.page-content__sidebar {
-// Desktop and above
-    @include breakpoint(medium-min) {
-        // margin-left: -15px;
-    }
-}
-
-.page-content.landing .container-fluid .container {
-    width: 970px;
-    padding: 15px 0 0;
-}
-
-// .page-content .stripe {
-//     left: -1263px;
-//     background-color: #000;
-//     opacity: 0.1;
-//     z-index: -1;
-// }
-
-// .page-content .stripe + .stripe {
-//     left: -1203px;
-//     background-color: #000;
-//     opacity: 0.07;
-//     z-index: -1;
-// }
-
-
-// .page-content .stripe--bottom {
-//     left: 1330px;
-//     bottom: 0;
-//     background-color: #000;
-//     opacity: 0.1;
-//     z-index: -1;
-// }
-
-// .page-content .stripe--bottom + .stripe--bottom {
-//     left: -1270px;
-//     bottom: 0;
-//     background-color: #000;
-//     opacity: 0.07;
-//     z-index: -1;
-// }
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Individual content units
-
-// Article base layout
-.article {
-    margin-bottom: 40px;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-// Desktop and below
-    @include breakpoint(medium-max) {
-        margin-bottom: 15px;
-    }
-// Tablet and below
+    // Tablet and below
     @include breakpoint(small-max) {
-        margin-bottom: 15px;
-        padding-bottom: 0;
+        margin-top: 0;
     }
-// Phone and below
-    @include breakpoint(xsmall-max) {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Article modifiers
-
-.article--fixed-height {
-    @extend .article;
-    margin-bottom: 60px;
-    padding-bottom: 0;
-// Large Desktop and below
-    @include breakpoint(large-max) {
-        min-height: 244px;
-    }
-// Desktop and below
-    @include breakpoint(medium-max) {
-        min-height: 183px;
-    }
-// Tablet and below
-    @include breakpoint(small-max) {
-        height: 100%;
-        margin-bottom: 0px;
-    }
-// Phone and below
-    @include breakpoint(xsmall-max) {
-        margin-bottom: 0px;
-    }
-// iPhone and below
-    @include breakpoint(iphone) {
-        margin-bottom: 15px;
-    }
-}
-
-.article--equal {
-// Desktop and above
-    @include breakpoint(medium-min) {
-        // min-height: 340px;
-    }
-// iPhone and below
-    @include breakpoint(iphone) {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        // min-height: 330px;
-    }
-}
-
-.article--cta-1 {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Article content
-
-.article__image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.article__title {
-    @extend .opensans;
-    color: $gray-dk;
-    font-size: 1.2em;
-    font-weight: 700;
-    text-transform: none;
-    position: relative;
-    margin-top: 0;
-    padding: 0 0 4px;
-    // min-height: 15px;
-}
-
-.article__summary {
-    // position: relative;
-    // height: auto;
-    position: relative;
-    // min-height: 80px;
-    // display: block;
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        // min-height: 60px;
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Sidebar links
-
-.sidebar__title {
-    padding-bottom: .5em;
-    margin-bottom: .5em;
-}
-
-.sidebar__title::after {
-    display: block;
-    position: relative;
-    height: 10px;
-    width: 100px;
-    background-color: $blue;
-    @extend .skew;
-}
-
-.sidebar__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar__list--item {
-    margin: 2em auto;
-    padding: 0;
-    color: $gray-3;
-    border-bottom: 1px solid $gray-2;
 }
 
 
@@ -221,7 +40,7 @@
     z-index: 9;
 // Large desktop and below
     @include breakpoint(large-max) {
-        left: -963px;
+        // left: -963px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
@@ -238,7 +57,7 @@
     z-index: 9;
 // Large desktop and below
     @include breakpoint(large-max) {
-        left: -903px;
+        // left: -903px;
     }
 // Desktop and below
     @include breakpoint(medium-max) {
@@ -251,13 +70,15 @@
 // Page stripes bottom
 
 .container.page-stripes--bottom {
-    position: absolute;
-    overflow: hidden;
+    position: fixed;
+    overflow: visible;
     height: 600px;
-    margin: -600px auto 0;
+    // margin: -600px auto 0;
     padding: 0;
+    // margin-top: -600px;
     left: 0;
     right: 0;
+    z-index: -1;
 }
 
 .page-stripes--bottom .stripes .stripe {

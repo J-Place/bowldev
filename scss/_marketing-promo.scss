@@ -36,11 +36,11 @@
         height: 55px;
     }
     // Tablet and below
-    @include breakpoint(small-max) {
+    @include breakpoint(xsmall-max) {
         height: 50px;
     }
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         height: 100px;
     }
 }
@@ -52,38 +52,41 @@
     padding: 0;
     letter-spacing: .5px;
     overflow: hidden;
-
+    // Large desktop and above
     @include breakpoint(large-min) {
         font-size: 1.2em;
         line-height: 1.22em;
         height: 40px;
         margin: 13px 15px;
     }
+    // Large desktop and below
     @include breakpoint(large-max) {
         font-size: 1.2em;
         line-height: 1.22em;
         height: 40px;
         margin: 15px;
     }
+    // Desktop and below
     @include breakpoint(medium-max) {
         font-size: 1.07em;
         line-height: 1.2em;
         height: 35px;
         margin: 10px;
     }
+    // Tablet and below
+    // @include breakpoint(small-max) {
+    //     font-size: 1.0em;
+    //     line-height: 1.1em;
+    //     height: 30px;
+    //     margin: 8px;
+    // }
+    // Phone and below
     @include breakpoint(small-max) {
-        font-size: 1.0em;
-        line-height: 1.1em;
-        height: 30px;
-        margin: 8px;
-    }
-    @include breakpoint(xsmall-max) {
         font-size: 1.65em;
         line-height: 1.3em;
         height: 60px;
         margin: 20px 25px;
     }
-
 }
 
 .marketing-promo__image {

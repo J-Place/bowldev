@@ -5,55 +5,140 @@
     right: 0;
     width: 30px;
     height: 30px;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 15px;
-    transition: width 0.125s;
+    transition: width 0.25s, height .25s;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        width: 45px;
+        height: 45px;
+        // border: 1px solid red;
+    }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        top: -10px;
+        // transition: height .25s;
+        // top: -10px;
         // right: 0;
         // width: 30px;
-        height: 40px;
-        border-radius: 20px;
+        // height: 40px;
+        // border-radius: 20px;
     }
 }
 
 .secondary-links.search-container.open {
     width: 240px;
-    background-color: $gray-lt;
-    border: 1px solid $gray-md;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        top: 54px;
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        background-color: #FFF;
+        border-bottom: 1px solid $gray-2;
+    }
 }
 
 .nav-icon--search {
     display: block;
+    float: right;
     width: 30px;
     height: 30px;
     text-indent: -9999px;
     @extend .nav-icon;
-    background-position: -185px -1px;
+    background-position: -185px 0px;
+    // top: 45px;
     right: 0;
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        top: 5px;
+    position: absolute;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        top: 4px;
         right: 5px;
-        width: 35px;
-        height: 35px;
-        background-position: -237px -41px;
-        background-size: 430px;
+        width: 30px;
+        height: 30px;
+        background-position: -32px -90px;
     }
 }
 
-.nav-icon--search:hover, .nav-icon--search.open {
-    background-position: -185px -31px;
+.nav-icon--search.open, .nav-icon--search.open:hover {
+    // Tablet and below
+    @include breakpoint(small-max) {
+        background-position: -62px -90px;
+        top: -42px;
+        right: 12px;
+    }
+}
+
+.nav-icon--search:hover {
+    background-position: -185px -30px;
     // Phone and below
+    @include breakpoint(small-max) {
+        // margin-top: 1px;
+        // background-position: -237px -46px;
+        background-position: -32px -90px;
+    }
+}
+
+.search__input--wrapper {
+    display: none;
+    transition: width 0.125s;
+    // display: block;
+    // width: 30px;
+    width: 100%;
+    height: 30px;
+    background-color: $gray-lt;
+    border: 1px solid $gray-md;
+    // background-color: transparent;
+    // border: 1px solid red;
+    border-radius: 15px;
+    text-indent: -9999px;
+    top: 0px;
+    position: absolute;
+    right: 0;
+    // border: 1px solid orange;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        top: 4px;
+        // right: 7px;
+        right: 15px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        background-position: -31px -89px;
+        border-radius: 22px;
+        height: 44px;
+    }
+}
+
+
+.search__input--wrapper.open {
+    display: block;
+    width: 100%;
+    position: relative;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        position: absolute;
+        width: auto;
+        left: 15px;
+        right: 54px;
+        top: 5px;
+    }
+}
+
+.search__input--wrapper.open .search__input {
+    // Tablet and below
+    @include breakpoint(small-max) {
+        font-size: 1.3em;
+        display: block;
+        height: 40px;
+        // border: 1px solid red;
+        width: 88%;
+    }
+    // Tablet and below
     @include breakpoint(xsmall-max) {
-        margin-top: 1px;
-        background-position: -237px -46px;
+        height: 35px;
     }
 }
 
 .search__input {
+    display: none;
     background-color: transparent;
     border: 0 none;
     display: inline-block;
@@ -69,12 +154,32 @@
         padding: 0;
     }
 }
+.search__input--wrapper.open .search__submit--icon {
+    background-position: -184px -31px;
+    @include breakpoint(small-max) {
+        background-size: 330px;
+        top: 1px;
+        right: -43px;
+        background-position: -31px -89px;
+    }
+}
 
-.search__button {
-    background-color: transparent;
-    border: 0 none;
-    display: inline-block;
+.search__submit--icon {
+    // display: inline-block;
+    text-indent: -9999px;
+    @extend .nav-icon;
     position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    border: 0 none;
+    background-color: transparent;
+    background-position: -185px -1px;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        right: -60px;
+    }
 }
 
 .search__input:focus,

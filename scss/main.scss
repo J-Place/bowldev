@@ -9,7 +9,7 @@
 // Header, Nav, Footer
 @import 'header';
 @import 'nav-primary';
-@import 'nav-secondary';
+@import 'nav-utility';
 @import 'nav-mobile';
 @import 'login';
 @import 'search';
@@ -17,10 +17,14 @@
 
 // Content Containers
 @import 'banner';
-@import 'slider-double';
+@import 'slider';
 @import 'cta';
 
 // Content Elements
+@import 'breadcrumbs';
+@import 'articles';
+@import 'sidebar-links';
+@import 'sidebar-search';
 @import 'quick-links';
 @import 'marketing-promo';
 @import 'top-news';

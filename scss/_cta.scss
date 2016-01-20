@@ -1,17 +1,29 @@
+
+
+.main-content__body .cta-1 {
+    margin-top: 60px;
+}
+
+
 .container.cta-3 {
     padding: 0;
     margin-bottom: 40px;
+    margin-top: 0;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin-bottom: 15px;
+    }
     // iPhone and below
     @include breakpoint(iphone) {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
 .cta-3 .row {
-    margin: 0;
+    // margin: 0;
     // Tablet and below
     @include breakpoint(small-max) {
-        margin-left: 0;
+        // margin-left: 0;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -27,13 +39,29 @@
     }
 }
 
+.cta-3 .ad__block {
+    // Tablet and below
+    @include breakpoint(medium-max) {
+        margin-bottom: 15px;
+    }
+}
 
-
-
-.cta__content.container {
+.container.cta__content {
     position: relative;
     text-align: center;
     margin: 60px auto;
+}
+
+.cta-3 .article {
+    // Tablet and below
+    @include breakpoint(medium-max) {
+        height: 185px;
+        margin-bottom: 15px;
+    }
+    // Phone and below
+    @include breakpoint(small-max) {
+        height: auto;
+    }
 }
 
 .cta__header {
@@ -68,8 +96,13 @@
     color: #FFF;
     font-size: 1.2em;
     padding: 0 10em 1em;
+    // Tablet and below
     @include breakpoint(medium-max) {
         padding: 0 2em 1em;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        padding: 0 0 1em;
     }
 }
 
@@ -91,11 +124,21 @@
     height: auto;
     opacity: 0.2;
     bottom: 0;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
+    @include breakpoint(medium-max) {
+        width: auto;
+        height: 100%;
+    }
     @include breakpoint(small-max) {
         width: auto;
         height: 110%;
     }
+    @include breakpoint(xsmall-max) {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.main-content__body .cta__background img {
+        width: auto;
+        height: 110%;
 }

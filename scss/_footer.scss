@@ -3,31 +3,36 @@
     padding-top: 2em;
     padding-bottom: 1em;
     // margin-top: -30px;
-// Tablet and below
+    // Tablet and below
     @include breakpoint(small-max) {
-        padding: 2em 3em 1em;
+        padding: 1em 1em 1em;
+        // margin-bottom: 250px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        padding: 0 15px 1em;
-        margin-bottom: 4em;
+        // padding: 0 15px 1em;
+        // padding: 0 0 1em;
+        padding-bottom: 1em;
+        // margin-bottom: 230px;
     }
-}
-
-.container-fluid.footer .container {
-
 }
 
 .container.footer__links {
     position: relative;
     z-index: 999;
+    width: auto;
+    // Phone and below
+    @include breakpoint(small-max) {
+        padding: 0;
+    }
 }
 
 .footer-col--info {
     @extend .footer-col;
     // Phone and below
     @include breakpoint(xsmall-max) {
-        margin-top: 60px;
+        width: 100%;
+        margin-bottom: 45px;
     }
 }
 
@@ -35,20 +40,60 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-bottom: 45px;
+        // text-align: center;
+    }
+}
+
+.footer-col--cta {
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-left: 0;
+        padding-left: 15px;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        // padding-left: 15px;
     }
 }
 
 .footer-links {
     display: inline-block;
     vertical-align: top;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.footer-col--promo.col-xs-12 + .footer-col--promo.col-xs-12 {
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        margin-top: 30px;
+    }
+    // Phone and below
+    @include breakpoint(small-max) {
+        margin-top: 20px;
+    }
 }
 
 .footer-links__title {
     color: #FFF;
     font-size: 1.1em;
+    line-height: 1.2em;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        font-size: 1.29em;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        font-size: 1.17em;
+    }
 }
 
 .footer-links__list {
@@ -58,17 +103,36 @@
 }
 
 .footer-links__list li {
-    margin: 0 auto 1em;
+    margin: 0 auto 0.65em;
+}
+
+.footer-links__list.link--logos li {
+    margin-bottom: 1.75em;
 }
 
 .footer-col__link {
     color: #FFF;
+    img { display: none; }
+    img + img { display: block; }
 }
 
 .footer-col__link:hover {
-    color: $blue-lt;
+    // color: $blue-lt;
+    font-weight: 700;
+    color: #FFF;
     text-decoration: none;
+    img {
+        display: block;
+    }
+    img + img {
+        display: none;
+    }
 }
+
+// .footer-col__link:hover .text {
+//     font-weight: bold;
+//     color: #FFF;
+// }
 
 .footer-col__link:active, .footer-col__link:visited {
     text-decoration: none;
@@ -84,6 +148,11 @@
 
 .download-icon {
     margin: .5em 0;
+    // Phone and below
+    @include breakpoint(small-max) {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
 
 .social-link--footer {
@@ -94,7 +163,7 @@
     margin: 0;
     padding: 0;
     text-indent: -9999px;
-    background-image: url("../img/social-icons-footer.svg");
+    background-image: url("../img/social-icons-footer.png");
     background-size: 136px;
     background-repeat: no-repeat;
 }
@@ -131,7 +200,7 @@
     font-weight: 300;
     text-align: center;
     color: #FFF;
-    @include breakpoint(xsmall) {
+    @include breakpoint(small-max) {
         text-align: left;
         line-height: 1.7em;
         padding-top: 20px;
@@ -142,7 +211,8 @@
 .corporate-address {
     padding-left: 2em;
     padding-right: 2em;
-    @include breakpoint(xsmall) {
+    // Phone and below
+    @include breakpoint(small-max) {
         display: block;
         padding: 0;
     }
@@ -180,8 +250,8 @@
     // Slider small below
     @include breakpoint(slider-small) {
         overflow: hidden;
-        left: 15px;
-        right: 15px;
+        // left: 15px;
+        // right: 15px;
     }
 }
 
@@ -199,7 +269,7 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         // width: 650px;
-        left: 780px;
+        left: 720px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -208,6 +278,10 @@
     // Slider small
     @include breakpoint(slider-small) {
         left: 690px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        left: 400px;
     }
 }
 
@@ -222,7 +296,7 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         // width: 650px;
-        left: 710px;
+        left: 650px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -231,6 +305,10 @@
     // Slider small
     @include breakpoint(slider-small) {
         left: 650px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        left: 320px;
     }
 }
 

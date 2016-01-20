@@ -1,33 +1,74 @@
-.featured-video {
+.article--video {
+    background-color: $gray-2;
     text-align: center;
+    // padding: 30px 15px 60px;
+    padding: 0 15px 60px;
     position: relative;
     overflow: hidden;
     z-index: 99;
+    margin-bottom: 0;
+    // padding-top: 0;
+    @include breakpoint(large-max) {
+        padding: 30px 125px 60px;
+    }
+    @include breakpoint(medium-max) {
+        padding: 30px 145px 60px;
+    }
+    @include breakpoint(small-max) {
+        padding: 30px 15px 60px;
+    }
+}
+.main-content__body .article--video {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $gray-2;
+    border-bottom: 1px solid $gray-2;
+    margin-top: 60px;
 }
 
-.featured-video .wrapper {
-    background-color: $gray-2;
-    padding: 30px 0 60px;
+.video__wrapper {
+    text-align: center;
+    @include breakpoint(medium-max) {
+    margin: 0 auto;
     position: relative;
+    height: 0;
+    padding-top: 55.8%;
+    }
 }
 
-.featured-video iframe {
+.video__wrapper iframe {
+    // width: 560px;
+    // height: 315px;
+    z-index: 99999;
     position: relative;
-    z-index: 999;
-    // position: relative;
-    @include breakpoint(xsmall-max) {
-        height: 238px;
-        width: 424px;
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        width: 660px;
+        height: 370px;
     }
-    @include breakpoint(iphone) {
-        height: 168px;
-        width: 300px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
     }
+}
+
+.main-content__body .video__wrapper iframe {
+    margin-bottom: -5px;
 }
 
 .featured-video__title {
     color: #FFF;
     font-weight: 300;
+}
+
+.main-content__body .featured-video__title {
+    font-weight: 400;
 }
 
 .featured-video__title::after {
@@ -49,10 +90,11 @@
     width: 1900px;
     background-color: $gray-lt;
     opacity: 0.3;
+    z-index: 9;
     @include breakpoint(large) {
         width: 445px;
     }
     @include breakpoint(medium-max) {
-        width: 350px;
+        width: 750px;
     }
 }

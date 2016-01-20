@@ -1,45 +1,93 @@
 .container-fluid.header {
     position: relative;
     height: 95px;
-    z-index: 99999;
+    z-index: 9999999;
+    background-color: #FFF;
     border-bottom: 1px solid #d5d7d5;
     transition: height 0.3s;
     overflow: visible;
-    // Desktop and below
-    @include breakpoint(medium-max) {
-        height: 70px;
-    }
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        height: 55px;
-        padding: 0;
-        // overflow-x: hidden;
-        // overflow-y: visible;
-        position: fixed;
+    // Desktop and above //
+    @include breakpoint(small-min) {
+        width: 100%;
+        height: 95px;
         top: 0;
-        // width: 100%;
         left: 0;
         right: 0;
-        background-color: #FFF;
+        position: fixed;
     }
+    // Desktop and below //
+    @include breakpoint(medium-max) {
+        height: 70px;
+        padding: 0;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // background-color: #FFF;
+    }
+    // Tablet and below //
+    @include breakpoint(small-max) {
+        height: 55px;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: fixed;
+    }
+}
+
+body.scroll--header {
+    // Desktop and below
+    @include breakpoint(small-min) {
+        margin-top: 45px;
+    }
+    // Phone and below
+    @include breakpoint(small-max) {
+        margin-top: 55px;
+    }
+}
+
+.container-fluid.header.scroll {
+    // Desktop and below
+    @include breakpoint(medium-min) {
+        height: 45px;
+        position: fixed;
+    }
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        height: 45px;
+        position: fixed;
+    }
+    // @media only screen and (max-width: 568px) {
+    //     height: 55px;
+    // }
+    // Phone and below //
+    @include breakpoint(small-max) {
+        height: 55px;
+        position: fixed;
+    }
+}
+
+.container-fluid.header.open.scroll {
+    // top: 0;
+}
+
+.container-fluid.header.scroll.open {
+    // top: 0;
+    // position: absolute;
 }
 
 .container-fluid.header .container {
     position: relative;
     padding-top: 0;
     margin: 0 auto;
-    // Phone and below
+    // Phone and below //
     @include breakpoint(xsmall-max) {
-        // margin: 0;
         padding-right: 0;
         padding-left: 0;
-        // position: fixed;
-        // right: 0;
-        // left: 0;
     }
 }
 
 .logo {
+    cursor: pointer;
     width: 288px;
     height: 95px;
     background-image: url('../img/logo.png');
@@ -48,28 +96,52 @@
     background-repeat: no-repeat;
     display: block;
     text-indent: -9999px;
-    // Desktop and below
+    transition: all .2s;
+    // Desktop and below //
     @include breakpoint(medium-max) {
         margin-left: 0;
         width: 230px;
         background-position: -2px 20px;
         background-size: 280px;
-        height: 70px;
+        height: 68px;
     }
-    // Phone and below
-    @include breakpoint(xsmall-max) {
+    // Phone and below //
+    @include breakpoint(small-max) {
         height: 55px;
         margin: 0 auto;
-        background-size: 305px;
-        width: 245px;
-        background-position: -1px -1px;
+        background-size: 245px;
+        width: 200px;
+        background-position: 4px 2px;
     }
-    // Small phone and below
+    // Small phone and below //
     @include breakpoint(iphone) {
-        // height: 55px;
-        // margin: 0 auto;
-        background-size: 255px;
-        width: 215px;
-        background-position: 4px 1px;
+        background-size: 200px;
+        width: 165px;
+        background-position: 5px 10px;
+    }
+}
+
+
+.logo.scroll {
+    // Tablet and above //
+    @include breakpoint(small-min) {
+        width: 44px;
+        height: 43px;
+        background-size: 260px;
+        background-position: -219px -3px;
+    }
+    // Phone and below //
+    @include breakpoint(small-max) {
+        height: 54px;
+        margin: 0 auto;
+        background-size: 245px;
+        width: 200px;
+        background-position: 4px 2px;
+    }
+    // Small phone and below //
+    @include breakpoint(iphone) {
+        background-size: 200px;
+        width: 165px;
+        background-position: 5px 10px;
     }
 }

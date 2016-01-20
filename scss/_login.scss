@@ -1,9 +1,8 @@
 .login {
     position: absolute;
-    // right: -10px;
     right: 0;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: none;
     }
 }
@@ -15,14 +14,17 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 0.85em;
     letter-spacing: 0.5px;
-    color: $gray-md;
+    color: $gray-2;
+    font-weight: 400;
     text-transform: uppercase;
     width: auto;
     background-position: -5px -5px;
     margin-left: 15px;
     padding: 0 15px 0 23px;
     line-height: 20px;
-    @include breakpoint(nav) {
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        background-position: -5px -4px;
         text-indent: -9999px;
         padding-right: 10px;
         right: 122px;
@@ -45,9 +47,8 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .login-wrapper {
     position: absolute;
-    top: 20px;
+    top: 19px;
     right: 0;
-    // display: none;
     display: block;
     width: 235px;
     margin: 0;
@@ -62,7 +63,6 @@ a.login-toggle:active, a.login-toggle:focus {
 }
 
 .login-wrapper.open {
-    // display: block;
     opacity: 1.0;
     height: 245px;
     margin: 12px 0 0 0;
@@ -73,7 +73,7 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .login__instruction {
     padding-right: 30px;
-    color: $gray-md;
+    color: $gray-3;
     line-height: 1.3em;
     letter-spacing: 0.2px;
 }
