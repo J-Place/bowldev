@@ -117,7 +117,9 @@
 }
 
 .footer-col__link:hover {
-    color: $blue-lt;
+    // color: $blue-lt;
+    font-weight: 700;
+    color: #FFF;
     text-decoration: none;
     img {
         display: block;
@@ -126,6 +128,11 @@
         display: none;
     }
 }
+
+// .footer-col__link:hover .text {
+//     font-weight: bold;
+//     color: #FFF;
+// }
 
 .footer-col__link:active, .footer-col__link:visited {
     text-decoration: none;

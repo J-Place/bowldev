@@ -42,10 +42,6 @@
     border-left: 1px solid $gray-1;
     border-right: 1px solid $gray-1;
     display: none;
-    // Tablet and below
-    @include breakpoint(medium-max) {
-        margin-top: 1px;
-    }
     // Phone and below
     @include breakpoint(small-max) {
         position: relative;
@@ -56,18 +52,25 @@
     }
 }
 
+.scroll .nav-dropdown {
+    // Tablet and above
+    @include breakpoint(small-min) {
+        margin-top: 1px;
+    }
+}
+
 .nav-dropdown.open {
     display: block;
     background-color: #FFF;
+    // margin-top: 1px;
     // Phone and below
     @include breakpoint(small-max) {
         background-color: $gray-list-background;
-        left: 0;
+        left: -1px;
         right: 0;
-        top: 54px;
+        top: 55px;
         bottom: 0;
         position: fixed;
-        display: block;
         z-index: 1;
     }
 }
@@ -109,8 +112,8 @@
 .nav-level-1 {
     // Phone and below
     @include breakpoint(small-max) {
-        left: 0;
         transition: left 0.3s;
+        left: 0;
         position: fixed;
         background-color: $gray-list-background;
         top: 55px;
@@ -123,18 +126,29 @@
 }
 
 .nav-level-1.open {
+    transition: left 0.3s;
     // Phone and below
     @include breakpoint(small-max) {
         height: 100%;
-        padding-top: 2px;
         left: 0;
     }
 }
 .nav-level-1.open.left {
+    transition: left 0.3s;
     // Phone and below
     @include breakpoint(small-max) {
         left: -100%;
     }
+}
+
+.nav-level-1.open .nav__list:last-child::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 120px;
+    width: 100%;
+    background-color: $gray-list-background;
+    // background-color: red;
 }
 
 .nav-level-2 {
@@ -158,7 +172,8 @@
         padding-top: 0;
         height: 100%;
         left: 0px;
-        margin-left: 15px;
+        margin-left: 0;
+        // margin-left: 15px;
         padding-left: 0;
         position: fixed;
         overflow-x: hidden;
@@ -224,7 +239,9 @@ h3.dropdown__list--title {
 
 .open > h3.dropdown__list--title {
     position: fixed;
-    top: 55px;
+    top: 54px;
+    // left: 0;
+    // right: 0;
     left: 15px;
     right: 15px;
 }
@@ -268,15 +285,27 @@ h4.dropdown__list--title {
         margin: 0 15px 0 0;
         padding: 0;
     }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        margin: 0 15px 0 0;
+        padding: 0;
+    }
 }
 
 .dropdown__list--column {
-    // Tablet and below
-    @include breakpoint(small-max) {
-        padding: 0;
+    // iPhone and below
+    @include breakpoint(iphone) {
+        padding-left: 0;
+    }
+}
+
+.dropdown__list--column.col-xs-3 {
+    // iPhone and below
+    @include breakpoint(xsmall-max) {
+        padding: 0 0 0 15px;
         margin: 0;
         float: none;
-        // width: 100%;
+        width: 100%;
     }
 }
 
@@ -295,6 +324,11 @@ h4.dropdown__list--title {
         // margin-bottom: 0;
         padding: 0;
         border-bottom: 1px solid $gray-list-border;
+    }
+    // iPhone and below
+    @include breakpoint(iphone) {
+        margin: 0 0px 0 0;
+        padding: 0 0 0 15px;
     }
 }
 
@@ -315,7 +349,8 @@ h4.dropdown__list--title {
         padding: 20px 0 21px;
         display: block;
         position: relative;
-        margin: 0 15px;
+        // margin: 0 15px;
+        margin: 0;
     }
 }
 

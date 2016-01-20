@@ -82,9 +82,12 @@ body {
   color: #3b3c3e;
   overflow-x: hidden;
   font-weight: 400; }
-  @media only screen and (max-width: 991px) {
+  @media only screen and (min-width: 768px) {
     body {
-      margin-top: 0px; } }
+      margin-top: 95px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    body {
+      margin-top: 65px; } }
   @media only screen and (max-width: 767px) {
     body {
       margin-top: 55px; } }
@@ -241,24 +244,32 @@ a:hover {
 .container-fluid.header {
   position: relative;
   height: 95px;
-  z-index: 99999;
+  z-index: 9999999;
+  background-color: #FFF;
   border-bottom: 1px solid #d5d7d5;
   transition: height 0.3s;
   overflow: visible; }
-  @media only screen and (max-width: 991px) {
+  @media only screen and (min-width: 768px) {
     .container-fluid.header {
-      height: 70px;
-      padding: 0;
+      width: 100%;
+      height: 95px;
       top: 0;
       left: 0;
       right: 0;
-      background-color: #FFF; } }
+      position: fixed; } }
+  @media only screen and (max-width: 991px) {
+    .container-fluid.header {
+      height: 70px;
+      padding: 0; } }
   @media only screen and (max-width: 767px) {
     .container-fluid.header {
       height: 55px;
+      left: 0;
+      right: 0;
+      top: 0;
       position: fixed; } }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
   body.scroll--header {
     margin-top: 45px; } }
 
@@ -266,15 +277,20 @@ a:hover {
   body.scroll--header {
     margin-top: 55px; } }
 
-/* way the hell off screen */
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 992px) {
+  .container-fluid.header.scroll {
+    height: 45px;
+    position: fixed; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .container-fluid.header.scroll {
     height: 45px;
     position: fixed; } }
 
 @media only screen and (max-width: 767px) {
   .container-fluid.header.scroll {
-    height: 55px; } }
+    height: 55px;
+    position: fixed; } }
 
 .container-fluid.header .container {
   position: relative;
@@ -316,7 +332,7 @@ a:hover {
       width: 165px;
       background-position: 5px 10px; } }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
   .logo.scroll {
     width: 44px;
     height: 43px;
@@ -353,14 +369,24 @@ a:hover {
     .nav-main {
       right: 15px; } }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 992px) {
+  .nav-main.scroll {
+    top: 52px; } }
+
+@media only screen and (min-width: 768px) {
+  .nav-main.scroll {
+    top: 15px;
+    right: 270px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .nav-main.scroll {
     top: 15px;
     right: 175px; } }
 
 @media only screen and (max-width: 767px) {
   .nav-main.scroll {
-    top: 54px; } }
+    top: 54px;
+    right: 183px; } }
 
 @media only screen and (max-width: 479px) {
   .nav-main.scroll {
@@ -377,7 +403,6 @@ a:hover {
   @media only screen and (max-width: 767px) {
     .nav__list {
       position: fixed;
-      height: 100%;
       overflow-x: hidden; } }
   @media only screen and (max-width: 767px) {
     .nav__list {
@@ -385,11 +410,13 @@ a:hover {
 
 .nav-main.open .nav__list {
   transition: left 0.3s;
-  left: 0; }
+  left: 0;
+  height: 100%; }
 
 @media only screen and (max-width: 767px) {
   .nav-main.open.left .nav__list {
-    position: absolute; } }
+    position: absolute;
+    left: -100%; } }
 
 .nav__list--item {
   display: inline-block;
@@ -460,9 +487,9 @@ a:hover {
   width: auto;
   height: 4px;
   margin: 16px auto 0; }
-  @media only screen and (max-width: 991px) {
+  @media only screen and (min-width: 768px) {
     .nav__list--item a:hover::after {
-      margin-top: 4px; } }
+      margin-top: 3px; } }
   @media only screen and (max-width: 767px) {
     .nav__list--item a:hover::after {
       position: absolute;
@@ -475,6 +502,14 @@ a:hover {
       padding: 10px 0;
       content: url("../img/arrow-rt.png");
       background-color: transparent; } }
+
+@media only screen and (min-width: 768px) {
+  .nav-main.scroll .nav__list--item a:hover::after {
+    margin-top: 3px; } }
+
+@media only screen and (max-width: 767px) {
+  .nav-main.scroll .nav__list--item a:hover::after {
+    margin-top: 4px; } }
 
 .nav-secondary {
   position: absolute;
@@ -577,9 +612,6 @@ a:hover {
   border-left: 1px solid #e3e4e3;
   border-right: 1px solid #e3e4e3;
   display: none; }
-  @media only screen and (max-width: 991px) {
-    .nav-dropdown {
-      margin-top: 1px; } }
   @media only screen and (max-width: 767px) {
     .nav-dropdown {
       position: relative;
@@ -588,18 +620,21 @@ a:hover {
       top: 55px;
       z-index: 99; } }
 
+@media only screen and (min-width: 768px) {
+  .scroll .nav-dropdown {
+    margin-top: 1px; } }
+
 .nav-dropdown.open {
   display: block;
   background-color: #FFF; }
   @media only screen and (max-width: 767px) {
     .nav-dropdown.open {
       background-color: #63666b;
-      left: 0;
+      left: -1px;
       right: 0;
-      top: 54px;
+      top: 55px;
       bottom: 0;
       position: fixed;
-      display: block;
       z-index: 1; } }
 
 @media only screen and (max-width: 767px) {
@@ -630,8 +665,8 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .nav-level-1 {
-    left: 0;
     transition: left 0.3s;
+    left: 0;
     position: fixed;
     background-color: #63666b;
     top: 55px;
@@ -641,15 +676,26 @@ a:hover {
     z-index: 3;
     display: block; } }
 
-@media only screen and (max-width: 767px) {
-  .nav-level-1.open {
-    height: 100%;
-    padding-top: 2px;
-    left: 0; } }
+.nav-level-1.open {
+  transition: left 0.3s; }
+  @media only screen and (max-width: 767px) {
+    .nav-level-1.open {
+      height: 100%;
+      left: 0; } }
 
-@media only screen and (max-width: 767px) {
-  .nav-level-1.open.left {
-    left: -100%; } }
+.nav-level-1.open.left {
+  transition: left 0.3s; }
+  @media only screen and (max-width: 767px) {
+    .nav-level-1.open.left {
+      left: -100%; } }
+
+.nav-level-1.open .nav__list:last-child::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 120px;
+  width: 100%;
+  background-color: #63666b; }
 
 @media only screen and (max-width: 767px) {
   .nav-level-2 {
@@ -668,7 +714,7 @@ a:hover {
     padding-top: 0;
     height: 100%;
     left: 0px;
-    margin-left: 15px;
+    margin-left: 0;
     padding-left: 0;
     position: fixed;
     overflow-x: hidden; } }
@@ -711,7 +757,7 @@ a:hover {
 
 .open > h3.dropdown__list--title {
   position: fixed;
-  top: 55px;
+  top: 54px;
   left: 15px;
   right: 15px; }
 
@@ -746,11 +792,21 @@ a:hover {
     margin: 0 15px 0 0;
     padding: 0; } }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 320px) {
+  .dropdown__list {
+    margin: 0 15px 0 0;
+    padding: 0; } }
+
+@media only screen and (max-width: 320px) {
   .dropdown__list--column {
-    padding: 0;
+    padding-left: 0; } }
+
+@media only screen and (max-width: 479px) {
+  .dropdown__list--column.col-xs-3 {
+    padding: 0 0 0 15px;
     margin: 0;
-    float: none; } }
+    float: none;
+    width: 100%; } }
 
 .dropdown__list--item {
   list-style-type: none; }
@@ -763,6 +819,10 @@ a:hover {
       margin: 0 15px 0 0;
       padding: 0;
       border-bottom: 1px solid #3d4144; } }
+  @media only screen and (max-width: 320px) {
+    .dropdown__list--item {
+      margin: 0 0px 0 0;
+      padding: 0 0 0 15px; } }
 
 .dropdown__list--item > a {
   font-size: 1.0em;
@@ -778,7 +838,7 @@ a:hover {
       padding: 20px 0 21px;
       display: block;
       position: relative;
-      margin: 0 15px; } }
+      margin: 0; } }
 
 .dropdown__list--item > a:hover {
   color: #b71234; }
@@ -1158,7 +1218,8 @@ a.login-toggle:active, a.login-toggle:focus {
     display: block; }
 
 .footer-col__link:hover {
-  color: #56bde8;
+  font-weight: 700;
+  color: #FFF;
   text-decoration: none; }
   .footer-col__link:hover img {
     display: block; }

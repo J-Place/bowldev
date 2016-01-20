@@ -4,12 +4,18 @@ body {
     overflow-x: hidden;
     font-weight: 400;
     // Desktop and below
-    @include breakpoint(medium-max) {
-        margin-top: 0px;
+    @include breakpoint(small-min) {
+        margin-top: 95px;
+    }
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        margin-top: 65px;
+        // position: fixed;
     }
     // Phone and below
     @include breakpoint(small-max) {
         margin-top: 55px;
+        // margin-top: 0;
     }
 }
 
