@@ -94,10 +94,6 @@
         height: 110px;
         bottom: 0;
     }
-    // Slider small
-    // @include breakpoint(slider-small) {
-        // max-width: 410px;
-    // }
 
     // Slider step down
     @media only screen and (max-width: 580px) { width: 480px; }
@@ -122,12 +118,6 @@
         font-size: 1.52em;
         margin-top: 15px;
         margin-bottom: 7px;
-    }
-    // Tablet and below
-    @include breakpoint(small-max) {
-        // font-size: 1.52em;
-        // margin-top: 15px;
-        // margin-bottom: 7px;
     }
     // Slider small
     @include breakpoint(slider-small) {
@@ -161,7 +151,6 @@
     position: absolute;
     height: 100px;
     margin-bottom: 0;
-    // top: 250px;
     bottom: 30px;
     left: 0;
     right: 0;
@@ -203,35 +192,15 @@
     left: -1133px;
     position: relative;
     z-index: 999;
-    // Large desktop and below
-    @include breakpoint(large-max) {
-        // left: -1133px;
-    }
     // Desktop and below
     @include breakpoint(medium-max) {
         left: -1265px;
-    }
-    // iPad portrait
-    @include breakpoint(ipad-portrait) {
-        // left: 0;
-        // right: 0;
     }
     // Tablet and below
     @include breakpoint(small-max) {
         left: 0;
         right: 0;
     }
-    // Slider small
-    @include breakpoint(slider-small) {
-        // left: 0;
-        // right: 0;
-    }
-    // Slider step down
-    @media only screen and (max-width: 580px) { }
-    @media only screen and (max-width: 520px) { }
-    @media only screen and (max-width: 460px) { }
-    @media only screen and (max-width: 410px) { }
-    @media only screen and (max-width: 360px) { }
 }
 
 .ribbon.blue {
@@ -240,7 +209,6 @@
 .ribbon.yellow {
     background-color: $gray-3;
 }
-
 
 .ribbon::after {
     content: '';
@@ -254,10 +222,6 @@
     @include breakpoint(medium-max) {
         height: 75px;
     }
-    // iPad portrait
-    @include breakpoint(ipad-portrait) {
-        // display: none;
-    }
     // Tablet and below
     @include breakpoint(small-max) {
         display: none;
@@ -270,18 +234,12 @@
 
 .container.slider--background {
     height: 400px;
-    // padding: 0;
     overflow: hidden;
     position: relative;
     z-index: -1;
     // Desktop and below
     @include breakpoint(medium-max) {
         height: 285px;
-    }
-    // iPad portrait
-    @include breakpoint(ipad-portrait) {
-        // height: 405px;
-        // padding: 0 15px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -308,7 +266,6 @@
     @include breakpoint(small-max) {
         position: relative;
         overflow: hidden;
-        // height: 285px;
     }
 }
 
@@ -321,11 +278,6 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         height: 300px;
-    }
-    // Slider small
-    @include breakpoint(slider-small) {
-        // height: 243px;
-        // width: auto;
     }
     // Slider step down
     @media only screen and (max-width: 580px) { height: 232px; width: auto; }
@@ -344,7 +296,6 @@
     position: absolute;
     z-index: 99;
     overflow: visible;
-    // width: 1170px;
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -425,7 +376,6 @@
 
 .slider--stripes .stripe + .stripe {
     left: -858px;
-    // background-color: transparent;
     opacity: 0.5;
     @include breakpoint(large-max) {
         left: -858px
@@ -447,7 +397,6 @@
 .slider--stripes .stripe--right {
     right: -98px;
     width: 180px;
-    // background-color: transparent;
     opacity: 1.0;
     z-index: 99;
     // Desktop and below
@@ -486,7 +435,6 @@
 }
 
 .slick-arrow {
-    // border: 1px solid red;
     border: 0 none;
     width: 35px;
     height: 35px;
@@ -502,21 +450,18 @@
         top: 125px;
         width: 27px;
         height: 27px;
-        // background-size: 290px;
     }
     // Slider small
     @include breakpoint(slider-small) {
         top: 110px;
         width: 18px;
         height: 18px;
-        // background-size: 190px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
         top: 80px;
         width: 18px;
         height: 18px;
-        // background-size: 190px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -524,12 +469,7 @@
         top: 57px;
         width: 18px;
         height: 18px;
-        // background-size: 190px;
     }
-    // iPhone and below
-    // @include breakpoint(iphone) {
-    //     top: 56px;
-    // }
 }
 
 .slick-prev.slick-arrow {
@@ -561,7 +501,6 @@
     // Tablet and below
     @include breakpoint(medium-max) {
         right: 25px;
-        // background-position: -127px -52px;
         background-position: -153px -62px;
     }
     // Phone and below

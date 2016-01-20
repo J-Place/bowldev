@@ -13,7 +13,6 @@ a:focus {
 }
 
 .container {
-    // max-width: 992px !important;
     max-width: 970px !important;
     margin: 20px auto;
     // Tablet and below
@@ -38,7 +37,6 @@ a:focus {
         width: 758px;
     }
     @media (min-width: 992px) {
-        // width: 940px;
         width: 970px;
     }
 }
@@ -48,7 +46,6 @@ a:focus {
         width: 505.328px;
     }
     @media (min-width: 992px) {
-        // width: 940px;
         width: 646.656px;
     }
 }

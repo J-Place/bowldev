@@ -4,20 +4,6 @@
     // overflow: visible;
 }
 
-// .ad__block::after {
-//     content: "Advertisement";
-//     color: $gray-4;
-//     font-size: 0.79em;
-//     font-weight: 400;
-//     letter-spacing: .4px;
-//     text-transform: uppercase;
-//     margin: 0;
-//     padding: 0;
-//     position: absolute;
-//     bottom: -17px;
-//     left: 0;
-// }
-
 .ad__block img {
     width: 100%;
     height: auto;
@@ -75,25 +61,3 @@
     width: 100%;
     height: auto;
 }
-
-// .news-sponsor {
-//     margin-bottom: 2em;
-//     @include breakpoint(medium-max) {
-//     }
-//     @include breakpoint(small-max) {
-//         max-width: none;
-//     }
-// }
-
-// .news-sponsor-wrapper {
-//     position: relative;
-// }
-
-// .news-sponsor__image {
-//     display: block;
-//     margin: 0 auto;
-//     @include breakpoint(xsmall) {
-//         width: 100%;
-//         height: auto;
-//     }
-// }

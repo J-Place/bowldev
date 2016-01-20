@@ -1,13 +1,11 @@
 .article--video {
     background-color: $gray-2;
     text-align: center;
-    // padding: 30px 15px 60px;
     padding: 0 15px 60px;
     position: relative;
     overflow: hidden;
     z-index: 99;
     margin-bottom: 0;
-    // padding-top: 0;
     @include breakpoint(large-max) {
         padding: 30px 125px 60px;
     }
@@ -38,8 +36,6 @@
 }
 
 .video__wrapper iframe {
-    // width: 560px;
-    // height: 315px;
     z-index: 99999;
     position: relative;
     // Desktop and above

@@ -1,25 +1,25 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Colored border set for testing articles
+// Colored border set for testing article positions
 
 
 // .main-content__body .article {
-//     border: 2px solid yellow;
+//     border: 1px solid yellow;
 // }
 
 // .main-content__body .news-2 .article {
-//     border: 2px solid orange;
+//     border: 1px solid orange;
 // }
 
 // .news-3 .article {
-//     border: 2px solid red;
+//     border: 1px solid red;
 // }
 
 // .cta-3 .article {
-//     border: 2px solid purple;
+//     border: 1px solid purple;
 // }
 
 // .news-2 .article {
-//     border: 2px solid lime;
+//     border: 1px solid lime;
 // }
 
 
@@ -78,14 +78,6 @@
         position: relative;
         min-height: 1px;
     }
-}
-
-.article__section--content {
-    // margin-bottom: 25px;
-}
-
-.article__section--full {
-
 }
 
 .article__section.image-wrapper {
@@ -213,8 +205,6 @@
 //////////////////////////////////////////////////////////////////
 // Equal height
 
-// Article Equal classname is deprecated; styles here for temporary reference; delete for production
-
 // .article--equal {
 // // Desktop and above
 //     @include breakpoint(medium-min) {
@@ -243,7 +233,6 @@
 //         margin-bottom: 0;
 //     }
 // }
-
 
 
 

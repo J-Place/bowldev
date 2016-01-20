@@ -5,7 +5,6 @@
     top: 52px;
     margin:  0;
     padding: 0;
-    // @extend .oswald;
     text-transform: uppercase;
     transition: all 0.3s;
     // Desktop and below
@@ -23,22 +22,16 @@
     // Desktop and above
     @include breakpoint(medium-min) {
         top: 52px;
-        // right: 270px;
-        // right: 0;
     }
     // Tablet and above
     @include breakpoint(small-min) {
         top: 15px;
         right: 270px;
-        // right: 175px;
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
-        // top: 54px;
         top: 15px;
-        // right: 83px;
         right: 175px;
-        // right: 270px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -62,9 +55,7 @@
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        // display: none;
         position: fixed;
-        // height: 100%;
         overflow-x: hidden;
     }
     // Phone and below
@@ -201,7 +192,6 @@
     }
     // Phone and below
     @include breakpoint(small-max) {
-        // margin-top: 16px;
         margin-top: 4px;
     }
 }
@@ -209,6 +199,3 @@
 .nav__list--item a.skew:hover::after {
     @extend .skew;
 }
-
-
-

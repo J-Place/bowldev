@@ -4,7 +4,6 @@
 
 .container.main-content {
     margin-top: 45px;
-    // padding: 0;
     position: relative;
     // Tablet and below
     @include breakpoint(small-max) {
@@ -38,13 +37,8 @@
     background-color: $gray-1;
     opacity: 0.35;
     z-index: 9;
-// Large desktop and below
-    @include breakpoint(large-max) {
-        // left: -963px;
-    }
     // Desktop and below
     @include breakpoint(medium-max) {
-        // display: none;
         left: -1107px;
     }
 }
@@ -55,13 +49,8 @@
     background-color: gray;
     opacity: 0.125;
     z-index: 9;
-// Large desktop and below
-    @include breakpoint(large-max) {
-        // left: -903px;
-    }
-// Desktop and below
+    // Desktop and below
     @include breakpoint(medium-max) {
-        // display: none;
         left: -1057px;
     }
 }
@@ -73,9 +62,7 @@
     position: fixed;
     overflow: visible;
     height: 600px;
-    // margin: -600px auto 0;
     padding: 0;
-    // margin-top: -600px;
     left: 0;
     right: 0;
     z-index: -1;
@@ -87,15 +74,6 @@
     background-color: $gray-1;
     opacity: 0.45;
     z-index: 9;
-// Large desktop and below
-    @include breakpoint(large-max) {
-        // left: -1071px;
-    }
-    // Desktop and below
-    @include breakpoint(medium-max) {
-        // display: none;
-        // left: -1107px;
-    }
 }
 
 .page-stripes--bottom .stripes .stripe + .stripe {
@@ -104,13 +82,4 @@
     background-color: $gray-1;
     opacity: 0.45;
     z-index: 9;
-// Large desktop and below
-    @include breakpoint(large-max) {
-        // left: -1071px;
-    }
-    // Desktop and below
-    @include breakpoint(medium-max) {
-        // display: none;
-        // left: -1107px;
-    }
 }

@@ -1211,6 +1211,7 @@ a.login-toggle:active, a.login-toggle:focus {
   margin-bottom: 1.75em; }
 
 .footer-col__link {
+  display: block;
   color: #FFF; }
   .footer-col__link img {
     display: none; }

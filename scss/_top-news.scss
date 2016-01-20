@@ -33,7 +33,6 @@
     height: 38px;
     width: 16px;
     background-color: $gray-lt;
-    // background-color: rgba(255,0,255,0.5);
     position: absolute;
     top: 0;
     right: -15px;
@@ -108,13 +107,6 @@
         height: 35px;
         margin: 10px;
     }
-    // Tablet and below
-    // @include breakpoint(small-max) {
-    //     font-size: 1.0em;
-    //     line-height: 1.1em;
-    //     height: 30px;
-    //     margin: 8px;
-    // }
     // Phone and below
     @include breakpoint(small-max) {
         font-size: 1.65em;

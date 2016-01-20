@@ -10,16 +10,6 @@
     @include breakpoint(small-max) {
         width: 45px;
         height: 45px;
-        // border: 1px solid red;
-    }
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        // transition: height .25s;
-        // top: -10px;
-        // right: 0;
-        // width: 30px;
-        // height: 40px;
-        // border-radius: 20px;
     }
 }
 
@@ -44,7 +34,6 @@
     text-indent: -9999px;
     @extend .nav-icon;
     background-position: -185px 0px;
-    // top: 45px;
     right: 0;
     position: absolute;
     // Tablet and below
@@ -70,8 +59,6 @@
     background-position: -185px -30px;
     // Phone and below
     @include breakpoint(small-max) {
-        // margin-top: 1px;
-        // background-position: -237px -46px;
         background-position: -32px -90px;
     }
 }
@@ -79,24 +66,18 @@
 .search__input--wrapper {
     display: none;
     transition: width 0.125s;
-    // display: block;
-    // width: 30px;
     width: 100%;
     height: 30px;
     background-color: $gray-lt;
     border: 1px solid $gray-md;
-    // background-color: transparent;
-    // border: 1px solid red;
     border-radius: 15px;
     text-indent: -9999px;
     top: 0px;
     position: absolute;
     right: 0;
-    // border: 1px solid orange;
     // Tablet and below
     @include breakpoint(small-max) {
         top: 4px;
-        // right: 7px;
         right: 15px;
         left: 15px;
         width: 30px;
@@ -128,7 +109,6 @@
         font-size: 1.3em;
         display: block;
         height: 40px;
-        // border: 1px solid red;
         width: 88%;
     }
     // Tablet and below
@@ -165,7 +145,6 @@
 }
 
 .search__submit--icon {
-    // display: inline-block;
     text-indent: -9999px;
     @extend .nav-icon;
     position: absolute;

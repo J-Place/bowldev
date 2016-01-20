@@ -2,18 +2,13 @@
     background-color: $blue-md;
     padding-top: 2em;
     padding-bottom: 1em;
-    // margin-top: -30px;
     // Tablet and below
     @include breakpoint(small-max) {
         padding: 1em 1em 1em;
-        // margin-bottom: 250px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        // padding: 0 15px 1em;
-        // padding: 0 0 1em;
         padding-bottom: 1em;
-        // margin-bottom: 230px;
     }
 }
 
@@ -40,7 +35,6 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-bottom: 45px;
-        // text-align: center;
     }
 }
 
@@ -51,10 +45,6 @@
         margin-bottom: 30px;
         margin-left: 0;
         padding-left: 15px;
-    }
-    // iPhone and below
-    @include breakpoint(iphone) {
-        // padding-left: 15px;
     }
 }
 
@@ -111,6 +101,7 @@
 }
 
 .footer-col__link {
+    display: block;
     color: #FFF;
     img { display: none; }
     img + img { display: block; }
@@ -129,11 +120,6 @@
     }
 }
 
-// .footer-col__link:hover .text {
-//     font-weight: bold;
-//     color: #FFF;
-// }
-
 .footer-col__link:active, .footer-col__link:visited {
     text-decoration: none;
 }
@@ -143,7 +129,6 @@
     margin: .5em 0 1.5em;
     font-size: 0.95em;
     line-height: 1.15em;
-    // width: 60%;
 }
 
 .download-icon {
@@ -158,7 +143,6 @@
 .social-link--footer {
     width: 40px;
     height: 40px;
-    // border: 1px solid red;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -250,8 +234,6 @@
     // Slider small below
     @include breakpoint(slider-small) {
         overflow: hidden;
-        // left: 15px;
-        // right: 15px;
     }
 }
 
@@ -264,11 +246,9 @@
     z-index: 99;
     // Large desktop and below
     @include breakpoint(large-max) {
-        // left: -918px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
-        // width: 650px;
         left: 720px;
     }
     // Tablet and below
@@ -287,15 +267,10 @@
 
 .footer--stripes .stripe + .stripe {
     left: 954px;
-    // width: 440px;
     background-color: #000;
     opacity: 0.1;
-    @include breakpoint(large-max) {
-        // left: -858px
-    }
     // Desktop and below
     @include breakpoint(medium-max) {
-        // width: 650px;
         left: 650px;
     }
     // Tablet and below
@@ -311,4 +286,3 @@
         left: 320px;
     }
 }
-
