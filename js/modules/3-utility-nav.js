@@ -4,7 +4,6 @@ $(window).bind("load", function() {
     // Toggle login input box
     $(".login-toggle").click(function(e){
         e.preventDefault();
-        // console.log(e.target);
         $(this).addClass("open");
         $(".login-wrapper").addClass("open");
         $(".login__input--email").focus();
@@ -22,7 +21,6 @@ $(window).bind("load", function() {
             $("input.search__input").blur();
             $(".search-container").removeClass("open");
             $(".search__button").removeClass("open");
-            // $(".search__input").css("display", "block");
         }
         else {
             $(".search__input--wrapper").addClass("open");
@@ -55,8 +53,7 @@ $(document).mouseup(function(e)
 
     if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
     {
-        // console.log("Outside Dropdown");
-        // $(".nav-dropdown").removeClass("open");
+        $(".nav__list--item a").removeClass("active");
         $(".dropdown-wrapper").removeClass("open");
     }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)

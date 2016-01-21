@@ -7,7 +7,6 @@ $(window).bind("load", function() {
     });
 
 
-
     var windowWidth = $(window).width();
     var setSkew = function(){
         if (windowWidth > 768) {
@@ -18,7 +17,6 @@ $(window).bind("load", function() {
         }
     };
     setSkew();
-
 
 });
 $(window).bind("load", function() {
@@ -32,13 +30,11 @@ $(window).bind("load", function() {
         var bodyWidth = $("body").width();
         var bodyHeight = $(document).height();
 
-        console.log(bodyHeight);
+        // console.log(bodyHeight);
 
         if (panelWidth < 768) {
             $(".nav-dropdown").width(bodyWidth);
             $(".nav-level-2").width(bodyWidth - 30);
-            // $(".nav-dropdown").height(bodyHeight);
-            // $(".nav-level-2").height(bodyHeight);
         }
         else if (panelWidth >= 768) {
         }
@@ -46,18 +42,11 @@ $(window).bind("load", function() {
 
     setPanel();
 
+
     // Listen for orientation changes
     window.addEventListener("orientationchange", function() {
         location.reload();
-    //     var panelWidth = $(window).width();
-    //     $(".nav-dropdown").width(bodyWidth);
-    //     $(".nav-level-2").width(bodyWidth - 30);
-    //     setPanel();
     }, false);
-
-    // $(window).resize(function() {
-    //     setPanel();
-    // });
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +69,6 @@ $(window).bind("load", function() {
         $(".nav-main").removeClass("open");
         $(".nav-dropdown").removeClass("open");
         $(level1).removeClass("open");
-        // $(level1).removeClass("left");
         $(".container-fluid.header").removeClass("open");
     }
     function openLevel2() {
@@ -112,19 +100,16 @@ $(window).bind("load", function() {
 
 // Click links within dropdown
     $(".nav__list--item a").click(function(e){
-        // var windowWidth = $(window).width();
         var navID = $(this).attr("ID");
+        $(this).addClass("active");
         e.preventDefault();
         if (panelWidth < 768 && level1Open === true) {
-            console.log("Mobile");
             $(level1).addClass("left");
-            // $(level2 + navID).addClass("open");
             $(".nav-level-2." + navID).addClass("open");
             return level1Open = true;
             return level2Open = true;
         }
         else if (panelWidth >= 768) {
-            console.log("false");
             $(".nav-dropdown").addClass("open");
             $(".nav-level-2." + navID).addClass("open");
             return level1Open = true;
@@ -161,7 +146,6 @@ $(window).bind("load", function() {
     // Toggle login input box
     $(".login-toggle").click(function(e){
         e.preventDefault();
-        // console.log(e.target);
         $(this).addClass("open");
         $(".login-wrapper").addClass("open");
         $(".login__input--email").focus();
@@ -179,7 +163,6 @@ $(window).bind("load", function() {
             $("input.search__input").blur();
             $(".search-container").removeClass("open");
             $(".search__button").removeClass("open");
-            // $(".search__input").css("display", "block");
         }
         else {
             $(".search__input--wrapper").addClass("open");
@@ -212,8 +195,7 @@ $(document).mouseup(function(e)
 
     if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
     {
-        // console.log("Outside Dropdown");
-        // $(".nav-dropdown").removeClass("open");
+        $(".nav__list--item a").removeClass("active");
         $(".dropdown-wrapper").removeClass("open");
     }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
@@ -266,13 +248,6 @@ $(window).bind("load", function() {
             $("body").removeClass("scroll--header");
         }
     });
-    // Listen for orientation changes
-    // window.addEventListener("orientationchange", function() {
-    //     // Announce the new orientation number
-    //     alert(window.orientation);
-    //     setPanel();
-    // }, false);
-
 $(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

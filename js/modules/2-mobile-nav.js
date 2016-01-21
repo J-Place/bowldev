@@ -9,13 +9,11 @@ $(window).bind("load", function() {
         var bodyWidth = $("body").width();
         var bodyHeight = $(document).height();
 
-        console.log(bodyHeight);
+        // console.log(bodyHeight);
 
         if (panelWidth < 768) {
             $(".nav-dropdown").width(bodyWidth);
             $(".nav-level-2").width(bodyWidth - 30);
-            // $(".nav-dropdown").height(bodyHeight);
-            // $(".nav-level-2").height(bodyHeight);
         }
         else if (panelWidth >= 768) {
         }
@@ -23,18 +21,11 @@ $(window).bind("load", function() {
 
     setPanel();
 
+
     // Listen for orientation changes
     window.addEventListener("orientationchange", function() {
         location.reload();
-    //     var panelWidth = $(window).width();
-    //     $(".nav-dropdown").width(bodyWidth);
-    //     $(".nav-level-2").width(bodyWidth - 30);
-    //     setPanel();
     }, false);
-
-    // $(window).resize(function() {
-    //     setPanel();
-    // });
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -57,7 +48,6 @@ $(window).bind("load", function() {
         $(".nav-main").removeClass("open");
         $(".nav-dropdown").removeClass("open");
         $(level1).removeClass("open");
-        // $(level1).removeClass("left");
         $(".container-fluid.header").removeClass("open");
     }
     function openLevel2() {
@@ -89,19 +79,16 @@ $(window).bind("load", function() {
 
 // Click links within dropdown
     $(".nav__list--item a").click(function(e){
-        // var windowWidth = $(window).width();
         var navID = $(this).attr("ID");
+        $(this).addClass("active");
         e.preventDefault();
         if (panelWidth < 768 && level1Open === true) {
-            console.log("Mobile");
             $(level1).addClass("left");
-            // $(level2 + navID).addClass("open");
             $(".nav-level-2." + navID).addClass("open");
             return level1Open = true;
             return level2Open = true;
         }
         else if (panelWidth >= 768) {
-            console.log("false");
             $(".nav-dropdown").addClass("open");
             $(".nav-level-2." + navID).addClass("open");
             return level1Open = true;

@@ -7,7 +7,6 @@ $(window).bind("load", function() {
     });
 
 
-
     var windowWidth = $(window).width();
     var setSkew = function(){
         if (windowWidth > 768) {
@@ -18,6 +17,5 @@ $(window).bind("load", function() {
         }
     };
     setSkew();
-
 
 });
