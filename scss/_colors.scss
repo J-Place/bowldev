@@ -1,6 +1,8 @@
-$blue: #01348d;
-$blue-md: #00338d;
-$blue-lt: #56bde8;
+$blue-1: #56bde8; $blue-lt: #56bde8;
+$blue-2: #44b0e0;
+$blue-3: #00338d; $blue-md: #00338d;
+$blue-4: #0945ff;
+$blue-5: #01348d; $blue: #01348d;
 $blue-link: #05328d;
 
 $red: #b71234;
@@ -19,3 +21,21 @@ $gray-list-background: #63666b;
 $orange: #fe7200;
 
 $yellow: #ffc100;
+
+
+
+.white { background-color: #FFF; }
+.green { background-color: #5bb51f; }
+.orange { background-color: $orange; }
+
+.blue1 { background-color: $blue; }
+.blue2 { background-color: $blue-2; }
+.blue3 { background-color: $blue-3; }
+.blue4 { background-color: $blue-4; }
+.blue5 { background-color: $blue-5; }
+
+.gray1 { background-color: $gray-1; }
+.gray2 { background-color: $gray-2; }
+.gray3 { background-color: $gray-3; }
+.gray4 { background-color: $gray-4; }
+.gray5 { background-color: $gray-5; }

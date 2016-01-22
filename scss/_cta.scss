@@ -52,6 +52,31 @@
     margin: 60px auto;
 }
 
+
+.cta-arrow .cta__content {
+    padding: 2.5em 1em 1em;
+    margin: 0;
+    height: 170px;
+}
+
+.cta-arrow .cta__content:before {
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    // border-bottom: 15px solid $blue-2;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+}
+.cta-arrow .cta__content.blue5::before {
+    border-bottom: 15px solid $blue-5;
+}
+.cta-arrow .cta__content.blue4::before {
+    border-bottom: 15px solid $blue-4;
+}
+
 .cta-3 .article {
     // Tablet and below
     @include breakpoint(medium-max) {
@@ -73,6 +98,13 @@
     margin-bottom: 20px;
 }
 
+.cta-arrow .cta__header {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 300;
+
+}
+
 .cta__header::after {
     content: '';
     display: block;
@@ -81,6 +113,10 @@
     height: 5px;
     margin: 17px auto 0;
     @extend .skew;
+}
+
+.cta-arrow .cta__header::after {
+    content: none;
 }
 
 .cta__header--sub {
@@ -106,6 +142,13 @@
     }
 }
 
+.cta-arrow .cta__text {
+    padding: 0 2em;
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
+}
+
 .cta__background {
     position: absolute;
     bottom: 0;
@@ -113,11 +156,16 @@
     right: 0;
     top: 0;
     z-index: -1;
-    background-color: $orange;
 }
-.cta__background.green {
-    background-color: #5bb51f;
+
+.cta-champ .cta__background {
+    @extend .cta__background;
+    background-color: #FFF;
 }
+
+// .cta__background.orange {
+//     background-color: $orange;
+// }
 
 .cta__background img {
     width: 100%;
@@ -137,6 +185,10 @@
         height: 100%;
     }
 }
+.cta__background.white img {
+    opacity: 0.9;
+}
+
 
 .main-content__body .cta__background img {
         width: auto;
