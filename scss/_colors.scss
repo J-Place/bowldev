@@ -14,9 +14,10 @@ $gray-2: #b0b3b1; $gray-md: #b0b3b1;
 $gray-3: #75777a; $gray-dk: #75777a;
 $gray-4: #63666a;
 $gray-5: #333333;
+
 $gray-body: #3b3c3e;
-$gray-list-border: #3d4144;
-$gray-list-background: #63666b;
+$gray-list-border: #3d4144; // Mobile Nav Border Color
+$gray-list-background: #63666b; // Mobile Nav Background Color
 
 $orange: #fe7200;
 
@@ -28,7 +29,7 @@ $yellow: #ffc100;
 .green { background-color: #5bb51f; }
 .orange { background-color: $orange; }
 
-.blue1 { background-color: $blue; }
+.blue1 { background-color: $blue-1; }
 .blue2 { background-color: $blue-2; }
 .blue3 { background-color: $blue-3; }
 .blue4 { background-color: $blue-4; }

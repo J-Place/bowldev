@@ -8,7 +8,7 @@
   background-color: #fe7200; }
 
 .blue1 {
-  background-color: #01348d; }
+  background-color: #56bde8; }
 
 .blue2 {
   background-color: #44b0e0; }
@@ -135,7 +135,7 @@ a:hover {
   text-decoration: none; }
 
 .skew, .section__title--large::after, .stripe, .stripe--featured-video, .stripe--right, .stripe--bottom, .nav__list--item a.skew.active::after,
-.nav__list--item a.skew:hover::after, .ribbon::after, .cta__header::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
+.nav__list--item a.skew:hover::after, .ribbon::after, .cta__headline::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
   -webkit-transform: skew(-18.25deg);
   -moz-transform: skew(-18.25deg);
   -o-transform: skew(-18.25deg);
@@ -1964,6 +1964,9 @@ a.login-toggle:active, a.login-toggle:focus {
   text-align: center;
   margin: 60px auto; }
 
+.cta-1-champ .container.cta__content {
+  margin: 85px auto 100px; }
+
 .cta-arrow .cta__content {
   padding: 2.5em 1em 1em;
   margin: 0;
@@ -1994,20 +1997,24 @@ a.login-toggle:active, a.login-toggle:focus {
   .cta-3 .article {
     height: auto; } }
 
-.cta__header {
+.cta__headline {
   color: #FFF;
   font-size: 2.5em;
   line-height: 1.2em;
   letter-spacing: 0.5px;
   margin-top: 0;
+  font-weight: 400;
   margin-bottom: 20px; }
 
-.cta-arrow .cta__header {
+.cta-arrow .cta__headline {
   text-align: center;
   font-size: 1.7em;
   font-weight: 300; }
 
-.cta__header::after {
+.cta-1-champ .cta__headline {
+  font-weight: 400; }
+
+.cta__headline::after {
   content: '';
   display: block;
   background-color: #FFF;
@@ -2015,10 +2022,10 @@ a.login-toggle:active, a.login-toggle:focus {
   height: 5px;
   margin: 17px auto 0; }
 
-.cta-arrow .cta__header::after {
+.cta-arrow .cta__headline::after {
   content: none; }
 
-.cta__header--sub {
+.cta__headline--sub {
   display: block;
   font-size: 0.7em;
   line-height: 1.2em;
@@ -2059,7 +2066,7 @@ a.login-toggle:active, a.login-toggle:focus {
   height: auto;
   opacity: 0.2;
   bottom: 0; }
-  @media only screen and (max-width: 991px) {
+  @media only screen and (max-width: 1199px) {
     .cta__background img, .cta-champ .cta__background img {
       width: auto;
       height: 100%; } }

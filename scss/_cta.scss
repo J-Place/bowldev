@@ -52,6 +52,9 @@
     margin: 60px auto;
 }
 
+.cta-1-champ .container.cta__content {
+    margin: 85px auto 100px;
+}
 
 .cta-arrow .cta__content {
     padding: 2.5em 1em 1em;
@@ -89,23 +92,28 @@
     }
 }
 
-.cta__header {
+.cta__headline {
     color: #FFF;
     font-size: 2.5em;
     line-height: 1.2em;
     letter-spacing: 0.5px;
     margin-top: 0;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
-.cta-arrow .cta__header {
+.cta-arrow .cta__headline {
     text-align: center;
     font-size: 1.7em;
     font-weight: 300;
 
 }
 
-.cta__header::after {
+.cta-1-champ .cta__headline {
+    font-weight: 400;
+}
+
+.cta__headline::after {
     content: '';
     display: block;
     background-color: #FFF;
@@ -115,11 +123,11 @@
     @extend .skew;
 }
 
-.cta-arrow .cta__header::after {
+.cta-arrow .cta__headline::after {
     content: none;
 }
 
-.cta__header--sub {
+.cta__headline--sub {
     display: block;
     font-size: 0.7em;
     line-height: 1.2em;
@@ -172,7 +180,7 @@
     height: auto;
     opacity: 0.2;
     bottom: 0;
-    @include breakpoint(medium-max) {
+    @include breakpoint(large-max) {
         width: auto;
         height: 100%;
     }
