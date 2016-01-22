@@ -73,6 +73,7 @@
 .nav-dropdown.open {
     display: block;
     background-color: #FFF;
+    width: 100%;
     // Phone and below
     @include breakpoint(small-max) {
         background-color: $gray-list-background;

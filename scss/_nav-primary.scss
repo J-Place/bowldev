@@ -160,7 +160,10 @@
 .nav__list--item .active, .nav__list--item .active:hover {
     text-decoration: none;
     color: $red-5;
-    // Phone and below
+    @include breakpoint(ipad-landscape) {
+        color: $red;
+    }
+    // Tablet and below
     @include breakpoint(small-max) {
         color: $blue;
     }
@@ -202,6 +205,9 @@
     width: auto;
     height: 4px;
     margin: 16px auto 0;
+    @include breakpoint(ipad-landscape) {
+        background-color: $blue;
+    }
     // Desktop and above
     @include breakpoint(small-min) {
         // margin-top: 3px;

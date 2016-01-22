@@ -523,6 +523,9 @@ a:hover {
 .nav__list--item .active, .nav__list--item .active:hover {
   text-decoration: none;
   color: #82001b; }
+  @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+    .nav__list--item .active, .nav__list--item .active:hover {
+      color: #b71234; } }
   @media only screen and (max-width: 767px) {
     .nav__list--item .active, .nav__list--item .active:hover {
       color: #01348d; } }
@@ -557,6 +560,9 @@ a:hover {
   width: auto;
   height: 4px;
   margin: 16px auto 0; }
+  @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+    .nav__list--item a.active::after {
+      background-color: #01348d; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
     .nav__list--item a.active::after {
       margin-top: 2px; } }
@@ -711,7 +717,8 @@ a:hover {
 
 .nav-dropdown.open {
   display: block;
-  background-color: #FFF; }
+  background-color: #FFF;
+  width: 100%; }
   @media only screen and (max-width: 767px) {
     .nav-dropdown.open {
       background-color: #63666b;
