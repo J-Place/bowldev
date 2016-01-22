@@ -8,11 +8,11 @@ $(document).mouseup(function(e)
     var loginDropdown = $(".login-wrapper");
     var search = $(".search-container");
 
-    if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
-    {
-        $(".nav__list--item a").removeClass("active");
-        $(".dropdown-wrapper").removeClass("open");
-    }
+    // if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
+    // {
+    //     $(".nav__list--item a").removeClass("active");
+    //     $(".dropdown-wrapper").removeClass("open");
+    // }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
     {
         $(loginDropdown).removeClass("open");

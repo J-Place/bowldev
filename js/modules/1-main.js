@@ -17,5 +17,3 @@ $(window).bind("load", function() {
         }
     };
     setSkew();
-
-});

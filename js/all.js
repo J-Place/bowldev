@@ -18,9 +18,35 @@ $(window).bind("load", function() {
     };
     setSkew();
 
-});
-$(window).bind("load", function() {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Desktop meganav
 
+
+    // On hover show dropdown
+    $(".nav__list--item a").hover(
+        function (){
+
+            var navID = $(this).attr("ID");
+            var dropContainer = $(".nav-dropdown");
+
+            console.log(navID);
+
+            // if(e.target.id === dropdown.attr('id') && dropdown.has(e.target).length) {
+            //     $(this).toggleClass("active");
+            //     $(".nav-level-2." + navID).toggleClass("open");
+            //     $(dropContainer).toggleClass("open");
+            // }
+            if ($(this).hasClass("open")) {
+                $(this).toggleClass("active");
+                $(".nav-level-2." + navID).toggleClass("open");
+                $(dropContainer).toggleClass("open");
+            }
+            if (!$(this).hasClass("open")) {
+                $(this).toggleClass("active");
+                $(".nav-level-2." + navID).toggleClass("open");
+                $(dropContainer).toggleClass("open");
+            }
+    });
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Set height and width of mobile nav panels
 
@@ -99,47 +125,46 @@ $(window).bind("load", function() {
     });
 
 // Click links within dropdown
-    $(".nav__list--item a").click(function(e){
-        var navID = $(this).attr("ID");
-        $(this).addClass("active");
-        e.preventDefault();
-        if (panelWidth < 768 && level1Open === true) {
-            $(level1).addClass("left");
-            $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true;
-            return level2Open = true;
-        }
-        else if (panelWidth >= 768) {
-            $(".nav-dropdown").addClass("open");
-            $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true;
-            return level2Open = false;
-        }
+    // $(".nav__list--item a").click(function(e){
+    //     var navID = $(this).attr("ID");
+    //     $(this).addClass("active");
+    //     e.preventDefault();
+    //     if (panelWidth < 768 && level1Open === true) {
+    //         $(level1).addClass("left");
+    //         $(".nav-level-2." + navID).addClass("open");
+    //         return level1Open = true;
+    //         return level2Open = true;
+    //     }
+    //     else if (panelWidth >= 768) {
+    //         $(".nav-dropdown").addClass("open");
+    //         $(".nav-level-2." + navID).addClass("open");
+    //         return level1Open = true;
+    //         return level2Open = false;
+    //     }
 
-        //////////////////////////////////////////////////////////////
-        // Keep this in case we need nav links with no children
-        //
-        // if ($(this).hasClass("has-children")) {
-        //     // $(dropContainer).addClass("open");
-        //     // $(level1).addClass("left");
-        //     // $(".nav-level-2." + navID).addClass("open");
-        //     // return false;
-        // }
-        // else {
-        //     return true;
-        // }
-        //////////////////////////////////////////////////////////////
+    //     //////////////////////////////////////////////////////////////
+    //     // Keep this in case we need nav links with no children
+    //     //
+    //     // if ($(this).hasClass("has-children")) {
+    //     //     // $(dropContainer).addClass("open");
+    //     //     // $(level1).addClass("left");
+    //     //     // $(".nav-level-2." + navID).addClass("open");
+    //     //     // return false;
+    //     // }
+    //     // else {
+    //     //     return true;
+    //     // }
+    //     //////////////////////////////////////////////////////////////
 
-    });
+    // });
 
 
-    $(".exit-level-2").click(function() {
-        $(level2).removeClass("open");
-        $(level1).removeClass("left");
-        return level2Open = false;
-    });
+    // $(".exit-level-2").click(function() {
+    //     $(level2).removeClass("open");
+    //     $(level1).removeClass("left");
+    //     return level2Open = false;
+    // });
 
-});
 $(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -184,7 +209,6 @@ $(window).bind("load", function() {
 
 
 
-$(window).bind("load", function() {
     $(".sidebar-links__title").click(function (){
         console.log("click");
         if ($(this).hasClass('open')) {
@@ -198,7 +222,6 @@ $(window).bind("load", function() {
             $(".sidebar-links__list").addClass("open");
         }
     });
-});
     $(window).scroll( function(){
         var panelWidth = $(window).width();
         // console.log(window.scrollY);
@@ -217,7 +240,6 @@ $(window).bind("load", function() {
             $("body").removeClass("scroll--header");
         }
     });
-$(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // slick() is called on 'slider--foreground' and 'slider--background',
@@ -311,7 +333,8 @@ $(window).bind("load", function() {
         asNavFor: '.slider--foreground',
         arrows: false
     });
-// });
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Close Login and Search on click outside
 $(document).mouseup(function(e)
@@ -322,11 +345,11 @@ $(document).mouseup(function(e)
     var loginDropdown = $(".login-wrapper");
     var search = $(".search-container");
 
-    if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
-    {
-        $(".nav__list--item a").removeClass("active");
-        $(".dropdown-wrapper").removeClass("open");
-    }
+    // if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
+    // {
+    //     $(".nav__list--item a").removeClass("active");
+    //     $(".dropdown-wrapper").removeClass("open");
+    // }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
     {
         $(loginDropdown).removeClass("open");

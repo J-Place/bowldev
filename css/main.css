@@ -95,8 +95,7 @@ body {
 a:hover {
   text-decoration: none; }
 
-.skew, .section__title--large::after, .stripe, .stripe--featured-video, .stripe--right, .stripe--bottom, .nav__list--item a.skew.active::after,
-.nav__list--item a.skew:hover::after, .ribbon::after, .cta__header::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
+.skew, .section__title--large::after, .stripe, .stripe--featured-video, .stripe--right, .stripe--bottom, .nav__list--item a.skew.active::after, .ribbon::after, .cta__header::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
   -webkit-transform: skew(-18.25deg);
   -moz-transform: skew(-18.25deg);
   -o-transform: skew(-18.25deg);
@@ -474,46 +473,6 @@ a:hover {
   text-decoration: none;
   outline: 0; }
 
-.nav__list--item a:hover {
-  text-decoration: none;
-  color: #b71234; }
-  @media only screen and (max-width: 767px) {
-    .nav__list--item a:hover {
-      color: #01348d; } }
-
-.nav__list--item .active, .nav__list--item .active:hover {
-  text-decoration: none;
-  color: #82001b; }
-  @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
-    .nav__list--item .active, .nav__list--item .active:hover {
-      color: #b71234; } }
-  @media only screen and (max-width: 767px) {
-    .nav__list--item .active, .nav__list--item .active:hover {
-      color: #01348d; } }
-
-.nav__list--item a:hover::after {
-  content: '';
-  display: block;
-  background-color: #01348d;
-  width: auto;
-  height: 4px;
-  margin: 16px auto 0; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .nav__list--item a:hover::after {
-      margin-top: 2px; } }
-  @media only screen and (max-width: 767px) {
-    .nav__list--item a:hover::after {
-      position: absolute;
-      top: 10px;
-      right: -10px;
-      width: 30px;
-      height: 40px;
-      margin: 0;
-      margin-top: 0px;
-      padding: 10px 0;
-      content: url("../img/arrow-rt.png");
-      background-color: transparent; } }
-
 .nav__list--item a.active::after {
   content: '';
   display: block;
@@ -541,18 +500,15 @@ a:hover {
       background-color: transparent; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .nav-main.scroll .nav__list--item a.active::after,
-  .nav-main.scroll .nav__list--item a:hover::after {
+  .nav-main.scroll .nav__list--item a.active::after {
     margin-top: 5px; } }
 
 @media only screen and (min-width: 768px) {
-  .nav-main.scroll .nav__list--item a.active::after,
-  .nav-main.scroll .nav__list--item a:hover::after {
+  .nav-main.scroll .nav__list--item a.active::after {
     margin-top: 3px; } }
 
 @media only screen and (max-width: 767px) {
-  .nav-main.scroll .nav__list--item a.active::after,
-  .nav-main.scroll .nav__list--item a:hover::after {
+  .nav-main.scroll .nav__list--item a.active::after {
     margin-top: 4px; } }
 
 .nav-secondary {

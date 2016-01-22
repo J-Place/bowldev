@@ -1,4 +1,3 @@
-$(window).bind("load", function() {
     $(".sidebar-links__title").click(function (){
         console.log("click");
         if ($(this).hasClass('open')) {
@@ -12,4 +11,3 @@ $(window).bind("load", function() {
             $(".sidebar-links__list").addClass("open");
         }
     });
-});

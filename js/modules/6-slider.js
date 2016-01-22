@@ -1,4 +1,3 @@
-$(window).bind("load", function() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // slick() is called on 'slider--foreground' and 'slider--background',
@@ -92,4 +91,4 @@ $(window).bind("load", function() {
         asNavFor: '.slider--foreground',
         arrows: false
     });
-// });
+

@@ -1,5 +1,3 @@
-$(window).bind("load", function() {
-
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Set height and width of mobile nav panels
 
@@ -78,44 +76,42 @@ $(window).bind("load", function() {
     });
 
 // Click links within dropdown
-    $(".nav__list--item a").click(function(e){
-        var navID = $(this).attr("ID");
-        $(this).addClass("active");
-        e.preventDefault();
-        if (panelWidth < 768 && level1Open === true) {
-            $(level1).addClass("left");
-            $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true;
-            return level2Open = true;
-        }
-        else if (panelWidth >= 768) {
-            $(".nav-dropdown").addClass("open");
-            $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true;
-            return level2Open = false;
-        }
+    // $(".nav__list--item a").click(function(e){
+    //     var navID = $(this).attr("ID");
+    //     $(this).addClass("active");
+    //     e.preventDefault();
+    //     if (panelWidth < 768 && level1Open === true) {
+    //         $(level1).addClass("left");
+    //         $(".nav-level-2." + navID).addClass("open");
+    //         return level1Open = true;
+    //         return level2Open = true;
+    //     }
+    //     else if (panelWidth >= 768) {
+    //         $(".nav-dropdown").addClass("open");
+    //         $(".nav-level-2." + navID).addClass("open");
+    //         return level1Open = true;
+    //         return level2Open = false;
+    //     }
 
-        //////////////////////////////////////////////////////////////
-        // Keep this in case we need nav links with no children
-        //
-        // if ($(this).hasClass("has-children")) {
-        //     // $(dropContainer).addClass("open");
-        //     // $(level1).addClass("left");
-        //     // $(".nav-level-2." + navID).addClass("open");
-        //     // return false;
-        // }
-        // else {
-        //     return true;
-        // }
-        //////////////////////////////////////////////////////////////
+    //     //////////////////////////////////////////////////////////////
+    //     // Keep this in case we need nav links with no children
+    //     //
+    //     // if ($(this).hasClass("has-children")) {
+    //     //     // $(dropContainer).addClass("open");
+    //     //     // $(level1).addClass("left");
+    //     //     // $(".nav-level-2." + navID).addClass("open");
+    //     //     // return false;
+    //     // }
+    //     // else {
+    //     //     return true;
+    //     // }
+    //     //////////////////////////////////////////////////////////////
 
-    });
+    // });
 
 
-    $(".exit-level-2").click(function() {
-        $(level2).removeClass("open");
-        $(level1).removeClass("left");
-        return level2Open = false;
-    });
-
-});
+    // $(".exit-level-2").click(function() {
+    //     $(level2).removeClass("open");
+    //     $(level1).removeClass("left");
+    //     return level2Open = false;
+    // });
