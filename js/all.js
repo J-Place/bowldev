@@ -166,7 +166,7 @@ $(window).bind("load", function() {
         }
         else {
             $(".search__input--wrapper").addClass("open");
-            $("input.search__input").focus();
+            $(".search__input").css("display", "block").focus();
             $(".search-container").addClass("open");
             $(".search__button").addClass("open");
 
