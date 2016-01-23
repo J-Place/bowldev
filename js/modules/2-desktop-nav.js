@@ -1,105 +1,61 @@
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Desktop meganav
+    (function(){
 
-    // On hover show dropdown
-    // $(".nav__list--item a").hover(
-    //     function (){
-    //         var navID = $(this).attr("ID");
-    //         var dropContainer = $(".nav-dropdown");
-    //         $(this).toggleClass("active");
-    //         $(".nav-level-2." + navID).toggleClass("open");
-    //         $(dropContainer).toggleClass("open");
-    //     }
-    // );
+        //desktop hover script
 
+        $navMainLevel1 = $('.nav-main.nav-level-1');
+        $navMainLevel1Links = $navMainLevel1.find('a');
+        $navLevel2Dropdown = $('.nav-dropdown');
+        $navLevel2Wrappers = $('.dropdown-wrapper.nav-level-2');
 
+        var _activeMenu = false;
+        var _level2Active = false;
+        var _level1MouseOutTimeout = false;
 
-    // $('#item-over a').hover(
-    // function(){
-    //     $(this).doTimeout(
-    //         'hover', 250,
-    //         'addClass', 'hover'
-    //         );
-    // }, function(){
-    //     $(this).doTimeout(
-    //         'hover', 250,
-    //         'removeClass', 'hover'
-    //         );
-    // });
+        var level1MouseOver = function(e) {
+            clearTimeout(_level1MouseOutTimeout);
+            setActiveMenu($(e.currentTarget).attr('id'));
+        };
 
-
-    // var el = document.getElementById(".nav__list--item a");
-    //     hoverintent(el,
-    // function() {
-    //     // Handler in
-    // }, function() {
-    //     // Handler out
-    // });
-
-    // var opts = {
-    //     timeout: 500,
-    //     interval: 50
-    // };
-
-    // <script type="text/javascript" src='js/vendor/hoverintent.min.js' />
-
-    // var bowlers = document.getElementById('bowlers');
-    // var bowlersDrop = hoverintent(bowlers,
-    //     function() {
-    //         console.log("hover");
-    //         // this.className = 'active';
-    //         $(this).addClass("active");
-    //     }, function() {
-    //         // this.className = '';
-    //         $(this).removeClass("active");
-    //     }).options({
-    //     timeout:500
-    // });
-
-
-
-$(document).ready(function()
-    {
-    var timer;
-    var navID = $(".nav__list--item a").attr("ID");
-
-    $(".nav__list--item a").hover(
-        function()
-        {
-            // var navID = $(this).attr("ID");
-            $(this).addClass("active");
-            $(".nav-dropdown").addClass("open");
-            $(".nav-level-2." + navID).addClass("open");
-        },
-        function()
-        {
-            timer = setTimeout(function(){
-                $(".nav__list--item a").removeClass("active");
-                // $(navID).removeClass("active");
-                $(".nav-dropdown").removeClass("open");
-                $(".nav-level-2." + navID).removeClass("open");
-            }, 600);
-        }
-    );
-
-    $(".nav-dropdown").hover(
-        function ()
-        {
-            var navID = $(".nav__list--item a").attr("ID");
-            var menuID = $(this).attr("ID");
-            if (navID === menuID) {
-                $(this).addClass("active");
+        var level1MouseOut = function(e) {
+            var timeout = 500;
+            if(e.clientY < $navMainLevel1.position().top) {
+                timeout = 1;
             }
-            clearTimeout(timer);
-            $(".nav-dropdown").addClass("open");
-            $(".nav-level-2." + navID).addClass("open");
-        },
-        function()
-        {
-            var navID = $(this).attr("ID");
-            $(".nav__list--item a").removeClass("active");
-            $(".nav-dropdown").removeClass("open");
-            $(".nav-level-2." + navID).removeClass("open");
-        }
-    );
-});
+            _level1MouseOutTimeout = setTimeout(function(){
+                if(!_level2Active) {
+                    setActiveMenu(false);
+                }
+            }, timeout);
+        };
+
+        var level2MouseOver = function(e) {
+            _level2Active = true;
+        };
+
+        var level2MouseOut = function(e) {
+            _level2Active = false;
+            setActiveMenu(false);
+        };
+
+        var setActiveMenu = function(name) {
+            if(name === _activeMenu) {
+                return;
+            }
+            _activeMenu = name;
+            //set the active link
+            $navMainLevel1Links.each(function(index, navLevel2Link){
+                $(navLevel2Link).toggleClass('active', ($(navLevel2Link).attr('id') === _activeMenu));
+            });
+            //toggle the dropdown
+            $navLevel2Dropdown.toggleClass('open', (_activeMenu !== false));
+            $navLevel2Wrappers.each(function(index, navLevel2Wrapper){
+                $(navLevel2Wrapper).toggleClass('open', $(navLevel2Wrapper).hasClass(_activeMenu));
+            });
+        };
+
+        $navMainLevel1Links.hover(level1MouseOver, level1MouseOut);
+        $navLevel2Dropdown.hover(level2MouseOver, level2MouseOut);
+
+        //end desktop hover script
+
+    })();
