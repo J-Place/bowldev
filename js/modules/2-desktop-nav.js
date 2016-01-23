@@ -85,9 +85,12 @@ $(document).ready(function()
     $(".nav-dropdown").hover(
         function ()
         {
-            var navID = $(this).attr("ID");
+            var navID = $(".nav__list--item a").attr("ID");
+            var menuID = $(this).attr("ID");
+            if (navID === menuID) {
+                $(this).addClass("active");
+            }
             clearTimeout(timer);
-            $(this).addClass("active");
             $(".nav-dropdown").addClass("open");
             $(".nav-level-2." + navID).addClass("open");
         },
