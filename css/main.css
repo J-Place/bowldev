@@ -62,7 +62,7 @@ body {
 .bold {
   font-weight: bold; }
 
-.oswald, .button, .button--cta, .nav__list--item a, .login__submit, .add-this a, .article__title--large, .page__title--large, .marketing-promo__summary p, .top-news__summary p {
+.oswald, .button, .button--cta, .button--cta-2, .nav__list--item a, .login__submit, .add-this a, .article__title--large, .page__title--large, .marketing-promo__summary p, .top-news__summary p {
   font-family: 'Oswald', sans-serif; }
 
 .opensans, .nav-main, .dropdown-cta p, .article__title, .page__title, .contact__title, .sidebar-links__list--item a {
@@ -203,7 +203,7 @@ a:hover {
 .outline--yellow {
   border-color: yellow; }
 
-.button, .button--cta {
+.button, .button--cta, .button--cta-2 {
   display: inline-block;
   padding: 11px 33px;
   margin: 0;
@@ -214,8 +214,14 @@ a:hover {
   font-weight: 400;
   letter-spacing: 0.8px; }
 
-.button:hover, .button--cta:hover, button:active, button:focus, button:visited {
+.button:hover, .button--cta:hover, .button--cta-2:hover, button:active, button:focus, button:visited {
   text-decoration: none; }
+
+.button--cta-2 {
+  padding: 9px 31px;
+  background-color: transparent;
+  color: #FFF;
+  border: 2px solid #FFF; }
 
 .container.main-content {
   margin-top: 45px;
@@ -1964,7 +1970,7 @@ a.login-toggle:active, a.login-toggle:focus {
   text-align: center;
   margin: 60px auto; }
 
-.cta-1-champ .container.cta__content {
+.cta-future .container.cta__content {
   margin: 85px auto 100px; }
 
 .cta-arrow .cta__content {
@@ -2011,8 +2017,18 @@ a.login-toggle:active, a.login-toggle:focus {
   font-size: 1.7em;
   font-weight: 300; }
 
-.cta-1-champ .cta__headline {
-  font-weight: 400; }
+.article--cta-1 {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  @media only screen and (max-width: 479px) {
+    .article--cta-1 {
+      margin-bottom: 15px; } }
+
+.main-content__body .article--cta-1 .cta__text {
+  padding: 0 2em;
+  font-size: 0.9em;
+  font-weight: 300;
+  text-align: center; }
 
 .cta__headline::after {
   content: '';
@@ -2082,7 +2098,7 @@ a.login-toggle:active, a.login-toggle:focus {
 .cta__background.white img {
   opacity: 0.9; }
 
-.main-content__body .cta__background img {
+.main-content__body .cta-future .cta__background img {
   width: auto;
   height: 110%; }
 
@@ -2225,13 +2241,6 @@ a.login-toggle:active, a.login-toggle:focus {
       margin-bottom: 20px; } }
   @media only screen and (max-width: 479px) {
     .article--fixed-height {
-      margin-bottom: 15px; } }
-
-.article--cta-1 {
-  margin-bottom: 0;
-  padding-bottom: 0; }
-  @media only screen and (max-width: 479px) {
-    .article--cta-1 {
       margin-bottom: 15px; } }
 
 .article__link:hover .article__title, .article__link:hover .page__title {

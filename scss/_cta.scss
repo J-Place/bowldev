@@ -52,7 +52,7 @@
     margin: 60px auto;
 }
 
-.cta-1-champ .container.cta__content {
+.cta-future .container.cta__content {
     margin: 85px auto 100px;
 }
 
@@ -109,8 +109,27 @@
 
 }
 
-.cta-1-champ .cta__headline {
-    font-weight: 400;
+// .cta-1-champ .cta__headline {
+//     font-weight: 400;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CTA 1 Column
+
+.article--cta-1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin-bottom: 15px;
+    }
+}
+
+.main-content__body .article--cta-1 .cta__text {
+    padding: 0 2em;
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
 }
 
 .cta__headline::after {
@@ -198,7 +217,7 @@
 }
 
 
-.main-content__body .cta__background img {
+.main-content__body .cta-future .cta__background img {
         width: auto;
         height: 110%;
 }
