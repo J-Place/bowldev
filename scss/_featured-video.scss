@@ -1,5 +1,5 @@
 .article--video {
-    // background-color: $gray-2;
+    background-color: $gray-2;
     text-align: center;
     padding: 0 15px 60px;
     position: relative;
@@ -27,11 +27,12 @@
 
 .video__wrapper {
     text-align: center;
+    // Desktop and below
     @include breakpoint(medium-max) {
-    margin: 0 auto;
-    position: relative;
-    height: 0;
-    padding-top: 55.8%;
+        margin: 0 auto;
+        position: relative;
+        height: 0;
+        padding-top: 55.8%;
     }
 }
 
@@ -40,8 +41,10 @@
     position: relative;
     // Desktop and above
     @include breakpoint(medium-min) {
-        width: 660px;
-        height: 370px;
+        // width: 660px;
+        // height: 370px;
+        width: 617px;
+        height: 346px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {

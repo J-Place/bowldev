@@ -49,34 +49,6 @@
     margin: 60px auto;
 }
 
-.cta-future .container.cta__content {
-    margin: 85px auto 100px;
-}
-
-.cta-arrow .cta__content {
-    padding: 2.5em 1em 1em;
-    margin: 0;
-    height: 170px;
-}
-
-.cta-arrow .cta__content:before {
-    content:"";
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    // border-bottom: 15px solid $blue-2;
-    position: absolute;
-    top: 245px;
-    left: 50%;
-}
-.cta-arrow .cta__content.blue5::before {
-    border-bottom: 15px solid $blue-5;
-}
-.cta-arrow .cta__content.blue4::before {
-    border-bottom: 15px solid $blue-4;
-}
-
 .cta-3 .article {
     // Tablet and below
     @include breakpoint(medium-max) {
@@ -181,23 +153,35 @@
 // }
 
 .cta__background img {
-    width: 100%;
-    height: auto;
+    // width: 110%;
+    // height: auto;
     opacity: 0.2;
     bottom: 0;
-    // @include breakpoint(large-max) {
-    //     width: auto;
-    //     height: 100%;
-    // }
-    // @include breakpoint(large-max) {
-    //     width: 100%;
-    //     height: auto;
-    // }
-    // @include breakpoint(xsmall-max) {
-    //     width: auto;
-    //     height: 100%;
-    // }
+    @include breakpoint(medium-min) {
+        width: 110%;
+        height: auto;
+    }
+    @include breakpoint(medium-max) {
+        width: auto;
+        height: 100%;
+    }
+    @include breakpoint(ipad-portrait) {
+        width: auto;
+        height: 100%;
+    }
+    @include breakpoint(xsmall-max) {
+        width: auto;
+        height: 100%;
+    }
 }
+
+.cta__background img {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
 .cta__background.no-color img {
     opacity: 1.0;
 }
@@ -216,6 +200,53 @@
 
 .cta-2017-open {
     height: 323px;
+}
+
+.main-content__body .article--cta-1.cta-2017-open .cta__content {
+    text-align: left;
+}
+
+.cta-2017-open .cta__headline,
+.cta-2017-open .cta__text,
+.cta-2017-open .cta__button {
+    margin-left: 300px;
+}
+
+.cta-future .container.cta__content {
+    margin: 85px auto 100px;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// CTA with Teaxt Bock and Arrow
+
+.cta-arrow .cta__content {
+    padding: 2.5em 1em 1em;
+    margin: 0;
+    height: 170px;
+}
+
+.cta-arrow .cta__content:before {
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    // border-bottom: 15px solid $blue-2;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+}
+.cta-arrow .cta__content.blue5::before {
+    border-bottom: 15px solid $blue-5;
+}
+.cta-arrow .cta__content.blue4::before {
+    border-bottom: 15px solid $blue-4;
+}
+
+.cta-arrow .cta__img img {
+    width: 100%;
 }
 
 
@@ -240,11 +271,17 @@
     float: left;
 }
 
+.main-content__body .article--cta-1  .cta-1 .cta__hero + .cta__headline,
+.main-content__body .article--cta-1  .cta-1 .cta__hero + .cta__text {
+    text-align: left;
+}
+
+
 .main-content__body .article--cta-1 .cta__hero img {
 }
 
 .main-content__body .article--cta-1 .cta__content {
-    text-align: left;
+    text-align: center;
     padding-left: 0;
     padding-right: 15px;
 }
@@ -302,11 +339,4 @@
     margin: 0;
     padding: 0 0 30px;
     font-size: 1.3em;
-}
-
-.cta-banner .cta__background img {
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    position: absolute;
 }

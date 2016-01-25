@@ -104,15 +104,16 @@
 }
 .main-content__body .article--detail .video__wrapper iframe {
     // Desktop and above
-    @include breakpoint(medium-min) {
-        width: 616.656px;
-        height: 345px;
-    }
+    // @include breakpoint(medium-min) {
+    // @media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
+    //     width: 616.656px;
+    //     height: 345px;
+    // }
     // Between Phone and tablet
-    @media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
-        width: 475.328px;
-        height: 265px;
-    }
+    // @media only screen and (min-device-width : 480px) and (max-device-width : 568px) {
+    //     width: 475.328px;
+    //     height: 265px;
+    // }
 }
 
 
