@@ -89,6 +89,12 @@
     }
 }
 
+.cta__content {
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
 .cta__headline {
     color: #FFF;
     font-size: 2.5em;
@@ -204,6 +210,14 @@
         height: 110%;
 }
 
+.cta-support-team-usa .cta__content {
+    height: 147px;
+}
+
+.cta-2017-open {
+    height: 323px;
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // CTA with Background
@@ -217,16 +231,26 @@
     }
 }
 
+.article--cta-1 .cta__hero {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
 .main-content__body .article--cta-1 .cta__hero {
     float: left;
 }
 
+.main-content__body .article--cta-1 .cta__hero img {
+}
+
 .main-content__body .article--cta-1 .cta__content {
     text-align: left;
+    padding-left: 0;
+    padding-right: 15px;
 }
 
 .main-content__body .article--cta-1 .cta__headline {
-    font-size: 1.8em;
+    font-size: 1.7em;
     letter-spacing: 1px;
 }
 

@@ -63,7 +63,7 @@ body {
   font-weight: bold; }
 
 .oswald, .button, .button--cta, .button--cta-2,
-.button--outline, .nav__list--item a, .login__submit, .add-this a, .article__title--large, .page__title--large, .marketing-promo__summary p, .top-news__summary p {
+.button--outline, .button--small, .nav__list--item a, .login__submit, .add-this a, .article__title--large, .page__title--large, .marketing-promo__summary p, .top-news__summary p {
   font-family: 'Oswald', sans-serif; }
 
 .opensans, .nav-main, .dropdown-cta p, .article__title, .page__title, .contact__title, .sidebar-links__list--item a {
@@ -205,11 +205,12 @@ a:hover {
   border-color: yellow; }
 
 .button, .button--cta, .button--cta-2,
-.button--outline {
+.button--outline, .button--small {
   display: inline-block;
-  padding: 11px 33px;
+  padding: 7px 28px;
   margin: 0;
   background-color: #FFF;
+  border: 2px solid #FFF;
   color: #75777a;
   text-transform: uppercase;
   font-size: 16px;
@@ -217,15 +218,20 @@ a:hover {
   letter-spacing: 0.8px; }
 
 .button:hover, .button--cta:hover, .button--cta-2:hover,
-.button--outline:hover, button:active, button:focus, button:visited {
+.button--outline:hover, .button--small:hover, button:active, button:focus, button:visited {
   text-decoration: none; }
 
 .button--cta-2,
 .button--outline {
-  padding: 9px 31px;
   background-color: transparent;
   color: #FFF;
   border: 2px solid #FFF; }
+
+.button--small {
+  padding: 4px 12px;
+  border-width: 1px;
+  font-size: 0.9em;
+  font-weight: 300; }
 
 .container.main-content {
   margin-top: 45px;
@@ -2007,6 +2013,11 @@ a.login-toggle:active, a.login-toggle:focus {
   .cta-3 .article {
     height: auto; } }
 
+.cta__content {
+  display: block;
+  text-align: center;
+  padding: 15px; }
+
 .cta__headline {
   color: #FFF;
   font-size: 2.5em;
@@ -2078,6 +2089,12 @@ a.login-toggle:active, a.login-toggle:focus {
   width: auto;
   height: 110%; }
 
+.cta-support-team-usa .cta__content {
+  height: 147px; }
+
+.cta-2017-open {
+  height: 323px; }
+
 .article.article--cta-1 {
   margin-bottom: 0;
   padding-bottom: 0; }
@@ -2085,14 +2102,20 @@ a.login-toggle:active, a.login-toggle:focus {
     .article.article--cta-1 {
       margin-bottom: 15px; } }
 
+.article--cta-1 .cta__hero {
+  margin-top: 5px;
+  margin-bottom: 15px; }
+
 .main-content__body .article--cta-1 .cta__hero {
   float: left; }
 
 .main-content__body .article--cta-1 .cta__content {
-  text-align: left; }
+  text-align: left;
+  padding-left: 0;
+  padding-right: 15px; }
 
 .main-content__body .article--cta-1 .cta__headline {
-  font-size: 1.8em;
+  font-size: 1.7em;
   letter-spacing: 1px; }
 
 .main-content__body .article--cta-1 .cta__headline::after {
@@ -2193,6 +2216,9 @@ a.login-toggle:active, a.login-toggle:focus {
   .main-content__sidebar {
     margin-top: 20px;
     margin-bottom: 15px; } }
+
+.main-content__sidebar .article {
+  margin-bottom: 30px; }
 
 .article__section {
   margin-bottom: 45px;
