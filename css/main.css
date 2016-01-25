@@ -528,7 +528,7 @@ a:hover {
 
 .nav__list--item .active, .nav__list--item .active:hover {
   text-decoration: none;
-  color: #82001b; }
+  color: #b71234; }
   @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
     .nav__list--item .active, .nav__list--item .active:hover {
       color: #b71234; } }
@@ -562,7 +562,7 @@ a:hover {
 .nav__list--item a.active::after {
   content: '';
   display: block;
-  background-color: #000;
+  background-color: #01348d;
   width: auto;
   height: 4px;
   margin: 16px auto 0; }

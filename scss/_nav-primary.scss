@@ -159,7 +159,7 @@
 }
 .nav__list--item .active, .nav__list--item .active:hover {
     text-decoration: none;
-    color: $red-5;
+    color: $red;
     @include breakpoint(ipad-landscape) {
         color: $red;
     }
@@ -201,7 +201,7 @@
 .nav__list--item a.active::after {
     content: '';
     display: block;
-    background-color: #000;
+    background-color: $blue;
     width: auto;
     height: 4px;
     margin: 16px auto 0;
