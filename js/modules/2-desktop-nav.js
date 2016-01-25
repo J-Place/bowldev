@@ -13,7 +13,11 @@
 
         var level1MouseOver = function(e) {
             clearTimeout(_level1MouseOutTimeout);
-            setActiveMenu($(e.currentTarget).attr('id'));
+            // setActiveMenu($(e.currentTarget).attr('id'));
+            var timeout = 100;
+            _level1MouseOverTimeout = setTimeout(function(){
+                setActiveMenu($(e.currentTarget).attr('id'));
+            }, timeout);
         };
 
         var level1MouseOut = function(e) {
@@ -22,8 +26,17 @@
                 timeout = 1;
             }
             _level1MouseOutTimeout = setTimeout(function(){
-                if(!_level2Active) {
+                // if(e.currentTarget.id === e.target.id) {
+                //     console.log(e.currentTarget);
+                //     console.log(e.target);
+                //     return;
+                // }
+                // else
+                    if(!_level2Active) {
+                    console.log("level 2 not active")
                     setActiveMenu(false);
+                    clearTimeout(_level1MouseOutTimeout); // New
+                    return; // New
                 }
             }, timeout);
         };

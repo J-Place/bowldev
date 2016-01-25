@@ -10,10 +10,10 @@ $(window).bind("load", function() {
     var windowWidth = $(window).width();
     var setSkew = function(){
         if (windowWidth > 768) {
-            $(".nav__list--item a").addClass("skew");
+            $(".nav__list--item a.active::after").addClass("skew");
         }
         else if (windowWidth <= 768) {
-            $(".nav__list--item a").removeClass("skew");
+            $(".nav__list--item a.active::after").removeClass("skew");
         }
     };
     setSkew();
