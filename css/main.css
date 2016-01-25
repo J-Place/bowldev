@@ -277,7 +277,7 @@ a:hover {
   body.scroll--header {
     margin-top: 55px; } }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .container-fluid.header.scroll {
     height: 45px;
     position: fixed; } }
@@ -369,13 +369,13 @@ a:hover {
     .nav-main {
       right: 15px; } }
 
-@media only screen and (min-width: 992px) {
-  .nav-main.scroll {
-    top: 52px; } }
-
 @media only screen and (min-width: 768px) {
   .nav-main.scroll {
     top: 15px;
+    right: 175px; } }
+
+@media only screen and (min-width: 992px) {
+  .nav-main.scroll {
     right: 270px; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {

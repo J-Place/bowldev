@@ -19,13 +19,14 @@
 }
 
 .nav-main.scroll {
-    // Desktop and above
-    @include breakpoint(medium-min) {
-        top: 52px;
-    }
     // Tablet and above
     @include breakpoint(small-min) {
         top: 15px;
+        right: 175px;
+    }
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        // top: 15px;
         right: 270px;
     }
     // iPad portrait

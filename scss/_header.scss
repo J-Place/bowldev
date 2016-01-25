@@ -42,8 +42,8 @@ body.scroll--header {
 }
 
 .container-fluid.header.scroll {
-    // Desktop and below
-    @include breakpoint(medium-min) {
+    // Desktop and above
+    @include breakpoint(small-min) {
         height: 45px;
         position: fixed;
     }
