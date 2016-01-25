@@ -62,7 +62,8 @@ body {
 .bold {
   font-weight: bold; }
 
-.oswald, .button, .button--cta, .button--cta-2, .nav__list--item a, .login__submit, .add-this a, .article__title--large, .page__title--large, .marketing-promo__summary p, .top-news__summary p {
+.oswald, .button, .button--cta, .button--cta-2,
+.button--outline, .nav__list--item a, .login__submit, .add-this a, .article__title--large, .page__title--large, .marketing-promo__summary p, .top-news__summary p {
   font-family: 'Oswald', sans-serif; }
 
 .opensans, .nav-main, .dropdown-cta p, .article__title, .page__title, .contact__title, .sidebar-links__list--item a {
@@ -203,7 +204,8 @@ a:hover {
 .outline--yellow {
   border-color: yellow; }
 
-.button, .button--cta, .button--cta-2 {
+.button, .button--cta, .button--cta-2,
+.button--outline {
   display: inline-block;
   padding: 11px 33px;
   margin: 0;
@@ -214,10 +216,12 @@ a:hover {
   font-weight: 400;
   letter-spacing: 0.8px; }
 
-.button:hover, .button--cta:hover, .button--cta-2:hover, button:active, button:focus, button:visited {
+.button:hover, .button--cta:hover, .button--cta-2:hover,
+.button--outline:hover, button:active, button:focus, button:visited {
   text-decoration: none; }
 
-.button--cta-2 {
+.button--cta-2,
+.button--outline {
   padding: 9px 31px;
   background-color: transparent;
   color: #FFF;
@@ -2017,19 +2021,6 @@ a.login-toggle:active, a.login-toggle:focus {
   font-size: 1.7em;
   font-weight: 300; }
 
-.article--cta-1 {
-  margin-bottom: 0;
-  padding-bottom: 0; }
-  @media only screen and (max-width: 479px) {
-    .article--cta-1 {
-      margin-bottom: 15px; } }
-
-.main-content__body .article--cta-1 .cta__text {
-  padding: 0 2em;
-  font-size: 0.9em;
-  font-weight: 300;
-  text-align: center; }
-
 .cta__headline::after {
   content: '';
   display: block;
@@ -2066,7 +2057,7 @@ a.login-toggle:active, a.login-toggle:focus {
   font-weight: 300;
   text-align: center; }
 
-.cta__background, .cta-champ .cta__background {
+.cta__background {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2074,33 +2065,77 @@ a.login-toggle:active, a.login-toggle:focus {
   top: 0;
   z-index: -1; }
 
-.cta-champ .cta__background {
-  background-color: #FFF; }
-
-.cta__background img, .cta-champ .cta__background img {
+.cta__background img {
   width: 100%;
   height: auto;
   opacity: 0.2;
   bottom: 0; }
-  @media only screen and (max-width: 1199px) {
-    .cta__background img, .cta-champ .cta__background img {
-      width: auto;
-      height: 100%; } }
-  @media only screen and (max-width: 767px) {
-    .cta__background img, .cta-champ .cta__background img {
-      width: auto;
-      height: 110%; } }
-  @media only screen and (max-width: 479px) {
-    .cta__background img, .cta-champ .cta__background img {
-      width: auto;
-      height: 100%; } }
 
-.cta__background.white img {
-  opacity: 0.9; }
+.cta__background.no-color img {
+  opacity: 1.0; }
 
 .main-content__body .cta-future .cta__background img {
   width: auto;
   height: 110%; }
+
+.article.article--cta-1 {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  @media only screen and (max-width: 479px) {
+    .article.article--cta-1 {
+      margin-bottom: 15px; } }
+
+.main-content__body .article--cta-1 .cta__hero {
+  float: left; }
+
+.main-content__body .article--cta-1 .cta__content {
+  text-align: left; }
+
+.main-content__body .article--cta-1 .cta__headline {
+  font-size: 1.8em;
+  letter-spacing: 1px; }
+
+.main-content__body .article--cta-1 .cta__headline::after {
+  content: none; }
+
+.main-content__body .article--cta-1 .cta__text {
+  margin: 0 auto 15px;
+  padding: 0 4em;
+  font-size: 0.9em;
+  font-weight: 300; }
+
+.cta-banner {
+  height: 470px; }
+
+.cta-banner .cta__content {
+  text-align: left;
+  margin: 0 auto;
+  padding: 30px 30% 30px 0; }
+  @media only screen and (max-width: 767px) {
+    .cta-banner .cta__content {
+      padding-left: 15px; } }
+
+.cta-banner .cta__headline {
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: none;
+  font-size: 3.5em;
+  line-height: 1.1em;
+  margin-top: 20px; }
+
+.cta-banner .cta__headline::after {
+  content: none; }
+
+.cta-banner .cta__text {
+  margin: 0;
+  padding: 0 0 30px;
+  font-size: 1.3em; }
+
+.cta-banner .cta__background img {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute; }
 
 .container.breadcrumbs {
   margin: 0 auto; }

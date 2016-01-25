@@ -20,7 +20,8 @@
     @extend .button;
 }
 
-.button--cta-2 {
+.button--cta-2,
+.button--outline {
     @extend .button;
     padding: 9px 31px;
     background-color: transparent;
