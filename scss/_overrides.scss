@@ -14,6 +14,8 @@ a:focus {
 
 .container {
     max-width: 970px !important;
+    padding-left: 0;
+    padding-right: 0;
     margin: 20px auto;
     // Tablet and below
     @include breakpoint(small-max) {}

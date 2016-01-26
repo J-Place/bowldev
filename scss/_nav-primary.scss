@@ -130,7 +130,7 @@
 }
 
 // Right arrow on mobile nav links
-.nav__list--item a::after {
+.nav__list--item a.active::after {
     // Phone and below
     @include breakpoint(small-max) {
         padding: 10px 0;
@@ -179,8 +179,8 @@
     height: 4px;
     margin: 16px auto 0;
     // Desktop and above
-    @include breakpoint(small-min) {
-        // margin-top: 3px;
+    @include breakpoint(medium-max) {
+        margin-top: 3px;
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
@@ -200,6 +200,7 @@
         background-color: transparent;
     }
 }
+
 .nav__list--item a.active::after {
     content: '';
     display: block;
@@ -233,8 +234,24 @@
     }
 }
 
-.nav-main.scroll .nav__list--item a.active::after,
-.nav-main.scroll .nav__list--item a:hover::after {
+.nav__list--item a::after {
+    // Phone and below
+    @include breakpoint(small-max) {
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        width: 30px;
+        height: 40px;
+        margin: 0;
+        margin-top: 0px;
+        padding: 10px 0;
+        content: url("../img/arrow-rt.png");
+        background-color: transparent;
+    }
+}
+
+.nav-main.scroll .nav__list--item a:hover::after,
+.nav-main.scroll .nav__list--item a.active::after {
     // iPad portrait
     @include breakpoint(ipad-portrait) {
         margin-top: 5px;

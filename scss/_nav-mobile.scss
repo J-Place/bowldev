@@ -36,13 +36,13 @@
 
 .nav-dropdown {
     position: absolute;
-    margin-top: -1px;
+    // margin-top: -1px;
     box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.2), -5px 0px 5px -4px rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid $gray-1;
     border-left: 1px solid $gray-1;
     border-right: 1px solid $gray-1;
     display: none;
-    margin-left: -15px;
+    // margin-left: -15px;
 
     // Desktop and below
     @include breakpoint(medium-max) {
@@ -70,12 +70,18 @@
     }
 }
 
+.scroll .nav-dropdown.open {
+    margin-top: 1px;
+}
+
 .nav-dropdown.open {
     display: block;
     background-color: #FFF;
     width: 100%;
+    margin-top: -1px;
     // Phone and below
     @include breakpoint(small-max) {
+        margin-top: 0;
         background-color: $gray-list-background;
         left: -1px;
         right: 0;

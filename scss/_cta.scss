@@ -101,6 +101,11 @@
 
 }
 
+.cta-arrow .article__link:hover .cta__text {
+    text-decoration: underline;
+    color: #FFF;
+}
+
 // .cta-1-champ .cta__headline {
 //     font-weight: 400;
 // }
@@ -291,7 +296,7 @@
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-// CTA with Teaxt Bock and Arrow
+// CTA with Text Bock and Arrow
 
 .cta-arrow .cta__content {
     padding: 2.5em 1em 1em;
@@ -392,8 +397,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // CTA Page Banner
 
-.cta-banner {
+.container-fluid .cta-banner {
     height: 470px;
+    @include breakpoint(small-max) {
+        height: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+        overflow: hidden;
+    }
 }
 
 .cta-banner .cta__hero {
@@ -403,10 +414,20 @@
     text-align: left;
     margin: 0 auto;
     padding: 30px 30% 30px 0;
+    @include breakpoint(large-max) {
+        padding-right: 45%;
+    }
+    @include breakpoint(medium-max) {
+        padding: 30px 25% 30px 15px;
+    }
     @include breakpoint(small-max) {
-        padding-left: 15px;
+        padding: 30px;
     }
 }
+
+// .cta-banner .cta__content > * {
+//         border: 1px solid yellow;
+// }
 
 .cta-banner .cta__headline {
     font-weight: 400;
@@ -415,6 +436,10 @@
     font-size: 3.5em;
     line-height: 1.1em;
     margin-top: 20px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    @include breakpoint(small-max) {
+        font-size: 2.75em;
+    }
 }
 
 .cta-banner .cta__headline::after {
@@ -425,4 +450,15 @@
     margin: 0;
     padding: 0 0 30px;
     font-size: 1.3em;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.cta-banner .cta__background img {
+    width: 100%;
+    height: auto;
+    @include breakpoint(small-max) {
+        width: auto;
+        height: 100%;
+
+    }
 }
