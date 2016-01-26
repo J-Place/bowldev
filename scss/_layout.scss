@@ -18,7 +18,8 @@
 .container.page-stripes {
     position: absolute;
     overflow: visible;
-    height: 1600px;
+    // height: 1600px;
+    height: 2000px;
     margin: 0 auto;
     padding: 0;
     left: 0;
@@ -32,7 +33,8 @@
 }
 
 .page-stripes .stripes .stripe {
-    left: -1071px;
+    // left: -1071px;
+    left: -1138px;
     width: 1000px;
     background-color: $gray-1;
     opacity: 0.35;
@@ -44,7 +46,8 @@
 }
 
 .page-stripes .stripes .stripe + .stripe {
-    left: -1011px;
+    // left: -1011px;
+    left: -1078px;
     width: 1000px;
     background-color: gray;
     opacity: 0.125;
@@ -55,16 +58,18 @@
     }
 }
 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Page stripes bottom
 
 .container.page-stripes--bottom {
-    position: fixed;
+    position: absolute;
     overflow: visible;
-    height: 600px;
+    height: 1900px;
     padding: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     z-index: -1;
 }
 

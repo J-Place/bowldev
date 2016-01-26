@@ -6,13 +6,15 @@
     padding: 0;
     margin-bottom: 40px;
     margin-top: 0;
-    // Phone and below
-    @include breakpoint(xsmall-max) {
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        padding: 0 15px;
         margin-bottom: 15px;
     }
     // iPhone and below
     @include breakpoint(iphone) {
         margin-bottom: 0;
+        padding: 0 15px;
     }
 }
 

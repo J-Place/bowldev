@@ -2,9 +2,15 @@
     background-color: $blue-md;
     padding-top: 2em;
     padding-bottom: 1em;
+    overflow: visible;
+    // Tablet and below
+    @include breakpoint(small-max) {
+
+    }
     // Tablet and below
     @include breakpoint(small-max) {
         padding: 1em 1em 1em;
+        overflow-x: hidden;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -16,16 +22,20 @@
     position: relative;
     z-index: 999;
     padding: 0;
-    // Phone and below
+    // Tablet and below
     @include breakpoint(small-max) {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        padding-left: 0px;
+        padding-right: 0px;
     }
     @include breakpoint(ipad-portrait) {
         padding-left: 30px;
         padding-right: 30px;
     }
-
 }
 
 .footer-col--info {
@@ -45,6 +55,9 @@
 }
 
 .footer-col--cta {
+    @include breakpoint(small-max) {
+        padding-left: 60px;
+    }
     // Phone and below
     @include breakpoint(xsmall-max) {
         width: 100%;
@@ -213,25 +226,26 @@
 
 .container.footer--stripes {
     position: absolute;
-    z-index: 99;
-    overflow: visible;
-    height: 100%;
+    z-index: 1;
+    overflow-y: visible;
+    height: 1780px;
     margin: 0 auto;
     padding: 0;
-    left: 0;
-    right: 0;
+    // left: 0;
+    right: 30px;
     bottom: 0;
-    top: 0;
+    // top: 0;
     // Slider small
     @include breakpoint(slider-small) {
-        overflow: hidden;
+        // overflow: hidden;
     }
 }
 
 .footer--stripes .stripes {
     width: auto;
     left: 0;
-    right: 0;
+    // right: 0;
+
     // Tablet and below
     @include breakpoint(small-max) {
         left:  0;
@@ -239,7 +253,7 @@
     }
     // Slider small below
     @include breakpoint(slider-small) {
-        overflow: hidden;
+        // overflow: hidden;
     }
 }
 
@@ -248,7 +262,7 @@
     left: 1024px;
     width: 500px;
     background-color: #000;
-    opacity: 0.1;
+    opacity: 0.05;
     z-index: 99;
     // Large desktop and below
     @include breakpoint(large-max) {
@@ -259,15 +273,16 @@
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        left: 750px;
+        // left: 750px;
+        left: 60px;
     }
     // Slider small
     @include breakpoint(slider-small) {
-        left: 690px;
+        // left: 690px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        left: 400px;
+        // left: 400px;
     }
 }
 
@@ -281,7 +296,8 @@
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        left: 680px;
+        // left: 680px;
+        left: -10px;
     }
     // Slider small
     @include breakpoint(slider-small) {

@@ -242,8 +242,11 @@ h3.dropdown__list--title {
         line-height: 70px;
         margin: 0;
         padding: 0 15px 0 0;
+        transition: margin-left 0.3s;
+        width: 100%;
         left: 15px;
         right: 15px;
+        margin-left: 100%;
         background-color: $gray-list-background;
         border-bottom: 1px solid $gray-list-border;
         z-index: 999999;
@@ -251,10 +254,14 @@ h3.dropdown__list--title {
 }
 
 .open > h3.dropdown__list--title {
-    position: fixed;
-    top: 54px;
-    left: 15px;
-    right: 15px;
+    // Phone and below
+    @include breakpoint(small-max) {
+        position: fixed;
+        top: 54px;
+        left: 15px;
+        margin-left: 0;
+        right: 15px;
+    }
 }
 
 h4.dropdown__list--title {
@@ -262,6 +269,7 @@ h4.dropdown__list--title {
     @include breakpoint(small-min) {
         text-transform: uppercase;
         font-size: 1.1em;
+        line-height: 1.23em;
         letter-spacing: 0.7px;
         margin-top: 0;
         margin-bottom: 15px;
@@ -284,6 +292,7 @@ h4.dropdown__list--title {
 }
 
 .dropdown__list {
+    list-style-type: none;
     // Tablet and above
     @include breakpoint(small-min) {
         margin: 0 auto;
@@ -332,10 +341,11 @@ h4.dropdown__list--title {
 }
 
 .dropdown__list--item {
-    list-style-type: none;
     // Tablet and above
     @include breakpoint(small-min) {
-        margin: 0 0 0.3em;
+        list-style-type: none;
+        line-height: 1.23em;
+        margin: 0 0 0.7em;
         padding: 0;
     }
     // Phone and below
@@ -356,6 +366,7 @@ h4.dropdown__list--title {
     letter-spacing: 0.5px;
     font-weight: 400;
     color: $gray-4;
+    margin-bottom: 1.3em;
     // Phone and below
     @include breakpoint(small-max) {
         // Match font-size, margin and padding on these elements:
