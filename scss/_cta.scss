@@ -143,20 +143,13 @@
     z-index: -1;
 }
 
-// .cta-champ .cta__background {
-//     @extend .cta__background;
-//     background-color: #FFF;
-// }
-
-// .cta__background.orange {
-//     background-color: $orange;
-// }
-
 .cta__background img {
-    // width: 110%;
-    // height: auto;
     opacity: 0.2;
     bottom: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
     @include breakpoint(medium-min) {
         width: 110%;
         height: auto;
@@ -175,15 +168,13 @@
     }
 }
 
-.cta__background img {
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-}
-
 .cta__background.no-color img {
     opacity: 1.0;
+}
+
+.main-content__body .cta__background img {
+    width: 110%;
+    height: auto;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -196,20 +187,37 @@
 
 .cta-support-team-usa .cta__content {
     height: 147px;
+    @include breakpoint(medium-max) {
+        height: 111px;
+    }
 }
 
-.cta-2017-open {
+// .cta-2017-open {
+//     height: 323px;
+// }
+
+.main-content__body .article--cta-1.cta-2017-open {
     height: 323px;
-}
-
-.main-content__body .article--cta-1.cta-2017-open .cta__content {
+    @include breakpoint(medium-max) {
+        height: 252px;
+    }
+    .cta__content {
     text-align: left;
-}
-
-.cta-2017-open .cta__headline,
-.cta-2017-open .cta__text,
-.cta-2017-open .cta__button {
-    margin-left: 300px;
+    }
+    .cta__hero {
+        width: 280px;
+        img {
+            width: 100%;
+        }
+    }
+    .cta__headline,
+    .cta__text {
+        margin-left: 300px;
+        padding-left: 0;
+    }
+    .cta__button {
+        margin-left: 300px;
+    }
 }
 
 .cta-future .container.cta__content {
