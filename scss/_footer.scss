@@ -15,11 +15,17 @@
 .container.footer__links {
     position: relative;
     z-index: 999;
-    width: auto;
+    padding: 0;
     // Phone and below
     @include breakpoint(small-max) {
-        padding: 0;
+        padding-left: 15px;
+        padding-right: 15px;
     }
+    @include breakpoint(ipad-portrait) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
 }
 
 .footer-col--info {

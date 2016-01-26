@@ -52,6 +52,10 @@
     @include breakpoint(ipad-portrait) {
         margin-left: -15px;
     }
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        margin-top: -1px;
+    }
     // Phone and below
     @include breakpoint(small-max) {
         position: relative;
@@ -66,7 +70,7 @@
 .scroll .nav-dropdown {
     // Tablet and above
     @include breakpoint(small-min) {
-        margin-top: 1px;
+        // margin-top: -1px;
     }
 }
 
@@ -78,7 +82,12 @@
     display: block;
     background-color: #FFF;
     width: 100%;
-    margin-top: -1px;
+    margin-top: 0px;
+    margin-left: 0;
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        margin-top: -1px;
+    }
     // Phone and below
     @include breakpoint(small-max) {
         margin-top: 0;
@@ -247,7 +256,6 @@ h3.dropdown__list--title {
     left: 15px;
     right: 15px;
 }
-
 
 h4.dropdown__list--title {
     // Tablet and above - megamenu

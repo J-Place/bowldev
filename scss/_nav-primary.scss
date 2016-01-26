@@ -9,7 +9,7 @@
     transition: all 0.3s;
     // Desktop and below
     @include breakpoint(medium-max) {
-        top: 41px;
+        top: 40px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -93,7 +93,8 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-left: 11px;
-        padding: 0 5px;
+        // padding: 0 5px;
+        padding: 0;
     }
     // Tablet and below
     @include breakpoint(small-max) {
@@ -109,18 +110,25 @@
     @extend .oswald;
     font-size: 1.1em;
     font-weight: 400;
+    // border: 1px solid yellow;
+    display: block;
+    // Tablet and above
+    @include breakpoint(small-min) {
+        height: 30px;
+    }
+    @include breakpoint(ipad-portrait) {
+        height: 30px;
+    }
     // Desktop and above
     @include breakpoint(medium-min) {
-        // border: 1px solid yellow;
-        display: block;
-        // padding-bottom: 7px;
-        height: 42px;
+        height: 45px;
     }
     // Desktop and below
     @include breakpoint(medium-max) {
         font-size: 0.95em;
+        // height: 28px;
     }
-    // Phone and below
+    // Tablet and below
     @include breakpoint(small-max) {
         font-family: "Open Sans", sans-serif;
         letter-spacing: 2px;
@@ -137,68 +145,10 @@
     }
 }
 
-// Right arrow on mobile nav links
-// .nav__list--item a::before {
-//     // Phone and below
-//     @include breakpoint(small-max) {
-//         padding: 0;
-//         display: block;
-//         position: absolute;
-//         bottom: 10px;
-//         left: -10px;
-//         content: url("../img/arrow-rt.png");
-//         width: 30px;
-//         height: 40px;
-//         background-color: transparent;
-//         overflow: hidden;
-//     }
-// }
-
-// .nav__list--item a::after {
-//     // Phone and below
-//     @include breakpoint(small-max) {
-//         padding: 10px 0;
-//         display: block;
-//         position: absolute;
-//         top: 10px;
-//         right: -10px;
-//         content: url("../img/arrow-rt.png");
-//         width: 30px;
-//         height: 40px;
-//         background-color: transparent;
-//         overflow: hidden;
-//     }
-// }
-
-.nav__list--item a.active::after {
-    // Phone and below
-    @include breakpoint(small-max) {
-        padding: 10px 0;
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: -10px;
-        content: url("../img/arrow-rt.png");
-        width: 30px;
-        height: 40px;
-        background-color: transparent;
-        overflow: hidden;
-    }
-}
-
 .nav__list--item a:focus {
     text-decoration: none;
     outline: 0;
 }
-
-// .nav__list--item a:hover {
-//     text-decoration: none;
-//     color: $red;
-//     // Phone and below
-//     @include breakpoint(small-max) {
-//         color: $blue;
-//     }
-// }
 
 .nav__list--item .active,
 .nav__list--item .active:hover {
@@ -221,69 +171,26 @@
     }
 }
 
-// .nav__list--item a:hover::after {
-//     content: '';
-//     display: block;
-//     background-color: $blue;
-//     width: auto;
-//     height: 4px;
-//     margin: 16px auto 0;
-//     // Desktop and above
-//     @include breakpoint(small-min) {
-//         // margin-top: 3px;
-//     }
-//     // iPad portrait
-//     @include breakpoint(ipad-portrait) {
-//         margin-top: 2px;
-//     }
-//     // Phone and below
-//     @include breakpoint(small-max) {
-//         position: absolute;
-//         top: 10px;
-//         right: -10px;
-//         width: 30px;
-//         height: 40px;
-//         margin: 0;
-//         margin-top: 0px;
-//         padding: 10px 0;
-//         content: url("../img/arrow-rt.png");
-//         background-color: transparent;
-//     }
-// }
 .nav__list--item a.active::before {
     content: '';
     display: block;
     width: 50%;
     height: 4px;
     position: absolute;
-    bottom: 0px;
+    bottom: 3px;
     left: 0;
-    border-right: 0;
-    border-left: 2px solid transparent;
     border-top: 0;
+    border-right: 0;
     border-bottom:4px solid $blue;
-    margin: 0 auto 0;
-    margin: 16px auto 0;
-    // Desktop and above
+    border-left: 2px solid transparent;
+    margin: 0 auto;
     @include breakpoint(medium-max) {
-        margin-top: 3px;
+        // border-bottom:6px solid $blue;
+        // border-left: 3px solid transparent;
+        // bottom: 2px;
     }
-    // iPad portrait
-    @include breakpoint(ipad-portrait) {
-        margin-top: 2px;
-    }
-    // Phone and below
     @include breakpoint(small-max) {
-        position: absolute;
-        top: 10px;
-        right: -10px;
-        width: 30px;
-        height: 40px;
-        margin: 0;
-        margin-top: 0px;
-        padding: 10px 0;
-        content: url("../img/arrow-rt.png");
-        background-color: transparent;
+        content: none;
     }
 }
 
@@ -293,27 +200,21 @@
     width: 50%;
     height: 4px;
     position: absolute;
-    bottom: 0px;
+    bottom: 3px;
     right: 0;
     border-right: 2px solid transparent;
     border-left: 0;
     border-top: 4px solid $blue;
     border-bottom: 0;
     margin: 0 auto;
-    @include breakpoint(ipad-landscape) {
-        background-color: $blue;
-    }
-    // Desktop and above
-    @include breakpoint(small-min) {
-        // margin-top: 3px;
-    }
-    // iPad portrait
-    @include breakpoint(ipad-portrait) {
-        @extend .skew-reset;
-        margin-top: 2px;
+    @include breakpoint(medium-max) {
+        // border-top:6px solid $blue;
+        // border-right: 3px solid transparent;
+        // bottom: 2px;
     }
     // Phone and below
     @include breakpoint(small-max) {
+        border: 0 none;
         position: absolute;
         top: 10px;
         right: -10px;
@@ -326,7 +227,6 @@
         background-color: transparent;
     }
 }
-
 
 // .nav-main.scroll .nav__list--item a:hover::after,
 .nav__list--item a::after {
@@ -345,12 +245,30 @@
     }
 }
 
+.nav-main.scroll .nav__list--item a {
+    @include breakpoint(small-min) {
+        height: 30px;
+    }
+    @include breakpoint(ipad-portrait) {
+        height: 27px;
+    }
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        height: 28px;
+    }
+}
+
+.nav-main.scroll .nav__list--item a.active::before {
+    bottom: 0;
+}
+
 .nav-main.scroll .nav__list--item a:hover::after,
 .nav-main.scroll .nav__list--item a.active::after {
-    // iPad portrait
-    @include breakpoint(ipad-portrait) {
-        margin-top: 5px;
-    }
+    bottom: 0;
+    // // iPad portrait
+    // @include breakpoint(ipad-portrait) {
+    //     margin-top: 5px;
+    // }
     // Phone and above
     @include breakpoint(small-min) {
         margin-top: 3px;
