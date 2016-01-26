@@ -2,7 +2,7 @@
     background-color: $blue-md;
     padding-top: 2em;
     padding-bottom: 1em;
-    overflow: visible;
+    overflow-y: visible;
     // Tablet and below
     @include breakpoint(small-max) {
 
@@ -253,7 +253,7 @@
     }
     // Slider small below
     @include breakpoint(slider-small) {
-        // overflow: hidden;
+        overflow-x: hidden;
     }
 }
 
