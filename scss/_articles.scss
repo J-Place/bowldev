@@ -57,6 +57,18 @@
     }
 }
 
+// .container.cta-2-col-sidebar {
+//     margin-top: 45px;
+// }
+
+.container-fluid + .container.cta-2-col-sidebar {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    .main-content__sidebar {
+        margin-top: 0;
+    }
+}
+
 .main-content__sidebar {
     // Phone and below
     @include breakpoint(small-max) {
@@ -65,6 +77,14 @@
     @include breakpoint(xsmall-max) {
         margin-top: 20px;
         margin-bottom: 15px;
+    }
+}
+
+.main-content__sidebar .article {
+    margin-bottom: 30px;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        margin-bottom: 20px;
     }
 }
 
@@ -100,15 +120,16 @@
 }
 .main-content__body .article--detail .video__wrapper iframe {
     // Desktop and above
-    @include breakpoint(medium-min) {
-        width: 616.656px;
-        height: 345px;
-    }
+    // @include breakpoint(medium-min) {
+    // @media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
+    //     width: 616.656px;
+    //     height: 345px;
+    // }
     // Between Phone and tablet
-    @media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
-        width: 475.328px;
-        height: 265px;
-    }
+    // @media only screen and (min-device-width : 480px) and (max-device-width : 568px) {
+    //     width: 475.328px;
+    //     height: 265px;
+    // }
 }
 
 
@@ -233,20 +254,6 @@
 //         margin-bottom: 0;
 //     }
 // }
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// CTA 1 Column
-
-.article--cta-1 {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        margin-bottom: 15px;
-    }
-}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

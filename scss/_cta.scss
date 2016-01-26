@@ -1,9 +1,6 @@
-
-
 .main-content__body .cta-1 {
     margin-top: 60px;
 }
-
 
 .container.cta-3 {
     padding: 0;
@@ -17,6 +14,23 @@
     @include breakpoint(iphone) {
         margin-bottom: 0;
     }
+}
+
+.container.cta-arrow {
+    // margin-bottom: 15px;
+    margin-bottom: 0;
+}
+
+.article.cta-arrow {
+    margin-bottom: 30px;
+    @include breakpoint(small-max) {
+        margin-bottom: 20px;
+    }
+}
+
+.container.cta-2-col-sidebar {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .cta-3 .row {
@@ -64,16 +78,41 @@
     }
 }
 
-.cta__header {
+.cta__content {
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
+.cta__headline {
     color: #FFF;
     font-size: 2.5em;
     line-height: 1.2em;
     letter-spacing: 0.5px;
     margin-top: 0;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
-.cta__header::after {
+.cta-arrow .cta__headline {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 300;
+
+}
+
+.cta-arrow .article__link:hover .cta__text {
+    text-decoration: underline;
+    color: #FFF;
+}
+
+// .cta-1-champ .cta__headline {
+//     font-weight: 400;
+// }
+
+
+
+.cta__headline::after {
     content: '';
     display: block;
     background-color: #FFF;
@@ -83,7 +122,11 @@
     @extend .skew;
 }
 
-.cta__header--sub {
+.cta-arrow .cta__headline::after {
+    content: none;
+}
+
+.cta__headline--sub {
     display: block;
     font-size: 0.7em;
     line-height: 1.2em;
@@ -106,6 +149,17 @@
     }
 }
 
+.cta-arrow .cta__text {
+    padding: 0 2em;
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
+    @include breakpoint(small-max) {
+        font-size: 1.1em;
+        padding-bottom: 1em;
+    }
+}
+
 .cta__background {
     position: absolute;
     bottom: 0;
@@ -113,24 +167,26 @@
     right: 0;
     top: 0;
     z-index: -1;
-    background-color: $orange;
-}
-.cta__background.green {
-    background-color: #5bb51f;
 }
 
 .cta__background img {
-    width: 100%;
-    height: auto;
     opacity: 0.2;
     bottom: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    @include breakpoint(medium-min) {
+        width: 115%;
+        height: auto;
+    }
     @include breakpoint(medium-max) {
         width: auto;
         height: 100%;
     }
-    @include breakpoint(small-max) {
+    @include breakpoint(ipad-portrait) {
         width: auto;
-        height: 110%;
+        height: 100%;
     }
     @include breakpoint(xsmall-max) {
         width: auto;
@@ -138,7 +194,271 @@
     }
 }
 
+.cta__background.no-color img {
+    opacity: 1.0;
+}
+
 .main-content__body .cta__background img {
+    width: 110%;
+    height: auto;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CTA Customizations
+
+.main-content__body .cta-future .cta__background img {
         width: auto;
         height: 110%;
+}
+
+.cta-support-team-usa .cta__content {
+    height: 147px;
+    padding-top: 10px;
+    @include breakpoint(medium-max) {
+        height: 111px;
+        padding-bottom: 60px;
+    }
+    @include breakpoint(small-max) {
+        height: auto;
+        padding: 15px 15px 30px;
+    }
+    .cta__hero {
+        margin-bottom: 8px;
+        img {
+            width: 100%;
+            max-width: 300px;
+            padding-top: 0;
+            margin-top: 0;
+            @include breakpoint(small-max) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+// .cta-2017-open {
+//     height: 323px;
+// }
+
+.main-content__body .article--cta-1.cta-2017-open {
+    height: 323px;
+    @include breakpoint(medium-max) {
+        height: 252px;
+    }
+    @include breakpoint(small-max) {
+        height: auto;
+    }
+    .cta__content {
+    text-align: left;
+        @include breakpoint(medium-max) {
+            margin: 15px auto;
+        }
+        @include breakpoint(small-max) {
+            margin: 30px auto;
+        }
+    }
+    .cta__hero {
+        width: 260px;
+        @include breakpoint(medium-max) {
+            width: 220px;
+        }
+        img {
+            width: 95%;
+            padding-left: 10%;
+        }
+    }
+    .cta__headline,
+    .cta__text,
+    .cta__button {
+        margin-left: 260px;
+        @include breakpoint(medium-max) {
+            margin-left: 220px;
+        }
+    }
+    .cta__headline {
+        padding-left: 0;
+    }
+    .cta__text {
+        padding-left: 0;
+        padding-bottom: 1em;
+        @include breakpoint(small-max) {
+            font-size: 1.1em;
+        }
+    }
+    .cta__button {
+    }
+}
+
+.cta-future .container.cta__content {
+    margin: 85px auto 100px;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// CTA with Text Bock and Arrow
+
+.cta-arrow .cta__content {
+    padding: 2.5em 1em 1em;
+    margin: 0;
+    height: 170px;
+    position: relative;
+    @include breakpoint(small-max) {
+        height: auto;
+    }
+}
+
+.cta-arrow .cta__content:before {
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    // border-bottom: 15px solid $blue-2;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    // @include breakpoint(medium-max) {
+
+    //     top:185px;
+    // }
+    // @include breakpoint(small-max) {
+    //     top:365px;
+    // }
+    // @include breakpoint(xsmall-max) {
+    //     top:185px;
+    // }
+}
+.cta-arrow .cta__content.blue5::before {
+    border-bottom: 15px solid $blue-5;
+}
+.cta-arrow .cta__content.blue4::before {
+    border-bottom: 15px solid $blue-4;
+}
+
+.cta-arrow .cta__top-content img {
+    width: 100%;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CTA with Background
+
+.article.article--cta-1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        margin-bottom: 15px;
+    }
+}
+
+.article--cta-1 .cta__hero {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.main-content__body .article--cta-1 .cta__hero {
+    float: left;
+}
+
+.main-content__body .article--cta-1  .cta-1 .cta__hero + .cta__headline,
+.main-content__body .article--cta-1  .cta-1 .cta__hero + .cta__text {
+    text-align: left;
+}
+
+
+.main-content__body .article--cta-1 .cta__hero img {
+}
+
+.main-content__body .article--cta-1 .cta__content {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.main-content__body .article--cta-1 .cta__headline {
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+
+.main-content__body .article--cta-1 .cta__headline::after {
+    content: none;
+}
+
+.main-content__body .article--cta-1 .cta__text {
+    margin: 0 auto 15px;
+    padding: 0 4em;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CTA Page Banner
+
+.container-fluid .cta-banner {
+    height: 470px;
+    @include breakpoint(small-max) {
+        height: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+        overflow: hidden;
+    }
+}
+
+.cta-banner .cta__hero {
+}
+
+.cta-banner .cta__content {
+    text-align: left;
+    margin: 0 auto;
+    padding: 30px 30% 30px 0;
+    @include breakpoint(large-max) {
+        padding-right: 45%;
+    }
+    @include breakpoint(medium-max) {
+        padding: 30px 25% 30px 15px;
+    }
+    @include breakpoint(small-max) {
+        padding: 30px;
+    }
+}
+
+// .cta-banner .cta__content > * {
+//         border: 1px solid yellow;
+// }
+
+.cta-banner .cta__headline {
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: none;
+    font-size: 3.5em;
+    line-height: 1.1em;
+    margin-top: 20px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    @include breakpoint(small-max) {
+        font-size: 2.75em;
+    }
+}
+
+.cta-banner .cta__headline::after {
+    content: none;
+}
+
+.cta-banner .cta__text {
+    margin: 0;
+    padding: 0 0 30px;
+    font-size: 1.3em;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.cta-banner .cta__background img {
+    width: 100%;
+    height: auto;
+    @include breakpoint(small-max) {
+        width: auto;
+        height: 100%;
+
+    }
 }
