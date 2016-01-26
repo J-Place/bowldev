@@ -21,7 +21,6 @@
     @extend .button;
 }
 
-.button--cta-2,
 .button--outline {
     @extend .button;
     // padding: 9px 31px;
@@ -30,10 +29,20 @@
     border: 2px solid #FFF;
 }
 
+.button--outline:hover {
+    background-color: #FFF;
+    color: $blue;
+    font-weight: 700;
+}
+
 .button--small {
     @extend .button;
     padding: 4px 12px;
     border-width: 1px;
     font-size: 0.9em;
     font-weight: 300;
+}
+
+.button--small:hover {
+    font-weight: 700;
 }

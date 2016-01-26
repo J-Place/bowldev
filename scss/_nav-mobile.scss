@@ -295,6 +295,19 @@ h4.dropdown__list--title {
 }
 
 .dropdown__list--column.col-xs-3 {
+    @include breakpoint(iphone-landscape) {
+        width: 100%;
+        padding: 0 0 0 15px;
+        margin: 0;
+        float: none;
+    }
+    // Phone and below
+    @include breakpoint(small-max) {
+        padding: 0 0 0 15px;
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
     // iPhone and below
     @include breakpoint(xsmall-max) {
         padding: 0 0 0 15px;

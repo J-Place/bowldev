@@ -57,6 +57,18 @@
     }
 }
 
+// .container.cta-2-col-sidebar {
+//     margin-top: 45px;
+// }
+
+.container-fluid + .container.cta-2-col-sidebar {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    .main-content__sidebar {
+        margin-top: 0;
+    }
+}
+
 .main-content__sidebar {
     // Phone and below
     @include breakpoint(small-max) {
@@ -70,6 +82,10 @@
 
 .main-content__sidebar .article {
     margin-bottom: 30px;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        margin-bottom: 20px;
+    }
 }
 
 .article__section {

@@ -16,6 +16,23 @@
     }
 }
 
+.container.cta-arrow {
+    // margin-bottom: 15px;
+    margin-bottom: 0;
+}
+
+.article.cta-arrow {
+    margin-bottom: 30px;
+    @include breakpoint(small-max) {
+        margin-bottom: 20px;
+    }
+}
+
+.container.cta-2-col-sidebar {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 .cta-3 .row {
     // margin: 0;
     // Tablet and below
@@ -132,6 +149,10 @@
     font-size: 0.9em;
     font-weight: 300;
     text-align: center;
+    @include breakpoint(small-max) {
+        font-size: 1.1em;
+        padding-bottom: 1em;
+    }
 }
 
 .cta__background {
@@ -151,7 +172,7 @@
     left: 50%;
     position: absolute;
     @include breakpoint(medium-min) {
-        width: 110%;
+        width: 115%;
         height: auto;
     }
     @include breakpoint(medium-max) {
@@ -187,8 +208,26 @@
 
 .cta-support-team-usa .cta__content {
     height: 147px;
+    padding-top: 10px;
     @include breakpoint(medium-max) {
         height: 111px;
+        padding-bottom: 60px;
+    }
+    @include breakpoint(small-max) {
+        height: auto;
+        padding: 15px 15px 30px;
+    }
+    .cta__hero {
+        margin-bottom: 8px;
+        img {
+            width: 100%;
+            max-width: 300px;
+            padding-top: 0;
+            margin-top: 0;
+            @include breakpoint(small-max) {
+                margin-bottom: 8px;
+            }
+        }
     }
 }
 
@@ -201,22 +240,47 @@
     @include breakpoint(medium-max) {
         height: 252px;
     }
+    @include breakpoint(small-max) {
+        height: auto;
+    }
     .cta__content {
     text-align: left;
+        @include breakpoint(medium-max) {
+            margin: 15px auto;
+        }
+        @include breakpoint(small-max) {
+            margin: 30px auto;
+        }
     }
     .cta__hero {
-        width: 280px;
+        width: 260px;
+        @include breakpoint(medium-max) {
+            width: 220px;
+        }
         img {
-            width: 100%;
+            width: 95%;
+            padding-left: 10%;
         }
     }
     .cta__headline,
-    .cta__text {
-        margin-left: 300px;
+    .cta__text,
+    .cta__button {
+        margin-left: 260px;
+        @include breakpoint(medium-max) {
+            margin-left: 220px;
+        }
+    }
+    .cta__headline {
         padding-left: 0;
     }
+    .cta__text {
+        padding-left: 0;
+        padding-bottom: 1em;
+        @include breakpoint(small-max) {
+            font-size: 1.1em;
+        }
+    }
     .cta__button {
-        margin-left: 300px;
     }
 }
 
@@ -233,6 +297,10 @@
     padding: 2.5em 1em 1em;
     margin: 0;
     height: 170px;
+    position: relative;
+    @include breakpoint(small-max) {
+        height: auto;
+    }
 }
 
 .cta-arrow .cta__content:before {
@@ -243,8 +311,18 @@
     border-right: 15px solid transparent;
     // border-bottom: 15px solid $blue-2;
     position: absolute;
-    top: 245px;
+    top: -15px;
     left: 50%;
+    // @include breakpoint(medium-max) {
+
+    //     top:185px;
+    // }
+    // @include breakpoint(small-max) {
+    //     top:365px;
+    // }
+    // @include breakpoint(xsmall-max) {
+    //     top:185px;
+    // }
 }
 .cta-arrow .cta__content.blue5::before {
     border-bottom: 15px solid $blue-5;
@@ -253,7 +331,7 @@
     border-bottom: 15px solid $blue-4;
 }
 
-.cta-arrow .cta__img img {
+.cta-arrow .cta__top-content img {
     width: 100%;
 }
 
