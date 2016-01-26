@@ -2284,12 +2284,9 @@ a.login-toggle:active, a.login-toggle:focus {
   margin-top: 5px;
   margin-bottom: 15px; }
 
-<<<<<<< HEAD
-.main-content__body .article--cta-1 .cta__hero {
-=======
 @media only screen and (min-width: 768px) {
->>>>>>> 27b7aca... New Logo
-  float: left; }
+  .main-content__body .article--cta-1 .cta__hero {
+    float: left; } }
 
 .main-content__body .article--cta-1 .cta-1 .cta__hero + .cta__headline,
 .main-content__body .article--cta-1 .cta-1 .cta__hero + .cta__text {

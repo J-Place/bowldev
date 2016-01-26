@@ -302,9 +302,8 @@
             font-size: 1.1em;
         }
     }
-    .cta__button {
-    }
 }
+
 
 .cta-future .container.cta__content {
     margin: 85px auto 100px;
@@ -331,7 +330,6 @@
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    // border-bottom: 15px solid $blue-2;
     position: absolute;
     top: -15px;
     left: 50%;
@@ -365,13 +363,11 @@
     margin-bottom: 15px;
 }
 
-<<<<<<< HEAD
 .main-content__body .article--cta-1 .cta__hero {
-=======
 // .main-content__body .article--cta-1 .cta__hero {
     @include breakpoint(small-min) {
->>>>>>> 27b7aca... New Logo
     float: left;
+    }
 }
 
 .main-content__body .article--cta-1  .cta-1 .cta__hero + .cta__headline,
@@ -471,6 +467,5 @@
     @include breakpoint(small-max) {
         width: auto;
         height: 100%;
-
     }
 }
