@@ -1,5 +1,3 @@
-$(window).bind("load", function() {
-
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Toggle login input box
     $(".login-toggle").click(function(e){
@@ -37,7 +35,3 @@ $(window).bind("load", function() {
             $(".nav-level-2").removeClass("open");
         }
     });
-});
-
-
-

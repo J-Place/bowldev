@@ -1,16 +1,10 @@
-$(window).bind("load", function() {
-
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Set height and width of mobile nav panels
 
     var panelWidth = $(window).width();
     var setPanel = function(){
-
         var bodyWidth = $("body").width();
         var bodyHeight = $(document).height();
-
-        // console.log(bodyHeight);
-
         if (panelWidth < 768) {
             $(".nav-dropdown").width(bodyWidth);
             $(".nav-level-2").width(bodyWidth - 30);
@@ -18,9 +12,7 @@ $(window).bind("load", function() {
         else if (panelWidth >= 768) {
         }
     };
-
     setPanel();
-
 
     // Listen for orientation changes
     window.addEventListener("orientationchange", function() {
@@ -53,31 +45,31 @@ $(window).bind("load", function() {
     function openLevel2() {
         $(level1).addClass("left");
         $(level2).addClass("open");
-        return level1Open = true;
-        return level2Open = true;
+        return level1Open = true,
+                level2Open = true;
     }
     function closeLevel2() {
         $(level1).removeClass("left");
         $(level2).removeClass("open");
     }
 
-// Click nav icon to open mobile nav
+    // Click nav icon to open mobile nav
     $(".nav-small-icon").click(function(e){
         e.preventDefault();
         if (level1Open === false) {
             openLevel1();
-            return level1Open = true;
-            return level2Open = false;
+            return level1Open = true,
+                    level2Open = false;
         }
         else if (level1Open === true) {
             closeLevel1();
             closeLevel2();
-            return level1Open = false;
-            return level2Open = false;
+            return level1Open = false,
+                    level2Open = false;
         }
     });
 
-// Click links within dropdown
+    // Click links within dropdown
     $(".nav__list--item a").click(function(e){
         var navID = $(this).attr("ID");
         $(this).addClass("active");
@@ -85,14 +77,14 @@ $(window).bind("load", function() {
         if (panelWidth < 768 && level1Open === true) {
             $(level1).addClass("left");
             $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true;
-            return level2Open = true;
+            return level1Open = true,
+                    level2Open = true;
         }
         else if (panelWidth >= 768) {
             $(".nav-dropdown").addClass("open");
             $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true;
-            return level2Open = false;
+            return level1Open = true,
+                    level2Open = false;
         }
 
         //////////////////////////////////////////////////////////////
@@ -117,5 +109,3 @@ $(window).bind("load", function() {
         $(level1).removeClass("left");
         return level2Open = false;
     });
-
-});
