@@ -138,7 +138,6 @@
 }
 
 // Right arrow on mobile nav links
-<<<<<<< HEAD
 // .nav__list--item a::before {
 //     // Phone and below
 //     @include breakpoint(small-max) {
@@ -170,7 +169,7 @@
 //         overflow: hidden;
 //     }
 // }
-=======
+
 .nav__list--item a.active::after {
     // Phone and below
     @include breakpoint(small-max) {
@@ -186,7 +185,6 @@
         overflow: hidden;
     }
 }
->>>>>>> open-championship
 
 .nav__list--item a:focus {
     text-decoration: none;
@@ -206,8 +204,6 @@
 .nav__list--item .active:hover {
     text-decoration: none;
     color: $red;
-<<<<<<< HEAD
-=======
     // Phone and below
     @include breakpoint(small-max) {
         color: $blue;
@@ -216,7 +212,6 @@
 .nav__list--item .active, .nav__list--item .active:hover {
     text-decoration: none;
     color: $red;
->>>>>>> open-championship
     @include breakpoint(ipad-landscape) {
         color: $red;
     }
@@ -260,7 +255,6 @@
     display: block;
     width: 50%;
     height: 4px;
-<<<<<<< HEAD
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -269,7 +263,6 @@
     border-top: 0;
     border-bottom:4px solid $blue;
     margin: 0 auto 0;
-=======
     margin: 16px auto 0;
     // Desktop and above
     @include breakpoint(medium-max) {
@@ -292,18 +285,14 @@
         content: url("../img/arrow-rt.png");
         background-color: transparent;
     }
->>>>>>> open-championship
 }
 
 .nav__list--item a.active::after {
     content: '';
     display: block;
-<<<<<<< HEAD
     width: 50%;
-=======
     background-color: $blue;
     width: auto;
->>>>>>> open-championship
     height: 4px;
     position: absolute;
     bottom: 0px;
@@ -340,9 +329,7 @@
     }
 }
 
-<<<<<<< HEAD
 // .nav-main.scroll .nav__list--item a:hover::after,
-=======
 .nav__list--item a::after {
     // Phone and below
     @include breakpoint(small-max) {
@@ -360,7 +347,6 @@
 }
 
 .nav-main.scroll .nav__list--item a:hover::after,
->>>>>>> open-championship
 .nav-main.scroll .nav__list--item a.active::after {
     // iPad portrait
     @include breakpoint(ipad-portrait) {

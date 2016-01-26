@@ -135,12 +135,7 @@ body {
 a:hover {
   text-decoration: none; }
 
-<<<<<<< HEAD
-.skew, .section__title--large::after, .stripe, .stripe--featured-video, .stripe--right, .stripe--bottom, .ribbon::after, .cta__header::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
-=======
-.skew, .section__title--large::after, .stripe, .stripe--featured-video, .stripe--right, .stripe--bottom, .nav__list--item a.skew.active::after,
-.nav__list--item a.skew:hover::after, .ribbon::after, .cta__headline::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
->>>>>>> open-championship
+.skew, .section__title--large::after, .stripe, .stripe--featured-video, .stripe--right, .stripe--bottom, .ribbon::after, .cta__headline::after, .sidebar-links__title::after, .marketing-promo__detail, .top-news__title::after, .featured-video__title::after {
   -webkit-transform: skew(-18.25deg);
   -moz-transform: skew(-18.25deg);
   -o-transform: skew(-18.25deg);
@@ -528,8 +523,6 @@ a:hover {
       font-size: 1.5em;
       line-height: 22px; } }
 
-<<<<<<< HEAD
-=======
 @media only screen and (max-width: 767px) {
   .nav__list--item a.active::after {
     padding: 10px 0;
@@ -543,7 +536,6 @@ a:hover {
     background-color: transparent;
     overflow: hidden; } }
 
->>>>>>> open-championship
 .nav__list--item a:focus {
   text-decoration: none;
   outline: 0; }
@@ -552,23 +544,19 @@ a:hover {
 .nav__list--item .active:hover {
   text-decoration: none;
   color: #b71234; }
-<<<<<<< HEAD
-=======
   @media only screen and (max-width: 767px) {
-    .nav__list--item a:hover {
+    .nav__list--item .active,
+    .nav__list--item .active:hover {
       color: #01348d; } }
 
 .nav__list--item .active, .nav__list--item .active:hover {
   text-decoration: none;
   color: #b71234; }
->>>>>>> open-championship
   @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
-    .nav__list--item .active,
-    .nav__list--item .active:hover {
+    .nav__list--item .active, .nav__list--item .active:hover {
       color: #b71234; } }
   @media only screen and (max-width: 767px) {
-    .nav__list--item .active,
-    .nav__list--item .active:hover {
+    .nav__list--item .active, .nav__list--item .active:hover {
       color: #01348d; } }
 
 .nav__list--item a.active::before {
@@ -576,7 +564,6 @@ a:hover {
   display: block;
   width: 50%;
   height: 4px;
-<<<<<<< HEAD
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -584,17 +571,16 @@ a:hover {
   border-left: 2px solid transparent;
   border-top: 0;
   border-bottom: 4px solid #01348d;
-  margin: 0 auto 0; }
-=======
+  margin: 0 auto 0;
   margin: 16px auto 0; }
   @media only screen and (max-width: 991px) {
-    .nav__list--item a:hover::after {
+    .nav__list--item a.active::before {
       margin-top: 3px; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .nav__list--item a:hover::after {
+    .nav__list--item a.active::before {
       margin-top: 2px; } }
   @media only screen and (max-width: 767px) {
-    .nav__list--item a:hover::after {
+    .nav__list--item a.active::before {
       position: absolute;
       top: 10px;
       right: -10px;
@@ -605,17 +591,13 @@ a:hover {
       padding: 10px 0;
       content: url("../img/arrow-rt.png");
       background-color: transparent; } }
->>>>>>> open-championship
 
 .nav__list--item a.active::after {
   content: '';
   display: block;
-<<<<<<< HEAD
   width: 50%;
-=======
   background-color: #01348d;
   width: auto;
->>>>>>> open-championship
   height: 4px;
   position: absolute;
   bottom: 0px;
@@ -658,26 +640,17 @@ a:hover {
     background-color: transparent; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-<<<<<<< HEAD
-=======
   .nav-main.scroll .nav__list--item a:hover::after,
->>>>>>> open-championship
   .nav-main.scroll .nav__list--item a.active::after {
     margin-top: 5px; } }
 
 @media only screen and (min-width: 768px) {
-<<<<<<< HEAD
-=======
   .nav-main.scroll .nav__list--item a:hover::after,
->>>>>>> open-championship
   .nav-main.scroll .nav__list--item a.active::after {
     margin-top: 3px; } }
 
 @media only screen and (max-width: 767px) {
-<<<<<<< HEAD
-=======
   .nav-main.scroll .nav__list--item a:hover::after,
->>>>>>> open-championship
   .nav-main.scroll .nav__list--item a.active::after {
     margin-top: 4px; } }
 
