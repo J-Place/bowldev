@@ -365,7 +365,12 @@
     margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .main-content__body .article--cta-1 .cta__hero {
+=======
+// .main-content__body .article--cta-1 .cta__hero {
+    @include breakpoint(small-min) {
+>>>>>>> 27b7aca... New Logo
     float: left;
 }
 

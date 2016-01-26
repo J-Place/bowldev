@@ -370,7 +370,7 @@ a:hover {
   width: 288px;
   height: 95px;
   background-image: url("../img/logo.png");
-  background-position: -2px 22px;
+  background-position: -2px 16px;
   background-size: 360px;
   background-repeat: no-repeat;
   display: block;
@@ -380,7 +380,7 @@ a:hover {
     .logo {
       margin-left: 0;
       width: 230px;
-      background-position: -2px 20px;
+      background-position: -2px 12px;
       background-size: 280px;
       height: 68px; } }
   @media only screen and (max-width: 767px) {
@@ -2284,7 +2284,11 @@ a.login-toggle:active, a.login-toggle:focus {
   margin-top: 5px;
   margin-bottom: 15px; }
 
+<<<<<<< HEAD
 .main-content__body .article--cta-1 .cta__hero {
+=======
+@media only screen and (min-width: 768px) {
+>>>>>>> 27b7aca... New Logo
   float: left; }
 
 .main-content__body .article--cta-1 .cta-1 .cta__hero + .cta__headline,
