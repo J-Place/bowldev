@@ -585,30 +585,24 @@ a:hover {
   margin: 0 auto; }
   @media only screen and (max-width: 767px) {
     .nav__list--item a.active::after {
-      border: 0 none;
+      content: "";
+      background-position: -205px -147px;
+      height: 35px;
+      width: 35px;
       position: absolute;
-      top: 10px;
-      right: -10px;
-      width: 30px;
-      height: 40px;
-      margin: 0;
-      margin-top: 0px;
-      padding: 10px 0;
-      content: url("../img/arrow-rt.png");
-      background-color: transparent; } }
+      top: 16px;
+      right: 0px;
+      border: 0 none; } }
 
 @media only screen and (max-width: 767px) {
   .nav__list--item a::after {
+    content: "";
+    background-position: -205px -117px;
+    height: 35px;
+    width: 35px;
     position: absolute;
-    top: 10px;
-    right: -10px;
-    width: 30px;
-    height: 40px;
-    margin: 0;
-    margin-top: 0px;
-    padding: 10px 0;
-    content: url("../img/arrow-rt.png");
-    background-color: transparent; } }
+    top: 16px;
+    right: 0px; } }
 
 @media only screen and (min-width: 768px) {
   .nav-main.scroll .nav__list--item a {
@@ -698,7 +692,7 @@ a:hover {
 .youtube:hover {
   background-position: -153px -36px; }
 
-.nav-icon, .facebook, .twitter, .youtube, .nav-icon--search, .search__submit--icon, .pagination__list--item a.previous, .pagination__list--item a.next, .sidebar-nav--icon {
+.nav-icon, .nav__list--item a.active::after, .nav__list--item a::after, .facebook, .twitter, .youtube, .nav-icon--search, .search__submit--icon, .pagination__list--item a.previous, .pagination__list--item a.next, .sidebar-nav--icon {
   background-image: url("../img/bowl-sprites.png");
   background-size: 330px;
   background-repeat: no-repeat;
@@ -905,8 +899,8 @@ a:hover {
     position: fixed;
     top: 54px;
     left: 15px;
-    margin-left: 0;
-    right: 15px; } }
+    margin: 0;
+    padding: 0; } }
 
 @media only screen and (min-width: 768px) {
   h4.dropdown__list--title {
@@ -1033,7 +1027,7 @@ a:hover {
     display: block;
     position: absolute;
     top: 20px;
-    left: 10px;
+    left: 0px;
     background-image: url("../img/arrow-lt.png");
     width: 24px;
     height: 25px;

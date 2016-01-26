@@ -130,6 +130,7 @@ $(window).bind("load", function() {
         if (panelWidth < 768) {
             $(".nav-dropdown").width(bodyWidth);
             $(".nav-level-2").width(bodyWidth - 30);
+            $(".dropdown__list--title").width(bodyWidth - 45);
         }
         else if (panelWidth >= 768) {
         }
