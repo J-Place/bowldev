@@ -596,8 +596,6 @@ a:hover {
   content: '';
   display: block;
   width: 50%;
-  background-color: #01348d;
-  width: auto;
   height: 4px;
   position: absolute;
   bottom: 0px;

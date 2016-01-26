@@ -17,9 +17,10 @@
                 setActiveMenu($(e.currentTarget).attr('id'));
             }
             var timeout = 500;
-            _level1MouseOverTimeout = setTimeout(function(){
+            // _level1MouseOverTimeout = setTimeout(function(){
+                clearTimeout(_level1MouseOutTimeout);
                 setActiveMenu($(e.currentTarget).attr('id'));
-            }, timeout);
+            // }, timeout);
         };
 
         var level1MouseOut = function(e) {
@@ -67,7 +68,7 @@
             });
         };
 
-        $navMainLevel1Links.hover(level1MouseOver, level1MouseOut);
+        $navMainLevel1Links.hoverIntent(level1MouseOver, level1MouseOut);
         $navLevel2Container.hover(level2MouseOver, level2MouseOut);
 
         //end desktop hover script

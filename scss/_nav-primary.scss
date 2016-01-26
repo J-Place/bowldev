@@ -291,8 +291,6 @@
     content: '';
     display: block;
     width: 50%;
-    background-color: $blue;
-    width: auto;
     height: 4px;
     position: absolute;
     bottom: 0px;
@@ -328,6 +326,7 @@
         background-color: transparent;
     }
 }
+
 
 // .nav-main.scroll .nav__list--item a:hover::after,
 .nav__list--item a::after {
