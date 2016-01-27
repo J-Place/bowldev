@@ -2476,6 +2476,11 @@ a.login-toggle:active, a.login-toggle:focus {
   margin-bottom: 30px; }
 
 @media only screen and (min-width: 992px) {
+  .main-content__body .article--detail .video__wrapper iframe {
+    width: 636.656px;
+    height: 358px; } }
+
+@media only screen and (min-width: 992px) {
   .main-content__body .article--tile {
     overflow: hidden; } }
 
@@ -2703,7 +2708,7 @@ a.login-toggle:active, a.login-toggle:focus {
   margin: 0 auto 30px;
   font-size: 2.2em;
   letter-spacing: 1px;
-  color: #63666a; }
+  color: #75777a; }
   @media only screen and (max-width: 767px) {
     .sidebar-links__title {
       font-size: 1.65em;
