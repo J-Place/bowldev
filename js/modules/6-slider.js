@@ -11,17 +11,14 @@
     // var slideColor = $(this).attr("data-slideColor");
     var slideColor = $(".slider--foreground .slide").attr("data-slideColor");
 
-    $(".slider--foreground")
-        .on({
-            'afterChange': function(event, slick, currentSlide){
-                // console.log("after" + currentSlide);
-                $(".slider__ribbon .ribbon").toggleClass("blue");
-                $(".slider--stripes .stripes").toggleClass("blue");
-                $(".slider__ribbon .ribbon").toggleClass("yellow");
-                $(".slider--stripes .stripes").toggleClass("yellow");
-            }
-        })
-        .slick({
+    $(".slider--foreground").on({ 'afterChange': function(event, slick, currentSlide){
+        // console.log("after" + currentSlide);
+        $(".slider__ribbon .ribbon").toggleClass("blue");
+        $(".slider--stripes .stripes").toggleClass("blue");
+        $(".slider__ribbon .ribbon").toggleClass("yellow");
+        $(".slider--stripes .stripes").toggleClass("yellow");
+    }
+    }).slick({
         infinite: true,
         autoplay: true,
         asNavFor: '.slider--background',
@@ -29,7 +26,6 @@
         fade: true,
         speed: 0,
         autoplaySpeed: 9000
-        });
     });
 
     $('.slider--background').slick({
@@ -39,4 +35,4 @@
     });
 
 // Close all modules
-// });
+});
