@@ -119,4 +119,8 @@
 .top-news__image {
     width: 100%;
     height: auto;
+    @include breakpoint(medium-max) {
+        width: auto;
+        height: 100%;
+    }
 }

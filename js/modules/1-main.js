@@ -3,9 +3,12 @@ $(window).bind("load", function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Marketing promo slide over
     $(".marketing-promo").hover(function(){
-        $(".marketing-promo__detail").toggleClass("open");
+        var bodyWidth = $("body").width();
+        if (bodyWidth >= 768) {
+            $(".marketing-promo__detail").toggleClass("open");
+        }
+        return;
     });
-
 
     // var windowWidth = $(window).width();
     // var setSkew = function(){
