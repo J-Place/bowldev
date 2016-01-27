@@ -1,5 +1,5 @@
 .article--video {
-    background-color: $gray-2;
+    // background-color: $gray-2;
     text-align: center;
     padding: 0 15px 60px;
     position: relative;
@@ -13,7 +13,7 @@
         padding: 30px 145px 60px;
     }
     @include breakpoint(small-max) {
-        padding: 30px 15px 60px;
+        padding: 0px 15px 60px;
     }
 }
 .main-content__body .article--video {

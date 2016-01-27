@@ -66,6 +66,7 @@
     margin-bottom: 60px;
     @include breakpoint(small-max) {
         margin-top: 0px;
+        margin-bottom: 5px;
     }
     .main-content__sidebar {
         margin-top: 0;
@@ -89,8 +90,8 @@
     // Tablet and below
     @include breakpoint(small-max) {
         margin-bottom: 20px;
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
     }
 }
 
