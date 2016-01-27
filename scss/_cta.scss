@@ -449,7 +449,7 @@
         padding: 30px 25% 30px 15px;
     }
     @include breakpoint(small-max) {
-        padding: 30px;
+        padding: 30px 15px;
     }
 }
 
