@@ -2342,7 +2342,7 @@ a.login-toggle:active, a.login-toggle:focus {
   padding: 30px 30% 30px 0; }
   @media only screen and (max-width: 1199px) {
     .cta-banner .cta__content {
-      padding-right: 45%; } }
+      padding-right: 35%; } }
   @media only screen and (max-width: 991px) {
     .cta-banner .cta__content {
       padding: 30px 25% 30px 15px; } }
