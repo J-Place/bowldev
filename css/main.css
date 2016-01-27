@@ -2273,13 +2273,16 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .cta-arrow .cta__content:before {
   content: "";
-  width: 0;
-  height: 0;
+  width: 30px;
+  height: 15;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   position: absolute;
   top: -15px;
-  left: 50%; }
+  left: 48%; }
+  @media only screen and (max-width: 767px) {
+    .cta-arrow .cta__content:before {
+      left: 46%; } }
 
 .cta-arrow .cta__content.blue5::before {
   border-bottom: 15px solid #01348d; }
