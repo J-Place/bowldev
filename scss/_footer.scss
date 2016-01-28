@@ -16,6 +16,7 @@
     // Phone and below
     @include breakpoint(xsmall-max) {
         padding-bottom: 1em;
+        overflow: hidden;
     }
 }
 
@@ -254,24 +255,34 @@
 }
 
 .footer--stripes--top {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    height: 100%;
+    width: 650px;
+    margin: 0 auto;
+    padding: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer--stripes--background {
     @extend .container.footer--stripes;
+    z-index: -999;
     overflow: hidden;
     position: absolute;
-    height: 100%;
-    right: -100px;
+    height: 1600px;
+    width: 300px;
+    right: 0;
     bottom: 0;
     margin-bottom: 0;
-    // border: 1px solid red;
-    z-index: 1;
-    width: 650px;
+    z-index: -999;
+}
+
+.footer--stripes--background .stripes {
+    left: 133px;
     @include breakpoint(medium-max) {
-        right: 0px;
-    }
-    @include breakpoint(small-max) {
-        right: -60px;
-    }
-    @include breakpoint(xsmall-max) {
-        right: -140px;
+        left: 83px;
     }
 }
 
@@ -291,23 +302,24 @@
 
 .footer--stripes .stripe,
 .footer--stripes--top .stripe {
-    // left: -930px;
     left: 315px;
     width: 500px;
     background-color: #000;
     opacity: 0.075;
     z-index: 99;
-    // Large desktop and below
-    @include breakpoint(large-max) {
-    }
-    // Desktop and below
+}
+
+.footer--stripes--background .stripe {
+    background-color: #000;
+    opacity: 0.1;
+    left: 0px;
+}
+.footer--stripes--background .stripe + .stripe {
+    background-color: #000;
+    opacity: 0.05;
+    left: 60px;
     @include breakpoint(medium-max) {
-        // left: 420px;
-    }
-    // Tablet and below
-    @include breakpoint(small-max) {
-        // left: 750px;
-        // left: 60px;
+    left: 50px;
     }
 }
 
@@ -317,10 +329,6 @@
     left: 375px;
     background-color: #000;
     opacity: 0.075;
-    // // Large desktop and below
-    // @include breakpoint(large-max) {
-    //     left: 375px;
-    // }
     // Desktop and below
     @include breakpoint(medium-max) {
         left: 365px;
@@ -328,9 +336,5 @@
     // Tablet and below
     @include breakpoint(small-max) {
         left: 365px;
-    }
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        // left: 370px;
     }
 }

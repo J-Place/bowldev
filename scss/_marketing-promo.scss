@@ -109,6 +109,13 @@
     }
     // Tablet and below
     @include breakpoint(small-max) {
+        display: none;
+    }
+    @include breakpoint(ipad-landscape) {
+        display: none;
+    }
+    @include breakpoint(ipad-portrait) {
+        display: none;
     }
 }
 

@@ -67,7 +67,7 @@
 
 .banner--stripes .stripe {
     background-color: #000;
-    opacity: 0.15;
+    opacity: 0.1;
     left: -928px;
     width: 1000px;
     z-index: 99;
@@ -91,7 +91,7 @@
 
 .banner--stripes .stripe + .stripe {
     left: -868px;
-    opacity: 0.1;
+    opacity: 0.2;
     @include breakpoint(large-max) {
         left: -868px
     }

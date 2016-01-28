@@ -25,7 +25,9 @@
 }
 
 .sidebar-links__title.open {
-    margin-bottom: 0;
+    @include breakpoint(small-max) {
+        margin-bottom: 0;
+    }
 }
 
 

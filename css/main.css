@@ -1305,7 +1305,8 @@ a.login-toggle:active, a.login-toggle:focus {
       padding: 1em 1em 1em; } }
   @media only screen and (max-width: 479px) {
     .container-fluid.footer {
-      padding-bottom: 1em; } }
+      padding-bottom: 1em;
+      overflow: hidden; } }
 
 .container.footer__links {
   position: relative;
@@ -1491,23 +1492,32 @@ a.login-toggle:active, a.login-toggle:focus {
       right: -205px; } }
 
 .footer--stripes--top {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  height: 100%;
+  width: 650px;
+  margin: 0 auto;
+  padding: 0;
+  right: 0;
+  bottom: 0; }
+
+.footer--stripes--background {
+  z-index: -999;
   overflow: hidden;
   position: absolute;
-  height: 100%;
-  right: -100px;
+  height: 1600px;
+  width: 300px;
+  right: 0;
   bottom: 0;
   margin-bottom: 0;
-  z-index: 1;
-  width: 650px; }
+  z-index: -999; }
+
+.footer--stripes--background .stripes {
+  left: 133px; }
   @media only screen and (max-width: 991px) {
-    .footer--stripes--top {
-      right: 0px; } }
-  @media only screen and (max-width: 767px) {
-    .footer--stripes--top {
-      right: -60px; } }
-  @media only screen and (max-width: 479px) {
-    .footer--stripes--top {
-      right: -140px; } }
+    .footer--stripes--background .stripes {
+      left: 83px; } }
 
 .footer--stripes .stripes {
   width: auto;
@@ -1528,6 +1538,19 @@ a.login-toggle:active, a.login-toggle:focus {
   background-color: #000;
   opacity: 0.075;
   z-index: 99; }
+
+.footer--stripes--background .stripe, .footer--stripes--background .stripe--featured-video {
+  background-color: #000;
+  opacity: 0.1;
+  left: 0px; }
+
+.footer--stripes--background .stripe + .stripe, .footer--stripes--background .stripe--featured-video + .stripe, .footer--stripes--background .stripe + .stripe--featured-video, .footer--stripes--background .stripe--featured-video + .stripe--featured-video {
+  background-color: #000;
+  opacity: 0.05;
+  left: 60px; }
+  @media only screen and (max-width: 991px) {
+    .footer--stripes--background .stripe + .stripe, .footer--stripes--background .stripe--featured-video + .stripe, .footer--stripes--background .stripe + .stripe--featured-video, .footer--stripes--background .stripe--featured-video + .stripe--featured-video {
+      left: 50px; } }
 
 .footer--stripes .stripe + .stripe, .footer--stripes .stripe--featured-video + .stripe, .footer--stripes .stripe + .stripe--featured-video, .footer--stripes .stripe--featured-video + .stripe--featured-video,
 .footer--stripes--top .stripe + .stripe,
@@ -1605,7 +1628,7 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .banner--stripes .stripe, .banner--stripes .stripe--featured-video {
   background-color: #000;
-  opacity: 0.15;
+  opacity: 0.1;
   left: -928px;
   width: 1000px;
   z-index: 99; }
@@ -1622,7 +1645,7 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .banner--stripes .stripe + .stripe, .banner--stripes .stripe--featured-video + .stripe, .banner--stripes .stripe + .stripe--featured-video, .banner--stripes .stripe--featured-video + .stripe--featured-video {
   left: -868px;
-  opacity: 0.1; }
+  opacity: 0.2; }
   @media only screen and (max-width: 1199px) {
     .banner--stripes .stripe + .stripe, .banner--stripes .stripe--featured-video + .stripe, .banner--stripes .stripe + .stripe--featured-video, .banner--stripes .stripe--featured-video + .stripe--featured-video {
       left: -868px; } }
@@ -2817,8 +2840,9 @@ a.login-toggle:active, a.login-toggle:focus {
     .sidebar-links__title {
       margin-bottom: 0px; } }
 
-.sidebar-links__title.open {
-  margin-bottom: 0; }
+@media only screen and (max-width: 767px) {
+  .sidebar-links__title.open {
+    margin-bottom: 0; } }
 
 .sidebar-links__title::before {
   content: "";
@@ -3113,6 +3137,15 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 991px) {
     .marketing-promo__detail.open {
       left: -65px; } }
+  @media only screen and (max-width: 767px) {
+    .marketing-promo__detail.open {
+      display: none; } }
+  @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape) {
+    .marketing-promo__detail.open {
+      display: none; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .marketing-promo__detail.open {
+      display: none; } }
 
 .marketing-promo__detail p {
   max-width: 275px;
