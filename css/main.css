@@ -22,19 +22,19 @@
 .gray-5 {
   background-color: #333333; }
 
-.blue1 {
+.blue-1 {
   background-color: #56bde8; }
 
-.blue2 {
+.blue-2 {
   background-color: #44b0e0; }
 
-.blue3 {
+.blue-3 {
   background-color: #00338d; }
 
-.blue4 {
+.blue-4 {
   background-color: #0945ff; }
 
-.blue5 {
+.blue-5 {
   background-color: #01348d; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2405,10 +2405,10 @@ a.login-toggle:active, a.login-toggle:focus {
     .cta-arrow .cta__content:before {
       left: 46%; } }
 
-.cta-arrow .cta__content.blue5::before {
+.cta-arrow .cta__content.blue-5::before {
   border-bottom: 15px solid #01348d; }
 
-.cta-arrow .cta__content.blue4::before {
+.cta-arrow .cta__content.blue-4::before {
   border-bottom: 15px solid #0945ff; }
 
 .cta-arrow .cta__top-content img {
