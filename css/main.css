@@ -270,6 +270,9 @@ a:hover {
   @media only screen and (max-width: 991px) {
     .page-stripes .stripes .stripe, .page-stripes .stripes .stripe--featured-video {
       left: -1174px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .page-stripes .stripes .stripe, .page-stripes .stripes .stripe--featured-video {
+      left: -1108px; } }
 
 .page-stripes .stripes .stripe + .stripe, .page-stripes .stripes .stripe--featured-video + .stripe, .page-stripes .stripes .stripe + .stripe--featured-video, .page-stripes .stripes .stripe--featured-video + .stripe--featured-video {
   left: -1011px;
@@ -280,6 +283,9 @@ a:hover {
   @media only screen and (max-width: 991px) {
     .page-stripes .stripes .stripe + .stripe, .page-stripes .stripes .stripe--featured-video + .stripe, .page-stripes .stripes .stripe + .stripe--featured-video, .page-stripes .stripes .stripe--featured-video + .stripe--featured-video {
       left: -1124px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .page-stripes .stripes .stripe + .stripe, .page-stripes .stripes .stripe--featured-video + .stripe, .page-stripes .stripes .stripe + .stripe--featured-video, .page-stripes .stripes .stripe--featured-video + .stripe--featured-video {
+      left: -1058px; } }
 
 .container.page-stripes--bottom {
   position: absolute;

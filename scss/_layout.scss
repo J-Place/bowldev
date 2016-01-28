@@ -56,6 +56,10 @@
     @include breakpoint(medium-max) {
         left: -1174px;
     }
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        left: -1108px;
+    }
 }
 
 .page-stripes .stripes .stripe + .stripe {
@@ -68,6 +72,10 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         left: -1124px;
+    }
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        left: -1058px;
     }
 }
 
