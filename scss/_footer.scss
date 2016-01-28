@@ -2,7 +2,8 @@
     background-color: $blue-md;
     padding-top: 2em;
     padding-bottom: 1em;
-    overflow-y: visible;
+    // overflow-y: visible;
+    overflow: visible;
     // Tablet and below
     @include breakpoint(small-max) {
 
@@ -10,7 +11,7 @@
     // Tablet and below
     @include breakpoint(small-max) {
         padding: 1em 1em 1em;
-        overflow-x: hidden;
+        // overflow-x: hidden;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
@@ -224,28 +225,59 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Footer stripes
 
-.container.footer--stripes {
+// .container.footer--stripes {
+//     overflow: hidden;
+//     z-index: 1;
+//     border: 1px solid red;
+// }
+
+.footer--stripes {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     overflow-y: visible;
     height: 1780px;
+    width: 650px;
     margin: 0 auto;
     padding: 0;
-    // left: 0;
-    right: 30px;
+    right: -300px;
     bottom: 0;
-    // top: 0;
-    // Slider small
-    @include breakpoint(slider-small) {
-        // overflow: hidden;
+    // border: 1px solid lime;
+    @include breakpoint(medium-max) {
+        right: -150px;
+    }
+    @include breakpoint(small-max) {
+        right: -205px;
+    }
+    @include breakpoint(xsmall-max) {
+        right: -205px;
+    }
+}
+
+.footer--stripes--top {
+    @extend .container.footer--stripes;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    right: -100px;
+    bottom: 0;
+    margin-bottom: 0;
+    // border: 1px solid red;
+    z-index: 1;
+    width: 650px;
+    @include breakpoint(medium-max) {
+        right: 0px;
+    }
+    @include breakpoint(small-max) {
+        right: -60px;
+    }
+    @include breakpoint(xsmall-max) {
+        right: -140px;
     }
 }
 
 .footer--stripes .stripes {
     width: auto;
     left: 0;
-    // right: 0;
-
     // Tablet and below
     @include breakpoint(small-max) {
         left:  0;
@@ -257,54 +289,48 @@
     }
 }
 
-.footer--stripes .stripe {
+.footer--stripes .stripe,
+.footer--stripes--top .stripe {
     // left: -930px;
-    left: 1024px;
+    left: 315px;
     width: 500px;
     background-color: #000;
-    opacity: 0.05;
+    opacity: 0.075;
     z-index: 99;
     // Large desktop and below
     @include breakpoint(large-max) {
     }
     // Desktop and below
     @include breakpoint(medium-max) {
-        left: 720px;
+        // left: 420px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
         // left: 750px;
-        left: 60px;
-    }
-    // Slider small
-    @include breakpoint(slider-small) {
-        // left: 690px;
-    }
-    // Phone and below
-    @include breakpoint(xsmall-max) {
-        // left: 400px;
+        // left: 60px;
     }
 }
 
-.footer--stripes .stripe + .stripe {
-    left: 954px;
+
+.footer--stripes .stripe + .stripe,
+.footer--stripes--top .stripe + .stripe {
+    left: 375px;
     background-color: #000;
-    opacity: 0.1;
+    opacity: 0.075;
+    // // Large desktop and below
+    // @include breakpoint(large-max) {
+    //     left: 375px;
+    // }
     // Desktop and below
     @include breakpoint(medium-max) {
-        left: 650px;
+        left: 365px;
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        // left: 680px;
-        left: -10px;
-    }
-    // Slider small
-    @include breakpoint(slider-small) {
-        left: 650px;
+        left: 365px;
     }
     // Phone and below
     @include breakpoint(xsmall-max) {
-        left: 320px;
+        // left: 370px;
     }
 }

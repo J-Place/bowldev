@@ -19,3 +19,92 @@
         display: none;
     }
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Slider stripes
+
+.container.banner--stripes {
+    position: absolute;
+    z-index: 99;
+    overflow: visible;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    // iPad portrait
+    @include breakpoint(ipad-portrait) {
+        // display: none;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        display: none;
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        overflow: hidden;
+    }
+}
+
+.banner--stripes .stripes {
+    width: auto;
+    left: 0;
+    right: 0;
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left:  0;
+        right: 0;
+    }
+    // Slider small below
+    @include breakpoint(slider-small) {
+        overflow: hidden;
+        left: 15px;
+        right: 15px;
+    }
+}
+
+.banner--stripes .stripe {
+    background-color: #000;
+    opacity: 0.15;
+    left: -928px;
+    width: 1000px;
+    z-index: 99;
+    // Large desktop and below
+    @include breakpoint(large-max) {
+        left: -928px;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 650px;
+        left: -615px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        left: -635px;
+    }
+}
+
+.banner--stripes .stripe + .stripe {
+    left: -868px;
+    opacity: 0.1;
+    @include breakpoint(large-max) {
+        left: -868px
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 695px;
+        left: -610px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        left: -650px;
+    }
+}
