@@ -250,7 +250,7 @@ a:hover {
 .container.page-stripes {
   position: absolute;
   overflow: visible;
-  height: 2000px;
+  height: 1600px;
   margin: 0 auto;
   padding: 0;
   left: 0;
@@ -262,20 +262,20 @@ a:hover {
   right: 0; }
 
 .page-stripes .stripes .stripe, .page-stripes .stripes .stripe--featured-video {
-  left: -1138px;
+  left: -1071px;
   width: 1000px;
-  background-color: #e3e4e3;
-  opacity: 0.35;
+  background-color: #000;
+  opacity: 0.05;
   z-index: 9; }
   @media only screen and (max-width: 991px) {
     .page-stripes .stripes .stripe, .page-stripes .stripes .stripe--featured-video {
       left: -1174px; } }
 
 .page-stripes .stripes .stripe + .stripe, .page-stripes .stripes .stripe--featured-video + .stripe, .page-stripes .stripes .stripe + .stripe--featured-video, .page-stripes .stripes .stripe--featured-video + .stripe--featured-video {
-  left: -1078px;
+  left: -1011px;
   width: 1000px;
-  background-color: gray;
-  opacity: 0.125;
+  background-color: #000;
+  opacity: 0.05;
   z-index: 9; }
   @media only screen and (max-width: 991px) {
     .page-stripes .stripes .stripe + .stripe, .page-stripes .stripes .stripe--featured-video + .stripe, .page-stripes .stripes .stripe + .stripe--featured-video, .page-stripes .stripes .stripe--featured-video + .stripe--featured-video {
@@ -1472,7 +1472,7 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .footer--stripes {
   position: absolute;
-  z-index: -1;
+  z-index: -999;
   overflow-y: visible;
   height: 1780px;
   width: 650px;
@@ -2314,7 +2314,8 @@ a.login-toggle:active, a.login-toggle:focus {
       .main-content__body .article--cta-1.cta-2017-open .cta__content {
         margin: 20px auto; } }
   .main-content__body .article--cta-1.cta-2017-open .cta__hero {
-    width: 260px; }
+    text-align: center;
+    width: 270px; }
     @media only screen and (max-width: 991px) {
       .main-content__body .article--cta-1.cta-2017-open .cta__hero {
         width: 220px; } }
@@ -2327,7 +2328,7 @@ a.login-toggle:active, a.login-toggle:focus {
   .main-content__body .article--cta-1.cta-2017-open .cta__headline,
   .main-content__body .article--cta-1.cta-2017-open .cta__text,
   .main-content__body .article--cta-1.cta-2017-open .cta__button {
-    margin-left: 260px; }
+    margin-left: 270px; }
     @media only screen and (max-width: 991px) {
       .main-content__body .article--cta-1.cta-2017-open .cta__headline,
       .main-content__body .article--cta-1.cta-2017-open .cta__text,
