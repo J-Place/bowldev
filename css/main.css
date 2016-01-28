@@ -3117,6 +3117,10 @@ a.login-toggle:active, a.login-toggle:focus {
     .marketing-promo__image {
       width: auto;
       height: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .marketing-promo__image {
+      width: 100%;
+      height: auto; } }
 
 .marketing-promo__detail {
   position: absolute;
@@ -3291,6 +3295,10 @@ a.login-toggle:active, a.login-toggle:focus {
     .top-news__image {
       width: auto;
       height: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .top-news__image {
+      width: 100%;
+      height: auto; } }
 
 .article--video {
   text-align: center;
