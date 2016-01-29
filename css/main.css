@@ -1404,10 +1404,14 @@ a.login-toggle:active, a.login-toggle:focus {
   font-weight: 700;
   color: #FFF;
   text-decoration: none; }
-  .footer-col__link:hover img {
-    display: block; }
-  .footer-col__link:hover img + img {
-    display: none; }
+  @media only screen and (min-width: 992px) {
+    .footer-col__link:hover img {
+      display: block; }
+    .footer-col__link:hover img + img {
+      display: none; } }
+  @media only screen and (max-width: 991px) {
+    .footer-col__link:hover {
+      font-weight: 400; } }
 
 .footer-col__link:active, .footer-col__link:visited {
   text-decoration: none; }

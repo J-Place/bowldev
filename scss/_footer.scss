@@ -124,20 +124,29 @@
 .footer-col__link {
     display: block;
     color: #FFF;
-    img { display: none; }
-    img + img { display: block; }
+        img {
+            display: none;
+        }
+        img + img {
+            display: block;
+        }
 }
 
 .footer-col__link:hover {
-    // color: $blue-lt;
     font-weight: 700;
     color: #FFF;
     text-decoration: none;
-    img {
-        display: block;
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        img {
+            display: block;
+        }
+        img + img {
+            display: none;
+        }
     }
-    img + img {
-        display: none;
+    @include breakpoint(medium-max) {
+        font-weight: 400;
     }
 }
 
