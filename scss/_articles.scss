@@ -408,6 +408,16 @@
 .contact__list--item {
     margin-bottom: 15px;
 }
+.contact__list--item a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+.contact__list--item a:active {
+    text-decoration: underline;
+}
+.contact__list--item a:focus {
+    text-decoration: underline;
+}
 
 .contact__title {
     @extend .opensans;
@@ -415,6 +425,10 @@
     font-weight: 600;
     color: $gray-4;
     margin-bottom: .1em;
+}
+
+.contact__list .contact__name {
+    margin-bottom: 0;
 }
 
 // Host cities

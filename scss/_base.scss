@@ -19,7 +19,14 @@ body {
 }
 
 a:hover {
+    color: #23527c;
     text-decoration: none;
+}
+a:active {
+    text-decoration: underline;
+}
+a:focus {
+    text-decoration: underline;
 }
 
 .skew {
