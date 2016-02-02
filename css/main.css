@@ -644,10 +644,6 @@ a:focus {
     .nav-main.scroll .nav__list--item a:hover::after,
     .nav-main.scroll .nav__list--item a.active::after {
       margin-top: 3px; } }
-  @media only screen and (max-width: 767px) {
-    .nav-main.scroll .nav__list--item a:hover::after,
-    .nav-main.scroll .nav__list--item a.active::after {
-      margin-top: 4px; } }
 
 .nav-secondary {
   position: absolute;
