@@ -1338,25 +1338,33 @@ a.login-toggle:active, a.login-toggle:focus {
       padding-left: 30px;
       padding-right: 30px; } }
 
-@media only screen and (max-width: 479px) {
-  .footer-col--info {
-    width: 100%;
-    margin-bottom: 45px; } }
+.footer-nav {
+  z-index: 999;
+  position: relative; }
+
+@media only screen and (min-width: 992px) {
+  .info-links {
+    margin-right: -45px; } }
 
 @media only screen and (max-width: 991px) {
-  .footer-col--links {
-    margin-bottom: 45px; } }
+  .logo-links {
+    margin-top: 45px; } }
 
 @media only screen and (max-width: 767px) {
-  .footer-col--cta {
-    padding-left: 60px; } }
+  .logo-links .col-xs-12 {
+    margin-top: 45px; } }
 
-@media only screen and (max-width: 479px) {
-  .footer-col--cta {
-    width: 100%;
-    margin-bottom: 30px;
-    margin-left: 0;
-    padding-left: 15px; } }
+@media only screen and (min-width: 992px) {
+  .cta-links {
+    margin-left: 10px;
+    margin-right: -50px; } }
+
+.download-app a {
+  cursor: pointer; }
+
+@media only screen and (min-width: 992px) {
+  .social-links-footer {
+    margin-top: 30px; } }
 
 .footer-links {
   display: inline-block;
@@ -1365,14 +1373,6 @@ a.login-toggle:active, a.login-toggle:focus {
     .footer-links {
       width: 100%;
       margin-bottom: 30px; } }
-
-@media only screen and (min-width: 992px) {
-  .footer-col--promo.col-xs-12 + .footer-col--promo.col-xs-12 {
-    margin-top: 30px; } }
-
-@media only screen and (max-width: 767px) {
-  .footer-col--promo.col-xs-12 + .footer-col--promo.col-xs-12 {
-    margin-top: 20px; } }
 
 .footer-links__title {
   color: #FFF;

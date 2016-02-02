@@ -1,3 +1,21 @@
+// .new-footer > div {
+//     border: 1px solid red;
+//     color: #FFF;
+// }
+// .new-footer > div > div {
+//     border: 1px solid orange;
+//     color: #FFF;
+// }
+// .new-footer > div > div > div {
+//     border: 1px solid yellow;
+//     color: #FFF;
+// }
+// .new-footer > div > div > div > div {
+//     border: 1px solid #FFF;
+//     color: #FFF;
+// }
+
+
 .container-fluid.footer {
     background-color: $blue-md;
     padding-top: 2em;
@@ -40,32 +58,77 @@
     }
 }
 
-.footer-col--info {
-    @extend .footer-col;
+.footer-nav {
+    z-index: 999;
+    position: relative;
+}
+
+// .footer-col--info {
+//     @extend .footer-col;
+//     // Phone and below
+//     @include breakpoint(xsmall-max) {
+//         width: 100%;
+//         margin-bottom: 45px;
+//     }
+// }
+
+// .footer-col--links {
+//     // Desktop and below
+//     @include breakpoint(medium-max) {
+//         margin-bottom: 45px;
+//     }
+// }
+
+// .footer-col--cta {
+//     @include breakpoint(small-max) {
+//         padding-left: 60px;
+//     }
+//     // Phone and below
+//     @include breakpoint(xsmall-max) {
+//         width: 100%;
+//         margin-bottom: 30px;
+//         margin-left: 0;
+//         padding-left: 15px;
+//     }
+// }
+
+.info-links {
     // Phone and below
-    @include breakpoint(xsmall-max) {
-        width: 100%;
-        margin-bottom: 45px;
+    @include breakpoint(medium-min) {
+        margin-right: -45px;
     }
 }
 
-.footer-col--links {
+.logo-links {
     // Desktop and below
     @include breakpoint(medium-max) {
-        margin-bottom: 45px;
+        margin-top: 45px;
     }
 }
 
-.footer-col--cta {
-    @include breakpoint(small-max) {
-        padding-left: 60px;
-    }
+.logo-links .col-xs-12 {
     // Phone and below
-    @include breakpoint(xsmall-max) {
-        width: 100%;
-        margin-bottom: 30px;
-        margin-left: 0;
-        padding-left: 15px;
+    @include breakpoint(small-max) {
+        margin-top: 45px;
+    }
+}
+
+.cta-links {
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        margin-left: 10px;
+        margin-right: -50px;
+    }
+}
+
+.download-app a {
+    cursor: pointer;
+}
+
+.social-links-footer {
+    // Desktop and above
+    @include breakpoint(medium-min) {
+        margin-top: 30px;
     }
 }
 
@@ -79,16 +142,16 @@
     }
 }
 
-.footer-col--promo.col-xs-12 + .footer-col--promo.col-xs-12 {
-    // Desktop and above
-    @include breakpoint(medium-min) {
-        margin-top: 30px;
-    }
-    // Phone and below
-    @include breakpoint(small-max) {
-        margin-top: 20px;
-    }
-}
+// .footer-col--promo.col-xs-12 + .footer-col--promo.col-xs-12 {
+//     // Desktop and above
+//     @include breakpoint(medium-min) {
+//         margin-top: 30px;
+//     }
+//     // Phone and below
+//     @include breakpoint(small-max) {
+//         margin-top: 20px;
+//     }
+// }
 
 .footer-links__title {
     color: #FFF;
