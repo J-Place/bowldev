@@ -130,6 +130,10 @@
     @include breakpoint(medium-min) {
         margin-top: 30px;
     }
+    // Phone and below
+    @include breakpoint(small-max) {
+        margin-top: 40px;
+    }
 }
 
 .footer-links {

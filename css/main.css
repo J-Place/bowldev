@@ -1366,6 +1366,10 @@ a.login-toggle:active, a.login-toggle:focus {
   .social-links-footer {
     margin-top: 30px; } }
 
+@media only screen and (max-width: 767px) {
+  .social-links-footer {
+    margin-top: 40px; } }
+
 .footer-links {
   display: inline-block;
   vertical-align: top; }
