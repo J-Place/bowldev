@@ -7,7 +7,7 @@
 $navMainLevel1 = $('.nav-main.nav-level-1');
 $navMainLevel1Links = $navMainLevel1.find('a');
 $navLevel2Container = $('.nav-dropdown');
-$navLevel2Links = $('.dropdown-wrapper.nav-level-2');
+$navLevel2Links = $('.dropdown-wrapper.nav-level-3');
 
 var _activeMenu = false;
 var _level2Active = false;

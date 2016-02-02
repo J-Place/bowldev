@@ -21,192 +21,178 @@ $(window).bind("load", function() {
     // };
     // setSkew();
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Desktop hover
-
 (function(){
 
-$navMainLevel1 = $('.nav-main.nav-level-1');
-$navMainLevel1Links = $navMainLevel1.find('a');
-$navLevel2Container = $('.nav-dropdown');
-$navLevel2Links = $('.dropdown-wrapper.nav-level-2');
+  var menu;
 
-var _activeMenu = false;
-var _level2Active = false;
-var _level1MouseOutTimeout = false;
+  var init = function() {
+    menu = new Menu([
+      $('.nav-level-1'),
+      $('.nav-level-2'),
+      $('.nav-level-3')
+    ], $('#mobile-menu-toggle'));
+  };
 
-var level1MouseOver = function(e) {
-    // if(e.relatedTarget.parentNode.className === "nav-dropdown") {
-    //     clearTimeout(_level1MouseOutTimeout);
-    //     setActiveMenu($(e.currentTarget).attr('id'));
-    // }
-    // var timeout = 500;
-    clearTimeout(_level1MouseOutTimeout);
-    setActiveMenu($(e.currentTarget).attr('id'));
-};
+  var areWeOnMobile = function() {
+    return $('#mobile-menu-toggle').is(":visible");
+  };
 
-var level1MouseOut = function(e) {
-    var timeout = 500;
-    // shorten timeout if mouse moves above nav
-    if(e.clientY < $navMainLevel1.position().top) {
-        timeout = 1;
-    }
-    _level1MouseOutTimeout = setTimeout(function(){
-        if(!_level2Active) {
-            setActiveMenu(false);
-            // return false;
+  var Menu = function($levelElements, $mobileToggle) {
+    var self = this;
+    this.$levelElements = $levelElements;
+    this.$mobileToggle = $mobileToggle;
+    this._currentPath = false;
+
+    //mobile toggle
+    $mobileToggle.click(function(){
+      if(self._currentPath !== false) {
+        self.setCurrentPath(false);
+      } else {
+        self.setCurrentPath('');
+      }
+    });
+
+    //level 1
+    $navLinks1 = $levelElements[0].find('[data-link]');
+    $navLinks1.click(function(event){
+      clearTimeout(self.rollOutTimeout);
+      self.setCurrentPath($(this).data('link'));
+    });
+    $navLinks1.hover(function(){
+      if(areWeOnMobile()) {
+        return;
+      }
+      clearTimeout(self.rollOutTimeout);
+      self.setCurrentPath($(this).data('link'));
+    }, function(){
+      if(areWeOnMobile()) {
+        return;
+      }
+      clearTimeout(self.rollOutTimeout);
+      self.rollOutTimeout = setTimeout(self.setCurrentPath.bind(self, ''), 500);
+    });
+
+    //level 2
+    $groupLevel2Els = $levelElements[1].find('[data-group]');
+    $groupLevel2Els.each(function(index, groupLevel2El){
+      $exitLink = $(groupLevel2El).find('.exit-level');
+      $exitLink.click(function(){
+        self.setCurrentPath('');
+      });
+      //links to level 3
+      $navLinks2 = $(groupLevel2El).find('[data-link]');
+      $navLinks2.click(function(){
+        clearTimeout(self.rollOutTimeout);
+        self.setCurrentPath($(groupLevel2El).data('group') + '/' + $(this).data('link'));
+      });
+    });
+
+    //level 3
+    $groupLevel3Els = $levelElements[2].find('[data-group]');
+    $groupLevel3Els.each(function(index, groupLevel3El){
+      $exitLink = $(groupLevel3El).find('.exit-level');
+      $exitLink.click(function(){
+        self.setCurrentPath($(groupLevel3El).data('group'));
+      });
+    });
+    $groupLevel3Els.hover(function(){
+      if(areWeOnMobile()) {
+        return;
+      }
+      clearTimeout(self.rollOutTimeout);
+      self.setCurrentPath($(this).data('group'));
+    }, function(){
+      if(areWeOnMobile()) {
+        return;
+      }
+      self.setCurrentPath('');
+    });
+  };
+
+  /**
+   * set the active menu location & highlight the correct links
+   * false - dont show the menu
+   * '' - show menu level 1
+   * youth - show youth menu
+   * youth/youth-tournaments - show youth tournamens
+   */
+  Menu.prototype.setCurrentPath = function(value) {
+    console.log(value);
+    if(value !== this._currentPath) {
+      this._currentPath = value;
+      var splitted = (value !== false) ? value.split('/') : false;
+      //console.log(splitted);
+      //reset classes
+      for (var i = this.$levelElements.length - 1; i >= 0; i--) {
+        this.$levelElements[i].removeClass('open');
+        this.$levelElements[i].removeClass('left');
+        this.$levelElements[i].find('[data-group]').removeClass('open');
+        //this one is not working with classes yet, but with inline css
+        //this.$levelElements[i].find('[data-subgroup]').removeClass('open');
+        this.$levelElements[i].find('[data-subgroup]').show();
+      }
+      if(!areWeOnMobile()) {
+        //desktop
+        if(splitted.length === 1) {
+          if(splitted[0] === '') {
+            //hide level 3
+            this.$levelElements[2].removeClass('open');
+            this.$levelElements[2].find('[data-group]').removeClass('open');
+          } else {
+            //show level 3
+            this.$levelElements[2].addClass('open');
+            this.$levelElements[2].find('[data-group]').each(function(index, element){
+              $(element).toggleClass('open', $(element).data('group') === splitted[0]);
+            });
+          }
         }
-    }, timeout);
-};
+        //highlight active menu item
+        this.$levelElements[0].find('[data-link]').each(function(index, element){
+          $(element).toggleClass('active', $(element).data('link') === splitted[0]);
+        });
+      } else {
+        this.$mobileToggle.toggleClass('open', (splitted !== false));
+        if(splitted !== false) {
+          //set correct menu visible
+          if(splitted[0] === '') {
+            //just show root menu
+            this.$levelElements[0].addClass('open');
+          } else {
+            if(splitted.length === 1) {
+              this.$levelElements[0].addClass('open');
+              this.$levelElements[0].addClass('left');
+              this.$levelElements[1].addClass('open');
+              //show the correct group in this level
+              this.$levelElements[1].find('[data-group]').each(function(index, element){
+                $(element).toggleClass('open', $(element).data('group') === splitted[0]);
+              });
+            } else if(splitted.length === 2) {
+              this.$levelElements[0].addClass('open');
+              this.$levelElements[0].addClass('left');
+              this.$levelElements[1].addClass('open');
+              this.$levelElements[1].addClass('left');
+              this.$levelElements[2].addClass('open');
 
-var level2MouseOver = function(e) {
-    _level2Active = true;
-};
-
-var level2MouseOut = function(e) {
-    if (("dropdown-" + e.relatedTarget.id) === e.target.id) {
-        console.log("This nav is already open.");
-        return;
+              this.$levelElements[2].find('[data-group]').each(function(index, element){
+                $(element).toggleClass('open', $(element).data('group') === splitted[0]);
+              });
+              //show the correct subgroup
+              $subgroupEls = this.$levelElements[2].find('[data-subgroup]');
+              $subgroupEls.each(function(index, subgroupEl){
+                //this one doesn't work with classes yet, but inline css - you should probably create a css class for that
+                //$(subgroupEl).toggleClass('open', $(subgroupEl).data('subgroup') === splitted[1]);
+                $(subgroupEl).toggle($(subgroupEl).data('subgroup') === splitted[1]);
+              });
+            }
+          }
+        }
+      }
     }
-    _level2Active = false;
-    setActiveMenu(false);
-};
+  };
 
-var setActiveMenu = function(name) {
-    if(name === _activeMenu) {
-        return;
-    }
-    _activeMenu = name;
-    //set the active link
-    $navMainLevel1Links.each(function(index, navLevel1Link){
-        $(navLevel1Link).toggleClass('active', ($(navLevel1Link).attr('id') === _activeMenu));
-    });
-    //toggle the dropdown
-    $navLevel2Container.toggleClass('open', (_activeMenu !== false));
-    $navLevel2Links.each(function(index, navLevel2Link){
-        $(navLevel2Link).toggleClass('open', $(navLevel2Link).hasClass(_activeMenu));
-    });
-};
-
-$navMainLevel1Links.hoverIntent(level1MouseOver, level1MouseOut);
-$navLevel2Container.hover(level2MouseOver, level2MouseOut);
-
-//end desktop hover script
+  init();
 
 })();
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Set height and width of mobile nav panels
-
-    var panelWidth = $(window).width();
-    var setPanel = function(){
-        var bodyWidth = $("body").width();
-        var bodyHeight = $(document).height();
-        if (panelWidth < 768) {
-            $(".nav-dropdown").width(bodyWidth);
-            $(".nav-level-2").width(bodyWidth - 30);
-            $(".dropdown__list--title").width(bodyWidth - 45);
-        }
-        else if (panelWidth >= 768) {
-        }
-    };
-    setPanel();
-
-    // Listen for orientation changes
-    window.addEventListener("orientationchange", function() {
-        location.reload();
-    }, false);
-
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Toggle mobile nav
-
-    var level1Open = false;
-    var level2Open = false;
-    var dropContainer = $(".nav-dropdown");
-    var level1 = $(".nav-level-1");
-    var level2 = $(".nav-level-2");
-
-    function openLevel1() {
-        $(".nav-small-icon").addClass("open");
-        $(".nav-main").addClass("open");
-        $(".nav-dropdown").addClass("open");
-        $(".container-fluid.header").addClass("open");
-    }
-    function closeLevel1() {
-        $(".nav-small-icon").removeClass("open");
-        $(".nav-main").removeClass("open");
-        $(".nav-dropdown").removeClass("open");
-        $(level1).removeClass("open");
-        $(".container-fluid.header").removeClass("open");
-    }
-    function openLevel2() {
-        $(level1).addClass("left");
-        $(level2).addClass("open");
-        return level1Open = true,
-                level2Open = true;
-    }
-    function closeLevel2() {
-        $(level1).removeClass("left");
-        $(level2).removeClass("open");
-    }
-
-    // Click nav icon to open mobile nav
-    $(".nav-small-icon").click(function(e){
-        e.preventDefault();
-        if (level1Open === false) {
-            openLevel1();
-            return level1Open = true,
-                    level2Open = false;
-        }
-        else if (level1Open === true) {
-            closeLevel1();
-            closeLevel2();
-            return level1Open = false,
-                    level2Open = false;
-        }
-    });
-
-    // Click links within dropdown
-    $(".nav__list--item a").click(function(e){
-        var navID = $(this).attr("ID");
-        $(this).addClass("active");
-        e.preventDefault();
-        if (panelWidth < 768 && level1Open === true) {
-            $(level1).addClass("left");
-            $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true,
-                    level2Open = true;
-        }
-        else if (panelWidth >= 768) {
-            $(".nav-dropdown").addClass("open");
-            $(".nav-level-2." + navID).addClass("open");
-            return level1Open = true,
-                    level2Open = false;
-        }
-
-        //////////////////////////////////////////////////////////////
-        // Keep this in case we need nav links with no children
-        //
-        // if ($(this).hasClass("has-children")) {
-        //     // $(dropContainer).addClass("open");
-        //     // $(level1).addClass("left");
-        //     // $(".nav-level-2." + navID).addClass("open");
-        //     // return false;
-        // }
-        // else {
-        //     return true;
-        // }
-        //////////////////////////////////////////////////////////////
-
-    });
-
-
-    $(".exit-level-2").click(function() {
-        $(level2).removeClass("open");
-        $(level1).removeClass("left");
-        return level2Open = false;
-    });
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Toggle login input box
     $(".login-toggle").click(function(e){
@@ -310,11 +296,11 @@ $(document).mouseup(function(e)
     var loginDropdown = $(".login-wrapper");
     var search = $(".search-container");
 
-    if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
-    {
-        $(".nav__list--item a").removeClass("active");
-        $(".dropdown-wrapper").removeClass("open");
-    }
+    // if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
+    // {
+    //     $(".nav__list--item a").removeClass("active");
+    //     $(".dropdown-wrapper").removeClass("open");
+    // }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
     {
         $(loginDropdown).removeClass("open");

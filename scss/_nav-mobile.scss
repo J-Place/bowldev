@@ -36,14 +36,11 @@
 
 .nav-dropdown {
     position: absolute;
-    // margin-top: -1px;
     box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.2), -5px 0px 5px -4px rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid $gray-1;
     border-left: 1px solid $gray-1;
     border-right: 1px solid $gray-1;
     display: none;
-    // margin-left: -15px;
-
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-left: -15px;
@@ -123,7 +120,9 @@
     }
     // Phone and below
     @include breakpoint(small-max) {
-        padding: 25px 15px;
+        padding: 0;
+        // padding: 25px 15px;
+        background-color: $gray-list-background;
     }
 }
 
@@ -133,6 +132,10 @@
     @include breakpoint(medium-min) {
         background-color: #FFF;
     }
+    // Phone and below
+    @include breakpoint(small-max) {
+        padding: 0 15px;
+    }
 }
 
 .nav-level-1 {
@@ -141,6 +144,8 @@
         transition: left 0.2s;
         left: 0;
         position: fixed;
+        margin: 0;
+        padding: 0 15px;
         background-color: $gray-list-background;
         top: 55px;
         width: 100%;
@@ -177,34 +182,83 @@
 }
 
 .nav-level-2 {
+    // display: none;
+    transition: left 0.2s;
+    left: 100%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: $gray-list-background;
     // Phone and below
     @include breakpoint(small-max) {
-        transition: left 0.2s;
-        background-color: $gray-list-background;
-        position: fixed;
-        display: block;
-        padding-top: 0;
-        left: 100%;
-        z-index: 2;
-        margin-bottom: -200px;
+        // position: fixed;
+        // height: 100%;
+        // width: 100%;
+        // background-color: red;
     }
 }
 
 .nav-level-2.open {
+    // display: block;
+    left: 0;
+    z-index: 9;
+}
+
+.nav-level-2.open.left {
+    left: -100%;
+}
+
+.nav-level-2-group {
+    display: none;
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav-level-2-group.open {
+    display: block;
+}
+
+.nav-level-2-group .nav__list {
+    height: auto;
+    position: relative;
+    display: none;
+}
+
+.nav-level-2-group.open .nav__list {
+    display: block;
+}
+
+.nav-level-3 {
+    // Phone and below
+    @include breakpoint(small-max) {
+        border: 0;
+        transition: left 0.2s;
+        background-color: $gray-list-background;
+        position: fixed;
+        display: block;
+        margin: 0;
+        padding: 0;
+        left: 100%;
+        z-index: 2;
+        // margin-bottom: -200px;
+    }
+}
+
+.nav-level-3.open {
     // Phone and below
     @include breakpoint(small-max) {
         display: block;
         padding-top: 0;
         height: 100%;
         left: 0px;
-        margin-left: 0;
-        padding-left: 0;
+        // margin-left: 0;
+        // padding-left: 0;
         position: fixed;
-        overflow-x: hidden;
+        // overflow-x: hidden;
     }
 }
 
-.nav-level-2.open.left {
+.nav-level-3.open.left {
     // Phone and below
     @include breakpoint(small-max) {
         left: -100%;
@@ -222,7 +276,7 @@
     @include breakpoint(small-max) {
         width: 100%;
         height: 100%;
-        margin-top: 70px;
+        // margin-top: 70px;
         position: absolute;
     }
 }
@@ -256,39 +310,58 @@ h3.dropdown__list--title {
 .open > h3.dropdown__list--title {
     // Phone and below
     @include breakpoint(small-max) {
-        position: fixed;
-        top: 54px;
-        left: 15px;
         margin: 0;
         padding: 0;
     }
 }
 
 h4.dropdown__list--title {
+    text-transform: uppercase;
     // Tablet and above - megamenu
     @include breakpoint(small-min) {
-        text-transform: uppercase;
         font-size: 1.1em;
         line-height: 1.23em;
         letter-spacing: 0.7px;
         margin-top: 0;
         margin-bottom: 15px;
     }
-    // Tablet and below - megamenu
+    // Phone and below
     @include breakpoint(small-max) {
-        display: none;
+        display: block;
+        text-align: center;
+        font-size: 1.6em;
+        letter-spacing: 1.25px;
+        height: 70px;
+        line-height: 70px;
+        margin: 0;
+        padding: 0 15px 0 0;
+        transition: margin-left 0.2s;
+        width: 100%;
+        left: 15px;
+        right: 15px;
+        background-color: $gray-list-background;
+        border-bottom: 1px solid $gray-list-border;
+        z-index: 999999;
     }
 }
 
 .dropdown__list--title a {
-    display: none;
+    color: $gray-4;
+    cursor: default;
+    // cursor: pointer;
     // Phone and below
     @include breakpoint(small-max) {
+        cursor: pointer;
         color: $gray-md;
         padding: 0;
         display: block;
         width: 100%;
     }
+}
+.dropdown__list--title a:hover,
+.dropdown__list--title a:focus,
+.dropdown__list--title a:active {
+    text-decoration: none;
 }
 
 .dropdown__list {
@@ -320,23 +393,24 @@ h4.dropdown__list--title {
 .dropdown__list--column.col-xs-3 {
     @include breakpoint(iphone-landscape) {
         width: 100%;
-        padding: 0 0 0 15px;
+        // padding: 0 0 0 15px;
+        padding: 0 15px 0 0;
         margin: 0;
         float: none;
     }
     // Phone and below
     @include breakpoint(small-max) {
-        padding: 0 0 0 15px;
+        padding: 0 15px 0 0;
         margin: 0;
         float: none;
         width: 100%;
     }
     // iPhone and below
     @include breakpoint(xsmall-max) {
-        padding: 0 0 0 15px;
-        margin: 0;
-        float: none;
-        width: 100%;
+        // padding: 0 0 0 15px;
+        // margin: 0;
+        // float: none;
+        // width: 100%;
     }
 }
 
@@ -361,7 +435,7 @@ h4.dropdown__list--title {
     }
 }
 
-.dropdown__list--item > a {
+.dropdown__list--item a {
     font-size: 1.0em;
     letter-spacing: 0.5px;
     font-weight: 400;
@@ -382,12 +456,17 @@ h4.dropdown__list--title {
     }
 }
 
-.dropdown__list--item > a:hover {
+.dropdown__list--item a:hover {
     color: $red;
     // Tablet and below
     @include breakpoint(small-max) {
-        color: $blue;
+        color: #FFF;
     }
+}
+
+.dropdown__list--item a:focus {
+    text-decoration: none;
+    outline: 0;
 }
 
 .dropdown-cta {
@@ -414,13 +493,14 @@ h4.dropdown__list--title {
 }
 
 .nav--prev {
+    display: none;
     // Phone and below
     @include breakpoint(small-max) {
-        padding: 10px 0;
+        padding: 0;
         display: block;
         position: absolute;
-        top: 20px;
-        left: 0px;
+        top: 23px;
+        left: 15px;
         background-image: url("../img/arrow-lt.png");
         width: 24px;
         height: 25px;

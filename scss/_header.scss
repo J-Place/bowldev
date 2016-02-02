@@ -95,14 +95,12 @@ body.scroll--header {
         margin: 0 auto;
         background-size: 245px;
         width: 200px;
-        // background-position: 4px 2px;
         background-position: 44px 6px;
     }
     // Small phone and below //
     @include breakpoint(iphone) {
         background-size: 200px;
         width: 165px;
-        // background-position: 5px 10px;
         background-position: 36px 10px;
     }
 }
@@ -122,12 +120,12 @@ body.scroll--header {
         margin: 0 auto;
         background-size: 245px;
         width: 200px;
-        background-position: 4px 2px;
+        background-position: 44px 6px;
     }
     // Small phone and below //
     @include breakpoint(iphone) {
         background-size: 200px;
         width: 165px;
-        background-position: 5px 10px;
+        background-position: 36px 10px;
     }
 }

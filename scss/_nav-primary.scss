@@ -49,12 +49,8 @@
     list-style: none;
     height: 0;
     padding-left: 0;
-    margin-left: -5px;
     height: 22px;
     transition: left 0.2s;
-    :last-child {
-        padding-right: 0;
-    }
     // Tablet and below
     @include breakpoint(small-max) {
         position: fixed;
@@ -66,10 +62,22 @@
     }
 }
 
+.nav__list:last-child {
+    padding-right: 0;
+    // Phone and below
+    // @include breakpoint(small-max) {
+    //     padding-right: 15px;
+    // }
+}
+
 .nav-main.open .nav__list {
-    transition: left 0.2s;
-    left: 0;
-    height: 100%;
+    // Phone and below
+    @include breakpoint(small-max) {
+        transition: left 0.2s;
+        left: 0;
+        padding: 0 15px;
+        height: 100%;
+    }
 }
 
 .nav-main.open.left .nav__list {
@@ -99,8 +107,8 @@
     // Tablet and below
     @include breakpoint(small-max) {
         display: block;
-        margin: 0 15px 0 23px;
-        padding: 0;
+        margin: 0;
+        padding: 0 5px 0 15px;
         border-bottom: 1px solid $gray-list-border;
     }
 }
@@ -140,6 +148,7 @@
         margin: 0;
         // Match font-size, margin and padding on these elements:
         // .nav-main, .dropdown__list--item > a, .sidebar__list--item > a
+        text-transform: uppercase;
         font-size: 1.5em;
         line-height: 22px;
     }
@@ -156,9 +165,11 @@
     color: $red;
     // Phone and below
     @include breakpoint(small-max) {
-        color: $blue;
+        // color: $blue;
+        color: inherit;
     }
 }
+
 .nav__list--item .active, .nav__list--item .active:hover {
     text-decoration: none;
     color: $red;
