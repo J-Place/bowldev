@@ -158,7 +158,7 @@
 }
 
 .nav-level-1.open {
-    transition: left 0.1s;
+    // transition: left 0.1s;
     // Phone and below
     @include breakpoint(small-max) {
         height: 100%;
@@ -166,12 +166,17 @@
     }
 }
 .nav-level-1.open.left {
-    transition: left 0.1s;
+    // transition: left 0.1s;
     // Phone and below
     @include breakpoint(small-max) {
-        // left: -100%;
-        left: 0;
+        left: -100%;
+        // left: 0;
     }
+}
+
+.nav-level-1.open .nav__list {
+    transition: left 0.1s;
+    left: 0;
 }
 
 .nav-level-1.open.left .nav__list {
@@ -254,14 +259,14 @@
 .nav-level-3.open {
     // Phone and below
     @include breakpoint(small-max) {
-        display: block;
+        // display: block;
         padding-top: 0;
         height: 100%;
         left: 0px;
         z-index: 999;
         // margin-left: 0;
         // padding-left: 0;
-        position: fixed;
+        // position: fixed;
         // overflow-x: hidden;
     }
 }

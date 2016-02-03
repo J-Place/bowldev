@@ -53,8 +53,8 @@
     transition: left 0.1s;
     // Tablet and below
     @include breakpoint(small-max) {
-        position: fixed;
-        overflow-x: hidden;
+        // position: fixed;
+        // overflow-x: hidden;
     }
     // Phone and below
     @include breakpoint(small-max) {
@@ -75,10 +75,12 @@
 }
 
 .nav-main.open .nav__list {
+    // transition: left 0.1s;
+    // left: 0;
     // Phone and below
     @include breakpoint(small-max) {
-        transition: left 0.1s;
-        left: 0;
+        // transition: left 0.1s;
+        // left: 0;
         // padding: 0 15px;
         padding: 0;
         height: 100%;
@@ -86,10 +88,12 @@
 }
 
 .nav-main.open.left .nav__list {
+    // position: absolute;
+    // left: -90%;
     // Phone and below
     @include breakpoint(small-max) {
-        position: absolute;
-        left: -50%;
+        // position: absolute;
+        // left: -50%;
     }
 }
 

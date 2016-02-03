@@ -477,10 +477,6 @@ a:focus {
   transition: left 0.1s; }
   @media only screen and (max-width: 767px) {
     .nav__list {
-      position: fixed;
-      overflow-x: hidden; } }
-  @media only screen and (max-width: 767px) {
-    .nav__list {
       width: 100%; } }
 
 .nav__list:last-child {
@@ -491,15 +487,8 @@ a:focus {
 
 @media only screen and (max-width: 767px) {
   .nav-main.open .nav__list {
-    transition: left 0.1s;
-    left: 0;
     padding: 0;
     height: 100%; } }
-
-@media only screen and (max-width: 767px) {
-  .nav-main.open.left .nav__list {
-    position: absolute;
-    left: -50%; } }
 
 .nav__list--item {
   display: inline-block;
@@ -840,18 +829,18 @@ a:focus {
     z-index: 3;
     display: block; } }
 
-.nav-level-1.open {
-  transition: left 0.1s; }
-  @media only screen and (max-width: 767px) {
-    .nav-level-1.open {
-      height: 100%;
-      left: 0; } }
+@media only screen and (max-width: 767px) {
+  .nav-level-1.open {
+    height: 100%;
+    left: 0; } }
 
-.nav-level-1.open.left {
-  transition: left 0.1s; }
-  @media only screen and (max-width: 767px) {
-    .nav-level-1.open.left {
-      left: 0; } }
+@media only screen and (max-width: 767px) {
+  .nav-level-1.open.left {
+    left: -100%; } }
+
+.nav-level-1.open .nav__list {
+  transition: left 0.1s;
+  left: 0; }
 
 .nav-level-1.open.left .nav__list {
   left: -100%;
@@ -910,12 +899,10 @@ a:focus {
 
 @media only screen and (max-width: 767px) {
   .nav-level-3.open {
-    display: block;
     padding-top: 0;
     height: 100%;
     left: 0px;
-    z-index: 999;
-    position: fixed; } }
+    z-index: 999; } }
 
 @media only screen and (max-width: 767px) {
   .nav-level-3.open.left {
