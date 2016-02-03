@@ -474,7 +474,7 @@ a:focus {
   height: 0;
   padding-left: 0;
   height: 22px;
-  transition: left 0.2s; }
+  transition: left 0.1s; }
   @media only screen and (max-width: 767px) {
     .nav__list {
       position: fixed;
@@ -486,17 +486,20 @@ a:focus {
 .nav__list:last-child {
   padding-right: 0; }
 
+.nav-main .nav__list {
+  padding: 0 15px; }
+
 @media only screen and (max-width: 767px) {
   .nav-main.open .nav__list {
-    transition: left 0.2s;
+    transition: left 0.1s;
     left: 0;
-    padding: 0 15px;
+    padding: 0;
     height: 100%; } }
 
 @media only screen and (max-width: 767px) {
   .nav-main.open.left .nav__list {
     position: absolute;
-    left: -100%; } }
+    left: -50%; } }
 
 .nav__list--item {
   display: inline-block;
@@ -516,6 +519,9 @@ a:focus {
       margin: 0;
       padding: 0 5px 0 15px;
       border-bottom: 1px solid #3d4144; } }
+
+.nav-level-1.open .nav__list {
+  padding: 0 15px; }
 
 .nav__list--item a {
   color: #01348d;
@@ -587,6 +593,9 @@ a:focus {
   @media only screen and (max-width: 767px) {
     .nav__list--item a.active::before {
       content: none; } }
+
+.nav__list--item a.no-children::after {
+  content: none; }
 
 .nav__list--item a.active::after {
   content: '';
@@ -818,11 +827,11 @@ a:focus {
 
 @media only screen and (max-width: 767px) {
   .nav-level-1 {
-    transition: left 0.2s;
+    transition: left 0.1s;
     left: 0;
     position: fixed;
     margin: 0;
-    padding: 0 15px;
+    padding: 0;
     background-color: #63666b;
     top: 55px;
     width: 100%;
@@ -832,17 +841,21 @@ a:focus {
     display: block; } }
 
 .nav-level-1.open {
-  transition: left 0.2s; }
+  transition: left 0.1s; }
   @media only screen and (max-width: 767px) {
     .nav-level-1.open {
       height: 100%;
       left: 0; } }
 
 .nav-level-1.open.left {
-  transition: left 0.2s; }
+  transition: left 0.1s; }
   @media only screen and (max-width: 767px) {
     .nav-level-1.open.left {
-      left: -100%; } }
+      left: 0; } }
+
+.nav-level-1.open.left .nav__list {
+  left: -100%;
+  z-index: 1; }
 
 .nav-level-1.open .nav__list:last-child::after {
   content: "";
@@ -853,7 +866,7 @@ a:focus {
   background-color: #63666b; }
 
 .nav-level-2 {
-  transition: left 0.2s;
+  transition: left 0.1s;
   left: 100%;
   position: fixed;
   height: 100%;
@@ -886,7 +899,7 @@ a:focus {
 @media only screen and (max-width: 767px) {
   .nav-level-3 {
     border: 0;
-    transition: left 0.2s;
+    transition: left 0.1s;
     background-color: #63666b;
     position: fixed;
     display: block;
@@ -901,6 +914,7 @@ a:focus {
     padding-top: 0;
     height: 100%;
     left: 0px;
+    z-index: 999;
     position: fixed; } }
 
 @media only screen and (max-width: 767px) {
@@ -3213,7 +3227,7 @@ a.login-toggle:active, a.login-toggle:focus {
   background-color: #01348d;
   top: 0;
   left: 340px;
-  transition: left 0.2s;
+  transition: left 0.1s;
   z-index: 9999;
   padding: 0; }
   @media only screen and (max-width: 991px) {

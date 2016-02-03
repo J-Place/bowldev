@@ -94,7 +94,7 @@
    * youth/youth-tournaments - show youth tournamens
    */
   Menu.prototype.setCurrentPath = function(value) {
-    console.log(value);
+    // console.log(value);
     if(value !== this._currentPath) {
       this._currentPath = value;
       var splitted = (value !== false) ? value.split('/') : false;
