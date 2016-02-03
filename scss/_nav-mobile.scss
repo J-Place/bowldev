@@ -45,6 +45,10 @@
     @include breakpoint(medium-max) {
         margin-left: -15px;
     }
+    // Tablet and above
+    @include breakpoint(small-min) {
+        background-color: #FFF;
+    }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
         margin-left: -15px;
@@ -77,19 +81,20 @@
 
 .nav-dropdown.open {
     display: block;
-    background-color: #FFF;
     width: 100%;
     margin-top: 0px;
     margin-left: 0;
     // Desktop and above
     @include breakpoint(medium-min) {
         margin-top: -1px;
+        // background-color: #FFF;
     }
     // Phone and below
     @include breakpoint(small-max) {
         margin-top: 0;
-        background-color: $gray-list-background;
-        left: -1px;
+        // background-color: $gray-list-background;
+        // left: -1px;
+        left: 0;
         right: 0;
         top: 55px;
         bottom: 0;
@@ -109,8 +114,7 @@
 .dropdown-wrapper {
     display: none;
     position: relative;
-    background-color: #FFF;
-    width: 100%;
+        width: 100%;
     height: 100%;
     padding: 25px 30px 15px;
     // Tablet and above
@@ -121,8 +125,7 @@
     // Phone and below
     @include breakpoint(small-max) {
         padding: 0;
-        // padding: 25px 15px;
-        background-color: $gray-list-background;
+        // background-color: $gray-list-background;
     }
 }
 
@@ -130,11 +133,11 @@
     display: block;
     // Desktop and above
     @include breakpoint(medium-min) {
-        background-color: #FFF;
+        // background-color: #FFF;
     }
     // Phone and below
     @include breakpoint(small-max) {
-        padding: 0 15px;
+        // padding: 0 15px;
     }
 }
 
@@ -148,6 +151,7 @@
         // padding: 0 15px;
         padding: 0;
         background-color: $gray-list-background;
+        // background-color: red;
         top: 55px;
         width: 100%;
         height: 0px;
@@ -158,7 +162,6 @@
 }
 
 .nav-level-1.open {
-    // transition: left 0.1s;
     // Phone and below
     @include breakpoint(small-max) {
         height: 100%;
@@ -166,11 +169,10 @@
     }
 }
 .nav-level-1.open.left {
-    // transition: left 0.1s;
     // Phone and below
     @include breakpoint(small-max) {
-        left: -100%;
-        // left: 0;
+        // left: -100%;
+        left: 0;
     }
 }
 
@@ -178,22 +180,13 @@
     transition: left 0.1s;
     left: 0;
     padding: 0 15px;
-    // width: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .nav-level-1.open.left .nav__list {
     left: -100%;
     z-index: 1;
-}
-
-// Specifically set last arrow for Login, since it has no children
-.nav-level-1.open .nav__list:last-child::after {
-    content: "";
-    display: block;
-    position: relative;
-    height: 120px;
-    width: 100%;
-    background-color: $gray-list-background;
 }
 
 .nav-level-2 {
@@ -202,14 +195,6 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: $gray-list-background;
-    // Phone and below
-    @include breakpoint(small-max) {
-        // position: fixed;
-        // height: 100%;
-        // width: 100%;
-        // background-color: red;
-    }
 }
 
 .nav-level-2.open {
@@ -251,7 +236,6 @@
     @include breakpoint(small-max) {
         border: 0;
         transition: left 0.1s;
-        background-color: $gray-list-background;
         position: fixed;
         display: block;
         margin: 0;
@@ -264,15 +248,10 @@
 .nav-level-3.open {
     // Phone and below
     @include breakpoint(small-max) {
-        // display: block;
         padding-top: 0;
         height: 100%;
         left: 0px;
         z-index: 999;
-        // margin-left: 0;
-        // padding-left: 0;
-        // position: fixed;
-        // overflow-x: hidden;
     }
 }
 
@@ -294,7 +273,6 @@
     @include breakpoint(small-max) {
         width: 100%;
         height: 100%;
-        // margin-top: 70px;
         position: absolute;
     }
 }
@@ -310,8 +288,8 @@ h3.dropdown__list--title {
         text-align: center;
         font-size: 1.6em;
         letter-spacing: 1.25px;
-        height: 70px;
-        line-height: 70px;
+        height: 69px;
+        line-height: 69px;
         margin: 0;
         padding: 0 15px 0 0;
         transition: margin-left 0.2s;
@@ -319,7 +297,7 @@ h3.dropdown__list--title {
         left: 15px;
         right: 15px;
         margin-left: 100%;
-        background-color: $gray-list-background;
+        // background-color: $gray-list-background;
         border-bottom: 1px solid $gray-list-border;
         z-index: 999999;
     }
@@ -352,12 +330,9 @@ h4.dropdown__list--title {
         height: 70px;
         line-height: 70px;
         margin: 0;
-        padding: 0 0 0 15px;
+        padding: 0;
         transition: margin-left 0.2s;
         width: 100%;
-        // left: 15px;
-        // right: 15px;
-        background-color: $gray-list-background;
         border-bottom: 1px solid $gray-list-border;
         z-index: 999999;
     }
@@ -366,7 +341,6 @@ h4.dropdown__list--title {
 .dropdown__list--title a {
     color: $gray-4;
     cursor: default;
-    // cursor: pointer;
     // Phone and below
     @include breakpoint(small-max) {
         cursor: pointer;
@@ -389,14 +363,9 @@ h4.dropdown__list--title {
         margin: 0 auto;
         padding: 0 0 20px 0;
     }
-        // Phone and below
+    // Phone and below
     @include breakpoint(small-max) {
-        margin: 0 15px 0 0;
-        padding: 0;
-    }
-    // iPhone and below
-    @include breakpoint(iphone) {
-        margin: 0 15px 0 0;
+        margin: 0;
         padding: 0;
     }
 }
@@ -411,24 +380,20 @@ h4.dropdown__list--title {
 .dropdown__list--column.col-xs-3 {
     @include breakpoint(iphone-landscape) {
         width: 100%;
-        // padding: 0 0 0 15px;
-        padding: 0 15px 0 0;
+        padding: 0 15px;
         margin: 0;
-        float: none;
+        // float: none;
     }
     // Phone and below
     @include breakpoint(small-max) {
-        padding: 0 15px 0 0;
+        padding: 0;
         margin: 0;
         float: none;
         width: 100%;
     }
     // iPhone and below
     @include breakpoint(xsmall-max) {
-        // padding: 0 0 0 15px;
-        // margin: 0;
-        // float: none;
-        // width: 100%;
+        padding: 0 15px;
     }
 }
 
@@ -448,7 +413,7 @@ h4.dropdown__list--title {
     }
     // iPhone and below
     @include breakpoint(iphone) {
-        margin: 0 0px 0 0;
+        margin: 0;
         padding: 0 0 0 15px;
     }
 }
@@ -525,8 +490,4 @@ h4.dropdown__list--title {
         background-color: transparent;
         overflow: hidden;
     }
-}
-
-.nav-level-3 .nav--prev {
-    left: 0;
 }
