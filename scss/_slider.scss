@@ -111,13 +111,14 @@
     font-size: 1.9em;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     // Desktop and below
     @include breakpoint(medium-max) {
         font-size: 1.52em;
-        margin-top: 15px;
-        margin-bottom: 7px;
+        margin-top: 5px;
+        margin-bottom: 0px;
     }
     // Slider small
     @include breakpoint(slider-small) {

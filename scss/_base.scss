@@ -1,8 +1,6 @@
 body {
     background-color: #FFF;
-    color: $gray-body;
     overflow-x: hidden;
-    font-weight: 400;
     margin-top: 95px;
     // Desktop and below
     @include breakpoint(medium-max) {

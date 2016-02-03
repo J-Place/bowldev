@@ -39,25 +39,84 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
-  color: #333333; }
+  color: #63666a; }
 
-h1, h2 {
+h1, h2, h3 {
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 700; }
+  font-weight: 400;
+  letter-spacing: 0.5px; }
+
+h1 {
+  font-size: 2.75em;
+  line-height: 1.2em;
+  margin: 0 0 45px;
+  padding: 0 0 5px; }
+
+h2 {
+  font-size: 2.3em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 30px 0 5px; }
 
 h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 400; }
+  font-size: 1.7em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 20px 0 5px; }
+  @media only screen and (max-width: 991px) {
+    h3 {
+      font-size: 1.8em; } }
+  @media only screen and (max-width: 767px) {
+    h3 {
+      font-size: 2.3em; } }
 
-h4, h5, h6 {
-  letter-spacing: 0.25px;
-  font-weight: 400; }
+h4 {
+  font-size: 1.4em;
+  line-height: 1.1em;
+  margin: 0;
+  padding: 10px 0 5px;
+  letter-spacing: 0.5px; }
+  @media only screen and (max-width: 991px) {
+    h4 {
+      font-size: 1.2em; } }
+  @media only screen and (max-width: 767px) {
+    h4 {
+      font-size: 1.0em; } }
+
+h5 {
+  font-size: 1.2em;
+  line-height: 1.1em;
+  margin: 0;
+  padding: 10px 0 5px;
+  letter-spacing: 0.5px; }
+  @media only screen and (max-width: 991px) {
+    h5 {
+      font-size: 1.1em; } }
+  @media only screen and (max-width: 767px) {
+    h5 {
+      font-size: 1.0em; } }
+
+h6 {
+  font-size: 1.02em;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #63666a;
+  margin-bottom: .1em; }
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #3b3c3e;
+  margin: 0 0 10px; }
 
 body {
+  font-size: 14px;
+  line-height: 20px;
+  color: #3b3c3e;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300; }
+  font-weight: 400; }
 
 .bold {
   font-weight: bold; }
@@ -65,8 +124,13 @@ body {
 .oswald, .button, .button--cta, .button--outline, .button--small, .nav__list--item a, .login__submit, .add-this a, .article__title--large, .page__title--large, .marketing-promo__summary p, .top-news__summary p {
   font-family: 'Oswald', sans-serif; }
 
-.opensans, .nav-main, .dropdown-cta p, .article__title, .page__title, .contact__title, .sidebar-links__list--item a {
+.opensans, h6, .nav-main, .dropdown-cta p, .article__title, .page__title, .contact__title, .sidebar-links__list--item a {
   font-family: 'Open Sans', sans-serif; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 .section__title, .section__title--large {
   font-size: 1.7em;
@@ -118,9 +182,7 @@ body {
 
 body {
   background-color: #FFF;
-  color: #3b3c3e;
   overflow-x: hidden;
-  font-weight: 400;
   margin-top: 95px; }
   @media only screen and (max-width: 991px) {
     body {
@@ -1042,6 +1104,7 @@ h4.dropdown__list--title {
 .dropdown-cta p {
   font-size: 0.95em;
   font-weight: 400;
+  line-height: 1.3em;
   color: #333333;
   margin: 1em auto;
   padding: 0;
@@ -1811,13 +1874,14 @@ a.login-toggle:active, a.login-toggle:focus {
   font-size: 1.9em;
   font-weight: 400;
   letter-spacing: 1px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   text-transform: uppercase; }
   @media only screen and (max-width: 991px) {
     .slide__title {
       font-size: 1.52em;
-      margin-top: 15px;
-      margin-bottom: 7px; } }
+      margin-top: 5px;
+      margin-bottom: 0px; } }
   @media only screen and (max-width: 620px) {
     .slide__title {
       font-size: 1.75em;
@@ -2881,7 +2945,7 @@ a.login-toggle:active, a.login-toggle:focus {
   margin: 0 auto 30px;
   font-size: 2.2em;
   letter-spacing: 1px;
-  color: #75777a; }
+  color: #63666a; }
   @media only screen and (max-width: 767px) {
     .sidebar-links__title {
       font-size: 1.65em;
