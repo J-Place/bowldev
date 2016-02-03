@@ -223,8 +223,7 @@ a:focus {
   letter-spacing: 0.8px; }
 
 .button:hover, .button--cta:hover, .button--outline:hover, .button--small:hover, button:active, button:focus, button:visited {
-  text-decoration: none;
-  background-color: transparent; }
+  text-decoration: none; }
 
 .button--outline {
   background-color: transparent;
