@@ -177,6 +177,8 @@
 .nav-level-1.open .nav__list {
     transition: left 0.1s;
     left: 0;
+    padding: 0 15px;
+    // width: 100%;
 }
 
 .nav-level-1.open.left .nav__list {
@@ -184,6 +186,7 @@
     z-index: 1;
 }
 
+// Specifically set last arrow for Login, since it has no children
 .nav-level-1.open .nav__list:last-child::after {
     content: "";
     display: block;
@@ -194,7 +197,6 @@
 }
 
 .nav-level-2 {
-    // display: none;
     transition: left 0.1s;
     left: 100%;
     position: fixed;
@@ -211,13 +213,17 @@
 }
 
 .nav-level-2.open {
-    // display: block;
     left: 0;
     z-index: 9;
 }
 
 .nav-level-2.open.left {
     left: -100%;
+}
+
+.nav-level-2 .nav__list {
+    margin: 0;
+    padding: 0;
 }
 
 .nav-level-2-group {
@@ -252,7 +258,6 @@
         padding: 0;
         left: 100%;
         z-index: 2;
-        // margin-bottom: -200px;
     }
 }
 
@@ -347,11 +352,11 @@ h4.dropdown__list--title {
         height: 70px;
         line-height: 70px;
         margin: 0;
-        padding: 0 15px 0 0;
+        padding: 0 0 0 15px;
         transition: margin-left 0.2s;
         width: 100%;
-        left: 15px;
-        right: 15px;
+        // left: 15px;
+        // right: 15px;
         background-color: $gray-list-background;
         border-bottom: 1px solid $gray-list-border;
         z-index: 999999;
@@ -520,4 +525,8 @@ h4.dropdown__list--title {
         background-color: transparent;
         overflow: hidden;
     }
+}
+
+.nav-level-3 .nav--prev {
+    left: 0;
 }

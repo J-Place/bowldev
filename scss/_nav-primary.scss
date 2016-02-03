@@ -47,54 +47,14 @@
 
 .nav__list {
     list-style: none;
-    height: 0;
-    padding-left: 0;
-    height: 22px;
-    transition: left 0.1s;
-    // Tablet and below
-    @include breakpoint(small-max) {
-        // position: fixed;
-        // overflow-x: hidden;
-    }
-    // Phone and below
-    @include breakpoint(small-max) {
-        width: 100%;
-    }
 }
 
 .nav__list:last-child {
-    padding-right: 0;
+    // padding-right: 0;
     // Phone and below
     // @include breakpoint(small-max) {
     //     padding-right: 15px;
     // }
-}
-
-.nav-main .nav__list {
-    padding: 0 15px;
-}
-
-.nav-main.open .nav__list {
-    // transition: left 0.1s;
-    // left: 0;
-    // Phone and below
-    @include breakpoint(small-max) {
-        // transition: left 0.1s;
-        // left: 0;
-        // padding: 0 15px;
-        padding: 0;
-        height: 100%;
-    }
-}
-
-.nav-main.open.left .nav__list {
-    // position: absolute;
-    // left: -90%;
-    // Phone and below
-    @include breakpoint(small-max) {
-        // position: absolute;
-        // left: -50%;
-    }
 }
 
 .nav__list--item {
@@ -110,7 +70,6 @@
     // Desktop and below
     @include breakpoint(medium-max) {
         margin-left: 11px;
-        // padding: 0 5px;
         padding: 0;
     }
     // Tablet and below
@@ -131,7 +90,6 @@
     @extend .oswald;
     font-size: 1.1em;
     font-weight: 400;
-    // border: 1px solid yellow;
     display: block;
     // Tablet and above
     @include breakpoint(small-min) {
