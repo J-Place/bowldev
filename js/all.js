@@ -53,6 +53,15 @@ $(".marketing-promo").hover(function(){
       if(areWeOnMobile()) {
         return;
       }
+      // Make sure Search and Login are closed
+      $(".search__toggle").removeClass("open");
+      $(".search__input--wrapper").removeClass("open");
+      $("input.search__input").blur();
+      $(".search-container").removeClass("open");
+      $(".search__button").removeClass("open");
+      $(".login-toggle").removeClass("open");
+      $(".login-wrapper").removeClass("open");
+
       clearTimeout(self.rollOutTimeout);
       self.setCurrentPath($(this).data('link'));
     }, function(){
@@ -211,13 +220,12 @@ $(".search__toggle").click(function(e) {
         $(".search-container").addClass("open");
         $(".search__button").addClass("open");
 
-        // Close other dropdowns
+        // Close other main nav
         $(".nav-small-icon").removeClass("open");
-        $(".nav-main").removeClass("open");
         $(".nav-dropdown").removeClass("open");
         $(".dropdown-wrapper").removeClass("open");
-        $(".nav-level-1").removeClass("left");
-        $(".nav-level-2").removeClass("open");
+        $(".nav-level-1").removeClass("left").removeClass("open");
+        $(".nav-level-2").removeClass("left").removeClass("open");
     }
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -227,7 +235,6 @@ $(".sidebar-links__title").click(function(){
     var bodyWidth = $("body").width();
     var bodyHeight = $(document).height();
     if (bodyWidth <= 768) {
-    // console.log("click");
         if ($(this).hasClass('open')) {
             $(this).removeClass("open");
             $(".sidebar-links__list").removeClass("open");

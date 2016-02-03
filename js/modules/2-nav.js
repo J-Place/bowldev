@@ -42,6 +42,15 @@
       if(areWeOnMobile()) {
         return;
       }
+      // Make sure Search and Login are closed
+      $(".search__toggle").removeClass("open");
+      $(".search__input--wrapper").removeClass("open");
+      $("input.search__input").blur();
+      $(".search-container").removeClass("open");
+      $(".search__button").removeClass("open");
+      $(".login-toggle").removeClass("open");
+      $(".login-wrapper").removeClass("open");
+
       clearTimeout(self.rollOutTimeout);
       self.setCurrentPath($(this).data('link'));
     }, function(){

@@ -25,12 +25,11 @@ $(".search__toggle").click(function(e) {
         $(".search-container").addClass("open");
         $(".search__button").addClass("open");
 
-        // Close other dropdowns
+        // Close other main nav
         $(".nav-small-icon").removeClass("open");
-        $(".nav-main").removeClass("open");
         $(".nav-dropdown").removeClass("open");
         $(".dropdown-wrapper").removeClass("open");
-        $(".nav-level-1").removeClass("left");
-        $(".nav-level-2").removeClass("open");
+        $(".nav-level-1").removeClass("left").removeClass("open");
+        $(".nav-level-2").removeClass("left").removeClass("open");
     }
 });
