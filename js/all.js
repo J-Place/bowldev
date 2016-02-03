@@ -1,26 +1,17 @@
 $(window).bind("load", function() {
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Marketing promo slide over
-    $(".marketing-promo").hover(function(){
-        var bodyWidth = $("body").width();
-        if (bodyWidth >= 768) {
-            $(".marketing-promo__detail").toggleClass("open");
-        }
-        return;
-    });
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Marketing promo slide over
+$(".marketing-promo").hover(function(){
+    var bodyWidth = $("body").width();
+    if (bodyWidth >= 768) {
+        $(".marketing-promo__detail").toggleClass("open");
+    }
+    return;
+});
 
-    // var windowWidth = $(window).width();
-    // var setSkew = function(){
-    //     if (windowWidth > 768) {
-    //         $(".nav__list--item a.active::after").addClass("skew");
-    //     }
-    //     else if (windowWidth <= 768) {
-    //         $(".nav__list--item a.active::after").removeClass("skew");
-    //     }
-    // };
-    // setSkew();
-
+/////////////////////////////////////////////////////////////////////////////
+// Desktop and Mobile Nav
 (function(){
 
   var menu;
@@ -193,47 +184,46 @@ $(window).bind("load", function() {
   init();
 
 })();
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Toggle login input box
-    $(".login-toggle").click(function(e){
-        e.preventDefault();
-        $(this).addClass("open");
-        $(".login-wrapper").addClass("open");
-        $(".login__input--email").focus();
-    });
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Toggle login input box
+$(".login-toggle").click(function(e){
+    e.preventDefault();
+    $(this).addClass("open");
+    $(".login-wrapper").addClass("open");
+    $(".login__input--email").focus();
+});
 
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Topggle search input box
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Topggle search input box
+$(".search__toggle").click(function(e) {
+    e.preventDefault();
+    if ($(this).hasClass('open')) {
+        $(this).removeClass("open");
+        $(".search__input--wrapper").removeClass("open");
+        $("input.search__input").blur();
+        $(".search-container").removeClass("open");
+        $(".search__button").removeClass("open");
+    }
+    else {
+        $(".search__input--wrapper").addClass("open");
+        $(".search__input").css("display", "block").focus();
+        $(".search-container").addClass("open");
+        $(".search__button").addClass("open");
 
-    $(".search__toggle").click(function(e) {
-        e.preventDefault();
-        if ($(this).hasClass('open')) {
-            $(this).removeClass("open");
-            $(".search__input--wrapper").removeClass("open");
-            $("input.search__input").blur();
-            $(".search-container").removeClass("open");
-            $(".search__button").removeClass("open");
-        }
-        else {
-            $(".search__input--wrapper").addClass("open");
-            $(".search__input").css("display", "block").focus();
-            $(".search-container").addClass("open");
-            $(".search__button").addClass("open");
-
-            // Close other dropdowns
-            $(".nav-small-icon").removeClass("open");
-            $(".nav-main").removeClass("open");
-            $(".nav-dropdown").removeClass("open");
-            $(".dropdown-wrapper").removeClass("open");
-            $(".nav-level-1").removeClass("left");
-            $(".nav-level-2").removeClass("open");
-        }
-    });
+        // Close other dropdowns
+        $(".nav-small-icon").removeClass("open");
+        $(".nav-main").removeClass("open");
+        $(".nav-dropdown").removeClass("open");
+        $(".dropdown-wrapper").removeClass("open");
+        $(".nav-level-1").removeClass("left");
+        $(".nav-level-2").removeClass("open");
+    }
+});
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sidebar nav
 
-$(".sidebar-links__title").click(function (){
+$(".sidebar-links__title").click(function(){
     var bodyWidth = $("body").width();
     var bodyHeight = $(document).height();
     if (bodyWidth <= 768) {
@@ -249,58 +239,75 @@ $(".sidebar-links__title").click(function (){
     }
 });
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // slick() is called on 'slider--foreground' and 'slider--background',
-    // which are synced via setting 'asNavFor'.
+//////////////////////////////////////////////////////////////////////////////////////////
+// Set character limit
 
-    // Change slider stripe color based on data-attribute of individual content element.
-    var slideBlue = $(".slider--foreground .slide").attr("data-slideColor") === "blue";
-    var slideYellow = $(".slider--foreground .slide").attr("data-slideColor") === "yellow";
-    var slideOrange = $(".slider--foreground .slide").attr("data-slideColor") === "orange";
-    var firstSlide = $(".slider .slide").first().attr("data-slideColor");
-    // var slideColor = $(this).attr("data-slideColor");
-    var slideColor = $(".slider--foreground .slide").attr("data-slideColor");
+(function(){
 
-    $(".slider--foreground").on({ 'afterChange': function(event, slick, currentSlide){
-        // console.log("after" + currentSlide);
-        $(".slider__ribbon .ribbon").toggleClass("blue");
-        $(".slider--stripes .stripes").toggleClass("blue");
-        $(".slider__ribbon .ribbon").toggleClass("yellow");
-        $(".slider--stripes .stripes").toggleClass("yellow");
+    var areWeOnMobile = function() {
+        return $('#mobile-menu-toggle').is(":visible");
+    };
+
+    var cta3Tiles = [$(".top-news__summary p"),$(".marketing-promo__summary p")];
+    var newsTiles = $(".article__summary");
+
+    if(areWeOnMobile()) {
+        $(cta3Tiles).each(function(){
+            $(this).text($(this).text().substr(0,80)).addClass("visible");
+        });
+        $(newsTiles).each(function(){
+            $(this).text($(this).text().substr(0,150));
+        });
     }
-    }).slick({
-        infinite: true,
-        autoplay: true,
-        asNavFor: '.slider--background',
-        arrows: true,
-        fade: true,
-        speed: 0,
-        autoplaySpeed: 9000
-    });
 
-    $('.slider--background').slick({
-        infinite: true,
-        asNavFor: '.slider--foreground',
-        arrows: false
-    });
+})();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// slick() is called on 'slider--foreground' and 'slider--background',
+// which are synced via setting 'asNavFor'.
+
+// Change slider stripe color based on data-attribute of individual content element.
+var slideBlue = $(".slider--foreground .slide").attr("data-slideColor") === "blue";
+var slideYellow = $(".slider--foreground .slide").attr("data-slideColor") === "yellow";
+var slideOrange = $(".slider--foreground .slide").attr("data-slideColor") === "orange";
+var firstSlide = $(".slider .slide").first().attr("data-slideColor");
+// var slideColor = $(this).attr("data-slideColor");
+var slideColor = $(".slider--foreground .slide").attr("data-slideColor");
+
+$(".slider--foreground").on({ 'afterChange': function(event, slick, currentSlide){
+    // console.log("after" + currentSlide);
+    $(".slider__ribbon .ribbon").toggleClass("blue");
+    $(".slider--stripes .stripes").toggleClass("blue");
+    $(".slider__ribbon .ribbon").toggleClass("yellow");
+    $(".slider--stripes .stripes").toggleClass("yellow");
+}
+}).slick({
+    infinite: true,
+    autoplay: true,
+    asNavFor: '.slider--background',
+    arrows: true,
+    fade: true,
+    speed: 0,
+    autoplaySpeed: 9000
+});
+
+$('.slider--background').slick({
+    infinite: true,
+    asNavFor: '.slider--foreground',
+    arrows: false
+});
 
 // Close all modules
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Close Login and Search on click outside
-$(document).mouseup(function(e)
-{
+$(document).mouseup(function(e) {
     var dropdown = $(".nav-dropdown");
     var loginToggle = $(".login-toggle");
     var searchToggle = $(".search__toggle");
     var loginDropdown = $(".login-wrapper");
     var search = $(".search-container");
 
-    // if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
-    // {
-    //     $(".nav__list--item a").removeClass("active");
-    //     $(".dropdown-wrapper").removeClass("open");
-    // }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
     {
         $(loginDropdown).removeClass("open");
@@ -318,18 +325,18 @@ $(document).mouseup(function(e)
         $(".login-toggle").removeClass("open");
     }
 });
-    $(window).scroll( function(){
-        var panelWidth = $(window).width();
-        if (panelWidth >= 480 && $(window).scrollTop() > 20) {
-            $(".logo").addClass("scroll");
-            $("body").addClass("scroll--header");
-            $(".header").addClass("scroll");
-            $(".nav-main").addClass("scroll");
-        }
-        if (panelWidth >= 480 && $(window).scrollTop() < 20) {
-            $(".logo").removeClass("scroll");
-            $(".header").removeClass("scroll");
-            $(".nav-main").removeClass("scroll");
-            $("body").removeClass("scroll--header");
-        }
-    });
+$(window).scroll(function(){
+    var panelWidth = $(window).width();
+    if (panelWidth >= 480 && $(window).scrollTop() > 20) {
+        $(".logo").addClass("scroll");
+        $("body").addClass("scroll--header");
+        $(".header").addClass("scroll");
+        $(".nav-main").addClass("scroll");
+    }
+    if (panelWidth >= 480 && $(window).scrollTop() < 20) {
+        $(".logo").removeClass("scroll");
+        $(".header").removeClass("scroll");
+        $(".nav-main").removeClass("scroll");
+        $("body").removeClass("scroll--header");
+    }
+});

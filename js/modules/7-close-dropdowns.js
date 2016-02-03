@@ -1,18 +1,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Close Login and Search on click outside
-$(document).mouseup(function(e)
-{
+$(document).mouseup(function(e) {
     var dropdown = $(".nav-dropdown");
     var loginToggle = $(".login-toggle");
     var searchToggle = $(".search__toggle");
     var loginDropdown = $(".login-wrapper");
     var search = $(".search-container");
 
-    // if(e.target.id != dropdown.attr('id') && !dropdown.has(e.target).length)
-    // {
-    //     $(".nav__list--item a").removeClass("active");
-    //     $(".dropdown-wrapper").removeClass("open");
-    // }
     if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
     {
         $(loginDropdown).removeClass("open");

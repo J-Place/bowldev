@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sidebar nav
 
-$(".sidebar-links__title").click(function (){
+$(".sidebar-links__title").click(function(){
     var bodyWidth = $("body").width();
     var bodyHeight = $(document).height();
     if (bodyWidth <= 768) {

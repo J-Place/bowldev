@@ -34,6 +34,8 @@
 }
 
 .marketing-promo__summary p {
+    // transition: opacity 0.1s;
+    // opacity: 0;
     @extend .oswald;
     font-weight: 400;
     color: #FFF;
@@ -69,6 +71,10 @@
         margin: 20px 25px;
     }
 }
+
+// .marketing-promo__summary p.visible {
+    // opacity: 1.0;
+// }
 
 .marketing-promo__image {
     width: 100%;

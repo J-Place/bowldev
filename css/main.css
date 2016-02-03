@@ -3468,7 +3468,7 @@ a.login-toggle:active, a.login-toggle:focus {
       padding: 0 15px; } }
 
 .news-2 .article {
-  height: 333px;
+  height: auto;
   margin-bottom: 30px; }
   @media only screen and (max-width: 991px) {
     .news-2 .article {

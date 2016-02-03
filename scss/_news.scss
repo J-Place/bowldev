@@ -14,7 +14,8 @@
 }
 
 .news-2 .article {
-    height: 333px;
+    // height: 333px;
+    height: auto;
     margin-bottom: 30px;
     // Tablet and below
     @include breakpoint(medium-max) {
