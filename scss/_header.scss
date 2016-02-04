@@ -67,6 +67,7 @@ body.scroll--header {
     @include breakpoint(xsmall-max) {
         padding-right: 0;
         padding-left: 0;
+        width: 100%;
     }
 }
 

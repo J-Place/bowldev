@@ -251,10 +251,10 @@ $(".sidebar-links__title").click(function(){
 
 (function(){
 
-    var areWeOnMobile = function() {
-        return $('#mobile-menu-toggle').is(":visible");
-    };
-    if(areWeOnMobile()) {
+    // var areWeOnMobile = function() {
+    //     return $('#mobile-menu-toggle').is(":visible");
+    // };
+    // if(areWeOnMobile()) {
         var cta3Tiles = [$(".top-news__summary p"),$(".marketing-promo__summary p")];
         var newsTiles = $(".article__summary");
         // var newsTileFull = $(newsTiles).text();
@@ -269,7 +269,7 @@ $(".sidebar-links__title").click(function(){
             $(this).text($(this).text().substr(0,140));
             // $(this).text(newsTileTrimmed);
         });
-    }
+    // }
 
 })();
 
@@ -310,6 +310,38 @@ $('.slider--background').slick({
 
 // Close all modules
 });
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Set height and width of mobile nav panels
+
+var panelWidth = $(window).width();
+var setPanel = function(){
+    var bodyWidth = $("body").width();
+    // var bodyHeight = $(document).height();
+    if (panelWidth < 768) {
+        $(".nav-level-1").width(bodyWidth);
+        $(".nav-level-2").width(bodyWidth);
+        $(".nav-level-3").width(bodyWidth);
+        // $(".nav-dropdown").width(bodyWidth);
+        // $(".nav-level-2").width(bodyWidth - 30);
+        // $(".dropdown__list--title").width(bodyWidth - 45);
+    }
+    else if (panelWidth >= 768) {
+    }
+};
+setPanel();
+
+// Listen for orientation changes
+// window.addEventListener("orientationchange", function() {
+//     location.reload();
+//     // .setPanel();
+// }, false);
+
+// window.addEventListener('orientationchange', function () {
+    // var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
+    // document.body.style.display='none';
+    // setTimeout(function () {
+    //   document.body.style.display = originalBodyStyle;
+// });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Close Login and Search on click outside
 $(document).mouseup(function(e) {

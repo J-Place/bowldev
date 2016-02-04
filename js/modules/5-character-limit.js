@@ -4,10 +4,10 @@
 
 (function(){
 
-    var areWeOnMobile = function() {
-        return $('#mobile-menu-toggle').is(":visible");
-    };
-    if(areWeOnMobile()) {
+    // var areWeOnMobile = function() {
+    //     return $('#mobile-menu-toggle').is(":visible");
+    // };
+    // if(areWeOnMobile()) {
         var cta3Tiles = [$(".top-news__summary p"),$(".marketing-promo__summary p")];
         var newsTiles = $(".article__summary");
         // var newsTileFull = $(newsTiles).text();
@@ -22,6 +22,6 @@
             $(this).text($(this).text().substr(0,140));
             // $(this).text(newsTileTrimmed);
         });
-    }
+    // }
 
 })();

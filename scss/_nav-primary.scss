@@ -1,7 +1,7 @@
 .nav-main {
     letter-spacing: 0.8px;
     position: absolute;
-    right: 15px;
+    right: -15px;
     top: 52px;
     margin:  0;
     padding: 0;
@@ -13,7 +13,7 @@
     }
     // Tablet and below
     @include breakpoint(small-max) {
-        right: 15px;
+        // right: 15px;
         @extend .opensans;
     }
 }
@@ -49,14 +49,6 @@
     list-style: none;
 }
 
-.nav__list:last-child {
-    // padding-right: 0;
-    // Phone and below
-    // @include breakpoint(small-max) {
-    //     padding-right: 15px;
-    // }
-}
-
 .nav__list--item {
     display: inline-block;
     margin-left: 27px;
@@ -78,6 +70,14 @@
         margin: 0;
         padding: 0 5px 0 15px;
         border-bottom: 1px solid $gray-list-border;
+    }
+}
+
+.nav-level-1 .nav__list--item:last-child {
+    display: none;
+    // Phone and below
+    @include breakpoint(xsmall-max) {
+        display: block;
     }
 }
 

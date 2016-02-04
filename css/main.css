@@ -48,21 +48,15 @@ h1, h2, h3 {
 
 h1 {
   font-size: 2.75em;
-  line-height: 1.2em;
-  margin: 0 0 45px;
-  padding: 0 0 5px; }
+  line-height: 1.2em; }
 
 h2 {
   font-size: 2.3em;
-  line-height: 1.2em;
-  margin: 0;
-  padding: 30px 0 5px; }
+  line-height: 1.2em; }
 
 h3 {
   font-size: 1.7em;
-  line-height: 1.2em;
-  margin: 0;
-  padding: 20px 0 5px; }
+  line-height: 1.2em; }
   @media only screen and (max-width: 991px) {
     h3 {
       font-size: 1.8em; } }
@@ -437,7 +431,8 @@ a:focus {
   @media only screen and (max-width: 479px) {
     .container-fluid.header .container {
       padding-right: 0;
-      padding-left: 0; } }
+      padding-left: 0;
+      width: 100%; } }
 
 .logo {
   cursor: pointer;
@@ -494,7 +489,7 @@ a:focus {
 .nav-main {
   letter-spacing: 0.8px;
   position: absolute;
-  right: 15px;
+  right: -15px;
   top: 52px;
   margin: 0;
   padding: 0;
@@ -503,9 +498,6 @@ a:focus {
   @media only screen and (max-width: 991px) {
     .nav-main {
       top: 40px; } }
-  @media only screen and (max-width: 767px) {
-    .nav-main {
-      right: 15px; } }
 
 @media only screen and (min-width: 768px) {
   .nav-main.scroll {
@@ -551,6 +543,12 @@ a:focus {
       margin: 0;
       padding: 0 5px 0 15px;
       border-bottom: 1px solid #3d4144; } }
+
+.nav-level-1 .nav__list--item:last-child {
+  display: none; }
+  @media only screen and (max-width: 479px) {
+    .nav-level-1 .nav__list--item:last-child {
+      display: block; } }
 
 .nav-level-1.open .nav__list {
   padding: 0 15px; }
@@ -688,11 +686,8 @@ a:focus {
 
 .nav-secondary {
   position: absolute;
-  right: 7px;
+  right: -5px;
   top: 12px; }
-  @media only screen and (max-width: 991px) {
-    .nav-secondary {
-      right: 3px; } }
   @media only screen and (max-width: 767px) {
     .nav-secondary {
       right: 9px; } }
@@ -852,7 +847,7 @@ a:focus {
 
 @media only screen and (max-width: 767px) {
   .nav-level-1 {
-    transition: left 0.1s;
+    transition: left 0.1s, height 0.2s;
     left: 0;
     position: fixed;
     margin: 0;
@@ -860,26 +855,50 @@ a:focus {
     background-color: #63666b;
     top: 55px;
     width: 100%;
-    height: 0px;
+    height: 0;
     overflow: hidden;
     z-index: 3;
     display: block; } }
 
+.nav-level-1 a:focus,
+.nav-level-2 a:focus,
+.nav-level-3 a:focus {
+  color: #01348d; }
+
 @media only screen and (max-width: 767px) {
   .nav-level-1.open {
-    height: 100%;
-    left: 0; } }
+    min-height: 2000px;
+    left: 0;
+    padding-bottom: 100px; } }
 
 @media only screen and (max-width: 767px) {
   .nav-level-1.open.left {
     left: 0; } }
 
+.nav-level-1 .nav__list::after {
+  content: "";
+  position: relative;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  display: block;
+  background-color: transparent; }
+
+.nav-level-1 .nav__list--item {
+  margin: 0 15px; }
+  @media only screen and (max-width: 991px) {
+    .nav-level-1 .nav__list--item {
+      margin: 0 10px; } }
+
 .nav-level-1.open .nav__list {
   transition: left 0.1s;
   left: 0;
-  padding: 0 15px;
+  padding: 0;
+  margin: 0;
   width: 100%;
-  position: absolute; }
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll; }
 
 .nav-level-1.open.left .nav__list {
   left: -100%;
@@ -899,6 +918,16 @@ a:focus {
 .nav-level-2.open.left {
   left: -100%; }
 
+.nav-level-2-group.open::after {
+  content: "";
+  position: relative;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  overflow-y: scroll; }
+
 .nav-level-2 .nav__list {
   margin: 0;
   padding: 0; }
@@ -906,18 +935,22 @@ a:focus {
 .nav-level-2-group {
   display: none;
   position: relative;
-  padding: 0 15px; }
+  padding: 0 15px;
+  overflow-y: scroll;
+  height: 100%; }
 
 .nav-level-2-group.open {
   display: block; }
 
 .nav-level-2-group .nav__list {
   height: auto;
-  position: relative;
+  width: 100%;
+  height: 100%;
   display: none; }
 
 .nav-level-2-group.open .nav__list {
-  display: block; }
+  display: block;
+  height: auto; }
 
 @media only screen and (max-width: 767px) {
   .nav-level-3 {
@@ -951,7 +984,8 @@ a:focus {
     .dropdown__links {
       width: 100%;
       height: 100%;
-      position: absolute; } }
+      position: absolute;
+      overflow-y: scroll; } }
 
 @media only screen and (min-width: 768px) {
   h3.dropdown__list--title {
@@ -1043,9 +1077,8 @@ h4.dropdown__list--title {
 
 @media only screen and (max-width: 767px) {
   .dropdown__list--column.col-xs-3 {
-    padding: 0;
+    padding: 0 15px;
     margin: 0;
-    float: none;
     width: 100%; } }
 
 @media only screen and (max-width: 479px) {
@@ -1125,7 +1158,7 @@ h4.dropdown__list--title {
       left: 15px;
       background-image: url("../img/arrow-lt.png");
       width: 24px;
-      height: 25px;
+      height: 24px;
       background-color: transparent;
       overflow: hidden; } }
 
@@ -2660,7 +2693,7 @@ a.login-toggle:active, a.login-toggle:focus {
   @media only screen and (max-width: 767px) {
     .container-fluid + .container.cta-2-col-sidebar {
       margin-top: 0px;
-      margin-bottom: 5px; } }
+      margin-bottom: 15px; } }
   .container-fluid + .container.cta-2-col-sidebar .main-content__sidebar {
     margin-top: 0; }
 
@@ -2730,12 +2763,10 @@ a.login-toggle:active, a.login-toggle:focus {
       margin-bottom: 15px; } }
 
 .main-content__body .article--list .article__summary {
-  max-height: 100px;
   margin-bottom: 30px;
   overflow: hidden; }
   @media only screen and (max-width: 767px) {
     .main-content__body .article--list .article__summary {
-      max-height: 160px;
       margin-bottom: 30px; } }
 
 .article--list .article__main-text {
@@ -3514,7 +3545,6 @@ a.login-toggle:active, a.login-toggle:focus {
   margin-bottom: 30px; }
   @media only screen and (max-width: 991px) {
     .news-2 .article {
-      height: 310px;
       margin-bottom: 30px; } }
   @media only screen and (max-width: 767px) {
     .news-2 .article {
