@@ -20,23 +20,11 @@
 .container.page-stripes {
     position: absolute;
     overflow: visible;
-    height: 1600px;
-    // height: 2000px;
+    height: 2300px;
     margin: 0 auto;
     padding: 0;
     left: 0;
-    // left: 133px;
     right: 0;
-    // // Slider small
-    // @include breakpoint(ipad-portrait) {
-    //     left: 95px;
-    // }
-    // @include breakpoint(large-max) {
-    //     left: 130px;
-    // }
-    // @include breakpoint(medium-max) {
-    //     left: 95px;
-    // }
 }
 
 .page-stripes .stripes {
@@ -46,7 +34,8 @@
 }
 
 .page-stripes .stripes .stripe {
-    left: -1071px;
+    // left: -1071px;
+    left: -1189px;
     // left: -1138px;
     width: 1000px;
     background-color: #000;
@@ -54,7 +43,7 @@
     z-index: 9;
     // Desktop and below
     @include breakpoint(medium-max) {
-        left: -1174px;
+        left: -1224px;
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
@@ -64,14 +53,14 @@
 
 .page-stripes .stripes .stripe + .stripe {
     // left: -1011px;
-    left: -1011px;
+    left: -1126px;
     width: 1000px;
     background-color: #000;
     opacity: 0.05;
     z-index: 9;
     // Desktop and below
     @include breakpoint(medium-max) {
-        left: -1124px;
+        left: -1174px;
     }
     // iPad portrait
     @include breakpoint(ipad-portrait) {
