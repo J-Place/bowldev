@@ -159,7 +159,10 @@
 .nav-level-1 a:focus,
 .nav-level-2 a:focus,
 .nav-level-3 a:focus {
-    color: $blue;
+    // Phone and below
+    @include breakpoint(small-max) {
+        color: $blue;
+    }
 }
 
 .nav-level-1.open {
