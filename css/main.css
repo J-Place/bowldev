@@ -890,8 +890,11 @@ a:focus {
     .nav-level-1 .nav__list--item {
       margin: 0 10px; } }
 
+.nav-level-1 .nav__list {
+  transition: left 0.2s;
+  left: 0; }
+
 .nav-level-1.open .nav__list {
-  transition: left 0.1s;
   left: 0;
   padding: 0;
   margin: 0;
@@ -905,7 +908,7 @@ a:focus {
   z-index: 1; }
 
 .nav-level-2 {
-  transition: left 0.1s;
+  transition: left 0.2s;
   left: 100%;
   position: fixed;
   height: 100%;
@@ -917,6 +920,16 @@ a:focus {
 
 .nav-level-2.open.left {
   left: -100%; }
+
+.nav-level-2-group {
+  display: none;
+  position: relative;
+  padding: 0 15px;
+  overflow-y: scroll;
+  height: 100%; }
+
+.nav-level-2-group.open {
+  display: block; }
 
 .nav-level-2-group.open::after {
   content: "";
@@ -932,16 +945,6 @@ a:focus {
   margin: 0;
   padding: 0; }
 
-.nav-level-2-group {
-  display: none;
-  position: relative;
-  padding: 0 15px;
-  overflow-y: scroll;
-  height: 100%; }
-
-.nav-level-2-group.open {
-  display: block; }
-
 .nav-level-2-group .nav__list {
   height: auto;
   width: 100%;
@@ -955,7 +958,7 @@ a:focus {
 @media only screen and (max-width: 767px) {
   .nav-level-3 {
     border: 0;
-    transition: left 0.1s;
+    transition: left 0.2s;
     position: fixed;
     display: block;
     margin: 0;
