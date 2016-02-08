@@ -18,16 +18,19 @@ $(".search__toggle").click(function(e) {
         $("input.search__input").blur();
         $(".search-container").removeClass("open");
         $(".search__button").removeClass("open");
+        $("body").removeClass("search-open");
     }
     else {
         $(".search__input--wrapper").addClass("open");
         $(".search__input").css("display", "block").focus();
         $(".search-container").addClass("open");
         $(".search__button").addClass("open");
+        $('body').addClass("search-open");
 
-        // Close other main nav
+        // Close main nav
         $(".nav-small-icon").removeClass("open");
         $(".nav-dropdown").removeClass("open");
+        $(".nav-dropdown").removeClass("left");
         $(".dropdown-wrapper").removeClass("open");
         $(".nav-level-1").removeClass("left").removeClass("open");
         $(".nav-level-2").removeClass("left").removeClass("open");

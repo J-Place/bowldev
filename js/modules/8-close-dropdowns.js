@@ -19,6 +19,8 @@ $(document).mouseup(function(e) {
         $(".search__button").removeClass("open");
         $(".search__input").css("display", "none");
         $(".search__input--wrapper").removeClass("open");
+        $("input.search__input").blur();
+        $("body").removeClass("search-open");
         $(".search-container").removeClass("open");
         $(".login-wrapper").removeClass("open");
         $(".login-toggle").removeClass("open");

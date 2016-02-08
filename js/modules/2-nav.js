@@ -48,6 +48,7 @@
       $("input.search__input").blur();
       $(".search-container").removeClass("open");
       $(".search__button").removeClass("open");
+      $("body").removeClass("search-open");
       $(".login-toggle").removeClass("open");
       $(".login-wrapper").removeClass("open");
 

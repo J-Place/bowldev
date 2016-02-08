@@ -1277,6 +1277,9 @@ a.login-toggle:active, a.login-toggle:focus {
 .login-wrapper *:active:focus {
   outline: none; }
 
+body.search-open {
+  margin-top: 125px; }
+
 .secondary-links.search-container {
   position: absolute;
   top: -5px;
