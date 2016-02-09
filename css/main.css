@@ -1195,6 +1195,25 @@ h4.dropdown__list--title {
       padding-right: 10px;
       right: 122px; } }
 
+.login.logged-in {
+  right: 130px; }
+
+.login select {
+  border: 0 none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85em;
+  letter-spacing: 0.5px;
+  color: #b0b3b1;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: auto;
+  text-align: right; }
+
+.logged-in .login-toggle {
+  text-indent: -9999px;
+  right: 100px;
+  background-position: -5px -35px; }
+
 .login-toggle.open {
   color: #01348d;
   background-position: -5px -35px; }

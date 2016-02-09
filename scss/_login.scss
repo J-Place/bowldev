@@ -31,6 +31,29 @@
     }
 }
 
+.login.logged-in {
+    right: 130px;
+}
+
+.login select {
+    border: 0 none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    color: $gray-2;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: auto;
+    text-align: right;
+}
+
+.logged-in .login-toggle {
+    text-indent: -9999px;
+    right: 100px;
+    background-position: -5px -35px;
+}
+
+
 .login-toggle.open {
     color: $blue;
     background-position: -5px -35px;
