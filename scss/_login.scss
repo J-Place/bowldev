@@ -37,6 +37,12 @@
 
 .login select {
     border: 0 none;
+    outline: none;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+    // border-radius: 0;
+    // background-color: #FFF;
     font-family: 'Open Sans', sans-serif;
     font-size: 0.85em;
     letter-spacing: 0.5px;
