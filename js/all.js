@@ -49,7 +49,7 @@ $(".marketing-promo").hover(function(){
       clearTimeout(self.rollOutTimeout);
       self.setCurrentPath($(this).data('link'));
     });
-    $navLinks1.hover(function(){
+    $navLinks1.hoverIntent(function(){
       if(areWeOnMobile()) {
         return;
       }
