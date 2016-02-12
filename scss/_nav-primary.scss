@@ -76,9 +76,28 @@
 .nav-level-1 .nav__list--item:last-child {
     display: none;
     // Phone and below
-    @include breakpoint(xsmall-max) {
+    @include breakpoint(small-max) {
         display: block;
     }
+}
+
+.nav-level-1 .nav__list--item:last-child a {
+    // Phone and below
+    @include breakpoint(small-max) {
+        margin-left: 23px;
+    }
+}
+
+.nav-level-1 .nav__list--item:last-child a:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -27px;
+    // border: 1px solid red;
+    background-image: url('../img/bowl-sprites.png');
+    background-size: 330px;
+    background-position: -5px -4px;
 }
 
 .nav-level-1.open .nav__list {

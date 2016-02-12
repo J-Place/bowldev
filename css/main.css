@@ -546,9 +546,23 @@ a:focus {
 
 .nav-level-1 .nav__list--item:last-child {
   display: none; }
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 767px) {
     .nav-level-1 .nav__list--item:last-child {
       display: block; } }
+
+@media only screen and (max-width: 767px) {
+  .nav-level-1 .nav__list--item:last-child a {
+    margin-left: 23px; } }
+
+.nav-level-1 .nav__list--item:last-child a:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -27px;
+  background-image: url("../img/bowl-sprites.png");
+  background-size: 330px;
+  background-position: -5px -4px; }
 
 .nav-level-1.open .nav__list {
   padding: 0 15px; }
@@ -1195,32 +1209,71 @@ h4.dropdown__list--title {
       padding-right: 10px;
       right: 122px; } }
 
-.login.logged-in {
-  right: 130px; }
+.logged-in .login-toggle {
+  color: #01348d;
+  width: 140px;
+  right: 80px;
+  letter-spacing: 0.3px; }
+  @media only screen and (max-width: 991px) {
+    .logged-in .login-toggle {
+      right: -35px; } }
 
-.login select {
-  border: 0 none;
-  outline: none;
+.logged-in .login-toggle .nav-icon, .logged-in .login-toggle .nav__list--item a::after, .nav__list--item .logged-in .login-toggle a::after, .logged-in .login-toggle .facebook, .logged-in .login-toggle .twitter, .logged-in .login-toggle .youtube, .logged-in .login-toggle .nav-icon--search, .logged-in .login-toggle .search__submit--icon, .logged-in .login-toggle .pagination__list--item a.previous, .pagination__list--item .logged-in .login-toggle a.previous, .logged-in .login-toggle .pagination__list--item a.next, .pagination__list--item .logged-in .login-toggle a.next, .logged-in .login-toggle .sidebar-nav--icon {
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  background-position: 0px -30px; }
+
+.login-toggle .nav-icon, .login-toggle .nav__list--item a::after, .nav__list--item .login-toggle a::after, .login-toggle .facebook, .login-toggle .twitter, .login-toggle .youtube, .login-toggle .nav-icon--search, .login-toggle .search__submit--icon, .login-toggle .pagination__list--item a.previous, .pagination__list--item .login-toggle a.previous, .login-toggle .pagination__list--item a.next, .pagination__list--item .login-toggle a.next, .login-toggle .sidebar-nav--icon {
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  top: -4px;
+  left: -5px; }
+
+.login-toggle.open .nav-icon, .login-toggle.open .nav__list--item a::after, .nav__list--item .login-toggle.open a::after, .login-toggle.open .facebook, .login-toggle.open .twitter, .login-toggle.open .youtube, .login-toggle.open .nav-icon--search, .login-toggle.open .search__submit--icon, .login-toggle.open .pagination__list--item a.previous, .pagination__list--item .login-toggle.open a.previous, .login-toggle.open .pagination__list--item a.next, .pagination__list--item .login-toggle.open a.next, .login-toggle.open .sidebar-nav--icon,
+.login-toggle:hover .nav-icon,
+.login-toggle:hover .nav__list--item a::after, .nav__list--item
+.login-toggle:hover a::after,
+.login-toggle:hover .facebook,
+.login-toggle:hover .twitter,
+.login-toggle:hover .youtube,
+.login-toggle:hover .nav-icon--search,
+.login-toggle:hover .search__submit--icon,
+.login-toggle:hover .pagination__list--item a.previous, .pagination__list--item
+.login-toggle:hover a.previous,
+.login-toggle:hover .pagination__list--item a.next, .pagination__list--item
+.login-toggle:hover a.next,
+.login-toggle:hover .sidebar-nav--icon {
+  background-position: -0px -30px; }
+
+.login.logged-in {
+  right: 50px; }
+
+.logged-in__list {
+  margin-top: 5px; }
+
+.logged-in__list li {
+  text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.85em;
   letter-spacing: 0.5px;
-  color: #b0b3b1;
   font-weight: 400;
   text-transform: uppercase;
   width: auto;
-  text-align: right; }
+  line-height: 20px;
+  margin-bottom: 3px; }
 
-.logged-in .login-toggle {
-  text-indent: -9999px;
-  right: 100px;
-  background-position: -5px -35px; }
+.logged-in__list li a {
+  color: #75777a; }
+
+.logged-in__list li a:hover {
+  color: #01348d; }
 
 .login-toggle.open {
   color: #01348d;
-  background-position: -5px -35px; }
-
-a.login-toggle:hover {
-  text-decoration: none;
   background-position: -5px -35px; }
 
 a.login-toggle:active, a.login-toggle:focus {
@@ -1249,6 +1302,11 @@ a.login-toggle:active, a.login-toggle:focus {
   padding: 0 20px 16px;
   border: 1px solid #f3f3f3;
   border-top: 0; }
+
+@media only screen and (max-width: 991px) {
+  .logged-in .login-wrapper.open {
+    height: 100px;
+    right: -50px; } }
 
 .login__instruction {
   padding-right: 30px;

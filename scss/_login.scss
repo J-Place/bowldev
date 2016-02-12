@@ -31,44 +31,75 @@
     }
 }
 
-.login.logged-in {
-    right: 130px;
+.logged-in .login-toggle {
+    color: $blue;
+    width: 140px;
+    right: 80px;
+    letter-spacing: 0.3px;
+    @include breakpoint(medium-max) {
+        right: -35px;
+    }
 }
 
-.login select {
-    border: 0 none;
-    outline: none;
-    // -webkit-appearance: none;
-    // -moz-appearance: none;
-    // appearance: none;
-    // border-radius: 0;
-    // background-color: #FFF;
+.logged-in .login-toggle .nav-icon {
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    background-position: 0px -30px;
+}
+
+.login-toggle .nav-icon {
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    top: -4px;
+    left: -5px;
+}
+
+.login-toggle.open .nav-icon,
+.login-toggle:hover .nav-icon {
+    background-position: -0px -30px;
+}
+
+.login.logged-in {
+    right: 50px;
+}
+
+.logged-in__list {
+    margin-top: 5px;
+}
+
+.logged-in__list li {
+    text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-size: 0.85em;
     letter-spacing: 0.5px;
-    color: $gray-2;
     font-weight: 400;
     text-transform: uppercase;
     width: auto;
-    text-align: right;
+    line-height: 20px;
+    margin-bottom: 3px;
 }
 
-.logged-in .login-toggle {
-    text-indent: -9999px;
-    right: 100px;
-    background-position: -5px -35px;
+.logged-in__list li a {
+    color: $gray-3;
 }
 
+.logged-in__list li a:hover {
+    color: $blue;
+}
 
 .login-toggle.open {
     color: $blue;
     background-position: -5px -35px;
 }
 
-a.login-toggle:hover {
-    text-decoration: none;
-    background-position: -5px -35px;
-}
+// a.login-toggle:hover {
+//     text-decoration: none;
+//     background-position: -5px -34px;
+// }
 
 a.login-toggle:active, a.login-toggle:focus {
     text-decoration: none;
@@ -98,6 +129,13 @@ a.login-toggle:active, a.login-toggle:focus {
     padding: 0 20px 16px;
     border: 1px solid #f3f3f3;
     border-top: 0;
+}
+
+.logged-in .login-wrapper.open {
+    @include breakpoint(medium-max) {
+        height: 100px;
+        right: -50px;
+    }
 }
 
 .login__instruction {
