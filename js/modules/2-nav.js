@@ -1,12 +1,11 @@
-
 /////////////////////////////////////////////////////////////////////////////
 // Desktop and Mobile Nav
 (function(){
 
-  var menu;
+  window.frontendApp = window.frontendApp || {};
 
   var init = function() {
-    menu = new Menu([
+    window.frontendApp.menu = new Menu([
       $('.nav-level-1'),
       $('.nav-level-2'),
       $('.nav-level-3')
@@ -38,7 +37,7 @@
       clearTimeout(self.rollOutTimeout);
       self.setCurrentPath($(this).data('link'));
     });
-    $navLinks1.hover(function(){
+    $navLinks1.hoverIntent(function(e){
       if(areWeOnMobile()) {
         return;
       }
@@ -85,7 +84,7 @@
         self.setCurrentPath($(groupLevel3El).data('group'));
       });
     });
-    $groupLevel3Els.hover(function(){
+    $groupLevel3Els.hoverIntent(function(){
       if(areWeOnMobile()) {
         return;
       }

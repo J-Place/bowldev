@@ -9,15 +9,14 @@ $(".marketing-promo").hover(function(){
     }
     return;
 });
-
 /////////////////////////////////////////////////////////////////////////////
 // Desktop and Mobile Nav
 (function(){
 
-  var menu;
+  window.frontendApp = window.frontendApp || {};
 
   var init = function() {
-    menu = new Menu([
+    window.frontendApp.menu = new Menu([
       $('.nav-level-1'),
       $('.nav-level-2'),
       $('.nav-level-3')
@@ -49,7 +48,7 @@ $(".marketing-promo").hover(function(){
       clearTimeout(self.rollOutTimeout);
       self.setCurrentPath($(this).data('link'));
     });
-    $navLinks1.hover(function(){
+    $navLinks1.hoverIntent(function(e){
       if(areWeOnMobile()) {
         return;
       }
@@ -96,7 +95,7 @@ $(".marketing-promo").hover(function(){
         self.setCurrentPath($(groupLevel3El).data('group'));
       });
     });
-    $groupLevel3Els.hover(function(){
+    $groupLevel3Els.hoverIntent(function(){
       if(areWeOnMobile()) {
         return;
       }
@@ -194,44 +193,51 @@ $(".marketing-promo").hover(function(){
   init();
 
 })();
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Toggle login input box
-$(".login-toggle").click(function(e){
-    e.preventDefault();
-    $(this).addClass("open");
-    $(".login-wrapper").addClass("open");
-    $(".login__input--email").focus();
-});
+(function(){
 
+    window.frontendApp = window.frontendApp || {};
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Topggle search input box
-$(".search__toggle").click(function(e) {
-    e.preventDefault();
-    if ($(this).hasClass('open')) {
-        $(this).removeClass("open");
-        $(".search__input--wrapper").removeClass("open");
-        $("input.search__input").blur();
-        $(".search-container").removeClass("open");
-        $(".search__button").removeClass("open");
-        $("body").removeClass("search-open");
-    }
-    else {
-        $(".search__input--wrapper").addClass("open");
-        $(".search__input").css("display", "block").focus();
-        $(".search-container").addClass("open");
-        $(".search__button").addClass("open");
-        $('body').addClass("search-open");
+    var init = function() {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Toggle login input box
+        $(".login-toggle").click(function(e){
+            e.preventDefault();
+            $(this).addClass("open");
+            $(".login-wrapper").addClass("open");
+            $(".login__input--email").focus();
+        });
 
-        // Close main nav
-        $(".nav-small-icon").removeClass("open");
-        $(".nav-dropdown").removeClass("open");
-        $(".nav-dropdown").removeClass("left");
-        $(".dropdown-wrapper").removeClass("open");
-        $(".nav-level-1").removeClass("left").removeClass("open");
-        $(".nav-level-2").removeClass("left").removeClass("open");
-    }
-});
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Topggle search input box
+        $(".search__toggle").click(function(e) {
+            e.preventDefault();
+            if ($(this).hasClass('open')) {
+                $(this).removeClass("open");
+                $(".search__input--wrapper").removeClass("open");
+                $("input.search__input").blur();
+                $(".search-container").removeClass("open");
+                $(".search__button").removeClass("open");
+                $("body").removeClass("search-open");
+            }
+            else {
+                $(".search__input--wrapper").addClass("open");
+                $(".search__input").css("display", "block").focus();
+                $(".search-container").addClass("open");
+                $(".search__button").addClass("open");
+                $('body').addClass("search-open");
+
+                // Close main nav
+                window.frontendApp.menu.setCurrentPath(false);
+            }
+        });
+
+        $('.login-wrapper').mouseup(function(e){
+            e.stopImmediatePropagation();
+        });
+    };
+
+    init();
+})();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sidebar nav
 
@@ -346,34 +352,43 @@ setPanel();
     // setTimeout(function () {
     //   document.body.style.display = originalBodyStyle;
 // });
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Close Login and Search on click outside
-$(document).mouseup(function(e) {
-    var dropdown = $(".nav-dropdown");
-    var loginToggle = $(".login-toggle");
-    var searchToggle = $(".search__toggle");
-    var loginDropdown = $(".login-wrapper");
-    var search = $(".search-container");
+(function(){
 
-    if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
-    {
-        $(loginDropdown).removeClass("open");
-        $(loginToggle).removeClass("open");
-    }
-    if(e.target.id != search.attr('id') && !search.has(e.target).length)
-    {
-        $(".search__input").val("");
-        $("search").removeClass("open");
-        $(".search__button").removeClass("open");
-        $(".search__input").css("display", "none");
-        $(".search__input--wrapper").removeClass("open");
-        $("input.search__input").blur();
-        $("body").removeClass("search-open");
-        $(".search-container").removeClass("open");
-        $(".login-wrapper").removeClass("open");
-        $(".login-toggle").removeClass("open");
-    }
-});
+    window.frontendApp = window.frontendApp || {};
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Close Login and Search on click outside
+    $(document).mouseup(function(e) {
+        var dropdown = $(".nav-dropdown");
+        var loginToggle = $(".login-toggle");
+        var searchToggle = $(".search__toggle");
+        var loginDropdown = $(".login-wrapper");
+        var search = $(".search-container");
+
+        if(e.target.id != loginDropdown.attr('id') && !loginDropdown.has(e.target).length)
+        {
+            $(loginDropdown).removeClass("open");
+            $(loginToggle).removeClass("open");
+        }
+
+        if(e.target.id != search.attr('id') && !search.has(e.target).length)
+        {
+            $(".search__input").val("");
+            $("search").removeClass("open");
+            $(".search__button").removeClass("open");
+            $(".search__input").css("display", "none");
+            $(".search__input--wrapper").removeClass("open");
+            $("input.search__input").blur();
+            $("body").removeClass("search-open");
+            $(".search-container").removeClass("open");
+            $(".login-wrapper").removeClass("open");
+            $(".login-toggle").removeClass("open");
+
+            // Close main nav
+            //window.frontendApp.menu.setCurrentPath(false);
+        }
+    });
+})();
 $(window).scroll(function(){
     var panelWidth = $(window).width();
     if (panelWidth >= 480 && $(window).scrollTop() > 20) {
