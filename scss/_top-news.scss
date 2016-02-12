@@ -1,5 +1,7 @@
 .top-news {
     position: relative;
+    height: 253px;
+    margin-bottom: 30px;
 }
 
 .top-news__title {
@@ -13,6 +15,7 @@
     margin: 0;
     padding: 0 8px 0 15px;
     position: absolute;
+    z-index: 99;
     // Tablet and below
     @include breakpoint(medium-max) {
         font-size: 0.91em;
@@ -59,7 +62,7 @@
     width: 100%;
     bottom: 0;
     background-color: rgba(224,224,224,0.915);
-    z-index: 9;
+    z-index: 99;
     overflow: hidden;
     // Desktop and above
     @include breakpoint(medium-min) {
@@ -118,13 +121,15 @@
     }
 }
 
-// .top-news__summary p.visible {
-    // opacity: 1.0;
-// }
-
 .top-news__image {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    // transform: translate(-50%, -50%);
+    // -webkit-transform: translate(-50%, -50%);
+    // left: 50%;
+    // top: 50%;
+    // position: absolute;
+    // z-index: 9;
     @include breakpoint(medium-max) {
         width: auto;
         height: 100%;

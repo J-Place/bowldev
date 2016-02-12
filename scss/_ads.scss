@@ -1,13 +1,27 @@
 .ad__block {
     position: relative;
     padding-bottom: 0;
-    // overflow: visible;
+}
+
+.cta-3 .ad__block {
+    margin-bottom: 30px;
 }
 
 .ad__block img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.cta-3 .ad__block img {
+    height: 253px;
+    width: auto;
+    @include breakpoint(medium-max) {
+        height: 185px;
+    }
+    @include breakpoint(small-max) {
+        height: auto;
+    }
 }
 
 .main-content__sidebar .ad__block {

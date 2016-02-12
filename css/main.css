@@ -2690,15 +2690,15 @@ body.search-open {
 .cta-banner .cta__content {
   text-align: left;
   margin: 0 auto;
-  padding: 30px 30% 30px 0;
+  padding: 30px 0;
   z-index: 999; }
-  @media only screen and (max-width: 1199px) {
-    .cta-banner .cta__content {
-      padding-right: 35%; } }
   @media only screen and (max-width: 991px) {
     .cta-banner .cta__content {
-      padding: 30px 25% 30px 15px; } }
+      padding: 30px 0; } }
   @media only screen and (max-width: 767px) {
+    .cta-banner .cta__content {
+      padding: 30px 30px 60px; } }
+  @media only screen and (max-width: 479px) {
     .cta-banner .cta__content {
       padding: 30px 15px; } }
 
@@ -2709,7 +2709,11 @@ body.search-open {
   font-size: 3.5em;
   line-height: 1.1em;
   margin-top: 20px;
+  padding-right: 40%;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25); }
+  @media only screen and (max-width: 991px) {
+    .cta-banner .cta__headline {
+      padding-right: 20%; } }
   @media only screen and (max-width: 767px) {
     .cta-banner .cta__headline {
       font-size: 2.75em; } }
@@ -2719,7 +2723,7 @@ body.search-open {
 
 .cta-banner .cta__text {
   margin: 0;
-  padding: 0 0 30px;
+  padding: 0 50% 30px 0;
   font-size: 1.3em;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25); }
 
@@ -3290,7 +3294,9 @@ body.search-open {
       letter-spacing: 0.5px; } }
 
 .marketing-promo {
-  position: relative; }
+  position: relative;
+  height: 253px;
+  margin-bottom: 30px; }
 
 .marketing-promo:hover {
   cursor: pointer; }
@@ -3302,7 +3308,7 @@ body.search-open {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   color: #FFF;
-  z-index: 9;
+  z-index: 99;
   overflow: hidden; }
   @media only screen and (min-width: 992px) {
     .marketing-promo__summary {
@@ -3349,8 +3355,8 @@ body.search-open {
       margin: 20px 25px; } }
 
 .marketing-promo__image {
-  width: 100%;
-  height: auto; }
+  width: auto;
+  height: 100%; }
   @media only screen and (max-width: 991px) {
     .marketing-promo__image {
       width: auto;
@@ -3428,7 +3434,9 @@ body.search-open {
       top: -450px; } }
 
 .top-news {
-  position: relative; }
+  position: relative;
+  height: 253px;
+  margin-bottom: 30px; }
 
 .top-news__title {
   color: #333333;
@@ -3440,7 +3448,8 @@ body.search-open {
   line-height: 40px;
   margin: 0;
   padding: 0 8px 0 15px;
-  position: absolute; }
+  position: absolute;
+  z-index: 99; }
   @media only screen and (max-width: 991px) {
     .top-news__title {
       font-size: 0.91em;
@@ -3480,7 +3489,7 @@ body.search-open {
   width: 100%;
   bottom: 0;
   background-color: rgba(224, 224, 224, 0.915);
-  z-index: 9;
+  z-index: 99;
   overflow: hidden; }
   @media only screen and (min-width: 992px) {
     .top-news__summary {
@@ -3527,8 +3536,8 @@ body.search-open {
       margin: 20px 25px; } }
 
 .top-news__image {
-  width: 100%;
-  height: auto; }
+  width: auto;
+  height: 100%; }
   @media only screen and (max-width: 991px) {
     .top-news__image {
       width: auto;
@@ -3679,10 +3688,23 @@ body.search-open {
   position: relative;
   padding-bottom: 0; }
 
+.cta-3 .ad__block {
+  margin-bottom: 30px; }
+
 .ad__block img, .main-content__sidebar .ad__block img {
   width: 100%;
   height: auto;
   display: block; }
+
+.cta-3 .ad__block img {
+  height: 253px;
+  width: auto; }
+  @media only screen and (max-width: 991px) {
+    .cta-3 .ad__block img {
+      height: 185px; } }
+  @media only screen and (max-width: 767px) {
+    .cta-3 .ad__block img {
+      height: auto; } }
 
 .main-content__sidebar .ad__block {
   margin-bottom: 30px; }

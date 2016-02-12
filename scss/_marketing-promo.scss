@@ -1,5 +1,7 @@
 .marketing-promo {
     position: relative;
+    height: 253px;
+    margin-bottom: 30px;
 }
 
 .marketing-promo:hover {
@@ -13,7 +15,7 @@
     bottom: 0;
     background-color: rgba(0,0,0,0.6);
     color: #FFF;
-    z-index: 9;
+    z-index: 99;
     overflow: hidden;
     // Desktop and above
     @include breakpoint(medium-min) {
@@ -34,8 +36,6 @@
 }
 
 .marketing-promo__summary p {
-    // transition: opacity 0.1s;
-    // opacity: 0;
     @extend .oswald;
     font-weight: 400;
     color: #FFF;
@@ -72,13 +72,15 @@
     }
 }
 
-// .marketing-promo__summary p.visible {
-    // opacity: 1.0;
-// }
-
 .marketing-promo__image {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    // transform: translate(-50%, -50%);
+    // -webkit-transform: translate(-50%, -50%);
+    // left: 50%;
+    // top: 50%;
+    // position: absolute;
+    // z-index: 9;
     @include breakpoint(medium-max) {
         width: auto;
         height: 100%;
