@@ -562,7 +562,7 @@ a:focus {
   left: -27px;
   background-image: url("../img/bowl-sprites.png");
   background-size: 330px;
-  background-position: -5px -4px; }
+  background-position: -5px -3px; }
 
 .nav-level-1.open .nav__list {
   padding: 0 15px; }
@@ -1222,9 +1222,12 @@ h4.dropdown__list--title {
   width: 35px;
   height: 30px;
   position: absolute;
-  top: -4px;
+  top: -5px;
   left: -5px;
   background-position: 0px -30px; }
+  @media only screen and (max-width: 991px) {
+    .logged-in .login-toggle .nav-icon, .logged-in .login-toggle .nav__list--item a::after, .nav__list--item .logged-in .login-toggle a::after, .logged-in .login-toggle .facebook, .logged-in .login-toggle .twitter, .logged-in .login-toggle .youtube, .logged-in .login-toggle .nav-icon--search, .logged-in .login-toggle .search__submit--icon, .logged-in .login-toggle .pagination__list--item a.previous, .pagination__list--item .logged-in .login-toggle a.previous, .logged-in .login-toggle .pagination__list--item a.next, .pagination__list--item .logged-in .login-toggle a.next, .logged-in .login-toggle .sidebar-nav--icon {
+      top: -4px; } }
 
 .login-toggle .nav-icon, .login-toggle .nav__list--item a::after, .nav__list--item .login-toggle a::after, .login-toggle .facebook, .login-toggle .twitter, .login-toggle .youtube, .login-toggle .nav-icon--search, .login-toggle .search__submit--icon, .login-toggle .pagination__list--item a.previous, .pagination__list--item .login-toggle a.previous, .login-toggle .pagination__list--item a.next, .pagination__list--item .login-toggle a.next, .login-toggle .sidebar-nav--icon {
   width: 35px;

@@ -45,9 +45,12 @@
     width: 35px;
     height: 30px;
     position: absolute;
-    top: -4px;
+    top: -5px;
     left: -5px;
     background-position: 0px -30px;
+    @include breakpoint(medium-max) {
+        top: -4px;
+    }
 }
 
 .login-toggle .nav-icon {
