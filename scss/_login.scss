@@ -57,8 +57,11 @@
     width: 35px;
     height: 30px;
     position: absolute;
-    top: -4px;
+    top: -5px;
     left: -5px;
+    @include breakpoint(medium-max) {
+        top: -4px;
+    }
 }
 
 .login-toggle.open .nav-icon,
@@ -135,8 +138,8 @@ a.login-toggle:active, a.login-toggle:focus {
 }
 
 .logged-in .login-wrapper.open {
+    height: 100px;
     @include breakpoint(medium-max) {
-        height: 100px;
         right: -50px;
     }
 }

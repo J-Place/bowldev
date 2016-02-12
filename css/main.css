@@ -1233,8 +1233,11 @@ h4.dropdown__list--title {
   width: 35px;
   height: 30px;
   position: absolute;
-  top: -4px;
+  top: -5px;
   left: -5px; }
+  @media only screen and (max-width: 991px) {
+    .login-toggle .nav-icon, .login-toggle .nav__list--item a::after, .nav__list--item .login-toggle a::after, .login-toggle .facebook, .login-toggle .twitter, .login-toggle .youtube, .login-toggle .nav-icon--search, .login-toggle .search__submit--icon, .login-toggle .pagination__list--item a.previous, .pagination__list--item .login-toggle a.previous, .login-toggle .pagination__list--item a.next, .pagination__list--item .login-toggle a.next, .login-toggle .sidebar-nav--icon {
+      top: -4px; } }
 
 .login-toggle.open .nav-icon, .login-toggle.open .nav__list--item a::after, .nav__list--item .login-toggle.open a::after, .login-toggle.open .facebook, .login-toggle.open .twitter, .login-toggle.open .youtube, .login-toggle.open .nav-icon--search, .login-toggle.open .search__submit--icon, .login-toggle.open .pagination__list--item a.previous, .pagination__list--item .login-toggle.open a.previous, .login-toggle.open .pagination__list--item a.next, .pagination__list--item .login-toggle.open a.next, .login-toggle.open .sidebar-nav--icon,
 .login-toggle:hover .nav-icon,
@@ -1306,10 +1309,11 @@ a.login-toggle:active, a.login-toggle:focus {
   border: 1px solid #f3f3f3;
   border-top: 0; }
 
-@media only screen and (max-width: 991px) {
-  .logged-in .login-wrapper.open {
-    height: 100px;
-    right: -50px; } }
+.logged-in .login-wrapper.open {
+  height: 100px; }
+  @media only screen and (max-width: 991px) {
+    .logged-in .login-wrapper.open {
+      right: -50px; } }
 
 .login__instruction {
   padding-right: 30px;
