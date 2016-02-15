@@ -1366,8 +1366,9 @@ a.login-toggle:active, a.login-toggle:focus {
 .login-wrapper *:active:focus {
   outline: none; }
 
-body.search-open {
-  margin-top: 125px; }
+@media only screen and (max-width: 767px) {
+  body.search-open {
+    margin-top: 125px; } }
 
 .secondary-links.search-container {
   position: absolute;
