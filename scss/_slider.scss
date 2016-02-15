@@ -207,8 +207,13 @@
 .ribbon.blue {
     background-color: $red;
 }
+
+.ribbon.blue-youth {
+    background-color: $yellow-3;
+}
+
 .ribbon.yellow {
-    background-color: $gray-3;
+    background-color: green;
 }
 
 .ribbon::after {
@@ -360,19 +365,27 @@
 }
 
 // Blue slider stripes
-.slider--stripes .stripes.blue .stripe {
-    background-color: $blue !important;
-}
-.slider--stripes .stripes.blue .stripe--right {
-    background-color: $blue !important;
-}
+// .slider--stripes .stripes.blue .stripe {
+//     background-color: $blue !important;
+// }
+// .slider--stripes .stripes.blue .stripe--right {
+//     background-color: $blue !important;
+// }
 
 // Yellow slider stripes
 .slider--stripes .stripes.yellow .stripe {
-    background-color: $yellow !important;
+    background-color: $yellow-3 !important;
 }
 .slider--stripes .stripes.yellow .stripe--right {
-    background-color: $yellow !important;
+    background-color: $yellow-3 !important;
+}
+
+// Blue Youth slider stripes
+.slider--stripes .stripes.blue-youth .stripe {
+    background-color: $blue-youth !important;
+}
+.slider--stripes .stripes.blue-youth .stripe--right {
+    background-color: $blue-youth !important;
 }
 
 

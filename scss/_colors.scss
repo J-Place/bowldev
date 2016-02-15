@@ -4,6 +4,7 @@ $blue-3: #00338d; $blue-md: #00338d;
 $blue-4: #0945ff;
 $blue-5: #01348d; $blue: #01348d;
 $blue-link: #05328d;
+$blue-youth: #0945ff;
 
 $red: #b71234;
 $red-5: #82001b;
@@ -22,7 +23,7 @@ $gray-list-background: #63666b; // Mobile Nav Background Color
 $orange: #fe7200;
 
 $yellow: #ffc100;
-
+$yellow-3: #ffeb00;
 
 
 .white { background-color: #FFF; }
@@ -40,3 +41,7 @@ $yellow: #ffc100;
 .blue-3 { background-color: $blue-3; }
 .blue-4 { background-color: $blue-4; }
 .blue-5 { background-color: $blue-5; }
+
+
+// .blue-youth { background-color: $blue-youth; }
+// .yellow-3 { background-color: $yellow-3; }

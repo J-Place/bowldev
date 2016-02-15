@@ -2068,8 +2068,11 @@ a.login-toggle:active, a.login-toggle:focus {
 .ribbon.blue {
   background-color: #b71234; }
 
+.ribbon.blue-youth {
+  background-color: #ffeb00; }
+
 .ribbon.yellow {
-  background-color: #75777a; }
+  background-color: green; }
 
 .ribbon::after {
   content: '';
@@ -2215,17 +2218,17 @@ a.login-toggle:active, a.login-toggle:focus {
     .slider--stripes .stripe, .slider--stripes .stripe--featured-video {
       left: -635px; } }
 
-.slider--stripes .stripes.blue .stripe, .slider--stripes .stripes.blue .stripe--featured-video {
-  background-color: #01348d !important; }
-
-.slider--stripes .stripes.blue .stripe--right {
-  background-color: #01348d !important; }
-
 .slider--stripes .stripes.yellow .stripe, .slider--stripes .stripes.yellow .stripe--featured-video {
-  background-color: #ffc100 !important; }
+  background-color: #ffeb00 !important; }
 
 .slider--stripes .stripes.yellow .stripe--right {
-  background-color: #ffc100 !important; }
+  background-color: #ffeb00 !important; }
+
+.slider--stripes .stripes.blue-youth .stripe, .slider--stripes .stripes.blue-youth .stripe--featured-video {
+  background-color: #0945ff !important; }
+
+.slider--stripes .stripes.blue-youth .stripe--right {
+  background-color: #0945ff !important; }
 
 .slider--stripes .stripe + .stripe, .slider--stripes .stripe--featured-video + .stripe, .slider--stripes .stripe + .stripe--featured-video, .slider--stripes .stripe--featured-video + .stripe--featured-video {
   left: -858px;
@@ -3746,6 +3749,31 @@ a.login-toggle:active, a.login-toggle:focus {
 .block__rectangle--large {
   width: 100%;
   height: auto; }
+
+.youth .page-stripes .stripes img {
+  position: absolute;
+  margin-left: -50%;
+  margin-top: 130px; }
+
+.quick-link__image {
+  width: auto;
+  height: auto; }
+
+.youth .slide__link img {
+  height: auto;
+  width: 255px;
+  top: -38px;
+  position: absolute;
+  margin-left: -10px; }
+
+.youth .slide__logo + .slide__title {
+  width: 440px;
+  margin-left: 210px;
+  color: #01348d;
+  font-size: 27px;
+  line-height: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; }
 
 a:focus {
   outline: thin dotted;
