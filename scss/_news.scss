@@ -14,12 +14,11 @@
 }
 
 .news-2 .article {
-    // height: 333px;
-    height: auto;
+    height: 360px;
     margin-bottom: 30px;
     // Tablet and below
     @include breakpoint(medium-max) {
-        // height: 310px;
+        height: 310px;
         margin-bottom: 30px;
     }
     // Phone and below
