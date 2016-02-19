@@ -390,8 +390,7 @@ a:focus {
 
 .button--outline:hover {
   background-color: #FFF;
-  color: #00338D;
-  font-weight: 700; }
+  color: #00338D; }
 
 .button--small {
   padding: 4px 12px;
@@ -2827,18 +2826,35 @@ a.login-toggle:active, a.login-toggle:focus {
   margin-top: 5px;
   margin-bottom: 15px; }
 
-@media only screen and (min-width: 768px) {
-  .main-content__body .article--cta-1 .cta__hero {
-    float: left; } }
+.main-content__body .article--cta-1.left .cta__hero {
+  float: left;
+  height: 100%; }
 
-.main-content__body .article--cta-1 .cta-1 .cta__hero + .cta__headline,
-.main-content__body .article--cta-1 .cta-1 .cta__hero + .cta__text {
+.main-content__body .article--cta-1.left .cta__headline {
   text-align: left; }
+
+.main-content__body .article--cta-1.left .cta__text {
+  text-align: left; }
+
+.main-content__body .article--cta-1.left .cta__button {
+  float: left; }
+
+.main-content__body .article--cta-1.right .cta__hero {
+  float: right;
+  height: 100%; }
+
+.main-content__body .article--cta-1.right .cta__headline {
+  text-align: right; }
+
+.main-content__body .article--cta-1.right .cta__text {
+  text-align: right; }
+
+.main-content__body .article--cta-1.right .cta__button {
+  float: right; }
 
 .main-content__body .article--cta-1 .cta__content {
   text-align: center;
-  padding-left: 0;
-  padding-right: 15px; }
+  padding: 0 30px; }
 
 .main-content__body .article--cta-1 .cta__headline {
   font-size: 1.7em;
@@ -2849,7 +2865,7 @@ a.login-toggle:active, a.login-toggle:focus {
 
 .main-content__body .article--cta-1 .cta__text {
   margin: 0 auto 15px;
-  padding: 0 4em;
+  padding: 0;
   font-size: 0.9em;
   font-weight: 300; }
 
