@@ -2669,15 +2669,15 @@ a.login-toggle:active, a.login-toggle:focus {
   opacity: 1.0; }
 
 .main-content__body .cta__background img {
-  width: 110%;
-  height: auto; }
+  height: 110%;
+  width: auto; }
   @media only screen and (max-width: 991px) {
     .main-content__body .cta__background img {
       height: 110%;
       width: auto; } }
   @media only screen and (max-width: 767px) {
     .main-content__body .cta__background img {
-      height: 100%;
+      height: 110%;
       width: auto; } }
 
 .article.article--cta-1.cta-future {
