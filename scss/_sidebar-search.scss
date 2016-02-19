@@ -1,7 +1,7 @@
 .sidebar-search__wrapper {
     position: relative;
-    border: 1px solid $gray-1;
-    background-color: $gray-0;
+    border: 1px solid $gray-list-border;
+    background-color: $gray-input;
     height: 45px;
     width: 100%;
     max-width: 400px;
@@ -18,7 +18,7 @@
     width: 85%;
     margin-top: 4px;
     height: 35px;
-    color: $gray-2;
+    color: $gray-body;
     font-size: 1.1em;
 }
 

@@ -93,25 +93,3 @@ a:focus {
     @extend .skew;
     z-index: 2;
 }
-
-.outline {
-    border: 1px solid $gray-lt;
-    // margin: -1px;
-}
-
-.outline--red {
-    @extend .outline;
-    border-color: red;
-}
-
-.outline--orange {
-    @extend .outline;
-    border-color: $orange;
-}
-
-.outline--yellow {
-    @extend .outline;
-    border-color: yellow;
-}
-
-

@@ -4,10 +4,10 @@
 // which are synced by setting 'asNavFor'.
 
 $(".slider--foreground").on({ 'afterChange': function(event, slick, currentSlide){
-    $(".slider__ribbon .ribbon").toggleClass("blue-youth");
-    $(".slider__ribbon .ribbon").toggleClass("yellow");
-    $(".slider--stripes .stripes").toggleClass("blue-youth");
+    $(".slider__ribbon .ribbon").toggleClass("cool-gray");
+    $(".slider__ribbon .ribbon").toggleClass("red");
     $(".slider--stripes .stripes").toggleClass("yellow");
+    $(".slider--stripes .stripes").toggleClass("blue");
 }}).slick({
     infinite: true,
     autoplay: true,

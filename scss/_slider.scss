@@ -204,17 +204,27 @@
     }
 }
 
-.ribbon.blue {
-    background-color: $red;
-}
-
-.ribbon.blue-youth {
-    background-color: $yellow-3;
-}
-
-.ribbon.yellow {
-    background-color: green;
-}
+.ribbon.blue { background-color: $blue; }
+.ribbon.red { background-color: $red; }
+.ribbon.cool-gray { background-color: $cool-gray; }
+.ribbon.gray-2 { background-color: $gray-2; }
+.ribbon.gray-3 { background-color: $gray-3; }
+.ribbon.blue-2 { background-color: $blue-2; }
+.ribbon.blue-3 { background-color: $blue-3; }
+.ribbon.blue-4 { background-color: $blue-4; }
+.ribbon.blue-5 { background-color: $blue-5; }
+.ribbon.red-2 { background-color: $red-2;; }
+.ribbon.red-4 { background-color: $red-4; }
+.ribbon.red-5 { background-color: $red-5; }
+.ribbon.orange-1 { background-color: $orange-1; }
+.ribbon.orange-2 { background-color: $orange-2; }
+.ribbon.green { background-color: $green; }
+.ribbon.yellow-1 { background-color: $yellow-1; };
+.ribbon.yellow-2 { background-color: $yellow-2; };
+.ribbon.bftc-lt-pink { background-color: $bftc-lt-pink; };
+.ribbon.bftc-dk-pink { background-color: $bftc-dk-pink; };
+.ribbon.bftc-lt-grey { background-color: $bftc-lt-grey; };
+.ribbon.bftc-dk-grey { background-color: $bftc-dk-grey; };
 
 .ribbon::after {
     content: '';
@@ -365,27 +375,27 @@
 }
 
 // Blue slider stripes
-// .slider--stripes .stripes.blue .stripe {
-//     background-color: $blue !important;
-// }
-// .slider--stripes .stripes.blue .stripe--right {
-//     background-color: $blue !important;
-// }
+.slider--stripes .stripes.blue .stripe {
+    background-color: $blue !important;
+}
+.slider--stripes .stripes.blue .stripe--right {
+    background-color: $blue !important;
+}
 
 // Yellow slider stripes
 .slider--stripes .stripes.yellow .stripe {
-    background-color: $yellow-3 !important;
+    background-color: $yellow-2 !important;
 }
 .slider--stripes .stripes.yellow .stripe--right {
-    background-color: $yellow-3 !important;
+    background-color: $yellow-2 !important;
 }
 
 // Blue Youth slider stripes
-.slider--stripes .stripes.blue-youth .stripe {
-    background-color: $blue-youth !important;
+.slider--stripes .stripes.blue-4 .stripe {
+    background-color: $blue-4 !important;
 }
-.slider--stripes .stripes.blue-youth .stripe--right {
-    background-color: $blue-youth !important;
+.slider--stripes .stripes.blue-4 .stripe--right {
+    background-color: $blue-4 !important;
 }
 
 

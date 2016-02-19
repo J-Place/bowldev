@@ -1,5 +1,4 @@
 .article--video {
-    // background-color: $gray-2;
     text-align: center;
     padding: 0 15px 60px;
     position: relative;
@@ -87,7 +86,7 @@
     bottom: 0;
     left: 65%;
     width: 1900px;
-    background-color: $gray-lt;
+    background-color: $cool-gray;
     opacity: 0.3;
     z-index: 9;
     @include breakpoint(large) {

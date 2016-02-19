@@ -1,47 +1,91 @@
-$blue-1: #56bde8; $blue-lt: #56bde8;
-$blue-2: #44b0e0;
-$blue-3: #00338d; $blue-md: #00338d;
-$blue-4: #0945ff;
-$blue-5: #01348d; $blue: #01348d;
-$blue-link: #05328d;
-$blue-youth: #0945ff;
+// Brand Colors
+$blue: #00338D;
+$red: #B71234;
+$cool-gray: #63666A;
+$gray-2: #9EA2A2;
+$gray-3: #C7C9C7;
+$blue-2: #69FFF0;
+$blue-3: #1A6EFF;
+$blue-4: #0A4FFF;
+$blue-5: #4A94FF;
+$red-2: #CC002B;
+$red-4: #FF0D00;
+$red-5: #ED3E38;
+$orange-1: #FF701A;
+$orange-2: #FF991A;
+$green: #4FFF00;
+$yellow-1: #FFBF0D;
+$yellow-2: #FFE833;
+$bftc-lt-pink: #F238A6;
+$bftc-dk-pink: #AB035C;
+$bftc-lt-grey: #585951;
+$bftc-dk-grey: #CFC9C4;
 
-$red: #b71234;
-$red-5: #82001b;
+// 75777a
 
-$gray-0: #f1f1f1;
-$gray-1: #e3e4e3; $gray-lt: #e3e4e3;
-$gray-2: #b0b3b1; $gray-md: #b0b3b1;
-$gray-3: #75777a; $gray-dk: #75777a;
-$gray-4: #63666a;
-$gray-5: #333333;
+// 63666a
 
-$gray-body: #3b3c3e;
+// Layout Helpers
+$blue-link: #05328D;
+$gray-body: #3B3C3E;
+$gray-input: #E3E4E3;
+$gray-text: #63666A;
 $gray-list-border: #3d4144; // Mobile Nav Border Color
-$gray-list-background: #63666b; // Mobile Nav Background Color
+$gray-list-background: #63666B; // Mobile Nav Background Color
 
-$orange: #fe7200;
+// For elements within an article
+.article .blue { background-color: $blue; }
+.article .red { background-color: $red; }
+.article .cool-gray { background-color: $cool-gray; }
+.article .gray-2 { background-color: $gray-2; }
+.article .gray-3 { background-color: $gray-3; }
+.article .blue-2 { background-color: $blue-2; }
+.article .blue-3 { background-color: $blue-3; }
+.article .blue-4 { background-color: $blue-4; }
+.article .blue-5 { background-color: $blue-5; }
+.article .red-2 { background-color: $red-2; }
+.article .red-4 { background-color: $red-4; }
+.article .red-5 { background-color: $red-5; }
+.article .orange-1 { background-color: $orange-1; }
+.article .orange-2 { background-color: $orange-2; }
+.article .green { background-color: $green; }
+.article .yellow-1 { background-color: $yellow-1; }
+.article .yellow-2 { background-color: $yellow-2; }
 
-$yellow: #ffc100;
-$yellow-3: #ffeb00;
+// Article backgrounds
+.article.blue { background-color: $blue; }
+.article.red { background-color: $red; }
+.article.cool-gray { background-color: $cool-gray; }
+.article.gray-2 { background-color: $gray-2; }
+.article.gray-3 { background-color: $gray-3; }
+.article.blue-2 { background-color: $blue-2; }
+.article.blue-3 { background-color: $blue-3; }
+.article.blue-4 { background-color: $blue-4; }
+.article.blue-5 { background-color: $blue-5; }
+.article.red-2 { background-color: $red-2; }
+.article.red-4 { background-color: $red-4; }
+.article.red-5 { background-color: $red-5; }
+.article.orange-1 { background-color: $orange-1; }
+.article.orange-2 { background-color: $orange-2; }
+.article.green { background-color: $green; }
+.article.yellow-1 { background-color: $yellow-1; }
+.article.yellow-2 { background-color: $yellow-2; }
 
-
-.white { background-color: #FFF; }
-.green { background-color: #5bb51f; }
-.orange { background-color: $orange; }
-
-.gray-1 { background-color: $gray-1; }
-.gray-2 { background-color: $gray-2; }
-.gray-3 { background-color: $gray-3; }
-.gray-4 { background-color: $gray-4; }
-.gray-5 { background-color: $gray-5; }
-
-.blue-1 { background-color: $blue-1; }
-.blue-2 { background-color: $blue-2; }
-.blue-3 { background-color: $blue-3; }
-.blue-4 { background-color: $blue-4; }
-.blue-5 { background-color: $blue-5; }
-
-
-// .blue-youth { background-color: $blue-youth; }
-// .yellow-3 { background-color: $yellow-3; }
+// CTA backgrounds
+.cta__background.blue { background-color: $blue; }
+.cta__background.red { background-color: $red; }
+.cta__background.cool-gray { background-color: $cool-gray; }
+.cta__background.gray-2 { background-color: $gray-2; }
+.cta__background.gray-3 { background-color: $gray-3; }
+.cta__background.blue-2 { background-color: $blue-2; }
+.cta__background.blue-3 { background-color: $blue-3; }
+.cta__background.blue-4 { background-color: $blue-4; }
+.cta__background.blue-5 { background-color: $blue-5; }
+.cta__background.red-2 { background-color: $red-2; }
+.cta__background.red-4 { background-color: $red-4; }
+.cta__background.red-5 { background-color: $red-5; }
+.cta__background.orange-1 { background-color: $orange-1; }
+.cta__background.orange-2 { background-color: $orange-2; }
+.cta__background.green { background-color: $green; }
+.cta__background.yellow-1 { background-color: $yellow-1; }
+.cta__background.yellow-2 { background-color: $yellow-2; }

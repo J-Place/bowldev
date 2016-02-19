@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
-    color: $gray-4;
+    color: $gray-text;
 }
 
 h1, h2, h3 {
@@ -75,7 +75,7 @@ h6 {
     font-size: 1.02em;
     font-weight: 600;
     letter-spacing: 0.2px;
-    color: $gray-4;
+    color: $gray-text;
     margin-bottom: .1em;
 }
 
@@ -122,7 +122,7 @@ ul {
 .section__title {
     font-size: 1.7em;
     line-height: 1.2em;
-    color: $gray-4;
+    color: $gray-text;
     font-weight: 500;
     margin: 0;
     padding: 0 0 15px;
@@ -160,7 +160,7 @@ ul {
 .section__title--large::after {
     content: '';
     display: block;
-    background-color: $gray-4;
+    background-color: $gray-text;
     width: 65px;
     height: 5px;
     margin: 0 auto;
@@ -172,11 +172,11 @@ ul {
 // Section titles for 2 col main content body
 
 .main-content__body .section__title--large {
-    color: $gray-3;
+    color: $gray-text;
     padding-top: 25px;
 }
 
 .main-content__body .section__title--large:after {
-    background-color: $gray-3;
+    background-color: $gray-text;
     height: 4px;
 }

@@ -73,8 +73,8 @@ body.search-open {
     transition: width 0.125s;
     width: 100%;
     height: 30px;
-    background-color: $gray-lt;
-    border: 1px solid $gray-md;
+    background-color: $gray-input;
+    border: 1px solid $gray-list-border;
     border-radius: 15px;
     text-indent: -9999px;
     top: 0px;

@@ -358,7 +358,7 @@
 
 .article__title {
     @extend .opensans;
-    color: $gray-4;
+    color: $gray-text;
     font-size: 1.2em;
     font-weight: 700;
     line-height: 1.3em;
@@ -396,7 +396,7 @@
 .article__summary {
     font-weight: 400;
     font-size: 1.05em;
-    color: $gray-4;
+    color: $gray-text;
     position: relative;
     margin-bottom: 15px;
 }
@@ -424,7 +424,7 @@
     @extend .opensans;
     font-size: 1.02em;
     font-weight: 600;
-    color: $gray-4;
+    color: $gray-text;
     margin-bottom: .1em;
 }
 

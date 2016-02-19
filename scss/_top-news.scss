@@ -5,8 +5,8 @@
 }
 
 .top-news__title {
-    color: $gray-5;
-    background-color: $gray-lt;
+    color: $gray-text;
+    background-color: $cool-gray;
     text-align: center;
     font-size: 1.1em;
     letter-spacing: 0.5px;
@@ -35,7 +35,7 @@
     content: '';
     height: 38px;
     width: 16px;
-    background-color: $gray-lt;
+    background-color: $cool-gray;
     position: absolute;
     top: 0;
     right: -15px;
@@ -87,7 +87,7 @@
     // opacity: 0;
     @extend .oswald;
     font-weight: 400;
-    color: $gray-5;
+    color: $gray-text;
     padding: 0;
     letter-spacing: .5px;
     overflow: hidden;
