@@ -21,10 +21,6 @@ $bftc-dk-pink: #AB035C;
 $bftc-lt-grey: #585951;
 $bftc-dk-grey: #CFC9C4;
 
-// 75777a
-
-// 63666a
-
 // Layout Helpers
 $blue-link: #05328D;
 $gray-body: #3B3C3E;
@@ -51,6 +47,11 @@ $gray-list-background: #63666B; // Mobile Nav Background Color
 .article .green { background-color: $green; }
 .article .yellow-1 { background-color: $yellow-1; }
 .article .yellow-2 { background-color: $yellow-2; }
+.article .yellow-2 { background-color: $yellow-2; }
+.article .bftc-lt-pink { background-color: $bftc-lt-pink; }
+.article .bftc-dk-pink { background-color: $bftc-dk-pink; }
+.article .bftc-lt-grey { background-color: $bftc-lt-grey; }
+.article .bftc-dk-grey { background-color: $bftc-dk-grey; }
 
 // Article backgrounds
 .article.blue { background-color: $blue; }
@@ -70,6 +71,10 @@ $gray-list-background: #63666B; // Mobile Nav Background Color
 .article.green { background-color: $green; }
 .article.yellow-1 { background-color: $yellow-1; }
 .article.yellow-2 { background-color: $yellow-2; }
+.article.bftc-lt-pink { background-color: $bftc-lt-pink; }
+.article.bftc-dk-pink { background-color: $bftc-dk-pink; }
+.article.bftc-lt-grey { background-color: $bftc-lt-grey; }
+.article.bftc-dk-grey { background-color: $bftc-dk-grey; }
 
 // CTA backgrounds
 .cta__background.blue { background-color: $blue; }
@@ -89,3 +94,7 @@ $gray-list-background: #63666B; // Mobile Nav Background Color
 .cta__background.green { background-color: $green; }
 .cta__background.yellow-1 { background-color: $yellow-1; }
 .cta__background.yellow-2 { background-color: $yellow-2; }
+.cta__background.bftc-lt-pink { background-color: $bftc-lt-pink; }
+.cta__backgroun.bftc-dk-pink { background-color: $bftc-dk-pink; }
+.cta__backgroun.bftc-lt-grey { background-color: $bftc-lt-grey; }
+.cta__backgroun.bftc-dk-grey { background-color: $bftc-dk-grey; }

@@ -49,6 +49,21 @@
 .article .yellow-2 {
   background-color: #FFE833; }
 
+.article .yellow-2 {
+  background-color: #FFE833; }
+
+.article .bftc-lt-pink {
+  background-color: #F238A6; }
+
+.article .bftc-dk-pink {
+  background-color: #AB035C; }
+
+.article .bftc-lt-grey {
+  background-color: #585951; }
+
+.article .bftc-dk-grey {
+  background-color: #CFC9C4; }
+
 .article.blue {
   background-color: #00338D; }
 
@@ -100,6 +115,18 @@
 .article.yellow-2 {
   background-color: #FFE833; }
 
+.article.bftc-lt-pink {
+  background-color: #F238A6; }
+
+.article.bftc-dk-pink {
+  background-color: #AB035C; }
+
+.article.bftc-lt-grey {
+  background-color: #585951; }
+
+.article.bftc-dk-grey {
+  background-color: #CFC9C4; }
+
 .cta__background.blue {
   background-color: #00338D; }
 
@@ -150,6 +177,18 @@
 
 .cta__background.yellow-2 {
   background-color: #FFE833; }
+
+.cta__background.bftc-lt-pink {
+  background-color: #F238A6; }
+
+.cta__backgroun.bftc-dk-pink {
+  background-color: #AB035C; }
+
+.cta__backgroun.bftc-lt-grey {
+  background-color: #585951; }
+
+.cta__backgroun.bftc-dk-grey {
+  background-color: #CFC9C4; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;

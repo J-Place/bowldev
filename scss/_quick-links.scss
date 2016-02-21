@@ -12,9 +12,9 @@
         margin-bottom: 30px;
     }
     // iPhone and below
-    @include breakpoint(iphone-max) {
-        padding: 0;
-    }
+    // @include breakpoint(iphone-max) {
+    //     padding: 0;
+    // }
 }
 
 .quick-link {
