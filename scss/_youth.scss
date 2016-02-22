@@ -1,8 +1,12 @@
 // Background Image
 .youth .page-stripes .stripes img {
     position: absolute;
-    margin-left: -50%;
+    // margin-left: -50%;
     margin-top: 130px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    // top: 50%;
+    left: 50%;
 }
 
 
@@ -20,15 +24,45 @@
     position: absolute;
     margin-left: -10px;
     // border: 1px solid red;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        top: -30px;
+        margin-left: -5px;
+        width: 205px;
+    }
+    @include breakpoint(small-max) {
+        width: 160px;
+        top: -20px;
+    }
+    @include breakpoint(xsmall-max) {
+        width: 140px;
+    }
 }
 
 .youth .slide__logo + .slide__title {
     width: 440px;
     margin-left: 210px;
-    color: $blue;
-    font-size: 27px;
+    color: $blue-4;
+    font-size: 29px;
     line-height: 30px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     // border: 1px solid red;
+    @include breakpoint(medium-max) {
+        width: 315px;
+        margin-left: 175px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    @include breakpoint(small-max) {
+        width: 210px;
+        margin-left: 150px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    @include breakpoint(xsmall-max) {
+        width: 160px;
+        margin-left: 110px;
+        font-size: 18px;
+        line-height: 20px;
+    }
 }

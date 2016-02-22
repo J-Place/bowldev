@@ -204,6 +204,61 @@
     }
 }
 
+.youth .ribbon {
+    transition: background-color 0.2s;
+    width: 1790px;
+    height: 100%;
+    left: -1133px;
+    position: relative;
+    z-index: 999;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        left: -1310px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        left: 0;
+        right: 0;
+    }
+}
+
+.ribbon::after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    height: 100px;
+    @extend .skew;
+    right: -17px;
+    width: 35px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 75px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        display: none;
+    }
+}
+
+.youth .ribbon::after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    height: 100px;
+    @extend .skew-youth;
+    right: -35px;
+    width: 65px;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        height: 75px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+        display: none;
+    }
+}
+
+// Ribbon Colors
 .ribbon.blue { background-color: $blue; }
 .ribbon.red { background-color: $red; }
 .ribbon.cool-gray { background-color: $cool-gray; }
@@ -226,23 +281,6 @@
 .ribbon.bftc-lt-grey { background-color: $bftc-lt-grey; };
 .ribbon.bftc-dk-grey { background-color: $bftc-dk-grey; };
 
-.ribbon::after {
-    content: '';
-    position: absolute;
-    background-color: inherit;
-    height: 100px;
-    @extend .skew;
-    right: -17px;
-    width: 35px;
-    // Desktop and below
-    @include breakpoint(medium-max) {
-        height: 75px;
-    }
-    // Tablet and below
-    @include breakpoint(small-max) {
-        display: none;
-    }
-}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -374,31 +412,6 @@
     }
 }
 
-// Blue slider stripes
-.slider--stripes .stripes.blue .stripe {
-    background-color: $blue !important;
-}
-.slider--stripes .stripes.blue .stripe--right {
-    background-color: $blue !important;
-}
-
-// Yellow slider stripes
-.slider--stripes .stripes.yellow .stripe {
-    background-color: $yellow-2 !important;
-}
-.slider--stripes .stripes.yellow .stripe--right {
-    background-color: $yellow-2 !important;
-}
-
-// Blue Youth slider stripes
-.slider--stripes .stripes.blue-4 .stripe {
-    background-color: $blue-4 !important;
-}
-.slider--stripes .stripes.blue-4 .stripe--right {
-    background-color: $blue-4 !important;
-}
-
-
 .slider--stripes .stripe + .stripe {
     left: -858px;
     opacity: 0.5;
@@ -437,7 +450,7 @@
 
 .slider--stripes .stripe--right + .stripe--right {
     right: -98px;
-    width: 240px;
+    width: 250px;
     background-color: transparent;
     opacity: 0.5;
     // Desktop and below
@@ -450,6 +463,159 @@
         right: -475px;
     }
 }
+
+.youth .slider--stripes .stripe {
+    // left: -930px;
+    left: -875px;
+    width: 1000px;
+    // background-color: transparent;
+    opacity: 1.0;
+    z-index: 99;
+    // Large desktop and below
+    @include breakpoint(large-max) {
+        left: -918px;
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 650px;
+        left: -560px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        left: -635px;
+    }
+}
+
+.youth .slider--stripes .stripe + .stripe {
+    left: -835px;
+    opacity: 0.5;
+    @include breakpoint(large-max) {
+        left: -858px
+    }
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 695px;
+        left: -565px;
+    }
+    // Tablet and below
+    @include breakpoint(small-max) {
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        left: -650px;
+    }
+}
+
+.youth .slider--stripes .stripe--right {
+    right: -125px;
+    width: 250px;
+    opacity: 1.0;
+    z-index: 99;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 500px;
+        right: -410px;
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        right: -455px;
+    }
+}
+
+.youth .slider--stripes .stripe--right + .stripe--right {
+    right: -125px;
+    width: 290px;
+    background-color: transparent;
+    opacity: 0.5;
+    // Desktop and below
+    @include breakpoint(medium-max) {
+        width: 550px;
+        right: -420px;
+    }
+    // Slider small
+    @include breakpoint(slider-small) {
+        right: -475px;
+    }
+}
+
+// Stripe Colors //////////////////////////////////////////////////
+
+// // Blue slider stripes
+// .slider--stripes .stripes.blue .stripe {
+//     background-color: $blue !important;
+// }
+// .slider--stripes .stripes.blue .stripe--right {
+//     background-color: $blue !important;
+// }
+
+// // Yellow slider stripes
+// .slider--stripes .stripes.yellow .stripe {
+//     background-color: $yellow-2 !important;
+// }
+// .slider--stripes .stripes.yellow .stripe--right {
+//     background-color: $yellow-2 !important;
+// }
+
+// // Blue Youth slider stripes
+// .slider--stripes .stripes.blue-4 .stripe {
+//     background-color: $blue-4 !important;
+// }
+// .slider--stripes .stripes.blue-4 .stripe--right {
+//     background-color: $blue-4 !important;
+// }
+
+
+.slider--stripes .stripes.blue .stripe { background-color: $blue; }
+.slider--stripes .stripes.red .stripe { background-color: $red; }
+.slider--stripes .stripes.cool-gray .stripe { background-color: $cool-gray; }
+.slider--stripes .stripes.gray-2 .stripe { background-color: $gray-2; }
+.slider--stripes .stripes.gray-3 .stripe { background-color: $gray-3; }
+.slider--stripes .stripes.blue-2 .stripe { background-color: $blue-2; }
+.slider--stripes .stripes.blue-3 .stripe { background-color: $blue-3; }
+.slider--stripes .stripes.blue-4 .stripe { background-color: $blue-4; }
+.slider--stripes .stripes.blue-5 .stripe { background-color: $blue-5; }
+.slider--stripes .stripes.red-2 .stripe { background-color: $red-2; }
+.slider--stripes .stripes.red-4 .stripe { background-color: $red-4; }
+.slider--stripes .stripes.red-5 .stripe { background-color: $red-5; }
+.slider--stripes .stripes.orange-1 .stripe { background-color: $orange-1; }
+.slider--stripes .stripes.orange-2 .stripe { background-color: $orange-2; }
+.slider--stripes .stripes.green .stripe { background-color: $green; }
+.slider--stripes .stripes.yellow-1 .stripe { background-color: $yellow-1; }
+.slider--stripes .stripes.yellow-2 .stripe { background-color: $yellow-2; }
+.slider--stripes .stripes.bftc-lt-pink .stripe { background-color: $bftc-lt-pink; }
+.slider--stripes .stripes.bftc-dk-pink .stripe { background-color: $bftc-dk-pink; }
+.slider--stripes .stripes.bftc-lt-grey .stripe { background-color: $bftc-lt-grey; }
+.slider--stripes .stripes.bftc-dk-grey .stripe { background-color: $bftc-dk-grey; }
+
+.slider--stripes .stripes.blue .stripe--right { background-color: $blue; }
+.slider--stripes .stripes.red .stripe--right { background-color: $red; }
+.slider--stripes .stripes.cool-gray .stripe--right { background-color: $cool-gray; }
+.slider--stripes .stripes.gray-2 .stripe--right { background-color: $gray-2; }
+.slider--stripes .stripes.gray-3 .stripe--right { background-color: $gray-3; }
+.slider--stripes .stripes.blue-2 .stripe--right { background-color: $blue-2; }
+.slider--stripes .stripes.blue-3 .stripe--right { background-color: $blue-3; }
+.slider--stripes .stripes.blue-4 .stripe--right { background-color: $blue-4; }
+.slider--stripes .stripes.blue-5 .stripe--right { background-color: $blue-5; }
+.slider--stripes .stripes.red-2 .stripe--right { background-color: $red-2; }
+.slider--stripes .stripes.red-4 .stripe--right { background-color: $red-4; }
+.slider--stripes .stripes.red-5 .stripe--right { background-color: $red-5; }
+.slider--stripes .stripes.orange-1 .stripe--right { background-color: $orange-1; }
+.slider--stripes .stripes.orange-2 .stripe--right { background-color: $orange-2; }
+.slider--stripes .stripes.green .stripe--right { background-color: $green; }
+.slider--stripes .stripes.yellow-1 .stripe--right { background-color: $yellow-1; }
+.slider--stripes .stripes.yellow-2 .stripe--right { background-color: $yellow-2; }
+.slider--stripes .stripes.bftc-lt-pink .stripe--right { background-color: $bftc-lt-pink; }
+.slider--stripes .stripes.bftc-dk-pink .stripe--right { background-color: $bftc-dk-pink; }
+.slider--stripes .stripes.bftc-lt-grey .stripe--right { background-color: $bftc-lt-grey; }
+.slider--stripes .stripes.bftc-dk-grey .stripe--right { background-color: $bftc-dk-grey; }
+
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // SlickJS Overrides

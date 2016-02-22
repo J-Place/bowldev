@@ -35,6 +35,11 @@
     }
 }
 
+.youth .marketing-promo__summary {
+    background-color: $blue-3;
+    opacity: 0.9;
+}
+
 .marketing-promo__summary p {
     @extend .oswald;
     font-weight: 400;
@@ -111,6 +116,10 @@
         left: 340px;
         display: none;
     }
+}
+
+.youth .marketing-promo__detail {
+    background-color: $orange-2;
 }
 
 .marketing-promo__detail.open {

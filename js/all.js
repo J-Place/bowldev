@@ -282,10 +282,10 @@ $(".sidebar-links__title").click(function(){
 // which are synced by setting 'asNavFor'.
 
 $(".slider--foreground").on({ 'afterChange': function(event, slick, currentSlide){
+    $(".slider__ribbon .ribbon").toggleClass("yellow-2");
     $(".slider__ribbon .ribbon").toggleClass("cool-gray");
-    $(".slider__ribbon .ribbon").toggleClass("red");
-    $(".slider--stripes .stripes").toggleClass("yellow");
-    $(".slider--stripes .stripes").toggleClass("blue");
+    $(".slider--stripes .stripes").toggleClass("blue-3");
+    $(".slider--stripes .stripes").toggleClass("orange-1");
 }}).slick({
     infinite: true,
     autoplay: true,

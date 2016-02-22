@@ -34,6 +34,13 @@ a:focus {
      -ms-transform: skew(-18.25deg);
 }
 
+.skew-youth {
+    -webkit-transform: skew(-32deg);
+   -moz-transform: skew(-32deg);
+     -o-transform: skew(-32deg);
+     -ms-transform: skew(-32deg);
+}
+
 .no-skew {
     -webkit-transform: skew(18.25deg);
    -moz-transform: skew(18.25deg);
@@ -76,6 +83,17 @@ a:focus {
     z-index: 2;
 }
 
+.youth .stripe {
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    background-color: $gray-2;
+    transition: background-color 0.2s;
+    left: -270px;
+    @extend .skew-youth;
+    z-index: 2;
+}
+
 .stripe--right {
     position: absolute;
     width: 175px;
@@ -83,6 +101,16 @@ a:focus {
     background-color: $gray-2;
     transition: background-color 0.2s;
     @extend .skew;
+    z-index: 2;
+}
+
+.youth .stripe--right {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    background-color: $gray-2;
+    transition: background-color 0.2s;
+    @extend .skew-youth;
     z-index: 2;
 }
 
