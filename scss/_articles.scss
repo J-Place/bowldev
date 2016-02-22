@@ -57,24 +57,6 @@
     }
 }
 
-// .container.cta-2-col-sidebar {
-//     margin-top: 45px;
-// }
-
-.container-fluid + .container.cta-2-col-sidebar {
-    margin-top: 45px;
-    margin-bottom: 60px;
-    @include breakpoint(small-max) {
-        margin-top: 0px;
-        // margin-bottom: 5px;
-        margin-bottom: 15px;
-    }
-    .main-content__sidebar {
-        margin-top: 0;
-        // margin-bottom: 15px;
-    }
-}
-
 .main-content__sidebar {
     // Phone and below
     @include breakpoint(small-max) {

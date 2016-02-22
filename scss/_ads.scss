@@ -58,25 +58,26 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Ad img elements
+// Commented out since these will be in iFrame in production
 
-.block__leaderboard {
-    width: auto;
-    margin: 0 auto;
-    height: 90px;
-    max-width: 970px;
-    // Tablet and below
-    @include breakpoint(small-max) {
-        width: 100%;
-        height: auto;
-    }
-}
+// .block__leaderboard {
+//     width: auto;
+//     margin: 0 auto;
+//     height: 90px;
+//     max-width: 970px;
+//     // Tablet and below
+//     @include breakpoint(small-max) {
+//         width: 100%;
+//         height: auto;
+//     }
+// }
 
-.block__rectangle--medium {
-    width: 100%;
-    height: auto;
-}
+// .block__rectangle--medium {
+//     width: 100%;
+//     height: auto;
+// }
 
-.block__rectangle--large {
-    width: 100%;
-    height: auto;
-}
+// .block__rectangle--large {
+//     width: 100%;
+//     height: auto;
+// }

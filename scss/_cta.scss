@@ -36,12 +36,6 @@
     }
 }
 
-.container.cta-2-col-sidebar {
-    margin-top: 0;
-    padding-top: 0;
-    overflow: hidden;
-}
-
 .cta-3 .row {
     // margin: 0;
     // Tablet and below
@@ -107,12 +101,6 @@
     text-decoration: underline;
     color: #FFF;
 }
-
-// .cta-1-champ .cta__headline {
-//     font-weight: 400;
-// }
-
-
 
 .cta__headline::after {
     content: '';
@@ -231,103 +219,70 @@
         height: 110%;
 }
 
-.cta-support-team-usa .cta__content {
-    height: 147px;
-    padding-top: 10px;
-    @include breakpoint(medium-max) {
-        height: 111px;
-        padding-bottom: 60px;
-    }
-    @include breakpoint(small-max) {
-        height: auto;
-        padding: 15px 15px 30px;
-    }
-    .cta__hero {
-        margin-bottom: 8px;
-        img {
-            width: 100%;
-            max-width: 300px;
-            padding-top: 0;
-            margin-top: 0;
-            @include breakpoint(small-max) {
-                margin-bottom: 8px;
-            }
-        }
-    }
-}
-
-// .cta-2017-open {
-//     height: 323px;
+// .main-content__body .article--cta-1.cta-2017-open {
+//     height: 328px;
+//     @include breakpoint(medium-max) {
+//         height: 252px;
+//     }
+//     @include breakpoint(small-max) {
+//         height: auto;
+//     }
+//     .cta__content {
+//     text-align: left;
+//         @include breakpoint(medium-max) {
+//             margin: 15px auto;
+//         }
+//         @include breakpoint(small-max) {
+//             margin: 30px auto;
+//             padding-right: 0;
+//             text-align: center;
+//         }
+//         @include breakpoint(xsmall-max) {
+//             margin: 20px auto;
+//         }
+//     }
+//     .cta__hero {
+//         text-align: center;
+//         width: 270px;
+//         @include breakpoint(medium-max) {
+//             width: 220px;
+//         }
+//         @include breakpoint(small-max) {
+//             width: 100%;
+//             margin: 0 auto 15px;
+//             // padding: 0;
+//         }
+//         img {
+//             max-width: 220px;
+//         }
+//     }
+//     .cta__headline,
+//     .cta__text,
+//     .cta__button {
+//         margin-left: 270px;
+//         @include breakpoint(medium-max) {
+//             margin-left: 220px;
+//         }
+//         @include breakpoint(small-max) {
+//             margin-left: auto;
+//             margin: 0 auto;
+//         }
+//     }
+//     .cta__headline {
+//         padding-left: 0;
+//         @include breakpoint(small-max) {
+//             padding: 0 15px;
+//         }
+//     }
+//     .cta__text {
+//         padding-left: 0;
+//         padding-bottom: 1em;
+//         @include breakpoint(small-max) {
+//             font-size: 1.1em;
+//             padding: 15px 30px 30px;
+//         }
+//     }
 // }
-
-.main-content__body .article--cta-1.cta-2017-open {
-    height: 328px;
-    @include breakpoint(medium-max) {
-        height: 252px;
-    }
-    @include breakpoint(small-max) {
-        height: auto;
-        // margin-left: 15px;
-        // margin-right: 15px;
-    }
-    .cta__content {
-    text-align: left;
-        @include breakpoint(medium-max) {
-            margin: 15px auto;
-        }
-        @include breakpoint(small-max) {
-            margin: 30px auto;
-            padding-right: 0;
-            text-align: center;
-        }
-        @include breakpoint(xsmall-max) {
-            margin: 20px auto;
-        }
-    }
-    .cta__hero {
-        text-align: center;
-        width: 270px;
-        @include breakpoint(medium-max) {
-            width: 220px;
-        }
-        @include breakpoint(small-max) {
-            width: 100%;
-            margin: 0 auto 15px;
-            // padding: 0;
-        }
-        img {
-            max-width: 220px;
-            // width: 95%;
-            // padding-left: 10%;
-        }
-    }
-    .cta__headline,
-    .cta__text,
-    .cta__button {
-        margin-left: 270px;
-        @include breakpoint(medium-max) {
-            margin-left: 220px;
-        }
-        @include breakpoint(small-max) {
-            margin-left: auto;
-            margin: 0 auto;
-        }
-    }
-    .cta__headline {
-        padding-left: 0;
-        @include breakpoint(small-max) {
-            padding: 0 15px;
-        }
-    }
-    .cta__text {
-        padding-left: 0;
-        padding-bottom: 1em;
-        @include breakpoint(small-max) {
-            font-size: 1.1em;
-            padding: 15px 30px 30px;
-        }
-    }
-}
 
 
 .cta-future .container.cta__content {
@@ -535,5 +490,61 @@
     @include breakpoint(small-max) {
         width: auto;
         height: 110%;
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// 2 Col TA with Sidebar
+
+.container.cta-2-col-sidebar {
+    margin-top: 0;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.container-fluid + .container.cta-2-col-sidebar {
+    margin-top: 45px;
+    margin-bottom: 60px;
+    @include breakpoint(small-max) {
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    .main-content__sidebar {
+        margin-top: 0;
+    }
+}
+
+.cta-2-col-sidebar .main-content__body .article--cta-1 {
+    min-height: 330px;
+}
+
+.cta-2-col-sidebar .main-content__sidebar .ad__block {
+    height: 150px;
+    background-color: $gray-3; // Temporary background color to show container size
+}
+
+.cta-2-col-sidebar .main-content__sidebar .article--cta-1 .cta__content {
+    padding-top: 10px;
+    height: 150px;
+    @include breakpoint(medium-max) {
+        height: 111px;
+        padding-bottom: 60px;
+    }
+    @include breakpoint(small-max) {
+        height: auto;
+        padding: 15px 15px 30px;
+    }
+    .cta__hero {
+        margin-bottom: 8px;
+        img {
+            width: 100%;
+            max-width: 300px;
+            padding-top: 0;
+            margin-top: 0;
+            @include breakpoint(small-max) {
+                margin-bottom: 8px;
+            }
+        }
     }
 }
