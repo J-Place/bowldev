@@ -364,11 +364,32 @@
     bottom: 0;
     margin-bottom: 0;
     z-index: -999;
+    @include breakpoint(medium-max) {
+        right: -100px;
+    }
 }
 
 .youth .footer--stripes--background .stripes {
     left: 133px;
     @include breakpoint(medium-max) {
         left: 83px;
+    }
+}
+
+.youth .footer--stripes--top {
+    @include breakpoint(small-max) {
+        left: 300px;
+    }
+}
+
+.youth .footer--stripes--top .stripe {
+    @include breakpoint(small-max) {
+        left: 400px;
+    }
+}
+
+.youth .footer--stripes--top .stripe + .stripe {
+    @include breakpoint(small-max) {
+        left: 450px;
     }
 }

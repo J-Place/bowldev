@@ -15,11 +15,11 @@
     }
 }
 
-.ad__block img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+// .ad__block img {
+//     width: 100%;
+//     height: auto;
+//     display: block;
+// }
 
 .main-content__sidebar .ad__block {
     @extend .ad__block;
@@ -50,6 +50,9 @@
     margin: 30px auto;
     position: relative;
     z-index: 999;
+    @include breakpoint(small-max) {
+        margin: 0 auto;
+    }
 }
 
 

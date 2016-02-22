@@ -234,46 +234,18 @@
 }
 
 
-//////////////////////////////////////////////////////////////////
-// Equal height
-
-// .article--equal {
-// // Desktop and above
-//     @include breakpoint(medium-min) {
-//         min-height: 340px;
-//         height: 375px;
-//     }
-// // iPhone and below
-//     @include breakpoint(iphone) {
-//         margin-bottom: 0;
-//         padding-bottom: 0;
-//         min-height: 330px;
-//     }
-// }
-
-// .article--equal .article__image {
-//     max-height: 220px;
-//     overflow: hidden;
-//     margin-bottom: 15px;
-//     // Tablet and below
-//     @include breakpoint(medium-max) {
-//         max-height: 175px;
-//     }
-//     // Tablet and below
-//     @include breakpoint(small-max) {
-//         max-height: none;
-//         margin-bottom: 0;
-//     }
-// }
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Article content
 
 .article__link:hover {
     .article__title {
-        color: $blue-link;
+        color: $blue;
     }
+}
+
+.article__link:active, .article__link:focus {
+    color: red;
+    text-decoration: none;
 }
 
 .article__author a {
