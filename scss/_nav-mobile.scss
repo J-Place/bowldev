@@ -20,6 +20,9 @@
     // border: 1px solid red;
     @extend .nav-icon;
     background-position: -247px -5px;
+    @include breakpoint(small-max){
+        top: 1px;
+    }
 }
 
 .home h4.dropdown__list--title {
@@ -34,6 +37,12 @@
 .home a:hover .nav-icon--home {
     background-position: -247px -35px;
 }
+
+// .home a:active,
+// .home a:focus {
+//     color: #FFF;
+//     text-decoration: none;
+// }
 
 .nav-small-icon {
     display: none;
@@ -90,7 +99,7 @@
         width: 100%;
         height: 100%;
         top: 55px;
-        z-index: 99;
+        z-index: 9999;
     }
 }
 
@@ -414,7 +423,7 @@ h4.dropdown__list--title {
     // Phone and below
     @include breakpoint(small-max) {
         cursor: pointer;
-        color: $gray-text;
+        color: #FFF;
         padding: 0;
         display: block;
         width: 100%;
